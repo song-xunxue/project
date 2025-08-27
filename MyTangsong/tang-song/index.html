@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国诗词网站</title>
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&family=ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            width: 100%; /* 宽度设置为100%，以适应页面宽度 */
+            height: auto; /* 高度自动调整，保持比例 */
+            max-height: 450px; /* 设置最大高度为450px，确保图片不会过高 */
+            display: block;
+            margin: 20px 0; /* 在图片上下方添加一些间距 */
+            border-radius: 8px; /* 圆角效果 */
+            object-fit: cover; /* 确保图片填充整个容器，可能会裁剪图片 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加更明显的阴影效果 */
+        }
+    </style>
+</head>
+<body class="home-page">
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="tang-poetry.html">唐诗</a>
+        <a href="song-poetry.html">宋词</a>
+        <button id="toggleMode" class="toggle-mode-button">🌙 夜间模式</button>
+    </nav>
+
+     <!-- 面包屑导航 -->
+     <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a href="index.html">首页</a></li>
+        </ol>
+    </div>
+
+    <main>
+        <h1>欢迎来到中国诗词网站</h1>
+        <section>
+            <h2>中国诗词概述</h2>
+            <p>
+                中国诗词，宛若一条璀璨的文化长河，源远流长，承载着中华民族的智慧与情感。它不仅映照出古代社会的万千气象与百姓的生活图景，更凝聚了无数先人的哲思与情怀，熠熠生辉，千古流传。从《诗经》的淳朴自然，到唐诗的恢弘壮丽，再到宋词的细腻深长，诗词在不同时代绽放出独具一格的光彩，成为中华文明中不可或缺的精华。
+            </p>
+        </section>
+        <img src="./images/ui.jpeg" alt="中国诗词网站图像">
+    </main>
+    <footer>
+        <p>&copy; 2025 中国诗词网站. 版权所有.</p>
+    </footer>
+
+    <script src="night-mode.js"></script>
+</body>
+</html>

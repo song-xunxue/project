@@ -1,0 +1,737 @@
+/* 全局样式 - 古典风格基础 */
+body {
+    font-family: 'Noto Serif SC', serif;
+    background: #f8f4e9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><rect width="100" height="100" fill="none" stroke="%23986c43" stroke-width="2"/></svg>');
+    color: #3a2615;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 夜间模式 */
+body.dark-mode {
+    background: #1a1208 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><rect width="100" height="100" fill="none" stroke="%23755c38" stroke-width="2"/></svg>');
+    color: #e6d6bc;
+}
+
+/* 卷轴效果容器 */
+.scroll-container {
+    background: #f9f6f0;
+    border-left: 15px solid #d4b98a;
+    border-right: 15px solid #d4b98a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.scroll-container::before,
+.scroll-container::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #d4b98a, transparent);
+}
+
+.scroll-container::before {
+    top: 0;
+}
+
+.scroll-container::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+body.dark-mode .scroll-container {
+    background: #2a2118;
+    border-left: 15px solid #6b563c;
+    border-right: 15px solid #6b563c;
+}
+
+body.dark-mode .scroll-container::before,
+body.dark-mode .scroll-container::after {
+    background: linear-gradient(to bottom, #6b563c, transparent);
+}
+
+/* 导航栏样式 - 古典风格 */
+nav {
+    background: linear-gradient(to bottom, #8e6c49, #6d4c33);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid #5c3e22;
+}
+
+nav a {
+    color: #f9f3e3;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 10px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f9d371;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #f9d371;
+}
+
+nav.dark-mode {
+    background: linear-gradient(to bottom, #3a2c1f, #2a1f15);
+    border-bottom: 2px solid #8b6b46;
+}
+
+/* 夜间模式切换按钮样式 */
+.toggle-mode-button {
+    background: rgba(169, 132, 88, 0.3);
+    border: 1px solid #a98458;
+    color: #f9f3e3;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.toggle-mode-button:hover {
+    background: rgba(169, 132, 88, 0.5);
+    transform: scale(1.05);
+}
+
+nav.dark-mode .toggle-mode-button {
+    background: rgba(139, 107, 70, 0.3);
+    border: 1px solid #8b6b46;
+    color: #e6d6bc;
+}
+
+/* 主内容样式 */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: -40px auto 20px;
+    background: #fdfaf3;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #d4b98a;
+}
+
+body.dark-mode main {
+    background: #2a2118;
+    border: 1px solid #6b563c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 36px;
+    color: #5c3e22;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+    font-weight: bold;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8e6c49, transparent);
+}
+
+body.dark-mode h1 {
+    color: #e6d6bc;
+}
+
+body.dark-mode h1::after {
+    background: linear-gradient(to right, transparent, #a98458, transparent);
+}
+
+h2 {
+    font-size: 28px;
+    color: #6d4c33;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 22px;
+    color: #5c3e22;
+    margin-top: 20px;
+    padding-left: 15px;
+    border-left: 4px solid #8e6c49;
+}
+
+body.dark-mode h2 {
+    color: #d4b98a;
+}
+
+body.dark-mode h3 {
+    color: #e6d6bc;
+    border-left: 4px solid #a98458;
+}
+
+/* 诗人列表样式 */
+.poet-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.poet-list li {
+    margin: 10px 0;
+}
+
+.poet-list a {
+    text-decoration: none;
+    color: #6d4c33;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #d4b98a;
+    border-radius: 30px;
+    background: rgba(212, 185, 138, 0.1);
+}
+
+.poet-list a:hover {
+    color: #f9d371;
+    background: #8e6c49;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .poet-list a {
+    color: #d4b98a;
+    border: 1px solid #6b563c;
+    background: rgba(107, 86, 60, 0.2);
+}
+
+body.dark-mode .poet-list a:hover {
+    color: #f9d371;
+    background: #6b563c;
+}
+
+/* 面包屑导航样式 */
+.breadcrumb-wrapper {
+    max-width: 100%;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9e1d1;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: 75px;
+    text-align: center;
+    color: #5c3e22;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0;
+    border: 1px solid #d4b98a;
+}
+
+.breadcrumb-item a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: inherit;
+    background-color: #e9e1d1;
+    border-radius: 5px;
+}
+
+.breadcrumb-item.active {
+    background-color: #8e6c49;
+    color: #f9f3e3;
+    box-shadow: 0 2px 8px rgba(142, 108, 73, 0.3);
+}
+
+.breadcrumb-item.active a {
+    background-color: #8e6c49;
+    color: #f9f3e3;
+}
+
+.breadcrumb-item.active::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid #8e6c49;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.breadcrumb-item:hover:not(.active) {
+    transform: translateY(-2px);
+    background-color: #8e6c49;
+    color: #f9f3e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item.active:hover {
+    transform: translateY(-1px);
+}
+
+.breadcrumb-item:hover:not(.active) a {
+    background-color: #8e6c49;
+    color: #f9f3e3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: transparent;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu .breadcrumb-item {
+    margin: 10px 0;
+    min-width: 75px;
+    width: auto;
+    text-align: center;
+}
+
+.dropdown-menu .breadcrumb-item a {
+    background-color: #e9e1d1;
+    color: #5c3e22;
+    border-radius: 5px;
+    padding: 8px 15px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border: 1px solid #d4b98a;
+}
+
+.dropdown-menu .breadcrumb-item:hover a {
+    background-color: #8e6c49;
+    color: #f9f3e3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item:hover .dropdown-menu {
+    display: block;
+}
+
+body.dark-mode .breadcrumb-item {
+    background-color: #3a2c1f;
+    color: #d4b98a;
+    border: 1px solid #6b563c;
+}
+
+body.dark-mode .breadcrumb-item.active {
+    background-color: #6b563c;
+    color: #f9f3e3;
+    box-shadow: 0 2px 8px rgba(107, 86, 60, 0.3);
+}
+
+body.dark-mode .breadcrumb-item::before {
+    border-left-color: #3a2c1f;
+}
+
+body.dark-mode .breadcrumb-item.active::before {
+    border-left-color: #6b563c;
+}
+
+body.dark-mode .breadcrumb-item:hover:not(.active) {
+    background-color: #6b563c;
+}
+
+body.dark-mode .breadcrumb-item+.breadcrumb-item::before {
+    border-left-color: #6b563c;
+}
+
+body.dark-mode .dropdown-menu .breadcrumb-item a {
+    background-color: #3a2c1f;
+    color: #d4b98a;
+    border: 1px solid #6b563c;
+}
+
+body.dark-mode .dropdown-menu .breadcrumb-item:hover a {
+    background-color: #6b563c;
+    color: #f9f3e3;
+}
+
+/* 普通段落样式 */
+p {
+    font-size: 18px;
+    margin: 20px 0;
+    text-indent: 2em;
+    line-height: 1.8;
+}
+
+/* 诗篇样式 */
+.poem {
+    font-family: 'Ma Shan Zheng', 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 20px;
+    margin: 15px 0;
+    text-indent: 0;
+    color: #5c3e22;
+    line-height: 2;
+    padding: 15px;
+    background: rgba(212, 185, 138, 0.1);
+    border-radius: 5px;
+    border-left: 3px solid #8e6c49;
+}
+
+body.dark-mode .poem {
+    color: #e6d6bc;
+    background: rgba(107, 86, 60, 0.2);
+    border-left: 3px solid #a98458;
+}
+
+/* 文章样式 */
+article {
+    background: #f9f6f0;
+    border-left: 5px solid #8e6c49;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #d4b98a, transparent);
+}
+
+body.dark-mode article {
+    background: #2a2118;
+    border-left: 5px solid #a98458;
+}
+
+body.dark-mode article::before {
+    background: linear-gradient(to right, transparent, #6b563c, transparent);
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮样式 */
+button {
+    background: linear-gradient(to bottom, #8e6c49, #6d4c33);
+    color: #f9f3e3;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+button:hover::after {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0);
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #9d7b58, #7d5b43);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(to bottom, #6d4c33, #5c3e22);
+    color: #f9f3e3;
+    font-size: 14px;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    flex-shrink: 0;
+    border-top: 2px solid #8e6c49;
+}
+
+footer a {
+    color: #f9d371;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffdf91;
+}
+
+footer.dark-mode {
+    background: linear-gradient(to bottom, #3a2c1f, #2a1f15);
+    border-top: 2px solid #6b563c;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    main {
+        padding: 20px 15px;
+        margin: -20px auto 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .poem {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+    }
+
+    .breadcrumb-item {
+        font-size: 12px;
+        padding: 5px 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    .breadcrumb-item::before {
+        border-left-width: 4px;
+    }
+
+    .poet-list {
+        gap: 10px;
+    }
+
+    .poet-list a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+/* 首页特定样式 */
+body.home-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><path d="M20,20 Q50,5 80,20 T100,50 T80,80 T50,100 T20,80 T0,50 T20,20 Z" fill="none" stroke="%23986c43" stroke-width="1"/></svg>'), #fdfaf3;
+}
+
+body.dark-mode.home-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><path d="M20,20 Q50,5 80,20 T100,50 T80,80 T50,100 T20,80 T0,50 T20,20 Z" fill="none" stroke="%23755c38" stroke-width="1"/></svg>'), #2a2118;
+}
+
+/* 唐诗页面特定样式 */
+body.tang-page {
+    background: #f9f4e9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" opacity="0.03"><path d="M10,10 C30,5 90,5 110,10 C115,30 115,90 110,110 C90,115 30,115 10,110 C5,90 5,30 10,10 Z" fill="none" stroke="%23986c43" stroke-width="2"/></svg>');
+}
+
+body.dark-mode.tang-page {
+    background: #1c140b url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" opacity="0.03"><path d="M10,10 C30,5 90,5 110,10 C115,30 115,90 110,110 C90,115 30,115 10,110 C5,90 5,30 10,10 Z" fill="none" stroke="%23755c38" stroke-width="2"/></svg>');
+}
+
+body.tang-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M0,40 Q20,0 40,40 T80,40 T40,40 T0,40 Z" fill="none" stroke="%23986c43" stroke-width="1"/></svg>'), #fdfaf3;
+    border: 2px solid #8e6c49;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(142, 108, 73, 0.1);
+}
+
+body.dark-mode.tang-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" opacity="0.03"><path d="M0,40 Q20,0 40,40 T80,40 T40,40 T0,40 Z" fill="none" stroke="%23755c38" stroke-width="1"/></svg>'), #2a2118;
+    border: 2px solid #6b563c;
+}
+
+body.tang-page h1::after {
+    background: linear-gradient(to right, transparent, #8e6c49, #c19b67, #8e6c49, transparent);
+    height: 4px;
+}
+
+body.tang-page .poem {
+    font-family: 'Ma Shan Zheng', 'ZCOOL XiaoWei', cursive;
+    font-weight: bold;
+    background: rgba(212, 185, 138, 0.15);
+    border-left: 4px solid #8e6c49;
+    padding: 20px;
+}
+
+body.dark-mode.tang-page .poem {
+    background: rgba(107, 86, 60, 0.25);
+    border-left: 4px solid #a98458;
+}
+
+/* 宋词页面特定样式 */
+body.song-page {
+    background: #f7f2e8 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><path d="M20,20 Q40,10 50,20 T80,30 T70,60 T50,80 T20,70 T10,50 T20,20 Z" fill="none" stroke="%23986c43" stroke-width="1.5"/></svg>');
+}
+
+body.dark-mode.song-page {
+    background: #1e160d url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><path d="M20,20 Q40,10 50,20 T80,30 T70,60 T50,80 T20,70 T10,50 T20,20 Z" fill="none" stroke="%23755c38" stroke-width="1.5"/></svg>');
+}
+
+body.song-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.03"><path d="M10,30 Q20,10 30,30 T50,30 T30,30 T10,30 Z" fill="none" stroke="%23986c43" stroke-width="1"/></svg>'), #fdfaf3;
+    border: 1px solid #8e6c49;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(142, 108, 73, 0.08);
+}
+
+body.dark-mode.song-page main {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.03"><path d="M10,30 Q20,10 30,30 T50,30 T30,30 T10,30 Z" fill="none" stroke="%23755c38" stroke-width="1"/></svg>'), #2a2118;
+    border: 1px solid #6b563c;
+}
+
+body.song-page h1::after {
+    background: linear-gradient(to right, transparent, #8e6c49, transparent);
+    width: 150px;
+    height: 2px;
+}
+
+body.song-page h2 {
+    font-weight: normal;
+    font-style: italic;
+}
+
+body.song-page .poem {
+    font-family: 'Ma Shan Zheng', 'ZCOOL QingKe HuangYou', cursive;
+    background: rgba(212, 185, 138, 0.08);
+    border-left: 2px solid #8e6c49;
+    padding: 18px;
+    line-height: 1.9;
+}
+
+body.dark-mode.song-page .poem {
+    background: rgba(107, 86, 60, 0.15);
+    border-left: 2px solid #a98458;
+}
+
+/* 印章效果 */
+.seal {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #c1272d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 14px;
+    transform: rotate(15deg);
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .seal {
+    background: #a61c22;
+}
