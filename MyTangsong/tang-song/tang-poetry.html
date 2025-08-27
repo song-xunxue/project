@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐诗 - 选择诗人</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="tang-page">
+    <nav>
+        <a href="./index.html">首页</a>
+        <a href="tang-poetry.html">唐诗</a>
+        <a href="song-poetry.html">宋词</a>
+        <button id="toggleMode" class="toggle-mode-button">🌙 夜间模式</button>
+    </nav>
+
+    <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">首页</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="tang-poetry.html">唐诗</a>
+                <ul class="dropdown-menu">
+                    <li class="breadcrumb-item"><a href="song-poetry.html">宋词</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <main>
+        <h1>唐诗</h1>
+        <section>
+            <h2>关于唐诗</h2>
+            <p>
+                唐代，是中国诗歌的黄金时代。那一时期，诗才辈出，气象万千。李白豪放飘逸，杜甫沉郁顿挫，王维清远空灵——他们以笔墨为舟，以胸怀为海，创作出大量震古烁今的杰作。唐诗不仅构筑了文学的高峰，更成为中华文化的精神象征，至今读来，犹令人心驰神往，回味无穷。
+            </p>
+        </section>
+        <section>
+            <h2>选择唐代诗人</h2>
+            <ul class="poet-list">
+                <li><a href="poets/tang/li-bai.html">李白</a></li>
+                <li><a href="poets/tang/du-fu.html">杜甫</a></li>
+                <li><a href="poets/tang/wang-wei.html">王维</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 中国诗词网站. 版权所有.</p>
+    </footer>
+
+    <script src="night-mode.js"></script>
+</body>
+</html>

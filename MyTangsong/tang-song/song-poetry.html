@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宋词 - 选择词人</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="song-page">
+    <nav>
+        <a href="./index.html">首页</a>
+        <a href="tang-poetry.html">唐诗</a>
+        <a href="song-poetry.html">宋词</a>
+        <button id="toggleMode" class="toggle-mode-button">🌙 夜间模式</button>
+    </nav>
+
+    <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">首页</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="song-poetry.html">宋词</a>
+                <ul class="dropdown-menu">
+                    <li class="breadcrumb-item"><a href="tang-poetry.html">唐诗</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+
+    <main>
+        <h1>宋词</h1>
+        <section>
+            <h2>关于宋词</h2>
+            <p>
+                宋代，词作渐成新风，别开生面。苏轼豁达超逸，李清照婉约深情，辛弃疾激昂豪迈——他们以词抒怀，以句寄意，将语言的艺术推向了新的境界。宋词兼有婉约与豪放的双重气质，情致绵长，意境悠远，成为中国文学史上一道不可忽视的风景，至今仍令人陶醉其中，感怀不已。
+            </p>
+        </section>
+        <section>
+            <h2>选择宋代词人</h2>
+            <ul class="poet-list">
+                <li><a href="poets/song/su-shi.html">苏轼</a></li>
+                <li><a href="poets/song/li-qingzhao.html">李清照</a></li>
+                <li><a href="poets/song/xin-qiji.html">辛弃疾</a></li>
+                <!-- 可以继续添加其他宋代词人 -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 中国诗词网站. 版权所有.</p>
+    </footer>
+
+    <script src="night-mode.js"></script>
+</body>
+</html>
