@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="90" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+  <!-- 猫的头部 -->
+  <ellipse cx="100" cy="80" rx="50" ry="40" fill="white" stroke="#333" stroke-width="1"/>
+  <!-- 猫的耳朵 -->
+  <path d="M70,50 L50,20 L90,30 Z" fill="white" stroke="#333" stroke-width="1"/>
+  <path d="M130,50 L150,20 L110,30 Z" fill="white" stroke="#333" stroke-width="1"/>
+  <!-- 猫的耳朵内部 -->
+  <path d="M70,50 L60,30 L80,35 Z" fill="#ffcccc" stroke="#333" stroke-width="0.5"/>
+  <path d="M130,50 L140,30 L120,35 Z" fill="#ffcccc" stroke="#333" stroke-width="0.5"/>
+  <!-- 猫的眼睛 -->
+  <ellipse cx="85" cy="75" rx="5" ry="6" fill="white" stroke="#333" stroke-width="1"/>
+  <ellipse cx="115" cy="75" rx="5" ry="6" fill="white" stroke="#333" stroke-width="1"/>
+  <ellipse cx="85" cy="75" rx="2" ry="3" fill="#333"/>
+  <ellipse cx="115" cy="75" rx="2" ry="3" fill="#333"/>
+  <!-- 猫的鼻子 -->
+  <path d="M100,85 L95,90 L105,90 Z" fill="#ff9999" stroke="#333" stroke-width="0.5"/>
+  <!-- 猫的嘴巴和舌头 -->
+  <path d="M100,90 L100,95" stroke="#333" stroke-width="0.5"/>
+  <path d="M95,90 Q100,98 105,90" stroke="#333" stroke-width="0.5" fill="none"/>
+  <path d="M100,95 Q98,105 102,105 Z" fill="#ff9999" stroke="#333" stroke-width="0.5"/>
+  <!-- 猫的胡须 -->
+  <line x1="90" y1="90" x2="70" y2="88" stroke="#333" stroke-width="0.5"/>
+  <line x1="90" y1="92" x2="70" y2="92" stroke="#333" stroke-width="0.5"/>
+  <line x1="90" y1="94" x2="70" y2="96" stroke="#333" stroke-width="0.5"/>
+  <line x1="110" y1="90" x2="130" y2="88" stroke="#333" stroke-width="0.5"/>
+  <line x1="110" y1="92" x2="130" y2="92" stroke="#333" stroke-width="0.5"/>
+  <line x1="110" y1="94" x2="130" y2="96" stroke="#333" stroke-width="0.5"/>
+  <!-- 猫的身体 -->
+  <ellipse cx="100" cy="130" rx="40" ry="25" fill="white" stroke="#333" stroke-width="1"/>
+  <!-- 猫的毛发细节 -->
+  <path d="M60,120 Q65,115 70,120" stroke="#333" stroke-width="0.5" fill="none"/>
+  <path d="M70,120 Q75,115 80,120" stroke="#333" stroke-width="0.5" fill="none"/>
+  <path d="M120,120 Q125,115 130,120" stroke="#333" stroke-width="0.5" fill="none"/>
+  <path d="M130,120 Q135,115 140,120" stroke="#333" stroke-width="0.5" fill="none"/>
+  <!-- 姓名 -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">胡晟源</text>
+</svg>
