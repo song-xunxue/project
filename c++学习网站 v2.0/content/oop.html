@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象编程 - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html" >C++基础</a></li>
+                <li><a href="oop.html" class="active">面向对象</a></li>
+                <li><a href="#">高级特性</a></li>
+                <li><a href="#">Effcctive C++</a></li>
+                <li><a href="#">STL源码剖析</a></li>
+                <li><a href="../about.html">关于我们</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#intro">OOP核心概念</a></li>
+                <li><a href="#classes-objects">类与对象</a></li>
+                <li><a href="#special-methods">特殊成员函数</a></li>
+                <li><a href="#encapsulation">封装与访问控制</a></li>
+                <li><a href="#inheritance">继承</a></li>
+                <li><a href="#polymorphism">多态</a></li>
+                <li><a href="#abstract-classes">抽象类与接口</a></li>
+                <li><a href="#friends">友元</a></li>
+                <li><a href="#static-members">静态成员</a></li>
+                <li><a href="#operator-overloading">运算符重载</a></li>
+                <li><a href="#templates">模板与泛型</a></li>
+                <li><a href="#best-practices">最佳实践</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>C++面向对象编程深入解析</h1>
+            <p class="intro">面向对象编程(Object-Oriented Programming,
+                OOP)是一种基于对象概念的编程范式，它通过封装、继承和多态等机制来组织代码。C++作为一门多范式语言，对OOP提供了全面而强大的支持。本文将从资深开发者的角度深入探讨C++ OOP的各个方面。</p>
+
+            <section id="intro" class="section">
+                <h2>OOP核心概念</h2>
+                <p>面向对象编程基于四个核心原则：</p>
+                <ol>
+                    <li><strong>抽象</strong>：简化复杂现实的方法，建模时只关注相关细节</li>
+                    <li><strong>封装</strong>：将数据和行为捆绑在一起，并控制对其的访问</li>
+                    <li><strong>继承</strong>：基于现有类创建新类的机制，实现代码复用</li>
+                    <li><strong>多态</strong>：同一接口可以用于不同的底层形式，提高灵活性</li>
+                </ol>
+
+                <div class="advanced">
+                    <h4>深入理解</h4>
+                    <p>在C++中，OOP不仅仅是语法特性，更是一种设计和组织代码的方式。良好的OOP设计能够提高代码的可维护性、可扩展性和可重用性。与C语言的过程式编程相比，OOP更适合大型复杂系统的开发。</p>
+                </div>
+            </section>
+
+            <section id="classes-objects" class="section">
+                <h2>类与对象</h2>
+                <p>类是面向对象编程的核心概念，它是创建对象的蓝图或模板。对象是类的实例。</p>
+
+                <h3>类的定义</h3>
+                <p>类定义包括数据成员（属性）和成员函数（方法）：</p>
+                <div class="code-block">
+                    <pre><code>// 类声明
+class Rectangle {
+private:    // 访问修饰符
+    double width;    // 数据成员
+    double height;
+
+public:     // 访问修饰符
+    // 成员函数声明
+    void setDimensions(double w, double h);
+    double getArea() const;  // const成员函数，不修改对象状态
+    double getPerimeter() const;
+    
+    // 内联成员函数
+    double getWidth() const { return width; }
+    double getHeight() const { return height; }
+};</code></pre>
+                </div>
+
+                <h3>类与结构体的区别</h3>
+                <div class="comparison">
+                    <div>
+                        <h4>类 (class)</h4>
+                        <ul>
+                            <li>默认成员访问权限为private</li>
+                            <li>用于表示具有复杂行为的对象</li>
+                            <li>强调封装和数据隐藏</li>
+                            <li>通常包含成员函数</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>结构体 (struct)</h4>
+                        <ul>
+                            <li>默认成员访问权限为public</li>
+                            <li>主要用于数据聚合</li>
+                            <li>在C++中与类的唯一区别是默认访问权限</li>
+                            <li>常用于简单数据容器</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <p>注意：在C++中，struct和class的唯一区别是默认访问权限。struct默认是public，class默认是private。除此之外，它们的功能完全相同。</p>
+                </div>
+
+                <h3>成员函数定义</h3>
+                <div class="code-block">
+                    <pre><code>// 类外定义成员函数，使用作用域解析运算符::
+void Rectangle::setDimensions(double w, double h) {
+    // 数据验证
+    if (w <= 0 || h <= 0) {
+        throw std::invalid_argument("尺寸必须为正数");
+    }
+    width = w;
+    height = h;
+}
+
+double Rectangle::getArea() const {
+    return width * height;
+}
+
+double Rectangle::getPerimeter() const {
+    return 2 * (width + height);
+}</code></pre>
+                </div>
+
+                <h3>创建和使用对象</h3>
+                <div class="code-block">
+                    <pre><code>int main() {
+    // 栈上创建对象
+    Rectangle rect1;
+    rect1.setDimensions(5.0, 3.0);
+    
+    // 堆上创建对象
+    Rectangle* rect2 = new Rectangle();
+    rect2->setDimensions(4.0, 6.0);
+    
+    // 使用对象
+    std::cout << "矩形1面积: " << rect1.getArea() << std::endl;
+    std::cout << "矩形2周长: " << rect2->getPerimeter() << std::endl;
+    
+    // 释放堆上对象
+    delete rect2;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="special-methods" class="section">
+                <h2>特殊成员函数</h2>
+                <p>C++类有六个特殊成员函数，编译器可以自动生成它们：</p>
+                <ol>
+                    <li>默认构造函数</li>
+                    <li>析构函数</li>
+                    <li>拷贝构造函数</li>
+                    <li>拷贝赋值运算符</li>
+                    <li>移动构造函数 (C++11)</li>
+                    <li>移动赋值运算符 (C++11)</li>
+                </ol>
+
+                <h3>构造函数与析构函数</h3>
+                <div class="code-block">
+                    <pre><code>class Student {
+private:
+    std::string name;
+    int age;
+    double* grades;  // 动态数组
+    int gradeCount;
+
+public:
+    // 默认构造函数
+    Student() : name("未知"), age(0), grades(nullptr), gradeCount(0) {}
+    
+    // 参数化构造函数
+    Student(std::string n, int a) : name(n), age(a), grades(nullptr), gradeCount(0) {}
+    
+    // 拷贝构造函数
+    Student(const Student &other) : name(other.name), age(other.age), gradeCount(other.gradeCount) {
+        // 深拷贝动态数组
+        if (other.grades) {
+            grades = new double[gradeCount];
+            for (int i = 0; i < gradeCount; i++) {
+                grades[i] = other.grades[i];
+            }
+        } else {
+            grades = nullptr;
+        }
+    }
+    
+    // 拷贝赋值运算符
+    Student& operator=(const Student &other) {
+        if (this != &other) {  // 防止自赋值
+            // 释放现有资源
+            delete[] grades;
+            
+            // 复制新资源
+            name = other.name;
+            age = other.age;
+            gradeCount = other.gradeCount;
+            
+            if (other.grades) {
+                grades = new double[gradeCount];
+                for (int i = 0; i < gradeCount; i++) {
+                    grades[i] = other.grades[i];
+                }
+            } else {
+                grades = nullptr;
+            }
+        }
+        return *this;
+    }
+    
+    // 移动构造函数 (C++11)
+    Student(Student &&other) noexcept : name(std::move(other.name)), age(other.age), 
+                                        grades(other.grades), gradeCount(other.gradeCount) {
+        // 将源对象置于有效但可析构状态
+        other.grades = nullptr;
+        other.gradeCount = 0;
+    }
+    
+    // 移动赋值运算符 (C++11)
+    Student& operator=(Student &&other) noexcept {
+        if (this != &other) {
+            // 释放现有资源
+            delete[] grades;
+            
+            // 移动资源
+            name = std::move(other.name);
+            age = other.age;
+            grades = other.grades;
+            gradeCount = other.gradeCount;
+            
+            // 将源对象置于有效但可析构状态
+            other.grades = nullptr;
+            other.gradeCount = 0;
+        }
+        return *this;
+    }
+    
+    // 析构函数
+    ~Student() {
+        delete[] grades;  // 释放动态分配的内存
+    }
+};</code></pre>
+                </div>
+
+                <div class="advanced">
+                    <h4>Rule of Three/Five/Zero</h4>
+                    <ul>
+                        <li><strong>Rule of Three</strong>：如果一个类需要自定义析构函数、拷贝构造函数或拷贝赋值运算符，那么它可能需要所有这三个</li>
+                        <li><strong>Rule of Five</strong>：由于C++11引入了移动语义，现在还需要考虑移动构造函数和移动赋值运算符</li>
+                        <li><strong>Rule of Zero</strong>：理想情况下，类不应自定义这些特殊成员函数，而应依赖智能指针等资源管理类</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="encapsulation" class="section">
+                <h2>封装与访问控制</h2>
+                <p>封装是OOP的基本原则之一，它将数据和行为捆绑在一起，并控制对其的访问。</p>
+
+                <h3>访问修饰符</h3>
+                <table>
+                    <tr>
+                        <th>修饰符</th>
+                        <th>类内访问</th>
+                        <th>派生类访问</th>
+                        <th>外部访问</th>
+                    </tr>
+                    <tr>
+                        <td><code>private</code></td>
+                        <td>是</td>
+                        <td>否</td>
+                        <td>否</td>
+                    </tr>
+                    <tr>
+                        <td><code>protected</code></td>
+                        <td>是</td>
+                        <td>是</td>
+                        <td>否</td>
+                    </tr>
+                    <tr>
+                        <td><code>public</code></td>
+                        <td>是</td>
+                        <td>是</td>
+                        <td>是</td>
+                    </tr>
+                </table>
+
+                <h3>封装示例</h3>
+                <div class="code-block">
+                    <pre><code>class BankAccount {
+private:
+    std::string accountNumber;
+    double balance;
+    std::vector&lt;Transaction&gt; transactionHistory;
+
+    // 私有方法，辅助函数
+    void logTransaction(const Transaction& t) {
+        transactionHistory.push_back(t);
+    }
+
+public:
+    BankAccount(std::string accNum, double initialBalance = 0.0) 
+        : accountNumber(accNum), balance(initialBalance) {}
+    
+    void deposit(double amount) {
+        if (amount <= 0) {
+            throw std::invalid_argument("存款金额必须为正数");
+        }
+        balance += amount;
+        logTransaction(Transaction("DEPOSIT", amount));
+    }
+    
+    bool withdraw(double amount) {
+        if (amount <= 0) {
+            throw std::invalid_argument("取款金额必须为正数");
+        }
+        if (balance >= amount) {
+            balance -= amount;
+            logTransaction(Transaction("WITHDRAW", amount));
+            return true;
+        }
+        return false;
+    }
+    
+    double getBalance() const {
+        return balance;
+    }
+    
+    std::string getAccountNumber() const {
+        return accountNumber;
+    }
+    
+    // 只提供const版本的交易历史访问
+    const std::vector&lt;Transaction&gt;& getTransactionHistory() const {
+        return transactionHistory;
+    }
+};</code></pre>
+                </div>
+
+                <div class="note">
+                    <p>良好的封装实践：将数据成员设为private，通过public方法提供受控的访问。避免返回内部数据的非const引用或指针，以防止外部代码意外修改内部状态。</p>
+                </div>
+            </section>
+
+            <section id="inheritance" class="section">
+                <h2>继承</h2>
+                <p>继承允许我们基于现有类创建新类，新类继承了现有类的特性和行为，并可以添加新的功能。</p>
+
+                <h3>继承类型</h3>
+                <table>
+                    <tr>
+                        <th>继承方式</th>
+                        <th>基类public成员</th>
+                        <th>基类protected成员</th>
+                        <th>基类private成员</th>
+                    </tr>
+                    <tr>
+                        <td><code>public</code></td>
+                        <td>派生类public成员</td>
+                        <td>派生类protected成员</td>
+                        <td>不可访问</td>
+                    </tr>
+                    <tr>
+                        <td><code>protected</code></td>
+                        <td>派生类protected成员</td>
+                        <td>派生类protected成员</td>
+                        <td>不可访问</td>
+                    </tr>
+                    <tr>
+                        <td><code>private</code></td>
+                        <td>派生类private成员</td>
+                        <td>派生类private成员</td>
+                        <td>不可访问</td>
+                    </tr>
+                </table>
+
+                <h3>继承示例</h3>
+                <div class="code-block">
+                    <pre><code>// 基类
+class Shape {
+protected:
+    std::string color;
+    Point center;
+
+public:
+    Shape(std::string c, Point cntr) : color(c), center(cntr) {}
+    
+    virtual ~Shape() {}  // 虚析构函数，确保正确析构派生类对象
+    
+    virtual double getArea() const = 0;  // 纯虚函数，使Shape成为抽象类
+    
+    virtual void draw() const {
+        std::cout << "绘制形状，颜色: " << color << std::endl;
+    }
+    
+    void move(const Point& newCenter) {
+        center = newCenter;
+    }
+    
+    std::string getColor() const {
+        return color;
+    }
+    
+    void setColor(std::string c) {
+        color = c;
+    }
+};
+
+// 派生类 - 圆形
+class Circle : public Shape {
+private:
+    double radius;
+
+public:
+    Circle(std::string c, Point cntr, double r) 
+        : Shape(c, cntr), radius(r) {}
+    
+    double getArea() const override {
+        return 3.14159 * radius * radius;
+    }
+    
+    void draw() const override {
+        std::cout << "绘制圆形，颜色: " << color 
+                  << ", 半径: " << radius << std::endl;
+    }
+    
+    double getRadius() const {
+        return radius;
+    }
+    
+    void setRadius(double r) {
+        if (r <= 0) {
+            throw std::invalid_argument("半径必须为正数");
+        }
+        radius = r;
+    }
+};
+
+// 派生类 - 矩形
+class Rectangle : public Shape {
+private:
+    double width;
+    double height;
+
+public:
+    Rectangle(std::string c, Point cntr, double w, double h) 
+        : Shape(c, cntr), width(w), height(h) {}
+    
+    double getArea() const override {
+        return width * height;
+    }
+    
+    void draw() const override {
+        std::cout << "绘制矩形，颜色: " << color 
+                  << ", 宽度: " << width 
+                  << ", 高度: " << height << std::endl;
+    }
+    
+    double getWidth() const {
+        return width;
+    }
+    
+    double getHeight() const {
+        return height;
+    }
+    
+    void setDimensions(double w, double h) {
+        if (w <= 0 || h <= 0) {
+            throw std::invalid_argument("尺寸必须为正数");
+        }
+        width = w;
+        height = h;
+    }
+};</code></pre>
+                </div>
+
+                <div class="advanced">
+                    <h4>继承中的构造函数和析构函数</h4>
+                    <p>派生类构造函数调用顺序：</p>
+                    <ol>
+                        <li>基类构造函数</li>
+                        <li>成员对象构造函数（按声明顺序）</li>
+                        <li>派生类构造函数体</li>
+                    </ol>
+                    <p>析构函数调用顺序相反：</p>
+                    <ol>
+                        <li>派生类析构函数体</li>
+                        <li>成员对象析构函数（按声明逆序）</li>
+                        <li>基类析构函数</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="polymorphism" class="section">
+                <h2>多态</h2>
+                <p>多态允许使用同一接口处理不同类型的对象，是面向对象编程的核心概念之一。</p>
+
+                <h3>虚函数与动态绑定</h3>
+                <div class="code-block">
+                    <pre><code>class Animal {
+public:
+    virtual void makeSound() const {
+        std::cout << "动物发出声音" << std::endl;
+    }
+    
+    virtual ~Animal() {}  // 虚析构函数，确保正确析构派生类对象
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() const override {
+        std::cout << "汪汪!" << std::endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void makeSound() const override {
+        std::cout << "喵喵!" << std::endl;
+    }
+};
+
+// 使用多态
+void animalSounds(const Animal* animals[], int count) {
+    for (int i = 0; i < count; i++) {
+        animals[i]->makeSound();  // 动态绑定，根据实际对象类型调用相应函数
+    }
+}
+
+int main() {
+    Dog dog;
+    Cat cat;
+    
+    Animal* animals[] = {&dog, &cat};
+    animalSounds(animals, 2);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>override和final关键字 (C++11)</h3>
+                <div class="code-block">
+                    <pre><code>class Base {
+public:
+    virtual void func() const;
+    virtual void finalFunc() const;
+};
+
+class Derived : public Base {
+public:
+    void func() const override;  // 明确表示重写基类虚函数
+    void finalFunc() const final;  // 禁止进一步重写
+};
+
+class FurtherDerived : public Derived {
+public:
+    void func() const override;  // 可以重写
+    // void finalFunc() const;  // 错误！不能重写final函数
+};</code></pre>
+                </div>
+
+                <div class="advanced">
+                    <h4>虚函数表(vtable)机制</h4>
+                    <p>C++通过虚函数表实现多态：</p>
+                    <ol>
+                        <li>每个包含虚函数的类都有一个虚函数表</li>
+                        <li>虚函数表存储指向该类虚函数的指针</li>
+                        <li>每个对象包含一个指向虚函数表的指针(vptr)</li>
+                        <li>调用虚函数时，通过vptr找到vtable，再找到正确的函数地址</li>
+                    </ol>
+                    <p>这种机制虽然增加了少量开销，但提供了强大的多态能力。</p>
+                </div>
+            </section>
+
+            <section id="abstract-classes" class="section">
+                <h2>抽象类与接口</h2>
+                <p>抽象类是包含至少一个纯虚函数的类，不能实例化。接口是一种特殊的抽象类，只包含纯虚函数。</p>
+
+                <h3>纯虚函数与抽象类</h3>
+                <div class="code-block">
+                    <pre><code>// 抽象类
+class Shape {
+public:
+    virtual double getArea() const = 0;  // 纯虚函数
+    virtual void draw() const = 0;       // 纯虚函数
+    
+    virtual ~Shape() {}  // 虚析构函数
+};
+
+// 接口类 - 只包含纯虚函数和虚析构函数
+class Drawable {
+public:
+    virtual void draw() const = 0;
+    virtual ~Drawable() {}
+};
+
+class Printable {
+public:
+    virtual void print() const = 0;
+    virtual ~Printable() {}
+};
+
+// 实现多个接口
+class Report : public Drawable, public Printable {
+private:
+    std::string title;
+    std::string content;
+
+public:
+    Report(std::string t, std::string c) : title(t), content(c) {}
+    
+    void draw() const override {
+        std::cout << "绘制报告: " << title << std::endl;
+    }
+    
+    void print() const override {
+        std::cout << "打印报告: " << title << std::endl;
+        std::cout << "内容: " << content << std::endl;
+    }
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="friends" class="section">
+                <h2>友元</h2>
+                <p>友元函数和友元类可以访问类的私有和保护成员，打破了封装性，但有时是必要的。</p>
+
+                <h3>友元函数</h3>
+                <div class="code-block">
+                    <pre><code>class Box {
+private:
+    double width;
+
+public:
+    Box(double w) : width(w) {}
+    
+    // 声明友元函数
+    friend void printWidth(const Box &box);
+    friend Box operator+(const Box &a, const Box &b);
+};
+
+// 定义友元函数
+void printWidth(const Box &box) {
+    // 可以直接访问私有成员
+    std::cout << "盒子宽度: " << box.width << std::endl;
+}
+
+Box operator+(const Box &a, const Box &b) {
+    return Box(a.width + b.width);
+}</code></pre>
+                </div>
+
+                <h3>友元类</h3>
+                <div class="code-block">
+                    <pre><code>class Storage {
+private:
+    int data[10];
+
+public:
+    Storage() {
+        for (int i = 0; i < 10; i++) {
+            data[i] = i;
+        }
+    }
+    
+    // 声明友元类
+    friend class Display;
+};
+
+class Display {
+public:
+    void show(const Storage &storage) {
+        // 可以直接访问Storage的私有成员
+        for (int i = 0; i < 10; i++) {
+            std::cout << storage.data[i] << " ";
+        }
+        std::cout << std::endl;
+    }
+};</code></pre>
+                </div>
+
+                <div class="warning">
+                    <p>注意：友元关系破坏了封装性，应谨慎使用。只有在确实需要访问类的内部实现细节，且无法通过公共接口实现时，才应考虑使用友元。</p>
+                </div>
+            </section>
+
+            <section id="static-members" class="section">
+                <h2>静态成员</h2>
+                <p>静态成员属于类而不是对象，所有对象共享同一份静态成员。</p>
+
+                <h3>静态数据成员和静态成员函数</h3>
+                <div class="code-block">
+                    <pre><code>class Counter {
+private:
+    static int count;  // 静态数据成员声明
+
+public:
+    Counter() {
+        count++;  // 每创建一个对象，计数增加
+    }
+    
+    ~Counter() {
+        count--;  // 每销毁一个对象，计数减少
+    }
+    
+    // 静态成员函数
+    static int getCount() {
+        return count;
+    }
+    
+    // 静态常量成员
+    static const int MAX_COUNT = 100;
+};
+
+// 静态数据成员定义和初始化
+int Counter::count = 0;</code></pre>
+                </div>
+
+                <h3>使用静态成员</h3>
+                <div class="code-block">
+                    <pre><code>int main() {
+    std::cout << "初始计数: " << Counter::getCount() << std::endl;
+    std::cout << "最大计数: " << Counter::MAX_COUNT << std::endl;
+    
+    {
+        Counter c1;
+        std::cout << "创建1个对象后计数: " << Counter::getCount() << std::endl;
+        
+        Counter c2;
+        std::cout << "创建2个对象后计数: " << Counter::getCount() << std::endl;
+    }
+    
+    std::cout << "所有对象销毁后计数: " << Counter::getCount() << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="operator-overloading" class="section">
+                <h2>运算符重载</h2>
+                <p>C++允许重定义大多数内置运算符，使它们能够用于用户定义的类型。</p>
+
+                <h3>重载算术运算符</h3>
+                <div class="code-block">
+                    <pre><code>class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) {}
+    
+    // 重载+运算符（成员函数版本）
+    Complex operator+(const Complex &other) const {
+        return Complex(real + other.real, imag + other.imag);
+    }
+    
+    // 重载-运算符（成员函数版本）
+    Complex operator-(const Complex &other) const {
+        return Complex(real - other.real, imag - other.imag);
+    }
+    
+    // 重载+=运算符
+    Complex& operator+=(const Complex &other) {
+        real += other.real;
+        imag += other.imag;
+        return *this;
+    }
+    
+    // 重载前置++运算符
+    Complex& operator++() {
+        ++real;
+        return *this;
+    }
+    
+    // 重载后置++运算符
+    Complex operator++(int) {
+        Complex temp = *this;
+        ++real;
+        return temp;
+    }
+    
+    // 重载输出运算符<<（友元函数）
+    friend std::ostream& operator<<(std::ostream &os, const Complex &c);
+    
+    // 重载输入运算符>>（友元函数）
+    friend std::istream& operator>>(std::istream &is, Complex &c);
+};
+
+// 重载<<运算符
+std::ostream& operator<<(std::ostream &os, const Complex &c) {
+    os << c.real;
+    if (c.imag >= 0) {
+        os << " + " << c.imag << "i";
+    } else {
+        os << " - " << -c.imag << "i";
+    }
+    return os;
+}
+
+// 重载>>运算符
+std::istream& operator>>(std::istream &is, Complex &c) {
+    is >> c.real >> c.imag;
+    return is;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="templates" class="section">
+                <h2>模板与泛型</h2>
+                <p>模板是C++中实现泛型编程的工具，允许编写与数据类型无关的代码。</p>
+
+                <h3>函数模板</h3>
+                <div class="code-block">
+                    <pre><code>// 函数模板
+template <typename T>
+T getMax(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+// 多类型参数的函数模板
+template <typename T, typename U>
+auto getMax(T a, U b) -> decltype(a > b ? a : b) {
+    return (a > b) ? a : b;
+}
+
+// 特化版本
+template <>
+const char* getMax<const char*>(const char* a, const char* b) {
+    return (strcmp(a, b) > 0) ? a : b;
+}
+
+// 可变参数模板 (C++11)
+template <typename... Args>
+void printAll(Args... args) {
+    (std::cout << ... << args) << std::endl;  // 折叠表达式 (C++17)
+}</code></pre>
+                </div>
+
+                <h3>类模板</h3>
+                <div class="code-block">
+                    <pre><code>// 类模板
+template <typename T>
+class Stack {
+private:
+    T* elements;
+    int capacity;
+    int topIndex;
+
+public:
+    Stack(int size = 10) : capacity(size), topIndex(-1) {
+        elements = new T[capacity];
+    }
+    
+    ~Stack() {
+        delete[] elements;
+    }
+    
+    void push(const T &value) {
+        if (topIndex >= capacity - 1) {
+            // 动态扩容
+            capacity *= 2;
+            T* newElements = new T[capacity];
+            for (int i = 0; i <= topIndex; i++) {
+                newElements[i] = elements[i];
+            }
+            delete[] elements;
+            elements = newElements;
+        }
+        elements[++topIndex] = value;
+    }
+    
+    T pop() {
+        if (topIndex < 0) {
+            throw std::out_of_range("栈为空");
+        }
+        return elements[topIndex--];
+    }
+    
+    bool isEmpty() const {
+        return topIndex == -1;
+    }
+    
+    int size() const {
+        return topIndex + 1;
+    }
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="best-practices" class="section">
+                <h2>面向对象编程最佳实践</h2>
+
+                <h3>设计原则</h3>
+                <ol>
+                    <li><strong>单一职责原则</strong>：一个类应该只有一个引起变化的原因</li>
+                    <li><strong>开放封闭原则</strong>：对扩展开放，对修改关闭</li>
+                    <li><strong>里氏替换原则</strong>：派生类必须能够替换其基类</li>
+                    <li><strong>接口隔离原则</strong>：使用多个专门的接口，而不是一个庞大的接口</li>
+                    <li><strong>依赖倒置原则</strong>：依赖于抽象而不是具体实现</li>
+                </ol>
+
+                <h3>C++特定建议</h3>
+                <ul>
+                    <li>优先使用组合而不是继承</li>
+                    <li>使用const正确性</li>
+                    <li>遵循Rule of Zero/Five</li>
+                    <li>使用智能指针管理资源</li>
+                    <li>避免过度使用继承，优先使用模板实现泛型</li>
+                    <li>使用override和final关键字明确意图</li>
+                    <li>谨慎使用友元，它破坏了封装性</li>
+                </ul>
+
+                <div class="advanced">
+                    <h4>现代C++中的OOP</h4>
+                    <p>现代C++开发中，OOP不再是唯一的编程范式。通常结合：</p>
+                    <ul>
+                        <li><strong>泛型编程</strong>：通过模板实现</li>
+                        <li><strong>函数式编程</strong>：Lambda表达式、函数对象</li>
+                        <li><strong>过程式编程</strong>：自由函数、算法</li>
+                        <li><strong>元编程</strong>：编译时计算和代码生成</li>
+                    </ul>
+                    <p>选择合适的范式或组合多种范式，而不是强制使用纯粹的OOP。</p>
+                </div>
+            </section>
+
+            <div class="navigation-buttons">
+                <a href="basics.html" class="nav-button">上一章：C++基础</a>
+                <a href="#" class="nav-button">下一章：高级特性</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <!-- <script>
+        // 移动端菜单切换
+        document.querySelector('.burger').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // 如果是移动端，点击后关闭菜单
+                    if (window.innerWidth <= 900) {
+                        document.querySelector('.nav-links').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script> -->
+    <!-- 改全局 -->
+    <script src="../js/main2.js"></script>
+</body>
+
+</html>

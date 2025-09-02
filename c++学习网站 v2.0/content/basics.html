@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 使网页在不同设备上（尤其是移动设备）能正确自适应布局。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++基础语法 - C++学习入门</title>
+    <!-- 引入Googlez 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html" class="active">C++基础</a></li>
+                <li><a href="oop.html " >面向对象</a></li>
+                <li><a href="#">高级特性</a></li>
+                <li><a href="#">Effective C++</a></li>
+                <li><a href="#">STL源码剖析</a></li>
+                <li><a href="../about.html">关于我们</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#intro">C++简介</a></li>
+                <li><a href="#first-program">第一个程序</a></li>
+                <li><a href="#data-types">数据类型</a></li>
+                <li><a href="#variables">变量与常量</a></li>
+                <li><a href="#operators">运算符</a></li>
+                <li><a href="#control-flow">控制流</a></li>
+                <li><a href="#functions">函数</a></li>
+                <li><a href="#arrays">数组</a></li>
+                <li><a href="#pointers">指针</a></li>
+                <li><a href="#structures">结构体</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>C++基础语法</h1>
+            <p class="intro">C++是一种通用的、静态类型的编程语言，它支持过程化编程、面向对象编程和泛型编程。本章将详细介绍C++的基础语法。</p>
+
+            <section id="intro" class="section">
+                <h2>C++简介</h2>
+                <p>C++是由Bjarne Stroustrup于1979年在贝尔实验室开始开发的一种编程语言，最初被称为"C with
+                    Classes"（带类的C）。它既保持了C语言的高效性和灵活性，又增加了面向对象编程的特性。</p>
+                <p>C++被广泛应用于系统软件、游戏开发、嵌入式系统、高性能计算、金融系统等领域。许多著名的软件和系统都是用C++编写的，包括Windows操作系统、Adobe系列软件、Chrome浏览器和Unreal游戏引擎等。
+                </p>
+            </section>
+
+            <section id="first-program" class="section">
+                <h2>第一个C++程序</h2>
+                <p>以下是一个简单的C++程序，它输出"Hello, World!"到屏幕上：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+                </div>
+                <p>让我们逐行解释这个程序：</p>
+                <ul>
+                    <li><code>#include &lt;iostream&gt;</code>: 包含输入输出流库，提供了输入输出功能</li>
+                    <li><code>int main()</code>: 主函数，程序的入口点，每个C++程序都必须有且只有一个main函数</li>
+                    <li><code>std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;</code>: 输出字符串到屏幕，std::endl表示换行</li>
+                    <li><code>return 0;</code>: 返回0，表示程序正常结束</li>
+                </ul>
+            </section>
+
+            <section id="data-types" class="section">
+                <h2>数据类型</h2>
+                <p>C++是一种静态类型语言，这意味着所有变量在使用前必须声明其类型。C++提供了丰富的数据类型：</p>
+
+                <h3>基本数据类型</h3>
+                <table>
+                    <tr>
+                        <th>类型</th>
+                        <th>描述</th>
+                        <th>大小(字节)</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td><code>int</code></td>
+                        <td>整数类型</td>
+                        <td>4</td>
+                        <td><code>int a = 10;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>float</code></td>
+                        <td>单精度浮点数</td>
+                        <td>4</td>
+                        <td><code>float b = 3.14f;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>double</code></td>
+                        <td>双精度浮点数</td>
+                        <td>8</td>
+                        <td><code>double c = 3.14159;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>char</code></td>
+                        <td>字符类型</td>
+                        <td>1</td>
+                        <td><code>char d = 'A';</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>bool</code></td>
+                        <td>布尔类型</td>
+                        <td>1</td>
+                        <td><code>bool e = true;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>void</code></td>
+                        <td>无类型</td>
+                        <td>N/A</td>
+                        <td>用于函数无返回值</td>
+                    </tr>
+                </table>
+
+                <h3>类型修饰符</h3>
+                <p>C++允许使用修饰符来改变基本数据类型的含义：</p>
+                <ul>
+                    <li><code>signed</code>：表示有符号数（默认）</li>
+                    <li><code>unsigned</code>：表示无符号数</li>
+                    <li><code>short</code>：短整型</li>
+                    <li><code>long</code>：长整型</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>short int si;          // 短整型
+long int li;           // 长整型
+unsigned int ui;       // 无符号整型
+signed long int sli;   // 有符号长整型</code></pre>
+                </div>
+            </section>
+
+            <section id="variables" class="section">
+                <h2>变量和常量</h2>
+                <p>变量是程序中用于存储数据的内存位置，而常量是固定值，在程序执行期间不能改变。</p>
+
+                <h3>变量声明和初始化</h3>
+                <div class="code-block">
+                    <pre><code>// 声明变量
+int age;
+float salary;
+
+// 初始化变量
+age = 25;
+salary = 5000.50f;
+
+// 声明并初始化
+int score = 95;
+std::string name = "John";
+
+// C++11引入的统一初始化语法
+int count{10};
+double price{19.99};</code></pre>
+                </div>
+
+                <h3>常量</h3>
+                <div class="code-block">
+                    <pre><code>// 使用const关键字（推荐）
+const int MAX_AGE = 100;
+const double PI = 3.1415926535;
+
+// 使用constexpr（C++11引入，编译期常量）
+constexpr int ARRAY_SIZE = 100;
+
+// 使用#define预处理指令（C风格，不推荐）
+#define MIN_AGE 18</code></pre>
+                </div>
+
+                <h3>作用域</h3>
+                <p>C++变量有不同的作用域：</p>
+                <ul>
+                    <li><strong>局部变量</strong>：在函数或代码块内部声明，只在该区域内有效</li>
+                    <li><strong>全局变量</strong>：在所有函数外部声明，在整个程序中有效</li>
+                    <li><strong>形式参数</strong>：在函数参数中声明，作为该函数的局部变量</li>
+                </ul>
+            </section>
+
+            <section id="operators" class="section">
+                <h2>运算符</h2>
+                <p>C++支持多种运算符：</p>
+
+                <h3>算术运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>描述</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>加法</td>
+                        <td>a + b</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>减法</td>
+                        <td>a - b</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>乘法</td>
+                        <td>a * b</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>除法</td>
+                        <td>a / b</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>取模</td>
+                        <td>a % b</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>自增</td>
+                        <td>a++ 或 ++a</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>自减</td>
+                        <td>a-- 或 --a</td>
+                    </tr>
+                </table>
+
+                <h3>其他运算符</h3>
+                <ul>
+                    <li><strong>赋值运算符</strong>: =, +=, -=, *=, /=, %=, &=, |=, ^=, <<=,>>=</li>
+                    <li><strong>比较运算符</strong>: ==, !=, >, <,>=, <=< /li>
+                    <li><strong>逻辑运算符</strong>: &&, ||, !</li>
+                    <li><strong>位运算符</strong>: &, |, ^, ~, <<,>></li>
+                    <li><strong>条件运算符</strong>: ? : (三元运算符)</li>
+                    <li><strong>逗号运算符</strong>: ,</li>
+                    <li><strong>成员访问运算符</strong>: ., -></li>
+                    <li><strong>指针运算符</strong>: & (取地址), * (解引用)</li>
+                </ul>
+            </section>
+
+            <section id="control-flow" class="section">
+                <h2>控制流</h2>
+                <p>C++提供了多种控制流语句来控制程序的执行流程：</p>
+
+                <h3>条件语句</h3>
+                <div class="code-block">
+                    <pre><code>// if语句
+if (age >= 18) {
+    std::cout << "成年人" << std::endl;
+} else if (age >= 13) {
+    std::cout << "青少年" << std::endl;
+} else {
+    std::cout << "儿童" << std::endl;
+}
+
+// switch语句
+switch (grade) {
+    case 'A':
+        std::cout << "优秀" << std::endl;
+        break;
+    case 'B':
+        std::cout << "良好" << std::endl;
+        break;
+    case 'C':
+        std::cout << "及格" << std::endl;
+        break;
+    default:
+        std::cout << "不及格" << std::endl;
+}</code></pre>
+                </div>
+
+                <h3>循环语句</h3>
+                <div class="code-block">
+                    <pre><code>// for循环
+for (int i = 0; i < 10; i++) {
+    std::cout << i << std::endl;
+}
+
+// 范围for循环 (C++11)
+int arr[] = {1, 2, 3, 4, 5};
+for (int num : arr) {
+    std::cout << num << std::endl;
+}
+
+// while循环
+int j = 0;
+while (j < 10) {
+    std::cout << j << std::endl;
+    j++;
+}
+
+// do-while循环
+int k = 0;
+do {
+    std::cout << k << std::endl;
+    k++;
+} while (k < 10);</code></pre>
+                </div>
+
+                <h3>跳转语句</h3>
+                <ul>
+                    <li><code>break</code>: 跳出循环或switch语句</li>
+                    <li><code>continue</code>: 跳过当前循环的剩余部分，进入下一次循环</li>
+                    <li><code>goto</code>: 无条件跳转到标记的语句（不推荐使用）</li>
+                    <li><code>return</code>: 从函数返回</li>
+                </ul>
+            </section>
+
+            <section id="functions" class="section">
+                <h2>函数</h2>
+                <p>函数是一组一起执行任务的语句，每个C++程序至少有一个main函数。</p>
+
+                <h3>函数定义</h3>
+                <div class="code-block">
+                    <pre><code>// 函数声明
+int add(int a, int b);
+
+// 函数定义
+int add(int a, int b) {
+    return a + b;
+}
+
+// 调用函数
+int result = add(5, 3);  // result = 8</code></pre>
+                </div>
+
+                <h3>函数参数传递</h3>
+                <p>C++支持三种参数传递方式：</p>
+                <ul>
+                    <li><strong>传值</strong>：函数接收参数的副本，修改不影响原值</li>
+                    <li><strong>传引用</strong>：函数接收参数的引用，修改会影响原值</li>
+                    <li><strong>传指针</strong>：函数接收参数的指针，通过指针修改原值</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>// 传值
+void incrementByValue(int x) {
+    x = x + 1;  // 不影响原值
+}
+
+// 传引用
+void incrementByReference(int &x) {
+    x = x + 1;  // 影响原值
+}
+
+// 传指针
+void incrementByPointer(int *x) {
+    *x = *x + 1;  // 影响原值
+}</code></pre>
+                </div>
+
+                <h3>函数重载</h3>
+                <p>C++允许在同一作用域内声明多个同名函数，只要它们的参数列表不同：</p>
+                <div class="code-block">
+                    <pre><code>int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+std::string add(std::string a, std::string b) {
+    return a + b;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="arrays" class="section">
+                <h2>数组</h2>
+                <p>数组是相同类型元素的集合，存储在连续的内存位置中。</p>
+
+                <h3>数组声明和初始化</h3>
+                <div class="code-block">
+                    <pre><code>// 声明数组
+int numbers[5];  // 包含5个整数的数组
+
+// 初始化数组
+int primes[5] = {2, 3, 5, 7, 11};
+
+// 省略大小
+int primes[] = {2, 3, 5, 7, 11};  // 编译器自动计算大小
+
+// 访问数组元素
+int first = primes[0];  // 第一个元素
+int last = primes[4];   // 最后一个元素
+
+// 多维数组
+int matrix[3][3] = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};</code></pre>
+                </div>
+
+                <h3>标准库数组 (C++11)</h3>
+                <p>C++11引入了std::array，比传统数组更安全：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;array&gt;
+
+std::array&lt;int, 5&gt; primes = {2, 3, 5, 7, 11};
+
+// 访问元素
+int first = primes[0];
+int size = primes.size();  // 获取数组大小</code></pre>
+                </div>
+            </section>
+
+            <section id="pointers" class="section">
+                <h2>指针</h2>
+                <p>指针是存储变量内存地址的变量，是C++的重要特性。</p>
+
+                <h3>指针基础</h3>
+                <div class="code-block">
+                    <pre><code>int var = 20;   // 实际变量
+int *ptr;       // 指针变量
+
+ptr = &var;     // 在指针变量中存储var的地址
+
+std::cout << "var的值: " << var << std::endl;
+std::cout << "var的地址: " << &var << std::endl;
+std::cout << "ptr的值: " << ptr << std::endl;
+std::cout << "ptr指向的值: " << *ptr << std::endl;</code></pre>
+                </div>
+
+                <h3>指针运算</h3>
+                <div class="code-block">
+                    <pre><code>int arr[5] = {10, 20, 30, 40, 50};
+int *ptr = arr;  // ptr指向arr的第一个元素
+
+std::cout << *ptr << std::endl;  // 输出10
+ptr++;  // 移动到下一个元素
+std::cout << *ptr << std::endl;  // 输出20</code></pre>
+                </div>
+
+                <h3>动态内存分配</h3>
+                <div class="code-block">
+                    <pre><code>// 使用new分配内存
+int *ptr = new int;   // 分配一个整数的内存
+*ptr = 100;           // 在分配的内存中存储值
+
+// 使用delete释放内存
+delete ptr;
+
+// 分配数组
+int *arr = new int[10];  // 分配10个整数的数组
+
+// 释放数组
+delete[] arr;</code></pre>
+                </div>
+            </section>
+
+            <section id="structures" class="section">
+                <h2>结构体</h2>
+                <p>结构体是一种用户自定义的数据类型，允许将不同类型的数据组合在一起。</p>
+
+                <h3>结构体定义和使用</h3>
+                <div class="code-block">
+                    <pre><code>// 定义结构体
+struct Person {
+    std::string name;
+    int age;
+    float height;
+};
+
+// 创建结构体变量
+Person person1;
+person1.name = "张三";
+person1.age = 25;
+person1.height = 175.5f;
+
+// 初始化结构体
+Person person2 = {"李四", 30, 180.0f};
+
+// 结构体指针
+Person *ptr = &person1;
+std::cout << ptr->name << std::endl;  // 使用->访问成员</code></pre>
+                </div>
+
+                <h3>结构体与函数</h3>
+                <div class="code-block">
+                    <pre><code>// 结构体作为函数参数
+void printPerson(Person p) {
+    std::cout << "姓名: " << p.name << std::endl;
+    std::cout << "年龄: " << p.age << std::endl;
+    std::cout << "身高: " << p.height << std::endl;
+}
+
+// 结构体作为函数返回值
+Person createPerson(std::string name, int age, float height) {
+    Person p;
+    p.name = name;
+    p.age = age;
+    p.height = height;
+    return p;
+}</code></pre>
+                </div>
+            </section>
+
+            <div class="navigation-buttons">
+                <a href="../index.html" class="nav-button">返回首页</a>
+                <a href="oop.html" class="nav-button">下一章：面向对象编程</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <script src="../js/main2.js"></script>
+</body>
+
+</html>

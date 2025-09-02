@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 8.31 新增加载页面过渡 -->
+    <!-- <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>正在加载C++学习资源...</p>
+        </div>
+    </div> -->
+
+    <header>
+        <nav>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero"
+            style="background: linear-gradient(white, rgba(0, 0, 0, 0.5)), url('images/hero.svg');">
+            <h1>欢迎来到C++学习入门网站</h1>
+            <p>从零开始，轻松掌握C++编程</p>
+            <a href="content/basics.html" class="btn">开始学习</a>
+        
+            <!-- 波浪效果 -->
+            <div class="waves-container">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        
+            <!-- 学习时间计数器
+            <div class="counter-container">
+                <div class="counter-title">已累计学习</div>
+                <div class="counter-time" id="learning-counter">00:00:00</div>
+            </div> -->
+            <!-- 北京时间显示器 -->
+            <div class="counter-container">
+                <!-- <div class="counter-title">北京时间</div> -->
+                <div class="counter-time" id="learning-counter">00:00:00</div>
+                <div class="counter-date" id="learning-date">0000-00-00 星期零</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-box">
+                <a href="content/basics.html" class="btn">基础语法</a>
+                <p>学习C++的基本语法、数据类型、控制流等基础知识</p>
+            </div>
+            <div class="feature-box">
+                <a href="content/oop.html" class="btn">面向对象</a>
+                <p>掌握类、对象、继承、多态等面向对象编程特性</p>
+            </div>
+            <div class="feature-box">
+                <a href="#" class="btn">高级特性</a>
+                <p>探索模板、STL、异常处理等C++高级特性</p>
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2>学习反馈</h2>
+            <div class="testimonial-box">
+                <p>"这个网站让我轻松入门了C++，讲解非常清晰！"</p>
+                <p class="author">— 张三，初学者</p>
+            </div>
+            <div class="testimonial-box">
+                <p>"作为一名转专业的学生，这个网站帮我打下了坚实的C++基础。"</p>
+                <p class="author">— 李四，计算机专业学生</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <script src="js/main2.js"></script>
+</body>
+
+</html>
