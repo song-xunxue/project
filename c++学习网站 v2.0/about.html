@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            flex: 1 1 300px;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #4CAF50;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="content/basics.html">C++基础</a></li>
+                <li><a href="content/oop.html" >面向对象</a></li>
+                <li><a href="#">高级特性</a></li>
+                <li><a href="#">Effcctive C++</a></li>
+                <li><a href="#">STL源码剖析</a></li>
+                <li><a href="about.html" class="active">关于我们</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>关于我们</h1>
+            <p class="intro">欢迎访问C++学习入门网站，我们致力于为初学者提供高质量的C++编程学习资源。</p>
+
+            <div class="section">
+                <h2>网站简介</h2>
+                <p>本网站是一个面向C++初学者的学习平台，提供从基础语法到高级特性的全面教程。我们的目标是帮助初学者快速掌握C++编程技能，为进一步学习计算机科学打下坚实的基础。</p>
+                <p>网站内容包括：</p>
+                <ul>
+                    <li>基础语法：变量、数据类型、运算符、控制流等</li>
+                    <li>面向对象：类、对象、继承、多态等</li>
+                    <li>高级特性：模板、STL、异常处理、智能指针等</li>
+                    <li>示例代码：实用的C++代码示例和项目</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>为什么学习C++</h2>
+                <p>C++是一种功能强大的编程语言，它具有以下优势：</p>
+                <ul>
+                    <li><strong>性能优越</strong>：C++是一种编译型语言，执行效率高</li>
+                    <li><strong>灵活性高</strong>：支持多种编程范式，包括过程化、面向对象和泛型编程</li>
+                    <li><strong>应用广泛</strong>：用于系统编程、游戏开发、嵌入式系统、高性能计算等领域</li>
+                    <li><strong>就业前景好</strong>：掌握C++的程序员在就业市场上具有竞争力</li>
+                    <li><strong>为学习其他语言打下基础</strong>：许多现代编程语言都借鉴了C++的语法和特性</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1>开发团队</h1>
+            <p class="intro">欢迎访问C++学习入门网站，我们致力于为初学者提供高质量的C++编程学习资源。</p>
+
+            <div class="section">
+                <h2>团队简介</h2>
+                <p>我们是一个由6名计算机科学专业学生组成的学习团队，致力于创建一个高质量的C++学习平台。我们的目标是帮助初学者快速掌握C++编程技能，为进一步学习计算机科学打下坚实的基础。</p>
+                <p>我们的团队成员来自不同的背景，但都对编程充满热情。我们分工合作，共同完成了这个网站的设计和开发。</p>
+            </div>
+
+            <div class="section">
+                <h2>团队成员</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="images/liwenyu_avatar.svg" alt="李文煜" class="member-photo">
+                        <div class="member-name"><a href="members/liwenyu.html">李文煜</a></div>
+                        <div class="member-role">CIO、资料搜集员、项目经理</div>
+                        <p>负责项目整体规划、资料收集与管理</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/xiangzetao_avatar.svg" alt="向泽涛" class="member-photo">
+                        <div class="member-name"><a href="members/xiangzetao.html">向泽涛</a></div>
+                        <div class="member-role">技术总监、测试、程序员</div>
+                        <p>负责技术架构、代码实现与测试</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/niyujun_avatar.svg" alt="倪宇骏" class="member-photo">
+                        <div class="member-name"><a href="members/niyujun.html">倪宇骏</a></div>
+                        <div class="member-role">程序员/UI/网站编辑</div>
+                        <p>负责代码实现、UI设计与网站内容编辑</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/dongshaojun_avatar.svg" alt="董绍军" class="member-photo">
+                        <div class="member-name"><a href="members/dongshaojun.html">董绍军</a></div>
+                        <div class="member-role">网站编辑、视频剪辑</div>
+                        <p>负责网站内容编辑与视频制作</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/zhangyiqiao_avatar.svg" alt="张祎桥" class="member-photo">
+                        <div class="member-name"><a href="members/zhangyiqiao.html">张祎桥</a></div>
+                        <div class="member-role">UI设计、美工、资料收集</div>
+                        <p>负责界面设计、视觉美化与资料收集</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/hushengyuan_avatar.svg" alt="胡晟源" class="member-photo">
+                        <div class="member-name"><a href="members/hushengyuan.html">胡晟源</a></div>
+                        <div class="member-role">网站编辑、程序员</div>
+                        <p>负责网站内容编辑与代码实现</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>贡献指南</h2>
+
+        </section>
+        <section>
+            <div class="section">
+                <h2>联系我们</h2>
+                <p>如果您对网站有任何建议或问题，欢迎联系我们：</p>
+                <ul>
+                    <li>电子邮件：bit.edu.cn</li>
+                    <li>微信公众号：C++学习入门</li>
+                    <li>gittee：<a href="https://gitee.com/li_fjyr" target="_blank"></a>https://gitee.com/li_fjyr</li>
+                </ul>
+                <p>我们会定期更新网站内容，添加新的教程和示例代码。感谢您的支持！</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <script src="../js/main2.js"></script>
+</body>
+
+</html>
