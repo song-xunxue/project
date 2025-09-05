@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清蒸鱼 - 粤菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="yue-cai-styles.css">
+</head>
+
+<body class="cantonese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-red-600 dark:text-red-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../yuecai.html"
+                    class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回粤菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">清蒸鱼</h1>
+                    <p class="text-xl opacity-90">Steamed Fish</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">鲜嫩</span>
+                        <span class="flavor-tag">清淡</span>
+                        <span class="flavor-tag">原汁原味</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="fresh-tag"><i class="fas fa-fish mr-1"></i>注重鲜味</span>
+                        <span class="fresh-tag"><i class="fas fa-award mr-1"></i>粤菜精髓</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 30分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        清蒸鱼是粤菜中最能体现食材本味的经典菜肴，以其鲜嫩滑爽、原汁原味的特点而备受推崇。这道菜看似简单，实则对火候的掌控要求极高，是检验厨师技艺的重要标准。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        正宗的清蒸鱼要求鱼肉刚熟即止，肉质鲜嫩多汁，鱼皮完整不破，鱼眼突出，鱼身挺拔，淋上热油和蒸鱼豉油后，香气四溢，令人食欲大增。
+                    </p>
+                </section>
+
+                <!-- 烹饪方法 -->
+                <section class="cooking-method">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensil-spoon mr-2 text-red-600"></i>烹饪精髓
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        清蒸鱼的烹饪精髓在于"火候精准"。蒸鱼时间过长会导致鱼肉变老，时间不足则鱼肉不熟。
+                        传统做法是水沸后才放入鱼，大火蒸制，根据鱼的大小精确计算时间，蒸好后立即取出，淋上热油和蒸鱼豉油，瞬间激发香味。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        清蒸鱼起源于广东沿海地区，已有数百年历史。广东人注重食材新鲜，清蒸是最能保留食材原味的烹饪方式，因此清蒸鱼成为粤菜的代表作之一。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        在广东，有无鱼不成宴的说法，而清蒸鱼更是宴席上的必备菜肴。这道菜体现了粤菜追求食材本味、注重火候掌握的烹饪理念。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>选鱼与处理
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            选用500-600克的新鲜活鱼（如鲈鱼、石斑鱼、黄花鱼等），宰杀洗净后，在鱼身两面各划几刀，便于入味和受热均匀。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>腌制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            在鱼身内外均匀涂抹少许盐和料酒，鱼肚内放入姜片和葱段，腌制10分钟。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>准备蒸鱼
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            在蒸盘上铺上姜片和葱段，将鱼放在上面，鱼身上再放几片姜。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>蒸制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            水沸后放入鱼，大火蒸8-10分钟（根据鱼的大小调整时间），至鱼眼突出即可。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>准备调料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            蒸鱼的同时，将葱、姜、红椒切丝，浸泡在冷水中使其卷曲。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>淋油与调味
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            取出蒸好的鱼，倒掉蒸鱼时产生的汤汁，撒上葱姜丝和红椒丝。烧热适量油，淋在葱姜丝上激发出香味，最后淋上蒸鱼豉油即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/qinzhengyu.jpg" alt="清蒸鱼" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>新鲜海鱼</span>
+                                <span class="text-red-600 dark:text-red-400">1条(约500-600g)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">配料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜</span>
+                                <span class="text-red-600 dark:text-red-400">1大块</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱</span>
+                                <span class="text-red-600 dark:text-red-400">3-4根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>红椒</span>
+                                <span class="text-red-600 dark:text-red-400">半个</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>蒸鱼豉油</span>
+                                <span class="text-red-600 dark:text-red-400">3汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>食用油</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">125</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">22g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">4g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">1g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每100克估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-red-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>选择新鲜活鱼是成功的关键，鱼眼明亮、鱼鳃鲜红</li>
+                        <li>蒸鱼前一定要水沸后才放入，保持大火蒸制</li>
+                        <li>蒸鱼时间要精确，以鱼眼突出为熟透标志</li>
+                        <li>蒸鱼产生的汤汁要倒掉，以免有腥味</li>
+                        <li>淋油时油温要足够高，才能激发出葱姜的香味</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../yuecai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回粤菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-red-400 hover:text-red-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老火靓汤 - 粤菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="yue-cai-styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-red-600 dark:text-red-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../yuecai.html"
+                    class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回粤菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">老火靓汤</h1>
+                    <p class="text-xl opacity-90">Slow-Cooked Soup</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">滋补养生</span>
+                        <span class="flavor-tag">浓郁鲜美</span>
+                        <span class="flavor-tag">营养丰富</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="fresh-tag"><i class="fas fa-leaf mr-1"></i>药食同源</span>
+                        <span class="fresh-tag"><i class="fas fa-award mr-1"></i>粤菜精髓</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 3-4小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        老火靓汤是粤菜中的养生精髓，以其长时间的慢火熬煮、食材的营养充分释放而闻名。这道汤品不仅味道鲜美，更注重药食同源的理念，根据不同季节和体质需求搭配不同食材，达到滋补养生的效果。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        "老火"指的是长时间的慢火熬煮，"靓汤"则是指汤品色香味俱全。正宗的老火靓汤需要熬制3-4小时，让食材中的营养成分充分溶解到汤中，形成浓郁醇厚的口感。
+                    </p>
+                </section>
+
+                <!-- 烹饪方法 -->
+                <section class="cooking-method">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensil-spoon mr-2 text-red-600"></i>烹饪精髓
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        老火靓汤的烹饪精髓在于"慢火细熬"。将各种食材放入锅中，先用大火煮沸，然后转为小火慢慢熬煮数小时。
+                        这种方法能够让食材中的营养成分充分释放到汤中，同时保持汤品清澈不浑浊，味道浓郁鲜美。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        老火靓汤源自广东，有着悠久的历史，与岭南地区湿热的气候密切相关。广东人通过喝汤来调理身体，应对湿热气候带来的不适。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        在广东饮食文化中，"宁可食无菜，不可食无汤"的说法体现了汤品的重要性。老火靓汤不仅是日常饮食的一部分，更是家庭关爱和健康的象征。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>选材与准备
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            根据季节和体质需求选择主料（如猪骨、鸡肉、鱼肉等）和配料（如中药材、蔬菜、干果等）。肉类需先焯水去血沫。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>食材处理
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将主料洗净切块，配料根据需要进行浸泡或简单处理。中药材需提前清洗，蔬菜类去皮切块。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>煲汤
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将处理好的食材放入汤锅中，加入足量清水（一般是食材的2-3倍）。大火煮沸后撇去浮沫，转为小火慢熬3-4小时。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>调味
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            汤熬好后，根据个人口味加入适量盐调味。注意盐要在最后加，过早加盐会影响蛋白质的溶解和汤的鲜味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>出锅
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将汤盛入汤碗，可根据需要撒上少许香菜或葱花点缀。老火靓汤注重喝汤，食材通常作为次要。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/laohuotang.jpg" alt="老火靓汤" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料（以猪骨汤为例）</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>猪骨</span>
+                                <span class="text-red-600 dark:text-red-400">500g</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">配料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>胡萝卜</span>
+                                <span class="text-red-600 dark:text-red-400">1根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>玉米</span>
+                                <span class="text-red-600 dark:text-red-400">1根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>淮山</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>枸杞</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>红枣</span>
+                                <span class="text-red-600 dark:text-red-400">5-6颗</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜片</span>
+                                <span class="text-red-600 dark:text-red-400">3-4片</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">85</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">8g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">4g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">5g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每100克估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-red-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>肉类食材一定要先焯水，去除血水和杂质，这样汤才会清澈</li>
+                        <li>水量要一次加足，中途尽量不要加水，以免影响汤的浓度和风味</li>
+                        <li>火候要控制好，煮沸后一定要转为小火慢熬</li>
+                        <li>盐要最后放，过早放盐会使蛋白质凝固，影响汤的鲜味</li>
+                        <li>根据季节和体质选择不同的食材搭配，达到不同的养生效果</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../yuecai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回粤菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-red-400 hover:text-red-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // 暗黑模式切换功能
+        document.getElementById('darkModeToggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('bg-gray-100');
+            document.body.classList.toggle('dark:bg-gray-900');
+        });
+    </script>
+
+</body>
+
+</html>

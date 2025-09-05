@@ -1,0 +1,206 @@
+
+
+/* 自定义CSS - 粤菜风格 */
+.chinese-theme {
+    background: linear-gradient(to bottom, #f0fff4, #fff);
+}
+
+.dark-mode .chinese-theme {
+    background: linear-gradient(to bottom, #1a2a1a, #1f291f);
+}
+
+.dish-header {
+    background: linear-gradient(to right, #10b981, #06b6d4);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+
+.ingredient-card {
+    background: rgba(240, 255, 244, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #10b981;
+}
+
+.dark-mode .ingredient-card {
+    background: rgba(26, 42, 26, 0.9);
+    border-left: 4px solid #06b6d4;
+}
+
+.step-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .step-card {
+    background: #374137;
+    border: 1px solid #4b554b;
+}
+
+.step-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 0.75rem;
+}
+
+.dish-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dish-image:hover {
+    transform: scale(1.02);
+}
+
+.history-section {
+    background: rgba(240, 255, 244, 0.7);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px dashed #10b981;
+}
+
+.dark-mode .history-section {
+    background: rgba(26, 42, 26, 0.7);
+    border: 1px dashed #06b6d4;
+}
+
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.flavor-tag {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.dark-mode .flavor-tag {
+    background: #065f46;
+    color: #d1fae5;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: #10b981;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.back-button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.nutrition-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .nutrition-item {
+    background: #374137;
+}
+
+.nutrition-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #10b981;
+    margin-bottom: 0.25rem;
+}
+
+.dark-mode .nutrition-value {
+    color: #6ee7b7;
+}
+
+.nutrition-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.dark-mode .nutrition-label {
+    color: #d1d5db;
+}
+
+/* 粤菜特有的样式 */
+.delicate-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.dark-mode .delicate-tag {
+    background: #065f46;
+    color: #d1fae5;
+}
+
+.knife-skill {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #059669;
+}
+
+.dark-mode .knife-skill {
+    background: linear-gradient(135deg, #065f46, #047857);
+    border-left: 4px solid #10b981;
+}
+
+/* 粤菜特色图标颜色 */
+.yuecai-icon {
+    color: #10b981;
+}
+
+.dark-mode .yuecai-icon {
+    color: #6ee7b7;
+}
+

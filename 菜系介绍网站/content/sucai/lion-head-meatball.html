@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清炖蟹粉狮子头 - 苏菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="su-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../sucai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回苏菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">清炖蟹粉狮子头</h1>
+                    <p class="text-xl opacity-90">Stewed Crab Meat Lion's Head</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">鲜嫩</span>
+                        <span class="flavor-tag">醇厚</span>
+                        <span class="flavor-tag">鲜美</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="delicate-tag"><i class="fas fa-fire-alt mr-1"></i>火候精湛</span>
+                        <span class="delicate-tag"><i class="fas fa-crown mr-1"></i>淮扬名菜</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 3小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        清炖蟹粉狮子头是江苏扬州地区经典传统名菜，属于淮扬菜系。口感松软，肥而不腻，营养丰富。红烧，清蒸，脍炙人口。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        "狮子头"千百年来盛誉不衰，成功之举在于保持基本格调传统烹调方法，而在适应季节变化，不同消费，尊重信仰方面，随候用料因物而异，富于变化，成为系列佳肴。
+                    </p>
+                </section>
+
+                <!-- 烹饪技艺 -->
+                <section class="knife-skill">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-mortar-pestle mr-2 text-blue-600"></i>烹饪技艺
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        清炖蟹粉狮子头极其考验火候控制能力。肉丸要做得松软，入口即化，需要长时间的文火慢炖。
+                        正宗的狮子头应该是"形散神不散"，看似松散，但用勺子舀起来却能保持完整，体现了淮扬菜对火候的精湛掌控。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-blue-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        狮子头最早出现在南北朝时期，唐代郇国公韦陟的家厨创制了"葵花斩肉"，后因形似狮子头，被改称为"狮子头"。
+                        宋代诗人杨万里诗云："却将一脔配两螯，世间真有扬州鹤"，将吃螃蟹斩肉比喻成"骑鹤下扬州"的快活神仙。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        1949年开国大典的国宴中，清炖蟹粉狮子头作为主菜之一，深受中外宾客好评，从此成为国宴经典菜品。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>准备肉馅
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将猪肉肥瘦分开，肥肉切成小丁，瘦肉剁成肉泥，肥瘦比例以3:7为佳。加入葱姜末、料酒、盐、少量淀粉，顺一个方向搅拌上劲。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>处理蟹肉
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将蟹蒸熟，取出蟹肉和蟹黄，保留蟹壳。将蟹肉与肉馅混合均匀，蟹黄留作最后点缀。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>成型
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            取适量肉馅在手中来回摔打，使其紧实，做成大肉丸。注意不要用力揉搓，保持松软口感。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>炖煮
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            砂锅中放入清水或高汤，加入蟹壳、姜片、葱段烧开，转小火。轻轻放入肉丸，小火慢炖2-3小时。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>装盘
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将炖好的狮子头轻轻捞出放入汤碗，原汤过滤后倒入，放上烫好的小青菜，最后点缀蟹黄即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/lion-head-meatball.jpg" alt="清炖蟹粉狮子头" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-blue-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>猪五花肉</span>
+                                <span class="text-blue-600 dark:text-blue-400">500克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>大闸蟹</span>
+                                <span class="text-blue-600 dark:text-blue-400">2只</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">辅料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白菜叶</span>
+                                <span class="text-blue-600 dark:text-blue-400">4片</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>小青菜</span>
+                                <span class="text-blue-600 dark:text-blue-400">4棵</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-blue-600 dark:text-blue-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>精盐</span>
+                                <span class="text-blue-600 dark:text-blue-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜末</span>
+                                <span class="text-blue-600 dark:text-blue-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱末</span>
+                                <span class="text-blue-600 dark:text-blue-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>淀粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">2茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白胡椒粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">少许</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-blue-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">380</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">28g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">25g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">10g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-blue-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>选用肥瘦相间的五花肉，手工剁馅，保持肉的纤维感</li>
+                        <li>搅拌肉馅时要顺一个方向，使肉馅上劲，更有弹性</li>
+                        <li>炖煮时一定要用小火，保持微沸状态，避免大火使肉丸散开</li>
+                        <li>可以在肉丸下方垫上白菜叶，防止粘锅并增加清甜味</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../sucai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回苏菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

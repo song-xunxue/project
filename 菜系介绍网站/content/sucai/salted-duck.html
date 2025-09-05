@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盐水鸭 - 苏菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="su-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../sucai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回苏菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">盐水鸭</h1>
+                    <p class="text-xl opacity-90">Salted Duck</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">咸鲜</span>
+                        <span class="flavor-tag">香嫩</span>
+                        <span class="flavor-tag">皮白肉红</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="delicate-tag"><i class="fas fa-map-marker-alt mr-1"></i>金陵名菜</span>
+                        <span class="delicate-tag"><i class="fas fa-history mr-1"></i>历史悠久</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 2天</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        盐水鸭是南京著名的特产，属金陵菜，是金陵菜的代表之一，又叫桂花鸭，是中国地理标志产品。因南京有"金陵"别称，故也称"金陵盐水鸭"，久负盛名，至今已有两千五百多年历史。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        南京盐水鸭制作历史悠久，积累了丰富的制作经验。生产的盐水鸭皮白肉嫩、肥而不腻、香鲜味美，具有香、酥、嫩的特点。而以中秋前后，桂花盛开季节制作的的盐水鸭色味最佳，名为桂花鸭。
+                    </p>
+                </section>
+
+                <!-- 工艺特点 -->
+                <section class="knife-skill">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-industry mr-2 text-blue-600"></i>工艺特点
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        盐水鸭的制作工艺非常讲究，概括起来是"炒盐腌、清卤复、烘得干、焐得透"。盐水鸭咸甜清香，口感滑嫩，肉玉白，油润光亮，皮肥骨香，鲜嫩异常。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        最正宗的盐水鸭需要经过十余道工序，包括选鸭、制卤、腌制、清卤、晾干、烘烤、煮制等，每一步都有严格的标准和时间控制。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-blue-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        南京盐水鸭历史悠久，早在春秋战国时期，南京就有"筑地养鸭"的记载。据《陈书》记载，陈军与北齐军在金陵北郊外覆舟山一带交锋，陈军"人人裹饭，媲以鸭肉"、"炊米煮鸭"，使得士气大振，终于以少胜多。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        明太祖朱元璋建都南京后，南京鸭馔制作技艺日趋完善。盐水鸭作为南京鸭馔的代表之一，在明代已闻名遐迩。明代有首民谣:"古书院，琉璃截，玄色缎子，盐水鸭"，可见当时盐水鸭就已享有盛名。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>选鸭处理
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            选用生长周期约90天的瘦肉型鸭，宰杀后去毛、去内脏，洗净后沥干水分。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>炒盐腌制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将花椒和盐炒香，均匀涂抹在鸭身内外，腌制2-4小时，使鸭肉入味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>制作清卤
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            用清水加葱、姜、八角、桂皮等香料熬制成清卤，冷却后使用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>清卤复腌
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将腌制过的鸭子放入清卤中浸泡2-4小时，使鸭肉吸收卤水的香味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>晾干
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            取出鸭子，挂在通风处晾干表皮，约需4-6小时。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>煮制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鸭子放入沸水中，加入葱、姜、料酒等调料，小火煮约40分钟至熟透。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">7</span>冷却切块
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            取出煮好的鸭子，自然冷却后切块装盘，淋上少许煮鸭的原汤即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/salted-duck.jpg" alt="盐水鸭" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-blue-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>嫩鸭</span>
+                                <span class="text-blue-600 dark:text-blue-400">1只(约1500克)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">腌制料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>精盐</span>
+                                <span class="text-blue-600 dark:text-blue-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花椒</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">卤水料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>清水</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱段</span>
+                                <span class="text-blue-600 dark:text-blue-400">50克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜片</span>
+                                <span class="text-blue-600 dark:text-blue-400">30克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>八角</span>
+                                <span class="text-blue-600 dark:text-blue-400">3-4个</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>桂皮</span>
+                                <span class="text-blue-600 dark:text-blue-400">1小块</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-blue-600 dark:text-blue-400">50毫升</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-blue-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">240</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">18g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">16g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">2g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每100克估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 食用建议 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensil-spoon mr-2 text-blue-600"></i>食用建议
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>盐水鸭最好冷食，口感更佳，肉质更加紧实</li>
+                        <li>可搭配姜丝、香菜和特制蘸料食用</li>
+                        <li>适宜作为下酒菜或宴席冷盘</li>
+                        <li>剩余的鸭架可以用来煮汤，制作鸭血粉丝汤等</li>
+                    </ul>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-blue-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>炒盐时要小火慢炒，直到花椒香味溢出，盐微微发黄</li>
+                        <li>腌制时间要足够，夏季2小时，冬季4小时，确保入味</li>
+                        <li>煮鸭时火候要控制好，水沸后转小火，保持微沸状态</li>
+                        <li>煮好的鸭子要自然冷却，不要放入冷水中，以免影响口感</li>
+                        <li>切鸭时要顺着肌肉纹理切，保持肉片完整美观</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../sucai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回苏菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

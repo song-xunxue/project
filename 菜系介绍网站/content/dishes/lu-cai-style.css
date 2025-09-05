@@ -1,0 +1,253 @@
+/* 鲁菜风格CSS - lucai-styles.css */
+
+/* 鲁菜主题色：使用蓝色系代表海洋(山东沿海)，金色/棕色系代表孔府文化的典雅 */
+:root {
+    --primary-color: #1a365d;
+    /* 深蓝色，象征海洋与稳重 */
+    --accent-color: #b45309;
+    /* 金棕色，象征孔府文化的典雅 */
+    --light-color: #e5e7eb;
+    /* 浅灰色，用于背景 */
+    --dark-color: #1f2937;
+    /* 深灰色，用于暗黑模式文字 */
+    --highlight-color: #dc2626;
+    /* 红色，用于强调元素 */
+}
+
+/* 鲁菜主题背景 */
+.shandong-theme {
+    background-color: #f9fafb;
+    color: #374151;
+}
+
+.dark .shandong-theme {
+    background-color: #111827;
+    color: #d1d5db;
+}
+
+/* 鲁菜标题区域 */
+.shandong-header {
+    background: linear-gradient(to right, #1a365d, #2d4a80);
+    color: white;
+    padding: 3rem 0;
+}
+
+.dark .shandong-header {
+    background: linear-gradient(to right, #0f1a2d, #1e2e4d);
+}
+
+/* 风味标签 */
+.flavor-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.flavor-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* 步骤卡片 */
+.step-card {
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, transparent 50%, rgba(180, 83, 9, 0.05) 100%);
+    pointer-events: none;
+}
+
+.dark .step-card {
+    background-color: #1f2937;
+}
+
+/* 步骤编号 */
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* 食材卡片 */
+.ingredient-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid var(--primary-color);
+}
+
+.dark .ingredient-card {
+    background-color: #1f2937;
+}
+
+/* 营养信息网格 */
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nutrition-item {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.dark .nutrition-item {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+.nutrition-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.dark .nutrition-value {
+    color: #93c5fd;
+}
+
+.nutrition-label {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.dark .nutrition-label {
+    color: #94a3b8;
+}
+
+/* 返回按钮 */
+.back-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-button:hover {
+    background-color: #2d4a80;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 菜品图片样式 */
+.dish-image img {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.dish-image img:hover {
+    transform: scale(1.02);
+}
+
+
+/* 历史区域特殊样式 */
+.history-section {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    margin-bottom: 2rem;
+}
+
+.history-section::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    color: var(--accent-color);
+    opacity: 0.1;
+    line-height: 1;
+}
+
+.dark .history-section {
+    background-color: #1f2937;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shandong-header {
+        padding: 2rem 0;
+    }
+
+    .flavor-tags {
+        flex-wrap: wrap;
+    }
+}
+
+/* 鲁菜特色装饰元素 */
+.shandong-theme .section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.shandong-theme .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-card,
+.ingredient-card,
+.nutrition-item {
+    animation: fadeIn 0.5s ease-out;
+}

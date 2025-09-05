@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白切鸡 - 粤菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="yue-cai-styles.css">
+</head>
+
+<body class="cantonese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-red-600 dark:text-red-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../yuecai.html"
+                    class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回粤菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">白切鸡</h1>
+                    <p class="text-xl opacity-90">White Cut Chicken</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">鲜嫩</span>
+                        <span class="flavor-tag">原汁原味</span>
+                        <span class="flavor-tag">爽滑</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="fresh-tag"><i class="fas fa-leaf mr-1"></i>注重原味</span>
+                        <span class="fresh-tag"><i class="fas fa-award mr-1"></i>粤菜代表</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 1.5小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        白切鸡是粤菜中最具代表性的菜肴之一，以其鲜嫩多汁、皮爽肉滑、原汁原味的特点而闻名。这道菜看似简单，实则对火候的掌控要求极高，是检验厨师技艺的重要标准。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        正宗的白切鸡要求"骨中带血"，即骨头周围的肉略带粉红色，但这并非真的血水，而是恰到好处的火候表现，确保鸡肉达到最鲜嫩的状态。
+                    </p>
+                </section>
+
+                <!-- 烹饪方法 -->
+                <section class="cooking-method">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensil-spoon mr-2 text-red-600"></i>烹饪精髓
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        白切鸡的烹饪精髓在于"浸"而非"煮"。将整鸡放入微沸的水中，然后离火浸泡，利用水的余温将鸡肉慢慢浸熟。
+                        这种方法能够最大程度地保留鸡肉的原汁原味，使鸡肉鲜嫩多汁，皮爽肉滑。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        白切鸡起源于广东，已有数百年的历史。最初是广东乡村宴席上的常见菜肴，后来逐渐发展成为粤菜的代表作之一。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        在广东，有无鸡不成宴的说法，而白切鸡更是宴席上的首选。这道菜体现了粤菜追求食材本味、注重火候掌握的烹饪理念。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>选鸡与处理
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            选用1-1.5公斤的三黄鸡或清远鸡，宰杀洗净后，去除内脏和杂毛，保持鸡皮完整。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>准备浸鸡水
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            大锅内放足够的水，加入姜片、葱段和少许盐，烧开后转小火，保持水微沸状态。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>浸鸡
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            手提鸡头，将整鸡放入热水中浸烫几秒钟后提起，重复三次（这叫"三提三放"），然后整只鸡放入锅中，离火浸泡25-30分钟。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>过冷河
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将浸熟的鸡立即放入冰水中浸泡10-15分钟，使鸡皮收缩，达到皮爽肉滑的效果。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>斩件
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鸡捞出沥干水分，斩成适当大小的块，整齐摆放在盘中。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>制作蘸料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将姜葱剁成茸，加入盐和少许鸡油或花生油，搅拌均匀即成经典姜葱蘸料。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/baiqieji.jpg" alt="白切鸡" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>三黄鸡/清远鸡</span>
+                                <span class="text-red-600 dark:text-red-400">1只(约1-1.5kg)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">配料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜</span>
+                                <span class="text-red-600 dark:text-red-400">1大块</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱</span>
+                                <span class="text-red-600 dark:text-red-4 00">3-4根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>冰水</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">蘸料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>姜茸</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱白茸</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花生油/鸡油</span>
+                                <span class="text-red-600 dark:text-red-400">3汤匙</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">215</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">27g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">11g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">0g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每100克估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-red-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>选择品质好的鸡是成功的关键，最好选用三黄鸡或清远鸡</li>
+                        <li>浸鸡前"三提三放"有助于鸡皮定型，防止破皮</li>
+                        <li>浸鸡时火一定要小，水不能大沸，否则鸡肉会变老</li>
+                        <li>过冰水是皮爽肉滑的关键步骤，不可省略</li>
+                        <li>斩鸡时刀要快，下刀要准，才能保持鸡块完整</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../yuecai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回粤菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-red-400 hover:text-red-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

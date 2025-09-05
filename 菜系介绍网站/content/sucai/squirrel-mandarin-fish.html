@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>松鼠桂鱼 - 苏菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="su-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../sucai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回苏菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">松鼠桂鱼</h1>
+                    <p class="text-xl opacity-90">Squirrel Mandarin Fish</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">酸甜</span>
+                        <span class="flavor-tag">酥脆</span>
+                        <span class="flavor-tag">鲜香</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="delicate-tag"><i class="fas fa-star mr-1"></i>刀工精湛</span>
+                        <span class="delicate-tag"><i class="fas fa-crown mr-1"></i>宫廷名菜</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 高</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 40分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        松鼠桂鱼是江苏省苏州市地方传统名菜，属苏菜系。当炸好的鳜鱼（或桂鱼）上桌时，随即浇上热气腾腾的卤汁，它便吱吱地"叫"起来，因活像一只松鼠而得名。这道菜成菜后，形如松鼠、外脆里嫩、色泽橘黄，酸甜适口，并有松红香味。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        松鼠桂鱼的前身是松鼠鱼。清代《调鼎集》中有记载为："取季鱼，肚皮去骨，拖蛋黄，炸黄，作松鼠式。油、酱油烧"。季鱼，即石斑鱼。这条记载间接证明苏州乾隆年间有"松鼠鲤鱼"的传说是可能的。
+                    </p>
+                </section>
+
+                <!-- 刀工展示 -->
+                <section class="knife-skill">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-cut mr-2 text-blue-600"></i>刀工技艺
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        松鼠桂鱼最考验厨师的刀工技巧。制作时需要将鱼去骨后，剖花刀，刀法要求精湛，刀刀到位却不能切断鱼皮。
+                        剖好花刀的鱼身经拍粉油炸后自然卷曲，形似松鼠，造型美观，这也正是苏菜"刀工精细"特点的完美体现。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-blue-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        松鼠桂鱼已有二百多年的历史。相传乾隆皇帝下江南时，曾微服至苏州松鹤楼菜馆用膳，厨师用鲤鱼出骨，在鱼肉上刻花纹，加调味稍腌后，拖上蛋黄糊，入热油锅炸熟后，浇上熬热的糖醋卤汁，形状似鼠，外脆里嫩，酸甜可口，乾隆皇帝吃后很满意，后来苏州官府传出乾隆在松鹤楼吃鱼的事，此菜便名扬苏州。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>处理鱼
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将桂鱼去鳞、鳃、内脏，洗净后斩去鱼头，从鱼头下巴处剖开。沿脊骨两侧平片至尾部，去掉脊骨，鱼尾相连。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>切花刀
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鱼肉皮朝下放在砧板上，用刀先直剞，再斜剞，深至鱼皮，成菱形刀纹。用料酒、精盐调匀，抹在鱼头和鱼肉上，再滚上干淀粉。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>油炸
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鱼头、鱼肉放入热油锅中炸至淡黄色捞起。待油温升至七成热时，再放入复炸至金黄色捞出装盘，装上鱼头拼成松鼠形。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>制作卤汁
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            锅内留油少许，放入葱白段、蒜末、笋丁、香菇丁、豌豆炒熟，加入料酒、酱油、白糖、香醋、猪肉汤烧开，用湿淀粉调稀勾芡，加入热油搅匀。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>浇汁
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将卤汁淋在鱼身上，发出"吱吱"声，形如松鼠，撒上熟虾仁和火腿末即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/songshu.jpg" alt="松鼠桂鱼" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-blue-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>桂鱼</span>
+                                <span class="text-blue-600 dark:text-blue-400">1条(约750克)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">辅料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟虾仁</span>
+                                <span class="text-blue-600 dark:text-blue-400">30克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟笋丁</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>水发香菇丁</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>青豌豆</span>
+                                <span class="text-blue-600 dark:text-blue-400">15克</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-blue-600 dark:text-blue-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>精盐</span>
+                                <span class="text-blue-600 dark:text-blue-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白糖</span>
+                                <span class="text-blue-600 dark:text-blue-400">200克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>香醋</span>
+                                <span class="text-blue-600 dark:text-blue-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>番茄酱</span>
+                                <span class="text-blue-600 dark:text-blue-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱白段</span>
+                                <span class="text-blue-600 dark:text-blue-400">10克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>蒜末</span>
+                                <span class="text-blue-600 dark:text-blue-400">5克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>干淀粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">60克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>猪肉汤</span>
+                                <span class="text-blue-600 dark:text-blue-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>湿淀粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">35克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>芝麻油</span>
+                                <span class="text-blue-600 dark:text-blue-400">15克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟猪油</span>
+                                <span class="text-blue-600 dark:text-blue-400">1500克</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-blue-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">320</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">25g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">12g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">28g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-blue-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>切花刀时刀深至鱼皮但不要切断，这样炸后才能卷曲成松鼠形</li>
+                        <li>拍粉要均匀，特别是刀纹深处也要拍到，炸时才不会粘连</li>
+                        <li>油温要控制好，第一次炸定型，第二次炸至酥脆</li>
+                        <li>卤汁要趁热浇在刚炸好的鱼上，才能发出"吱吱"声</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../sucai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回苏菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>
