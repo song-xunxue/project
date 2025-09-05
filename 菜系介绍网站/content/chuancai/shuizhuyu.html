@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水煮鱼 - 川菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="chuan-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../chuancai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回川菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">水煮鱼</h1>
+                    <p class="text-xl opacity-90">Boiled Fish in Chili Oil</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">麻辣</span>
+                        <span class="flavor-tag">鲜嫩</span>
+                        <span class="flavor-tag">油而不腻</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 45分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        水煮鱼是川菜中的一道经典名菜，以其麻辣鲜香、鱼肉鲜嫩、油而不腻的特点而闻名。这道菜看似简单，实则制作工艺讲究，需要掌握好火候和调料的比例。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        水煮鱼的特点是"麻、辣、鲜、香、嫩"，鱼肉在滚烫的红油中保持鲜嫩，辣椒和花椒的香味充分渗透到鱼肉中，吃起来麻辣过瘾，回味无穷。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        水煮鱼起源于重庆渝北地区，距今也只不过十几年的历史。发明这道菜的师傅是川菜世家出身，他在1983年重庆地区举办的一次厨艺大赛上，他用类似于现在水煮鱼做法的烹制方法制作了与当时传统做法截然不同的"水煮肉片"，他也因此而获得了大奖。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        自从获奖后，亲朋挚友纷纷前来祝贺，每次款待来客他必要亲自下厨烹制"水煮肉片"。这一日，有一位从小一起长大的朋友前来探望，这个朋友生活在嘉陵江边，每次来都要带几条刚刚打上来的嘉陵江草鱼，这次也不例外。每每相聚，小酌几杯是难免的，眼看时近中午，师傅反而为午饭发了愁，不是为了别的，只是因为这位好友从小忌吃猪肉，偏偏家中又没有准备其他的肉，而师傅又想让朋友分享一下大赛获奖的菜品。正在发愁之际，木盆里跳蹦的鱼提醒了师傅，何不水煮"鱼肉"？就这样，第一盆水煮鱼诞生了，更没想到的是，鱼肉的鲜美、麻辣的厚重，使得朋友赞不绝口，师傅本人也为之一惊。从此以后，师傅开始潜心研究"水煮鱼肉"，鱼肉的特性，麻辣的搭配，色型的创新等诸多方面力争做到精益求精，历经一年多的努力，1985年水煮鱼基本定型。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>处理鱼肉
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鱼去鳞、鳃、内脏，洗净，将鱼头、鱼骨和鱼肉分开。鱼肉切成薄片，用料酒、盐、淀粉腌制15分钟。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>准备配菜
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            豆芽洗净，干辣椒剪成段，姜蒜切末，葱切段备用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>煮制汤底
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            锅中放油，放入鱼头、鱼骨煎至微黄，加入适量水煮成鱼汤，捞出鱼头鱼骨备用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>焯烫配菜
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            豆芽放入沸水中焯烫至断生，捞出铺在碗底。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>煮鱼片
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将腌制好的鱼片放入鱼汤中滑煮至变色，捞出放在豆芽上，倒入适量鱼汤。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>淋热油
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            在鱼片上撒上干辣椒、花椒、蒜末，锅中烧热油，淋在调料上爆香即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/shuizhuyu.jpg" alt="水煮鱼" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>草鱼/鲶鱼</span>
+                                <span class="text-red-600 dark:text-red-400">1条(约1000克)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">辅料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>豆芽</span>
+                                <span class="text-red-600 dark:text-red-400">200克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>干辣椒</span>
+                                <span class="text-red-600 dark:text-red-40">50克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花椒</span>
+                                <span class="text-red-600 dark:text-red-400">20克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>大葱</span>
+                                <span class="text-red-600 dark:text-red-400">1根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>生姜</span>
+                                <span class="text-red-600 dark:text-red-400">1块</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>大蒜</span>
+                                <span class="text-red-600 dark:text-red-400">5瓣</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>郫县豆瓣酱</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>淀粉</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白胡椒粉</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>食用油</span>
+                                <span class="text-red-600 dark:text-red-400">200毫升</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">280</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">25g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">18g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">5g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../chuancai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回川菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+    <script src="../../model.js"></script>
+</body>
+
+</html>

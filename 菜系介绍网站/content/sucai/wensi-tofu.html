@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文思豆腐 - 苏菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="su-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../sucai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回苏菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">文思豆腐</h1>
+                    <p class="text-xl opacity-90">Wensi Tofu</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">清淡</span>
+                        <span class="flavor-tag">鲜美</span>
+                        <span class="flavor-tag">细腻</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="delicate-tag"><i class="fas fa-cut mr-1"></i>刀工极致</span>
+                        <span class="delicate-tag"><i class="fas fa-award mr-1"></i>国宴名菜</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 极高</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 1小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        文思豆腐是一道有着悠久历史的江苏传统名菜，起源于扬州，属于淮扬菜。该菜品选料极严，刀工精细，软嫩清醇，入口即化，同时具有调理营养不良、补虚养身等功效，是老人、儿童选择的上好菜谱。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        文思豆腐因其刀工要求极高而闻名，一块细嫩的豆腐，要切成五千根豆腐丝，每根豆腐丝细可穿针，放在清澈的水中，根根清晰、粗细均匀、细如发丝。
+                    </p>
+                </section>
+
+                <!-- 刀工展示 -->
+                <section class="knife-skill">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-cut mr-2 text-blue-600"></i>刀工技艺
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        文思豆腐的刀工被誉为中国烹饪刀工的巅峰之作。厨师需要将一块软嫩的豆腐先片成薄如纸张的片，再切成细如发丝的丝。
+                        整个过程要求一气呵成，刀工精准，力度均匀，是淮扬菜"刀工精细"特点的极致体现。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-blue-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        文思豆腐至今已有300多年的历史，传说由清代乾隆年间扬州僧人文思和尚所创。清代文人袁枚在《随园食单》中已有记载。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        文思和尚在扬州天宁寺修持，由于前往烧香拜佛的佛门居士繁多，寺院的斋菜需求很大，文思和尚便创制了这道豆腐羹，不但做法精细，而且用料丰富，味道鲜美，深受香客喜欢。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>准备豆腐
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            选用质地细腻的内酯豆腐，先切去老皮，再切成整齐的方块。将豆腐放入清水中浸泡，去除豆腥味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>切豆腐丝
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将豆腐块片成薄片，厚度不超过1毫米。然后将薄片切成细丝，要求粗细均匀，细如发丝。切好后放入清水中轻轻拨散。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>准备配料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将香菇、火腿、鸡胸肉、笋等配料同样切成细丝，要求与豆腐丝粗细相当。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>烹制汤底
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            用鸡高汤或素高汤作为汤底，烧开后转小火，保持微沸状态。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>组合烹煮
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            先将配料丝放入汤中焯熟，然后轻轻放入豆腐丝，稍煮即可。用盐、少许白胡椒粉调味，勾薄芡，淋入少量鸡油或香油。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>装盘
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将豆腐羹轻轻盛入汤碗，撒上少许香菜末或火腿末点缀即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/wensi-tofu.jpg" alt="文思豆腐" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-blue-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>内酯豆腐</span>
+                                <span class="text-blue-600 dark:text-blue-400">1块(约300克)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">配料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟鸡胸肉</span>
+                                <span class="text-blue-600 dark:text-blue-400">30克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟火腿</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>香菇</span>
+                                <span class="text-blue-600 dark:text-blue-400">2朵</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>笋</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>青菜叶</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>鸡高汤</span>
+                                <span class="text-blue-600 dark:text-blue-400">500毫升</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>精盐</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白胡椒粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">少许</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>湿淀粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>鸡油或香油</span>
+                                <span class="text-blue-600 dark:text-blue-400">少许</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-blue-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">120</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">12g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">5g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">8g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-blue-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>切豆腐丝时，刀要锋利，下刀要稳，力度要均匀</li>
+                        <li>豆腐切好后要立即放入清水中，防止粘连和破碎</li>
+                        <li>煮豆腐时火候要小，时间要短，避免豆腐丝煮烂</li>
+                        <li>勾芡要薄，保持汤羹清澈透明</li>
+                        <li>配料丝要与豆腐丝粗细相当，保持整体协调</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../sucai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回苏菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

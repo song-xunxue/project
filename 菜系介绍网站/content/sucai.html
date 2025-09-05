@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏菜 - 中华美食网</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* 苏菜专属样式 */
+        .jiangsu-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .dark-mode .jiangsu-card {
+            background: rgba(55, 65, 81, 0.9);
+            border-color: #4b5563;
+        }
+
+        .jiangsu-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .jiangsu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .jiangsu-card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .jiangsu-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .jiangsu-card:hover .jiangsu-card-image img {
+            transform: scale(1.05);
+        }
+
+        .jiangsu-card-content {
+            padding: 1.5rem;
+        }
+
+        .jiangsu-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode .jiangsu-card-title {
+            color: #f3f4f6;
+        }
+
+        .jiangsu-card-title i {
+            margin-right: 0.5rem;
+            color: #3b82f6;
+        }
+
+        .jiangsu-card-desc {
+            color: #6b7280;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .dark-mode .jiangsu-card-desc {
+            color: #d1d5db;
+        }
+
+        .jiangsu-card-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .jiangsu-card-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .jiangsu-card-button i {
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .jiangsu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .jiangsu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        .dark-mode .section-title {
+            color: #f9fafb;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 3px;
+        }
+
+        /* 保留原有样式 */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .glassmorphism {
+            background: rgba(55, 65, 81, 0.25);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+        }
+
+        .highlight-text {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .dark-mode .highlight-text {
+            color: #93c5fd;
+        }
+
+        .breadcrumb {
+            padding: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+
+        .dark-mode .breadcrumb a {
+            color: #a5b4fc;
+        }
+
+        .dark-mode .breadcrumb span {
+            color: #d1d5db;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../index.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- 面包屑导航 -->
+        <div class="container mx-auto px-4 breadcrumb">
+            <a href="../index.html" class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-home mr-1"></i>首页</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600 dark:text-gray-400">苏菜</span>
+        </div>
+
+        <!-- 苏菜内容 -->
+        <section class="container mx-auto px-4 py-6">
+            <div class="glassmorphism p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4 dark:bg-blue-900 dark:text-blue-300">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold dark:text-white">苏菜</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">发展历史</h3>
+                        <p class="text-gray-700 mb-6 dark:text-gray-300">
+                            苏菜起源于春秋战国时期的吴地，隋唐时期已形成独特风格，宋代成为"南食"两大台柱之一。
+                            明清时期，苏菜发展达到鼎盛，特别是乾隆年间，苏菜成为宫廷御膳的重要组成部分。
+                            苏菜由淮扬菜、金陵菜、苏锡菜和徐海菜等地方风味组成，其中淮扬菜最为著名，
+                            被誉为"东南第一佳味"，1949年开国大典的国宴即以淮扬菜为主。
+                        </p>
+
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">特色</h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            苏菜以<span class="highlight-text">清鲜甜咸</span>为核心，注重刀工与火候，擅长炖、焖、蒸、炒。
+                            讲究造型美观，色调雅丽，追求本味清鲜，浓而不腻，淡而不薄，酥烂脱骨而不失其形，
+                            滑嫩爽脆而不失其味。苏菜制作精细，注重调汤，保持原汁，风味清鲜，适应面广，
+                            浓而不腻，淡而不薄，酥松脱骨而不失其形，滑嫩爽脆而不失其味。
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="h-64 overflow-hidden rounded-lg mb-6">
+                            <img src="https://s.coze.cn/image/raOxtYuQ98k/" alt="苏菜特色"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center">
+                                <i class="fas fa-lightbulb mr-2"></i>你知道吗？
+                            </h4>
+                            <p class="text-blue-700 dark:text-blue-300 text-sm">
+                                苏菜中最著名的淮扬菜有着"刀工天下第一"的美誉，文思豆腐这道菜要将豆腐切成细如发丝的豆腐丝，
+                                充分展现了淮扬菜精湛的刀工技艺。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 经典菜品 -->
+            <div class="glassmorphism p-8 fade-in">
+                <h3 class="section-title dark:text-white">
+                    <i class="fas fa-utensils mr-2"></i>经典菜品
+                </h3>
+
+                <div class="jiangsu-grid">
+                    <div class="jiangsu-card">
+                        <div class="jiangsu-card-image">
+                            <img src="../img/songshu.jpg" alt="松鼠桂鱼">
+                        </div>
+                        <div class="jiangsu-card-content">
+                            <h4 class="jiangsu-card-title"><i class="fas fa-fish"></i>松鼠桂鱼</h4>
+                            <p class="jiangsu-card-desc">造型逼真，色泽橘黄，外酥里嫩，酸甜适口，是苏菜工艺菜的典型代表，刀工精细，造型美观。</p>
+                            <a href="sucai/squirrel-mandarin-fish.html" class="jiangsu-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="jiangsu-card">
+                        <div class="jiangsu-card-image">
+                            <img src="../img/lion-head-meatball.jpg" alt="清炖蟹粉狮子头">
+                        </div>
+                        <div class="jiangsu-card-content">
+                            <h4 class="jiangsu-card-title"><i class="fas fa-drumstick-bite"></i>清炖蟹粉狮子头</h4>
+                            <p class="jiangsu-card-desc">肉质鲜嫩，清香味醇，蟹粉鲜香，肥而不腻，是淮扬菜的代表作之一，火候精准，汤汁清醇。</p>
+                            <a href="sucai/lion-head-meatball.html" class="jiangsu-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="jiangsu-card">
+                        <div class="jiangsu-card-image">
+                            <img src="../img/wensi-tofu.jpg" alt="文思豆腐">
+                        </div>
+                        <div class="jiangsu-card-content">
+                            <h4 class="jiangsu-card-title"><i class="fas fa-cut"></i>文思豆腐</h4>
+                            <p class="jiangsu-card-desc">刀工精湛，豆腐细如发丝，口感软嫩清醇，入口即化，汤鲜味美，展现了淮扬菜的精湛刀工技艺。</p>
+                            <a href="sucai/wensi-tofu.html" class="jiangsu-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="jiangsu-card">
+                        <div class="jiangsu-card-image">
+                            <img src="../img/salted-duck.jpg" alt="盐水鸭">
+                        </div>
+                        <div class="jiangsu-card-content">
+                            <h4 class="jiangsu-card-title"><i class="fas fa-drumstick-bite"></i>盐水鸭</h4>
+                            <p class="jiangsu-card-desc">皮白肉嫩，肥而不腻，香鲜味美，具有香、酥、嫩的特点，是金陵菜的代表，制作工艺独特。</p>
+                            <a href="sucai/salted-duck.html" class="jiangsu-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-button inline-flex items-center fade-in">
+                <i class="fas fa-arrow-left mr-2"></i> 返回首页
+            </a>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+            
+        </div>
+    </footer>
+
+        <script src="../model.js"></script>
+
+</body>
+
+</html>

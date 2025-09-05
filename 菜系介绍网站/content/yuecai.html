@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粤菜 - 中华美食网</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* 粤菜专属样式 - 使用绿色主题 */
+        .cantonese-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .dark-mode .cantonese-card {
+            background: rgba(55, 65, 81, 0.9);
+            border-color: #4b5563;
+        }
+
+        .cantonese-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #06b6d4);
+        }
+
+        .cantonese-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cantonese-card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cantonese-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .cantonese-card:hover .cantonese-card-image img {
+            transform: scale(1.05);
+        }
+
+        .cantonese-card-content {
+            padding: 1.5rem;
+        }
+
+        .cantonese-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode .cantonese-card-title {
+            color: #f3f4f6;
+        }
+
+        .cantonese-card-title i {
+            margin-right: 0.5rem;
+            color: #10b981;
+        }
+
+        .cantonese-card-desc {
+            color: #6b7280;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .dark-mode .cantonese-card-desc {
+            color: #d1d5db;
+        }
+
+        .cantonese-card-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #10b981;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .cantonese-card-button:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+        }
+
+        .cantonese-card-button i {
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .cantonese-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .cantonese-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        .dark-mode .section-title {
+            color: #f9fafb;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981, #06b6d4);
+            border-radius: 3px;
+        }
+
+        /* 通用样式 */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .glassmorphism {
+            background: rgba(55, 65, 81, 0.25);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+        }
+
+        .highlight-text {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .dark-mode .highlight-text {
+            color: #6ee7b7;
+        }
+
+        .breadcrumb {
+            padding: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+
+        .dark-mode .breadcrumb a {
+            color: #a5b4fc;
+        }
+
+        .dark-mode .breadcrumb span {
+            color: #d1d5db;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../index.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- 面包屑导航 -->
+        <div class="container mx-auto px-4 breadcrumb">
+            <a href="../index.html" class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-home mr-1"></i>首页</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600 dark:text-gray-400">粤菜</span>
+        </div>
+
+        <!-- 粤菜内容 -->
+        <section class="container mx-auto px-4 py-6">
+            <div class="glassmorphism p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-4 dark:bg-green-900 dark:text-green-300">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold dark:text-white">粤菜</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">发展历史</h3>
+                        <p class="text-gray-700 mb-6 dark:text-gray-300">
+                            粤菜发端于秦汉，形成于唐宋，明清时期成为"南食"代表。作为海上丝绸之路的起点，
+                            广州融合中外饮食文化，清末民初成为宫廷菜与民间风味结合的典范。
+                            广府菜、潮州菜、客家菜共同构成粤菜体系，2018年米其林首次为单一菜系发布《米其林粤菜指南》，
+                            标志着粤菜在国际美食界的地位。粤菜讲究"不时不吃"，注重食材本味和季节变化，
+                            烹饪技法多样，尤以"镬气"著称，体现了岭南地区"食不厌精"的饮食哲学。
+                        </p>
+
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">特色</h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            粤菜以<span class="highlight-text">清鲜爽嫩</span>为核心，讲究"不时不吃"，注重食材本味。
+                            烹调技法多样，擅长蒸、炒、炖、烤，尤以"镬气"著称。调味清淡，夏秋偏凉，冬春偏浓，
+                            追求原汁原味，清中求鲜，淡中求美。粤菜选料广博奇杂，鸟兽蛇虫均可入馔，
+                            强调食材新鲜，火候精准，刀工精细。代表菜品如白切鸡、烧鹅、清蒸鱼等
+                            体现了"食在广州"的精髓，展现了粤菜清而不淡，鲜而不俗，嫩而不生，油而不腻的特点。
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="h-64 overflow-hidden rounded-lg mb-6">
+                            <img src="https://s.coze.cn/image/aECBk-1ocLQ/" alt="粤菜特色"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                            <h4 class="font-semibold text-green-800 dark:text-green-200 mb-2 flex items-center">
+                                <i class="fas fa-lightbulb mr-2"></i>你知道吗？
+                            </h4>
+                            <p class="text-green-700 dark:text-green-300 text-sm">
+                                粤菜中的"饮茶"文化已被列入国家级非物质文化遗产。广东早茶不仅仅是饮食，
+                                更是一种社交方式和生活方式，体现了岭南人悠闲自在的生活态度。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 经典菜品 -->
+            <div class="glassmorphism p-8 fade-in">
+                <h3 class="section-title dark:text-white">
+                    <i class="fas fa-utensils mr-2"></i>经典菜品
+                </h3>
+
+                <div class="cantonese-grid">
+                    <div class="cantonese-card">
+                        <div class="cantonese-card-image">
+                            <img src="../img/baiqieji.jpg" alt="白切鸡">
+                        </div>
+                        <div class="cantonese-card-content">
+                            <h4 class="cantonese-card-title"><i class="fas fa-drumstick-bite"></i>白切鸡</h4>
+                            <p class="cantonese-card-desc">皮爽肉滑，原汁原味，清淡鲜美，是粤菜中最能体现食材本味的经典菜品，选用优质三黄鸡，浸煮工艺精湛。</p>
+                            <a href="yuecai/white-cut-chicken.html" class="cantonese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cantonese-card">
+                        <div class="cantonese-card-image">
+                            <img src="../img/roast-goose.jpg" alt="烧鹅">
+                        </div>
+                        <div class="cantonese-card-content">
+                            <h4 class="cantonese-card-title"><i class="fas fa-drumstick-bite"></i>烧鹅</h4>
+                            <p class="cantonese-card-desc">色泽金红，皮脆肉嫩，肥而不腻，是广式烧腊的代表作，享誉海内外，选用黑棕鹅为原料，秘制酱料腌制。</p>
+                            <a href="yuecai/roast-goose.html" class="cantonese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cantonese-card">
+                        <div class="cantonese-card-image">
+                            <img src="../img/qinzhengyu.jpg" alt="清蒸鱼">
+                        </div>
+                        <div class="cantonese-card-content">
+                            <h4 class="cantonese-card-title"><i class="fas fa-fish"></i>清蒸鱼</h4>
+                            <p class="cantonese-card-desc">鲜美嫩滑，原汁原味，火候精准，体现了粤菜追求食材本味的烹饪理念，通常选用鲜活的海鱼，配以姜葱和特制酱油。</p>
+                            <a href="yuecai/steamed-fish.html" class="cantonese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cantonese-card">
+                        <div class="cantonese-card-image">
+                            <img src="../img/laohuotang.jpg" alt="老火靓汤">
+                        </div>
+                        <div class="cantonese-card-content">
+                            <h4 class="cantonese-card-title"><i class="fas fa-bowl-food"></i>老火靓汤</h4>
+                            <p class="cantonese-card-desc">火候足，时间长，既取药补之效，又取入口之甘甜，是粤菜养生之道的体现，根据不同季节选用不同食材，具有滋补功效。</p>
+                            <a href="yuecai/slow-cooked-soup.html" class="cantonese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-button inline-flex items-center fade-in">
+                <i class="fas fa-arrow-left mr-2"></i> 返回首页
+            </a>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+
+        </div>
+    </footer>
+    <script src="../model.js"></script>
+</body>
+
+</html>

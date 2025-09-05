@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回锅肉 - 川菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* 使用与宫保鸡丁相同的样式 */
+        .chinese-theme {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        .dark .chinese-theme {
+            background-color: #1e293b;
+            color: #cbd5e1;
+        }
+
+        .dish-header {
+            background: linear-gradient(to right, #dc2626, #ea580c);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .dark .dish-header {
+            background: linear-gradient(to right, #7f1d1d, #9a3412);
+        }
+
+        .flavor-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .flavor-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .step-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .step-card {
+            background-color: #374151;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #dc2626;
+            color: white;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+        }
+
+        .ingredient-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .ingredient-card {
+            background-color: #374151;
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .nutrition-item {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .nutrition-item {
+            background-color: #374151;
+        }
+
+        .nutrition-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc2626;
+        }
+
+        .dark .nutrition-value {
+            color: #f87171;
+        }
+
+        .nutrition-label {
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .dark .nutrition-label {
+            color: #94a3b8;
+        }
+
+        .back-button {
+            background-color: #dc2626;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #b91c1c;
+        }
+
+        .dish-image img {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../chuancai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回川菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">回锅肉</h1>
+                    <p class="text-xl opacity-90">Twice-Cooked Pork</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">香辣</span>
+                        <span class="flavor-tag">咸鲜</span>
+                        <span class="flavor-tag">浓郁</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 40分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        回锅肉是四川传统菜式中家常菜肴的代表菜之一，属于川菜系列。制作原料主要有猪后臀肉、青椒、蒜苗等，口味独特，色泽红亮，肥而不腻。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        回锅肉的特点是口味独特，色泽红亮，肥而不腻。所谓回锅，就是再次烹调的意思。回锅肉作为一道传统川菜，在川菜中的地位是非常重要的，川菜考级经常用回锅肉作为首选菜肴。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        回锅肉起源于清代末期，由一位姓凌的翰林偶然发明。然而，真相并非如此，回锅肉的源头可以追溯到北宋，具体于何时诞生、由何人刨制、自何时流行已无法考证。古时称为"油爆锅"，四川地区大部分家庭都会制作。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        清代末年有一位姓凌的翰林，因宦途失意退隐家居，潜心研究烹饪。他将原煮后炒的回锅肉改为先将猪肉去腥味，以隔水容器密封的方法蒸熟后再煎炒成菜。因为久蒸至熟，减少了可溶性蛋白质的损失，保持了肉质的浓郁鲜香，原味不失，色泽红亮。自此，名噪锦城的久蒸回锅肉便流传开来。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>煮肉
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将猪后臀肉（二刀肉）放入冷水锅中，加入姜片、葱段、花椒煮至断生（约20分钟），捞出放凉后切成薄片。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>准备配菜
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            蒜苗切斜段，青椒切块，郫县豆瓣酱和豆豉剁细备用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>煸炒肉片
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            热锅少油，放入肉片煸炒至肉片卷曲呈灯盏窝状，肥肉部分透明，将肉片推至锅边。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>炒香调料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            锅中底油加入郫县豆瓣酱、豆豉炒出红油和香味，再放入甜面酱略炒。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>混合翻炒
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将肉片与调料炒匀，加入少许白糖、酱油调味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>加入配菜
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            放入青椒翻炒片刻，最后加入蒜苗快速翻炒均匀即可出锅。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/huguorou.jpg"
+                        alt="回锅肉" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>猪后臀肉(二刀肉)</span>
+                                <span class="text-red-600 dark:text-red-400">300克</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">辅料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>蒜苗</span>
+                                <span class="text-red-600 dark:text-red-400">3根</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>青椒</span>
+                                <span class="text-red-600 dark:text-red-400">1个</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>生姜</span>
+                                <span class="text-red-600 dark:text-red-400">3片</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>大葱</span>
+                                <span class="text-red-600 dark:text-red-400">1段</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花椒</span>
+                                <span class="text-red-600 dark:text-red-400">10粒</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>郫县豆瓣酱</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>豆豉</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>甜面酱</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>酱油</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白糖</span>
+                                <span class="text-red-600 dark:text-red-400">1/2茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>食用油</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">425</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">22g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">35g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">8g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../chuancai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回川菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+
+</body>
+
+</html>

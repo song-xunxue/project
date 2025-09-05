@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲁菜 - 中华美食网</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* 鲁菜专属样式 */
+        .shandong-theme {
+            background: linear-gradient(to bottom, #f8f5f0, #faf8f5);
+        }
+
+        .dark-mode .shandong-theme {
+            background: linear-gradient(to bottom, #1a202c, #2d3748);
+        }
+
+        .shandong-header {
+            background: linear-gradient(to right, #1a365d, #2c5282);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shandong-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><path d="M50,5 L65,40 L100,40 L70,60 L85,95 L50,75 L15,95 L30,60 L0,40 L35,40 Z" fill="white"/></svg>');
+            background-repeat: repeat;
+            opacity: 0.1;
+        }
+
+        .shandong-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .dark-mode .shandong-card {
+            background: rgba(45, 55, 72, 0.95);
+            border-color: #4a5568;
+        }
+
+        .shandong-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1a365d, #2c5282);
+        }
+
+        .shandong-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .shandong-card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .shandong-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .shandong-card:hover .shandong-card-image img {
+            transform: scale(1.05);
+        }
+
+        .shandong-card-content {
+            padding: 1.5rem;
+        }
+
+        .shandong-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode .shandong-card-title {
+            color: #f7fafc;
+        }
+
+        .shandong-card-title i {
+            margin-right: 0.5rem;
+            color: #2c5282;
+        }
+
+        .shandong-card-desc {
+            color: #718096;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .dark-mode .shandong-card-desc {
+            color: #cbd5e0;
+        }
+
+        .shandong-card-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #2c5282;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .shandong-card-button:hover {
+            background-color: #2b6cb0;
+            transform: translateY(-2px);
+        }
+
+        .shandong-card-button i {
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .shandong-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .shandong-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .shandong-section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            color: #2d3748;
+        }
+
+        .dark-mode .shandong-section-title {
+            color: #f7fafc;
+        }
+
+        .shandong-section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a365d, #2c5282);
+            border-radius: 3px;
+        }
+
+        /* 保留原有样式 */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .glassmorphism {
+            background: rgba(55, 65, 81, 0.25);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+        }
+
+        .highlight-text {
+            color: #2c5282;
+            font-weight: 600;
+        }
+
+        .dark-mode .highlight-text {
+            color: #90cdf4;
+        }
+
+        .breadcrumb {
+            padding: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+
+        .dark-mode .breadcrumb a {
+            color: #a5b4fc;
+        }
+
+        .dark-mode .breadcrumb span {
+            color: #d1d5db;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 鲁菜特色装饰 */
+        .shandong-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.03"><path d="M50,5 L65,40 L100,40 L70,60 L85,95 L50,75 L15,95 L30,60 L0,40 L35,40 Z" fill="%231a365d"/></svg>');
+            background-repeat: repeat;
+        }
+
+        .shandong-info-box {
+            background: rgba(248, 245, 240, 0.8);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px dashed #cbd5e0;
+        }
+
+        .dark-mode .shandong-info-box {
+            background: rgba(45, 55, 72, 0.8);
+            border: 1px dashed #4a5568;
+        }
+
+        .flavor-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .flavor-tag {
+            background: #ebf8ff;
+            color: #2c5282;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .dark-mode .flavor-tag {
+            background: #2c5282;
+            color: #ebf8ff;
+        }
+    </style>
+</head>
+
+<body class="shandong-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../index.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- 面包屑导航 -->
+        <div class="container mx-auto px-4 breadcrumb">
+            <a href="../index.html" class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-home mr-1"></i>首页</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600 dark:text-gray-400">鲁菜</span>
+        </div>
+
+        <!-- 鲁菜内容 -->
+        <section class="container mx-auto px-4 py-6">
+            <div class="glassmorphism p-8 mb-8 fade-in shandong-pattern">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mr-4 dark:bg-amber-900 dark:text-amber-300">
+                        <i class="fas fa-dumpling"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold dark:text-white">鲁菜</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">发展历史</h3>
+                        <p class="text-gray-700 mb-6 dark:text-gray-300">
+                            鲁菜历史悠久，源远流长，是中国最早形成的菜系之一。春秋战国时期，鲁菜已崭露头角，
+                            秦汉时期得到进一步发展，宋代已成为北方菜的代表。明清两代，鲁菜进入宫廷，
+                            成为御膳支柱，被誉为"北方菜之宗"。鲁菜由济南菜、胶东菜和孔府菜三大分支组成，
+                            其中孔府菜有"食不厌精，脍不厌细"的特点，是中国饮食文化的瑰宝。
+                        </p>
+
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">特色</h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            鲁菜以<span class="highlight-text">咸鲜纯正</span>为核心，讲究"食不厌精，脍不厌细"。
+                            注重原料质地优良，以盐提鲜，以汤壮鲜，调味讲求咸鲜纯正，突出本味。
+                            烹制方法以爆、炒、烧、炸、烩、蒸、扒见长，注重火候掌握，讲究清脆嫩滑。
+                            鲁菜精于制汤，十分讲究清汤、奶汤的调制，清浊分明，取其清鲜。
+                            代表菜品有葱烧海参、九转大肠、糖醋鲤鱼等，体现了鲁菜雍容华贵、中正大气的特点。
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="h-64 overflow-hidden rounded-lg mb-6">
+                            <img src="https://s.coze.cn/image/F2IeA4QLwFk/" alt="鲁菜特色"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="shandong-info-box">
+                            <h4 class="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center">
+                                <i class="fas fa-lightbulb mr-2"></i>你知道吗？
+                            </h4>
+                            <p class="text-amber-700 dark:text-amber-300 text-sm">
+                                鲁菜对中国北方地区饮食文化影响深远，东北菜、津菜、晋菜等地方菜系都深受鲁菜影响，
+                                甚至北京宫廷菜也是在鲁菜基础上发展演变而来，因此鲁菜被誉为"北方菜系之母"。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 经典菜品 -->
+            <div class="glassmorphism p-8 fade-in shandong-pattern">
+                <h3 class="shandong-section-title dark:text-white">
+                    <i class="fas fa-utensils mr-2"></i>经典菜品
+                </h3>
+                <div class="shandong-card">
+                    <div class="shandong-card-image">
+                        <img src="../img/hui-wuyudan.jpg " alt="烩乌鱼蛋汤">
+                    </div>
+                    <div class="shandong-card-content">
+                        <h4 class="shandong-card-title"><i class="fas fa-egg"></i>烩乌鱼蛋汤</h4>
+                        <p class="shandong-card-desc">汤清味醇，乌鱼蛋片薄如纸，口感滑嫩，是孔府宴席名菜。</p>
+                        <a href="dishes/hui-wuyudan.html" class="shandong-card-button">查看详情 <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="shandong-card">
+                    <div class="shandong-card-image">
+                        <img src="../img/pa-yuankebao.jpg" alt="扒原壳鲍鱼">
+                    </div>
+                    <div class="shandong-card-content">
+                        <h4 class="shandong-card-title"><i class="fas fa-shell"></i>扒原壳鲍鱼</h4>
+                        <p class="shandong-card-desc">鲍鱼鲜嫩，原汁原味，造型美观，是胶东菜的代表作。</p>
+                        <a href="dishes/pa-yuankebao.html" class="shandong-card-button">查看详情 <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="shandong-card">
+                    <div class="shandong-card-image">
+                        <img src="../img/shili-yinxing.jpg" alt="诗礼银杏">
+                    </div>
+                    <div class="shandong-card-content">
+                        <h4 class="shandong-card-title"><i class="fas fa-leaf"></i>诗礼银杏</h4>
+                        <p class="shandong-card-desc">银杏软糯，甜香适口，源自孔府，有"诗礼传家"的寓意。</p>
+                        <a href="dishes/shili-yinxing.html" class="shandong-card-button">查看详情 <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="shandong-card">
+                    <div class="shandong-card-image">
+                        <img src="../img/yipin-doufu.jpg" alt="一品豆腐">
+                    </div>
+                    <div class="shandong-card-content">
+                        <h4 class="shandong-card-title"><i class="fas fa-cube"></i>一品豆腐</h4>
+                        <p class="shandong-card-desc">豆腐嫩滑，配料丰富，汤汁鲜美，是孔府菜的传统名肴。</p>
+                        <a href="dishes/yipin-doufu.html" class="shandong-card-button">查看详情 <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="../index.html" class="back-button inline-flex items-center fade-in">
+                    <i class="fas fa-arrow-left mr-2"></i> 返回首页
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+
+        </div>
+    </footer>
+
+        <script src="../model.js"></script>
+
+</body>
+
+</html>

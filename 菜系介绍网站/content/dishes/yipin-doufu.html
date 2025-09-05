@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一品豆腐 - 鲁菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="lu-cai-style.css">
+</head>
+
+<body class="shandong-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../lucai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回鲁菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="shandong-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">一品豆腐</h1>
+                    <p class="text-xl opacity-90">Premium Braised Tofu</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">鲜嫩</span>
+                        <span class="flavor-tag">滑爽</span>
+                        <span class="flavor-tag">醇厚</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 中等</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 1小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        一品豆腐是山东孔府菜中的传统名菜，以豆腐为主料，配以多种珍贵食材烹制而成。此菜造型美观，豆腐嫩滑，汤汁鲜美，营养丰富，是孔府宴席上的经典菜品。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        一品豆腐选用优质豆腐，经过精细加工，保持了豆腐的嫩滑口感，同时吸收了各种配料的鲜味。此菜汤汁醇厚，豆腐入口即化，味道鲜美，体现了孔府菜"食不厌精，脍不厌细"的特点。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-blue-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        一品豆腐源于孔府菜，已有数百年历史。孔子主张"食不厌精，脍不厌细"，孔府厨师遵循这一理念，将普通的豆腐通过精细加工和搭配珍贵食材，提升为宴席上的精品菜肴。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        "一品"在古代是最高官阶，这道菜取名"一品豆腐"，既体现了其在孔府菜中的地位，也寓意着食客的尊贵身份。这道菜后来传入民间，成为鲁菜中豆腐菜品的代表作，展现了鲁菜善于将普通食材烹制成美味佳肴的特点。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>准备豆腐
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将嫩豆腐切成大小均匀的方块，用开水焯一下，去除豆腥味，捞出沥干水分。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>准备配料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将香菇、火腿、鸡肉、笋等配料切成小丁，虾仁洗净备用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>炒制配料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            热锅凉油，放入葱姜爆香，加入配料丁翻炒，加入料酒、酱油、盐调味。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>烩制豆腐
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将豆腐放入锅中，加入高汤，小火慢炖15分钟，使豆腐充分吸收汤汁。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>勾芡出锅
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            用淀粉水勾芡，使汤汁浓稠，淋上香油，撒上葱花即可出锅。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/yipin-doufu.jpg"
+                        alt="一品豆腐" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-blue-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>嫩豆腐</span>
+                                <span class="text-blue-600 dark:text-blue-400">1块(约400克)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">配料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>香菇</span>
+                                <span class="text-blue-600 dark:text-blue-400">4朵</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>火腿</span>
+                                <span class="text-blue-600 dark:text-blue-400">50克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>鸡胸肉</span>
+                                <span class="text-blue-600 dark:text-blue-400">50克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>笋</span>
+                                <span class="text-blue-600 dark:text-blue-400">30克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>虾仁</span>
+                                <span class="text-blue-600 dark:text-blue-400">30克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>青豆</span>
+                                <span class="text-blue-600 dark:text-blue-400">20克</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>高汤</span>
+                                <span class="text-blue-600 dark:text-blue-400">500毫升</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>料酒</span>
+                                <span class="text-blue-600 dark:text-blue-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>酱油</span>
+                                <span class="text-blue-600 dark:text-blue-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>淀粉</span>
+                                <span class="text-blue-600 dark:text-blue-400">2茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>香油</span>
+                                <span class="text-blue-600 dark:text-blue-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>葱花</span>
+                                <span class="text-blue-600 dark:text-blue-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-blue-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">120</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">12g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">5g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">8g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../lucai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回鲁菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script
+
+
+</body>
+
+</html>

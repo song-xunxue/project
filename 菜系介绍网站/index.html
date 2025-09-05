@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中华四大菜系美食网</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400">中华美食网</a>
+
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html"
+                    class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors">首页</a>
+                <div class="relative group">
+                    <button
+                        class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors flex items-center">
+                        菜系 <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div
+                        class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all dark:bg-gray-800">
+                        <a href="yuecai.html"
+                            class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-gray-300 dark:hover:bg-gray-700">粤菜</a>
+                        <a href="chuancai.html"
+                            class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-gray-300 dark:hover:bg-gray-700">川菜</a>
+                        <a href="sucai.html"
+                            class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-gray-300 dark:hover:bg-gray-700">苏菜</a>
+                        <a href="lucai.html"
+                            class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-gray-300 dark:hover:bg-gray-700">鲁菜</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle" class="text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white dark:bg-gray-800 shadow-md">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300">首页</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full text-gray-700 dark:text-gray-300">
+                        菜系 <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="pl-4 mt-1">
+                        <a href="content/yuecai.html" class="block py-1 text-gray-700 dark:text-gray-300">粤菜</a>
+                        <a href="content/chuancai.html" class="block py-1 text-gray-700 dark:text-gray-300">川菜</a>
+                        <a href="content/sucai.html" class="block py-1 text-gray-700 dark:text-gray-300">苏菜</a>
+                        <a href="content/lucai.html" class="block py-1 text-gray-700 dark:text-gray-300">鲁菜</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="container mx-auto px-4 breadcrumb">
+        <a href="index.html" class="text-indigo-600 dark:text-indigo-400">首页</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-gray-600 dark:text-gray-400">中华四大菜系</span>
+    </div>
+
+    <!-- 首页 -->
+    <section class="container mx-auto px-4 py-6">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4 dark:text-white">中华四大菜系</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300">探索中国饮食文化的精髓</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 粤菜 -->
+            <div class="glassmorphism p-6 card-hover">
+                <div class="h-48 overflow-hidden rounded-lg mb-4">
+                    <img src="https://s.coze.cn/image/JK99yFzDpJE/" alt="粤菜" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold mb-2 dark:text-white">粤菜</h2>
+                <p class="text-gray-600 mb-4 dark:text-gray-300">以清鲜爽嫩为核心，讲究"不时不吃"，注重食材本味。</p>
+                <a href="content/yuecai.html"
+                    class="inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">了解更多</a>
+            </div>
+
+            <!-- 川菜 -->
+            <div class="glassmorphism p-6 card-hover">
+                <div class="h-48 overflow-hidden rounded-lg mb-4">
+                    <img src="https://s.coze.cn/image/jW_XtsAMdP8/" alt="川菜" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold mb-2 dark:text-white">川菜</h2>
+                <p class="text-gray-600 mb-4 dark:text-gray-300">以麻辣鲜香为核心特色，讲究"一菜一格，百菜百味"。</p>
+                <a href="content/chuancai.html"
+                    class="inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">了解更多</a>
+            </div>
+
+            <!-- 苏菜 -->
+            <div class="glassmorphism p-6 card-hover">
+                <div class="h-48 overflow-hidden rounded-lg mb-4">
+                    <img src="https://s.coze.cn/image/raOxtYuQ98k/" alt="苏菜" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold mb-2 dark:text-white">苏菜</h2>
+                <p class="text-gray-600 mb-4 dark:text-gray-300">以清鲜甜咸为核心，注重刀工与火候，擅长炖、焖、蒸、炒。</p>
+                <a href="content/sucai.html"
+                    class="inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">了解更多</a>
+            </div>
+
+            <!-- 鲁菜 -->
+            <div class="glassmorphism p-6 card-hover">
+                <div class="h-48 overflow-hidden rounded-lg mb-4">
+                    <img src="https://s.coze.cn/image/F2IeA4QLwFk/" alt="鲁菜" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold mb-2 dark:text-white">鲁菜</h2>
+                <p class="text-gray-600 mb-4 dark:text-gray-300">以咸鲜纯正为核心，讲究"食不厌精，脍不厌细"。</p>
+                <a href="content/lucai.html"
+                    class="inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                            class="fab fa-weixin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                            class="fab fa-weibo"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+                <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                        class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+            
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 夜间模式切换
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // 检查本地存储中的模式设置
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark-mode');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark-mode');
+            // 保存用户偏好
+            localStorage.setItem('darkMode', html.classList.contains('dark-mode'));
+        });
+
+        // 移动端菜单切换
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            // 切换图标
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>

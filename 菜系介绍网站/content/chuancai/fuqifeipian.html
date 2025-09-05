@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夫妻肺片 - 川菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="chuan-cai-styles.css">
+</head>
+
+<body class="chinese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../chuancai.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回川菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">夫妻肺片</h1>
+                    <p class="text-xl opacity-90">Sliced Beef and Ox Organs in Chili Sauce</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">麻辣</span>
+                        <span class="flavor-tag">鲜香</span>
+                        <span class="flavor-tag">爽口</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 较高</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 2小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        夫妻肺片是一道四川成都名菜，由郭朝华、张田政夫妻创制而成。通常以牛头皮、牛心、牛舌、牛肚、牛肉为主料，进行卤制，而后切片。再配以辣椒油、花椒面等辅料制成红油浇在上面。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        夫妻肺片制作精细，色泽美观，质嫩味鲜，麻辣浓香，非常适口。2017年5月，美国《GQ》杂志发布了餐饮品赏大师Brett
+                        Martin最新出炉的"美国2017餐饮排行榜"，夫妻肺片被评为"年度开胃菜"。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        夫妻肺片由来已久，在清朝末年，成都街头巷尾便有许多挑担、提篮叫卖凉拌肺片的小贩。用成本低廉的牛杂碎边角料，经精加工、卤煮后，切成片，佐以酱油、红油、辣椒、花椒面、芝麻面等拌食，风味别致，价廉物美，特别受到拉黄包车、脚夫和穷苦学生们的喜食。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        20世纪30年代，成都人郭朝华和妻子一道以制售凉拌肺片为业，他们夫妻俩亲自操作，走街串巷，提篮叫卖。由于选用牛肉铺的边角料做食材，价格便宜、味道好，颇受欢迎。人们就将这种凉拌牛杂称为"夫妻废片"。因为"废片"二字不好听，再加上食材中有牛肺片，便取"废"的谐音"肺"，改名为"夫妻肺片"。后来，他们发现牛肺的口感不好，便取消了牛肺，但名称却保留了下来。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>准备原料
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将牛肉、牛杂（牛心、牛舌、牛肚、牛头皮）洗净，切成大块，放入沸水锅内煮净血水，捞出备用。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>卤制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将牛肉、牛杂放入老卤水中，加入花椒、肉桂、八角等香料包，煮沸后改用小火卤制至熟而不烂，捞出放凉。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>切片
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将卤好的牛肉、牛杂切成大小均匀、厚薄一致的片，整齐地码入盘中。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>制作红油
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将菜油烧热，倒入装有辣椒面、花椒面的碗中，稍凉后加入酱油、盐、白糖、芝麻酱等调成味汁。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>调味装盘
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将调好的味汁淋在牛肉、牛杂片上，再撒上熟芝麻和花生碎，最后点缀上香菜即可。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/fuqi.jpg" alt="夫妻肺片" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>牛肉</span>
+                                <span class="text-red-600 dark:text-red-400">200克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>牛肚</span>
+                                <span class="text-red-600 dark:text-red-400">150克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>牛心</span>
+                                <span class="text-red-600 dark:text-red-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>牛舌</span>
+                                <span class="text-red-600 dark:text-red-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>牛头皮</span>
+                                <span class="text-red-600 dark:text-red-400">100克</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">辅料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>香菜</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>熟芝麻</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花生碎</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">调味料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>辣椒油</span>
+                                <span class="text-red-600 dark:text-red-400">3汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>花椒面</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>酱油</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白糖</span>
+                                <span class="text-red-600 dark:text-red-400">1茶匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>芝麻酱</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>八角/肉桂等香料</span>
+                                <span class="text-red-600 dark:text-red-400">适量</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">320</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">25g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">22g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">6g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每份估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../chuancai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回川菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>

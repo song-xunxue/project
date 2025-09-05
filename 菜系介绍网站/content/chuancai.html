@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>川菜 - 中华美食网</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* 新增的川菜独立样式 */
+        .chinese-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+
+        .dark-mode .chinese-card {
+            background: rgba(55, 65, 81, 0.9);
+            border-color: #4b5563;
+        }
+
+        .chinese-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e53e3e, #dd6b20);
+        }
+
+        .chinese-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .chinese-card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chinese-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .chinese-card:hover .chinese-card-image img {
+            transform: scale(1.05);
+        }
+
+        .chinese-card-content {
+            padding: 1.5rem;
+        }
+
+        .chinese-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode .chinese-card-title {
+            color: #f3f4f6;
+        }
+
+        .chinese-card-title i {
+            margin-right: 0.5rem;
+            color: #e53e3e;
+        }
+
+        .chinese-card-desc {
+            color: #6b7280;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .dark-mode .chinese-card-desc {
+            color: #d1d5db;
+        }
+
+        .chinese-card-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #e53e3e;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .chinese-card-button:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .chinese-card-button i {
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .chinese-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .chinese-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        .dark-mode .section-title {
+            color: #f9fafb;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #e53e3e, #dd6b20);
+            border-radius: 3px;
+        }
+
+        /* 保留原有样式 */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode .glassmorphism {
+            background: rgba(55, 65, 81, 0.25);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+        }
+
+        .highlight-text {
+            color: #e53e3e;
+            font-weight: 600;
+        }
+
+        .dark-mode .highlight-text {
+            color: #feb2b2;
+        }
+
+        .breadcrumb {
+            padding: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+
+        .dark-mode .breadcrumb a {
+            color: #a5b4fc;
+        }
+
+        .dark-mode .breadcrumb span {
+            color: #d1d5db;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../index.html"
+                    class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回首页
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- 面包屑导航 -->
+        <div class="container mx-auto px-4 breadcrumb">
+            <a href="../index.html" class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-home mr-1"></i>首页</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600 dark:text-gray-400">川菜</span>
+        </div>
+
+        <!-- 川菜内容 -->
+        <section class="container mx-auto px-4 py-6">
+            <div class="glassmorphism p-8 mb-8 fade-in">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 mr-4 dark:bg-red-900 dark:text-red-300">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold dark:text-white">川菜</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">发展历史</h3>
+                        <p class="text-gray-700 mb-6 dark:text-gray-300">
+                            川菜起源于古代巴蜀地区，已有两千多年历史。秦汉时期初具雏形，唐宋时期进一步发展，
+                            明清时期辣椒传入中国后逐渐形成现代川菜的麻辣特色。20世纪后期，川菜走向全国乃至世界，
+                            成为最受欢迎的中国菜系之一。2010年，成都被联合国教科文组织授予"美食之都"称号。
+                        </p>
+
+                        <h3 class="text-2xl font-semibold mb-4 dark:text-white">特色</h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            川菜以<span class="highlight-text">麻辣鲜香</span>为核心，讲究"一菜一格，百菜百味"。
+                            调味多变，擅长使用辣椒、花椒、豆瓣酱等调料，形成麻、辣、酸、甜、苦、香、咸七味俱全的特点。
+                            烹调方法多样，以小炒、干烧、干煸、烩等见长。代表菜品如麻婆豆腐、宫保鸡丁、回锅肉等，
+                            体现了川菜"味浓味厚"的独特风格。
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="h-64 overflow-hidden rounded-lg mb-6">
+                            <img src="https://s.coze.cn/image/jW_XtsAMdP8/" alt="川菜特色"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg">
+                            <h4 class="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center">
+                                <i class="fas fa-lightbulb mr-2"></i>你知道吗？
+                            </h4>
+                            <p class="text-amber-700 dark:text-amber-300 text-sm">
+                                川菜并非只有麻辣味，传统川菜中麻辣菜品仅占30%，更有大量不辣的美食，
+                                如开水白菜、鸡豆花、锅巴肉片等，展现了川菜味型的多样性。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 经典菜品 -->
+            <div class="glassmorphism p-8 fade-in">
+                <h3 class="section-title dark:text-white">
+                    <i class="fas fa-utensils mr-2"></i>经典菜品
+                </h3>
+
+                <div class="chinese-grid">
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/mapodf.jpg" alt="麻婆豆腐">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-pepper-hot"></i>麻婆豆腐</h4>
+                            <p class="chinese-card-desc">麻辣鲜香，豆腐嫩滑，是川菜的代表性菜品之一，具有麻、辣、烫、鲜、香、酥、活的特点。</p>
+                            <a href="chuancai/mapodoufu.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/huguorou.jpg" alt="回锅肉">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-bacon"></i>回锅肉</h4>
+                            <p class="chinese-card-desc">川菜经典家常菜，肥瘦相间的猪肉经过先煮后炒，色泽红亮，肥而不腻，咸鲜微辣，略带回甜。</p>
+                            <a href="chuancai/huiguorou.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/gongbao.jpg" alt="宫保鸡丁">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-drumstick-bite"></i>宫保鸡丁</h4>
+                            <p class="chinese-card-desc">鲜香细嫩，辣而不燥，略带甜酸味道，花生米酥脆，是闻名中外的川菜名品。</p>
+                            <a href="chuancai/gongbao.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/shuizhuyu.jpg" alt="水煮鱼">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-fish"></i>水煮鱼</h4>
+                            <p class="chinese-card-desc">鱼肉鲜嫩，麻辣味浓，油而不腻，是川菜中水煮菜式的代表作，突出川菜麻辣鲜香的特色。</p>
+                            <a href="chuancai/shuizhuyu.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/fuqi.jpg" alt="夫妻肺片">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-utensil-spoon"></i>夫妻肺片</h4>
+                            <p class="chinese-card-desc">以牛头皮、牛心、牛舌、牛肚、牛肉为主料，卤制后切片，配以辣椒油、花椒面等辅料制成红油浇在上面。</p>
+                            <a href="chuancai/fuqifeipian.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/dandanmian.jpg" alt="担担面">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-bowl-food"></i>担担面</h4>
+                            <p class="chinese-card-desc">面条细薄，卤汁酥香，咸鲜微辣，香气扑鼻，十分入味，是四川民间极为普遍且颇具特殊风味的一种著名小吃。</p>
+                            <a href="chuancai/dandan-noodles.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/koushuiji.jpg" alt="口水鸡">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-drumstick-bite"></i>口水鸡</h4>
+                            <p class="chinese-card-desc">集麻辣鲜香嫩爽于一身，佐料丰富，有"名驰巴蜀三千里，味压江南十二州"的美称。</p>
+                            <a href="chuancai/koushui-chicken.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="chinese-card">
+                        <div class="chinese-card-image">
+                            <img src="../img/maoxuewang.jpg" alt="毛血旺">
+                        </div>
+                        <div class="chinese-card-content">
+                            <h4 class="chinese-card-title"><i class="fas fa-fire"></i>毛血旺</h4>
+                            <p class="chinese-card-desc">以鸭血为制作主料，烹饪技巧以煮菜为主，口味属于麻辣味，是渝菜江湖菜的鼻祖之一。</p>
+                            <a href="chuancai/maoxue-wang.html" class="chinese-card-button">查看详情 <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-button inline-flex items-center fade-in">
+                <i class="fas fa-arrow-left mr-2"></i> 返回首页
+            </a>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+        <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                class="text-indigo-400 hover:text-indigo-300"> 六个人的群聊</a></p>
+    
+    </div>
+    <script src="../model.js"></script>
+
+</body>
+
+</html>

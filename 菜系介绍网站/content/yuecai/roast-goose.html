@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烧鹅 - 粤菜经典</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="yue-cai-styles.css">
+</head>
+
+<body class="cantonese-theme min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 transition-colors">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-bold text-red-600 dark:text-red-400 flex items-center">
+                <i class="fas fa-utensils mr-2"></i>中华美食网
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle"
+                    class="text-gray-700 dark:text-gray-300 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="../yuecai.html"
+                    class="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>返回粤菜列表
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 菜品标题区域 -->
+    <header class="dish-header">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold mb-2">烧鹅</h1>
+                    <p class="text-xl opacity-90">Roast Goose</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">香脆</span>
+                        <span class="flavor-tag">多汁</span>
+                        <span class="flavor-tag">鲜美</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="fresh-tag"><i class="fas fa-fire mr-1"></i>烤制工艺</span>
+                        <span class="fresh-tag"><i class="fas fa-award mr-1"></i>粤菜招牌</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-black bg-opacity-20 rounded-full px-4 py-2">
+                        <i class="fas fa-fire mr-2"></i>
+                        <span>难度: 高</span>
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>时间: 3小时</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧内容 -->
+            <div class="lg:col-span-2">
+                <!-- 菜品介绍 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-info-circle mr-2 text-red-600"></i>菜品介绍
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        烧鹅是粤菜中的经典烧味，以其皮脆肉嫩、色泽红润、香味浓郁而著称。正宗的烧鹅选用优质黑棕鹅，经过腌制、充气、烫皮、风干和烤制等多道工序，才能达到外皮酥脆、肉质鲜嫩多汁的完美口感。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        烧鹅的最佳食用部位是鹅腿和鹅胸，搭配特制的酸梅酱，酸甜可口，既能解腻又能提升鹅肉的鲜美。
+                    </p>
+                </section>
+
+                <!-- 烹饪方法 -->
+                <section class="cooking-method">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensil-spoon mr-2 text-red-600"></i>烹饪精髓
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        烧鹅的烹饪精髓在于"皮脆肉嫩"。通过充气使皮肉分离，烫皮使鹅皮收缩，风干使表皮干燥，最后烤制时高温使鹅皮变得酥脆。
+                        烤制过程中需要不断转动鹅身，使其受热均匀，达到外皮金黄酥脆、肉质鲜嫩多汁的效果。
+                    </p>
+                </section>
+
+                <!-- 历史背景 -->
+                <section class="history-section">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-landmark mr-2 text-red-600"></i>历史背景
+                    </h2>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        烧鹅起源于广东，已有数百年历史。最早是广东地区的节庆美食，后来逐渐成为日常餐桌上的佳肴。
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mt-4">
+                        在粤港澳地区，烧鹅是烧味店的必备菜品，也是衡量一家烧味店水准的重要标准。传统的烧鹅采用明炉烤制，使用荔枝木等果木为燃料，赋予鹅肉特殊的果香味。
+                    </p>
+                </section>
+
+                <!-- 制作步骤 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-utensils mr-2 text-red-600"></i>制作步骤
+                    </h2>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">1</span>选鹅与处理
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            选用3-4公斤的黑棕鹅，宰杀洗净后，去除内脏和杂毛，保持鹅皮完整。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">2</span>腌制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将五香粉、盐、糖、沙姜粉等调料混合均匀，涂抹在鹅腔内，腌制2小时以上。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">3</span>充气与缝针
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            在鹅皮与肉之间充气，使皮肉分离。然后用钢针缝合鹅腔开口，防止调料流出。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">4</span>烫皮与上糖水
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鹅放入沸水中烫约1分钟，使鹅皮收缩。然后均匀涂抹糖水（麦芽糖和白醋混合液）。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">5</span>风干
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鹅挂在通风处风干8-12小时，直至表皮完全干燥。
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 class="text-lg font-semibold mb-2 dark:text-white">
+                            <span class="step-number">6</span>烤制
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            将鹅放入预热至200°C的烤炉中，先烤40分钟，然后翻面再烤20分钟，直至表皮金黄酥脆。
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="lg:col-span-1">
+                <!-- 菜品图片 -->
+                <div class="dish-image mb-6">
+                    <img src="../../img/roast-goose.jpg" alt="烧鹅" class="w-full h-auto">
+                </div>
+
+                <!-- 食材清单 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-shopping-basket mr-2 text-red-600"></i>食材清单
+                    </h2>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">主料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>黑棕鹅</span>
+                                <span class="text-red-600 dark:text-red-400">1只(约3-4kg)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">腌料</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>五香粉</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>盐</span>
+                                <span class="text-red-600 dark:text-red-400">3汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白糖</span>
+                                <span class="text-red-600 dark:text-red-400">2汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>沙姜粉</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>蒜蓉</span>
+                                <span class="text-red-600 dark:text-red-400">1汤匙</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <h3 class="font-semibold dark:text-white mb-2">糖水</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>麦芽糖</span>
+                                <span class="text-red-600 dark:text-red-400">100克</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>白醋</span>
+                                <span class="text-red-600 dark:text-red-400">200毫升</span>
+                            </li>
+                            <li class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-700">
+                                <span>大红浙醋</span>
+                                <span class="text-red-600 dark:text-red-400">50毫升</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 营养信息 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-apple-alt mr-2 text-red-600"></i>营养信息
+                    </h2>
+
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">337</div>
+                            <div class="nutrition-label">卡路里</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">19g</div>
+                            <div class="nutrition-label">蛋白质</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">28g</div>
+                            <div class="nutrition-label">脂肪</div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-value">0g</div>
+                            <div class="nutrition-label">碳水化合物</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        * 营养信息为每100克估算值，实际数值可能因食材和烹饪方式有所不同
+                    </p>
+                </section>
+
+                <!-- 烹饪技巧 -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white flex items-center">
+                        <i class="fas fa-lightbulb mr-2 text-red-600"></i>烹饪技巧
+                    </h2>
+                    <ul class="text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-2">
+                        <li>选择优质黑棕鹅，肉质更加鲜嫩多汁</li>
+                        <li>充气要均匀，使皮肉完全分离</li>
+                        <li>风干时间要足够，确保表皮完全干燥</li>
+                        <li>烤制时温度要控制得当，避免外焦里生</li>
+                        <li>烤制过程中要不断转动鹅身，使其受热均匀</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="../yuecai.html" class="back-button inline-flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回粤菜列表
+            </a>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 中华美食网 版权所有</p>
+            <p class="text-gray-500 text-sm mt-2">created by <a href="https://space.coze.cn"
+                    class="text-red-400 hover:text-red-300"> 六个人的群聊</a></p>
+        </div>
+    </footer>
+
+    <script src="../../model.js"></script>
+
+</body>
+
+</html>
