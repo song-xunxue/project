@@ -1,0 +1,279 @@
+/* 首页杨思 */
+
+/* 光影世界 - 专属样式优化 */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --gray: #95a5a6;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+    color: white;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.site-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.site-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* 导航样式 */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    background: white;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    margin-bottom: 2rem !important;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-item:hover {
+    color: var(--secondary);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+    width: 80%;
+}
+
+/* 主内容区样式 */
+main {
+    margin-bottom: 2rem;
+}
+
+/* 横幅样式 */
+.banner {
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: white;
+    padding: 2rem !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.kicker {
+    display: inline-block;
+    background: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.banner h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.lead {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* 分区标题 */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--dark);
+}
+
+/* 卡片样式 */
+.card {
+    display: block;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: none !important;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.card p {
+    color: var(--gray);
+    margin: 0;
+}
+
+/* 网格布局优化 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem !important;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: var(--transition);
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.sidebar a:hover {
+    color: var(--secondary);
+    padding-left: 0.5rem;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: var(--dark);
+    color: white;
+    border-top: 4px solid var(--secondary);
+    border-radius: 0 0 8px 8px;
+    margin-top: 2rem !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .site-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .site-subtitle {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
