@@ -1,0 +1,9 @@
+/* 游戏专栏专用样式（可选） */
+.game-card .placeholder {
+    aspect-ratio: 16/9
+}
+
+.tag {
+    font-size: 12px;
+    color: #555
+}
