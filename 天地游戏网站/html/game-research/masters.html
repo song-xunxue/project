@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子游戏发展史 - 游戏天地</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <style>
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #667eea;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-date {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+                margin-left: 40px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-date {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>游戏天地</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">首页</a></li>
+                <li><a href="index.html" class="active">游戏研究</a></li>
+                <li><a href="../../games/index.html" class="active">游戏专栏</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>游戏研究</h1>
+            <p>探索游戏背后的文化与设计奥秘，从历史发展到设计理论，从大师见解到玩家心理</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb">
+            <a href="../../index.html">首页</a> &gt; <span class="current">游戏研究</span>
+        </div>
+
+    <!-- 研究导航 -->
+    <div class="filter-group">
+        <a href="history.html" class="btn">游戏发展史</a>
+        <a href="definition.html" class="btn">游戏的定义</a>
+        <a href="masters.html" class="btn">大师说游戏</a>
+    </div>
+
+        <!-- 内容区域 -->
+        <h2 class="section-title">最新专题</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🎮 中国游戏产业 30 年</h3>
+                <p>从小霸王到 3A 大作，回顾国产游戏软硬件、政策与市场的演变脉络。</p>
+            </div>
+            <div class="card">
+                <h3>🎯 游戏化教育前沿</h3>
+                <p>盘点「功能游戏」案例：医学模拟、历史考古、编程思维训练。</p>
+            </div>
+            <div class="card">
+                <h3>🧠 玩家心理研究</h3>
+                <p>从「心流理论」到「成瘾模型」，解析玩家留存与付费动因。</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">大师观点</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>宫本茂：游戏体验的纯粹乐趣</h3>
+                <p>任天堂传奇设计师宫本茂曾说过："在我的心目中，玩家脸上的笑容是最重要的。游戏应该带来纯粹的快乐，而不是复杂的挫败感。"</p>
+            </div>
+            <div class="card">
+                <h3>席德·梅尔：有趣的选择</h3>
+                <p>文明系列创造者席德·梅尔提出："游戏是一系列有趣的选择。"他强调游戏决策应当有意义且影响深远。</p>
+            </div>
+            <div class="card">
+                <h3>Jonathan Blow：游戏作为表达媒介</h3>
+                <p>《时空幻境》和《见证者》的制作人Jonathan Blow认为游戏有能力表达复杂思想和情感。</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">设计理论</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>MDA框架：机制、动态、美学</h3>
+                <p>MDA框架将游戏分解为三个层次：机制是游戏的基本组件和规则；动态是玩家与机制互动时产生的行为；美学是玩家体验的情感回应。</p>
+            </div>
+            <div class="card">
+                <h3>心流理论</h3>
+                <p>心理学家米哈里·契克森米哈赖提出的心流理论描述了人们完全沉浸于活动中的状态。游戏设计中，通过平衡挑战与玩家技能，提供明确目标和即时反馈。</p>
+            </div>
+            <div class="card">
+                <h3>玩家类型理论</h3>
+                <p>Richard Bartle将玩家分为四种主要类型：成就者、探索者、社交者和杀手。理解不同玩家动机有助于设计更具包容性的游戏系统。</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:2rem">
+            <h3>🔥 本周热帖</h3>
+            <ul>
+                <li><a href="#">《什么是游戏？》—— 重新定义「自愿克服不必要障碍」</a></li>
+                <li><a href="#">关卡设计十诫：从《马里奥》到《只狼》的共通逻辑</a></li>
+                <li><a href="#">像素、多边形与光线追踪：图形技术进化史</a></li>
+                <li><a href="#">游戏叙事的新方向：环境叙事与玩家驱动故事</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 游戏天地. 所有权利保留.</p>
+        <p>探索游戏文化，传播游戏魅力</p>
+    </footer>
+
+    <script>
+        // 移动端导航菜单切换
+        document.querySelector('.nav-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

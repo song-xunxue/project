@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>游戏专栏 | 游戏天地 V3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    /* 紫色导航栏样式 */
+    .navbar {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      box-shadow: 0 2px 15px rgba(106, 17, 203, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0 20px;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo span {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-logo i {
+      margin-right: 10px;
+      font-size: 28px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+
+    .nav-menu a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .nav-menu a[aria-current="page"] {
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 3px;
+    }
+
+    /* 主要内容区域 */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .breadcrumbs {
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .games-intro {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .games-intro h1 {
+      color: #2d2d86;
+      margin-bottom: 20px;
+      font-size: 32px;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 15px;
+    }
+
+    .search {
+      margin-bottom: 20px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+    }
+
+    input[type="search"]:focus {
+      outline: none;
+      border-color: #6a11cb;
+      box-shadow: 0 2px 12px rgba(106, 17, 203, 0.2);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      background: #f1f3f5;
+      color: #495057;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    .filter-btn:hover {
+      background: #e9ecef;
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
+    }
+
+    .games-intro p {
+      color: #6c757d;
+      font-size: 15px;
+    }
+
+    .games-intro code {
+      background: #f8f9fa;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #e83e8c;
+      font-size: 14px;
+    }
+
+    /* 游戏网格 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+    }
+
+    .card h3 a {
+      color: #2d2d86;
+      text-decoration: none;
+    }
+
+    .card h3 a:hover {
+      color: #6a11cb;
+      text-decoration: underline;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e9ecef;
+      color: #495057;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* 页脚 */
+    footer {
+      background: white;
+      border-top: 1px solid #e9ecef;
+      padding: 30px 0;
+      text-align: center;
+      color: #6c757d;
+      margin-top: 40px;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-menu a {
+        margin: 10px 0;
+        padding: 15px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 紫色导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-gamepad"></i>
+        <span>游戏天地</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html">首页</a></li>
+        <a href="../html/game-research/index.html">游戏研究</a>
+        <li><a href="index.html" aria-current="page">游戏专栏</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  </header>
+  <main class="container">
+    <div class="breadcrumbs">首页 / 游戏专栏</div>
+    <section class="games-intro">
+      <div class="search"><input type="search" id="q" placeholder="搜索游戏名称 / 英文名 / 类型 / 年份…" /></div>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-cat="all">全部</button>
+        <button class="filter-btn" data-cat="动作">动作</button>
+        <button class="filter-btn" data-cat="RPG">RPG</button>
+        <button class="filter-btn" data-cat="射击">射击</button>
+        <button class="filter-btn" data-cat="沙盒">沙盒</button>
+        <button class="filter-btn" data-cat="模拟">模拟</button>
+        <button class="filter-btn" data-cat="策略">策略</button>
+        <button class="filter-btn" data-cat="冒险">冒险</button>
+        <button class="filter-btn" data-cat="独立">独立</button>
+      </div>
+    </section>
+    <section class="grid" id="grid">
+      <article class="card game-card" data-title="塞尔达传说：旷野之息" data-aka="The Legend of Zelda: Breath of the Wild"
+        data-genre="动作/冒险" data-year="2017" data-cat="动作">
+        <a href="zelda-botw.html" aria-label="塞尔达传说：旷野之息">
+          <img src="../images/zelda-botw.jpg" alt="zelda-botw"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="zelda-botw.html">塞尔达传说：旷野之息</a></h3>
+        <div class="meta">The Legend of Zelda: Breath of the Wild · 2017 · 动作/冒险 · Switch</div>
+        <div class="tag">开发商：Nintendo</div>
+      </article>
+      <article class="card game-card" data-title="塞尔达传说：王国之泪" data-aka="The Legend of Zelda: Tears of the Kingdom"
+        data-genre="动作/冒险" data-year="2023" data-cat="动作">
+        <a href="zelda-totk.html" aria-label="塞尔达传说：王国之泪">
+          <img src="../images/zelda-totk.jpg" alt="zelda-totk"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="zelda-totk.html">塞尔达传说：王国之泪</a></h3>
+        <div class="meta">The Legend of Zelda: Tears of the Kingdom · 2023 · 动作/冒险 · Switch</div>
+        <div class="tag">开发商：Nintendo</div>
+
+      </article>
+      <article class="card game-card" data-title="战神（2018）" data-aka="God of War (2018)" data-genre="动作/剧情"
+        data-year="2018" data-cat="动作">
+        <a href="god-of-war-2018.html" aria-label="战神（2018）">
+          <img src="../images/god-of-war-2018.jpg" alt="god-of-war-2018"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="god-of-war-2018.html">战神（2018）</a></h3>
+        <div class="meta">God of War (2018) · 2018 · 动作/剧情 · PS4/PC</div>
+        <div class="tag">开发商：Santa Monica Studio</div>
+      </article>
+
+      <article class="card game-card" data-title="荒野大镖客：救赎2" data-aka="Red Dead Redemption 2" data-genre="动作/冒险"
+        data-year="2018" data-cat="冒险">
+        <a href="rdr2.html" aria-label="荒野大镖客：救赎2">
+          <img src="../images/rdr2.jpg" alt="rdr2"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="rdr2.html">荒野大镖客：救赎2</a></h3>
+        <div class="meta">Red Dead Redemption 2 · 2018 · 动作/冒险 · PS/Xbox/PC</div>
+        <div class="tag">开发商：Rockstar Games</div>
+      </article>
+      <article class="card game-card" data-title="艾尔登法环" data-aka="Elden Ring" data-genre="动作/RPG" data-year="2022"
+        data-cat="RPG">
+        <a href="elden-ring.html" aria-label="艾尔登法环">
+          <img src="../images/elden-ring.jpg" alt="elden-ring"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="elden-ring.html">艾尔登法环</a></h3>
+        <div class="meta">Elden Ring · 2022 · 动作/RPG · PS/Xbox/PC</div>
+        <div class="tag">开发商：FromSoftware</div>
+      </article>
+      <article class="card game-card" data-title="黑暗之魂3" data-aka="Dark Souls III" data-genre="动作/RPG" data-year="2016"
+        data-cat="RPG">
+        <a href="dark-souls-3.html" aria-label="黑暗之魂3">
+          <img src="../images/dark-souls-3.jpg" alt="dark-souls-3"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="dark-souls-3.html">黑暗之魂3</a></h3>
+        <div class="meta">Dark Souls III · 2016 · 动作/RPG · PS/Xbox/PC</div>
+        <div class="tag">开发商：FromSoftware</div>
+      </article>
+      <article class="card game-card" data-title="巫师3：狂猎" data-aka="The Witcher 3: Wild Hunt" data-genre="动作/RPG"
+        data-year="2015" data-cat="RPG">
+        <a href="the-witcher-3.html" aria-label="巫师3：狂猎">
+          <img src="../images/the-witcher-3.jpg" alt="the-witcher-3"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="the-witcher-3.html">巫师3：狂猎</a></h3>
+        <div class="meta">The Witcher 3: Wild Hunt · 2015 · 动作/RPG · PS/Xbox/PC/Switch</div>
+        <div class="tag">开发商：CD Projekt Red</div>
+      </article>
+      <article class="card game-card" data-title="赛博朋克2077" data-aka="Cyberpunk 2077" data-genre="动作/RPG"
+        data-year="2020" data-cat="RPG">
+        <a href="cyberpunk-2077.html" aria-label="赛博朋克2077">
+          <img src="../images/cyberpunk-2077.jpg" alt="cyberpunk-2077"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="cyberpunk-2077.html">赛博朋克2077</a></h3>
+        <div class="meta">Cyberpunk 2077 · 2020 · 动作/RPG · PS/Xbox/PC</div>
+        <div class="tag">开发商：CD Projekt Red</div>
+      </article>
+      <article class="card game-card" data-title="龙腾世纪：审判" data-aka="Dragon Age: Inquisition" data-genre="RPG"
+        data-year="2014" data-cat="RPG">
+        <a href="dragon-age-inquisition.html" aria-label="龙腾世纪：审判">
+          <img src="../images/dragon-age-inquisition.jpg" alt="dragon-age-inquisition"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="dragon-age-inquisition.html">龙腾世纪：审判</a></h3>
+        <div class="meta">Dragon Age: Inquisition · 2014 · RPG · PS/Xbox/PC</div>
+        <div class="tag">开发商：BioWare</div>
+      </article>
+      <article class="card game-card" data-title="守望先锋" data-aka="Overwatch" data-genre="团队射击" data-year="2016"
+        data-cat="射击">
+        <a href="overwatch.html" aria-label="守望先锋">
+          <img src="../images/overwatch.jpg" alt="overwatch"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="overwatch.html">守望先锋</a></h3>
+        <div class="meta">Overwatch · 2016 · 团队射击 · 全平台</div>
+        <div class="tag">开发商：Blizzard</div>
+      </article>
+      <article class="card game-card" data-title="Apex英雄" data-aka="Apex Legends" data-genre="大逃杀" data-year="2019"
+        data-cat="射击">
+        <a href="apex-legends.html" aria-label="Apex英雄">
+          <img src="../images/apex-legends.jpg" alt="apex-legends"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="apex-legends.html">Apex英雄</a></h3>
+        <div class="meta">Apex Legends · 2019 · 大逃杀 · 全平台</div>
+        <div class="tag">开发商：Respawn Entertainment</div>
+      </article>
+      <article class="card game-card" data-title="使命召唤：现代战争II（2022）" data-aka="Call of Duty: Modern Warfare II (2022)"
+        data-genre="射击" data-year="2022" data-cat="射击">
+        <a href="cod-mw2-2022.html" aria-label="使命召唤：现代战争II（2022）">
+          <img src="../images/cod-mw2-2022.jpg" alt="cod-mw2-2022"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="cod-mw2-2022.html">使命召唤：现代战争II（2022）</a></h3>
+        <div class="meta">Call of Duty: Modern Warfare II (2022) · 2022 · 射击 · 全平台</div>
+        <div class="tag">开发商：Infinity Ward</div>
+      </article>
+      <article class="card game-card" data-title="绝地求生" data-aka="PUBG: Battlegrounds" data-genre="大逃杀" data-year="2017"
+        data-cat="射击">
+        <a href="pubg.html" aria-label="绝地求生">
+          <img src="../images/pubg.jpg" alt="pubg"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="pubg.html">绝地求生</a></h3>
+        <div class="meta">PUBG: Battlegrounds · 2017 · 大逃杀 · 全平台</div>
+        <div class="tag">开发商：KRAFTON</div>
+      </article>
+      <article class="card game-card" data-title="彩虹六号：围攻" data-aka="Rainbow Six Siege" data-genre="战术射击"
+        data-year="2015" data-cat="射击">
+        <a href="rainbow-six-siege.html" aria-label="彩虹六号：围攻">
+          <img src="../images/rainbow-six-siege.jpg" alt="rainbow-six-siege"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="rainbow-six-siege.html">彩虹六号：围攻</a></h3>
+        <div class="meta">Rainbow Six Siege · 2015 · 战术射击 · 全平台</div>
+        <div class="tag">开发商：Ubisoft</div>
+      </article>
+      <article class="card game-card" data-title="我的世界" data-aka="Minecraft" data-genre="沙盒/生存" data-year="2011"
+        data-cat="沙盒">
+        <a href="minecraft.html" aria-label="我的世界">
+          <img src="../images/minecraft.jpg" alt="minecraft"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="minecraft.html">我的世界</a></h3>
+        <div class="meta">Minecraft · 沙盒/生存 · 全平台</div>
+        <div class="tag">开发商：Mojang Studios</div>
+      </article>
+      <article class="card game-card" data-title="堡垒之夜" data-aka="Fortnite" data-genre="大逃杀/沙盒" data-year="2017"
+        data-cat="沙盒">
+        <a href="fortnite.html" aria-label="堡垒之夜">
+          <img src="../images/fortnite.jpg" alt="fortnite"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="fortnite.html">堡垒之夜</a></h3>
+        <div class="meta">Fortnite · 2017 · 大逃杀/沙盒 · 全平台</div>
+        <div class="tag">开发商：Epic Games</div>
+      </article>
+      <article class="card game-card" data-title="模拟人生4" data-aka="The Sims 4" data-genre="模拟" data-year="2014"
+        data-cat="模拟">
+        <a href="the-sims-4.html" aria-label="模拟人生4">
+          <img src="../images/the-sims-4.jpg" alt="the-sims-4"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="the-sims-4.html">模拟人生4</a></h3>
+        <div class="meta">The Sims 4 · 2014 · 模拟 · PS/Xbox/PC</div>
+        <div class="tag">开发商：Maxis</div>
+      </article>
+      <article class="card game-card" data-title="集合啦！动物森友会" data-aka="Animal Crossing: New Horizons" data-genre="生活/模拟"
+        data-year="2020" data-cat="模拟">
+        <a href="acnh.html" aria-label="集合啦！动物森友会">
+          <img src="../images/acnh.jpg" alt="acnh"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="acnh.html">集合啦！动物森友会</a></h3>
+        <div class="meta">Animal Crossing: New Horizons · 2020 · 生活/模拟 · Switch</div>
+        <div class="tag">开发商：Nintendo</div>
+      </article>
+      <article class="card game-card" data-title="星露谷物语" data-aka="Stardew Valley" data-genre="农场/模拟" data-year="2016"
+        data-cat="模拟">
+        <a href="stardew-valley.html" aria-label="星露谷物语">
+          <img src="../images/stardew-valley.jpg" alt="stardew-valley"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="stardew-valley.html">星露谷物语</a></h3>
+        <div class="meta">Stardew Valley · 2016 · 农场/模拟 · 全平台</div>
+        <div class="tag">开发商：ConcernedApe</div>
+      </article>
+      <article class="card game-card" data-title="文明VI" data-aka="Sid Meier’s Civilization VI" data-genre="4X策略"
+        data-year="2016" data-cat="策略">
+        <a href="civ-6.html" aria-label="文明VI">
+          <img src="../images/civ-6.jpg" alt="civ-6"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="civ-6.html">文明VI</a></h3>
+        <div class="meta">Sid Meier’s Civilization VI · 2016 · 4X策略 · 全平台</div>
+        <div class="tag">开发商：Firaxis Games</div>
+      </article>
+      <article class="card game-card" data-title="全面战争：三国" data-aka="Total War: Three Kingdoms" data-genre="策略/战术"
+        data-year="2019" data-cat="策略">
+        <a href="total-war-three-kingdoms.html" aria-label="全面战争：三国">
+          <img src="../images/total-war-three-kingdoms.jpg" alt="total-war-three-kingdoms"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="total-war-three-kingdoms.html">全面战争：三国</a></h3>
+        <div class="meta">Total War: Three Kingdoms · 2019 · 策略/战术 · PC</div>
+        <div class="tag">开发商：Creative Assembly</div>
+      </article>
+      <article class="card game-card" data-title="帝国时代IV" data-aka="Age of Empires IV" data-genre="即时战略"
+        data-year="2021" data-cat="策略">
+        <a href="aoe-4.html" aria-label="帝国时代IV">
+          <img src="../images/aoe-4.jpg" alt="aoe-4"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="aoe-4.html">帝国时代IV</a></h3>
+        <div class="meta">Age of Empires IV · 2021 · 即时战略 · PC</div>
+        <div class="tag">开发商：Relic Entertainment</div>
+      </article>
+      <article class="card game-card" data-title="异度神剑3" data-aka="Xenoblade Chronicles 3" data-genre="JRPG"
+        data-year="2022" data-cat="RPG">
+        <a href="xenoblade-3.html" aria-label="异度神剑3">
+          <img src="../images/xenoblade-3.jpg" alt="xenoblade-3"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="xenoblade-3.html">异度神剑3</a></h3>
+        <div class="meta">Xenoblade Chronicles 3 · 2022 · JRPG · Switch</div>
+        <div class="tag">开发商：Monolith Soft</div>
+      </article>
+      <article class="card game-card" data-title="死亡搁浅" data-aka="Death Stranding" data-genre="动作/冒险" data-year="2019"
+        data-cat="冒险">
+        <a href="death-stranding.html" aria-label="死亡搁浅">
+          <img src="../images/death-stranding.jpg" alt="death-stranding"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="death-stranding.html">死亡搁浅</a></h3>
+        <div class="meta">Death Stranding · 2019 · 动作/冒险 · PS/PC</div>
+        <div class="tag">开发商：Kojima Productions</div>
+      </article>
+      <article class="card game-card" data-title="空洞骑士" data-aka="Hollow Knight" data-genre="类银河战士恶魔城" data-year="2017"
+        data-cat="独立">
+        <a href="hollow-knight.html" aria-label="空洞骑士">
+          <img src="../images/hollow-knight.jpg" alt="hollow-knight"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="hollow-knight.html">空洞骑士</a></h3>
+        <div class="meta">Hollow Knight · 2017 · 类银河战士恶魔城 · 全平台</div>
+        <div class="tag">开发商：Team Cherry</div>
+      </article>
+      <article class="card game-card" data-title="蔚蓝" data-aka="Celeste" data-genre="平台跳跃" data-year="2018"
+        data-cat="独立">
+        <a href="celeste.html" aria-label="蔚蓝">
+          <img src="../images/celeste.jpg" alt="celeste"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="celeste.html">蔚蓝档案</a></h3>
+        <div class="meta">Celeste · 2018 · 平台跳跃 · 全平台</div>
+        <div class="tag">开发商：Matt Makes Games</div>
+      </article>
+      <article class="card game-card" data-title="黑帝斯" data-aka="Hades" data-genre="Roguelike 动作" data-year="2020"
+        data-cat="独立">
+        <a href="hades.html" aria-label="黑帝斯">
+          <img src="../images/hades.jpg" alt="hades"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="hades.html">黑帝斯</a></h3>
+        <div class="meta">Hades · 2020 · Roguelike 动作 · 全平台</div>
+        <div class="tag">开发商：Supergiant Games</div>
+      </article>
+      <article class="card game-card" data-title="极乐迪斯科" data-aka="Disco Elysium" data-genre="叙事RPG" data-year="2019"
+        data-cat="独立">
+        <a href="disco-elysium.html" aria-label="极乐迪斯科">
+          <img src="../images/disco-elysium.jpg" alt="disco-elysium"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="disco-elysium.html">极乐迪斯科</a></h3>
+        <div class="meta">Disco Elysium · 2019 · 叙事RPG · 全平台</div>
+        <div class="tag">开发商：ZA/UM</div>
+      </article>
+      <article class="card game-card" data-title="奥日与萤火意志" data-aka="Ori and the Will of the Wisps" data-genre="平台动作"
+        data-year="2020" data-cat="独立">
+        <a href="ori-wotw.html" aria-label="奥日与萤火意志">
+          <img src="../images/ori-wotw.jpg" alt="ori-wotw"
+            style="width:100%;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.2)" />
+        </a>
+        <h3><a href="ori-wotw.html">奥日与萤火意志</a></h3>
+        <div class="meta">Ori and the Will of the Wisps · 2020 · 平台动作 · 全平台</div>
+        <div class="tag">开发商：Moon Studios</div>
+      </article>
+    </section>
+  </main>
+  <footer class="container">
+    <p>说明：本专栏与"游戏研究"并列，为整站的游戏资料索引与导航集中页。</p>
+  </footer>
+  <script>
+    // 导航栏交互
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // 游戏过滤功能
+    const q = document.getElementById('q');
+    const grid = document.getElementById('grid');
+    const items = Array.from(grid.children);
+    const filters = document.getElementById('filters');
+    let currentCat = 'all';
+
+    q.addEventListener('input', () => {
+      applyFilter();
+    });
+
+    filters.addEventListener('click', (e) => {
+      if (e.target && e.target.matches('.filter-btn')) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        currentCat = e.target.dataset.cat;
+        applyFilter();
+      }
+    });
+
+    function applyFilter() {
+      const s = q.value.trim().toLowerCase();
+      items.forEach(el => {
+        const txt = (el.dataset.title + ' ' + el.dataset.aka + ' ' + el.dataset.genre + ' ' + el.dataset.year + ' ' + el.dataset.cat).toLowerCase();
+        const bySearch = txt.includes(s);
+        const byCat = (currentCat === 'all') ? true : (el.dataset.cat === currentCat);
+        el.style.display = (bySearch && byCat) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+
+</html>
