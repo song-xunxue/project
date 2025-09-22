@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景圆形 -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)"/>
+  <!-- 头发 - 彩色假发 -->
+  <path d="M100,30 C130,30 160,50 160,80 C160,110 130,140 100,140 C70,140 40,110 40,80 C40,50 70,30 100,30 Z" fill="#ff6b6b"/>
+  <path d="M110,30 C140,35 160,55 160,80 C160,105 140,130 110,135" fill="#ffbe0b"/>
+  <path d="M90,30 C60,35 40,55 40,80 C40,105 60,130 90,135" fill="#3a86ff"/>
+  <path d="M100,25 C120,25 140,35 150,50 C140,65 120,75 100,75 C80,75 60,65 50,50 C60,35 80,25 100,25 Z" fill="#8338ec"/>
+  <path d="M100,40 C115,40 130,45 140,55 C135,65 120,70 100,70 C80,70 65,65 60,55 C70,45 85,40 100,40 Z" fill="#38b000"/>
+  <!-- 脸部轮廓 -->
+  <circle cx="100" cy="100" r="60" fill="#ffe0bd"/>
+  <!-- 眼睛 -->
+  <ellipse cx="80" cy="95" rx="8" ry="10" fill="white"/>
+  <ellipse cx="120" cy="95" rx="8" ry="10" fill="white"/>
+  <ellipse cx="80" cy="95" rx="4" ry="6" fill="#333"/>
+  <ellipse cx="120" cy="95" rx="4" ry="6" fill="#333"/>
+  <!-- 嘴巴 -->
+  <path d="M85,125 C100,135 115,135 130,125" stroke="#e06666" stroke-width="2" fill="none"/>
+  <!-- 红鼻子 -->
+  <circle cx="100" cy="110" r="8" fill="#ff6b6b"/>
+  <!-- 脸部妆容 -->
+  <path d="M70,110 C75,115 85,115 90,110" stroke="#ff6b6b" stroke-width="2" fill="none"/>
+  <path d="M130,110 C135,115 145,115 150,110" stroke="#ff6b6b" stroke-width="2" fill="none"/>
+  <!-- 衣服 -->
+  <path d="M60,160 C60,180 140,180 140,160 L140,140 C140,140 140,130 120,130 L80,130 C60,130 60,140 60,140 Z" fill="#1d3557"/>
+  <path d="M80,130 L120,130 L110,145 L90,145 Z" fill="#e63946"/>
+  <!-- 装饰图案 -->
+  <circle cx="75" cy="150" r="5" fill="#ffbe0b"/>
+  <circle cx="125" cy="150" r="5" fill="#ffbe0b"/>
+  <circle cx="100" cy="155" r="5" fill="#3a86ff"/>
+  <path d="M90,165 L110,165" stroke="#8338ec" stroke-width="3" stroke-linecap="round"/>
+  <!-- 文字标识 -->
+  <text x="100" y="170" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">向泽涛</text>
+</svg>

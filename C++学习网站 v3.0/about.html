@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            flex: 1 1 300px;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #4CAF50;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* 深色主题适配 */
+        body.dark-theme .team-member {
+            background-color: #2d3748;
+            color: var(--color-text);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-theme .team-member:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-theme .member-name {
+            color: var(--color-text);
+        }
+
+        body.dark-theme .member-name a {
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        body.dark-theme .member-name a:hover {
+            color: var(--color-primary);
+        }
+
+        body.dark-theme .member-role {
+            color: var(--color-text-light);
+        }
+
+        body.dark-theme .member-photo {
+            border-color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- 移动端主题切换按钮 -->
+            <button id="mobile-theme-toggle" class="mobile-theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="content/basics.html">基础语法</a></li>
+                <li><a href="content/oop.html">面向对象</a></li>
+                <li><a href="content/advanced.html">高级特性</a></li>
+                <li><a href="content/effective.html">Effective C++</a></li>
+                <li><a href="content/stl.html">STL源码剖析</a></li>
+                <li><a href="content/quiz.html">题库</a></li>
+                <li><a href="content/achievements.html">成就系统</a></li>
+                <li><a href="forum.html">论坛</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">账户 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login-modal">登录</a></li>
+                        <li><a href="#register-modal">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="active">关于我们</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>关于我们</h1>
+            <p class="intro">欢迎访问C++学习入门网站，我们致力于为初学者提供高质量的C++编程学习资源。</p>
+
+            <div class="section">
+                <h2>网站简介</h2>
+                <p>本网站是一个面向C++初学者的学习平台，提供从基础语法到高级特性的全面教程。我们的目标是帮助初学者快速掌握C++编程技能，为进一步学习计算机科学打下坚实的基础。</p>
+                <p>网站内容包括：</p>
+                <ul>
+                    <li>基础语法：变量、数据类型、运算符、控制流等</li>
+                    <li>面向对象：类、对象、继承、多态等</li>
+                    <li>高级特性：模板、STL、异常处理、智能指针等</li>
+                    <li>示例代码：实用的C++代码示例和项目</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>为什么学习C++</h2>
+                <p>C++是一种功能强大的编程语言，它具有以下优势：</p>
+                <ul>
+                    <li><strong>性能优越</strong>：C++是一种编译型语言，执行效率高</li>
+                    <li><strong>灵活性高</strong>：支持多种编程范式，包括过程化、面向对象和泛型编程</li>
+                    <li><strong>应用广泛</strong>：用于系统编程、游戏开发、嵌入式系统、高性能计算等领域</li>
+                    <li><strong>就业前景好</strong>：掌握C++的程序员在就业市场上具有竞争力</li>
+                    <li><strong>为学习其他语言打下基础</strong>：许多现代编程语言都借鉴了C++的语法和特性</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1>开发团队</h1>
+            <p class="intro">欢迎访问C++学习入门网站，我们致力于为初学者提供高质量的C++编程学习资源。</p>
+
+            <div class="section">
+                <h2>团队简介</h2>
+                <p>我们是一个由6名计算机科学专业学生组成的学习团队，致力于创建一个高质量的C++学习平台。我们的目标是帮助初学者快速掌握C++编程技能，为进一步学习计算机科学打下坚实的基础。</p>
+                <p>我们的团队成员来自不同的背景，但都对编程充满热情。我们分工合作，共同完成了这个网站的设计和开发。</p>
+            </div>
+
+            <div class="section">
+                <h2>团队成员</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="images/liwenyu_avatar.svg" alt="李文煜" class="member-photo">
+                        <div class="member-name"><a href="members/liwenyu.html">李文煜</a></div>
+                        <div class="member-role">CIO、资料搜集员、项目经理</div>
+                        <p>负责项目整体规划、资料收集与管理</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/xiangzetao_avatar.svg" alt="向泽涛" class="member-photo">
+                        <div class="member-name"><a href="members/xiangzetao.html">向泽涛</a></div>
+                        <div class="member-role">技术总监、测试、程序员</div>
+                        <p>负责技术架构、代码实现与测试</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/niyujun_avatar.svg" alt="倪宇骏" class="member-photo">
+                        <div class="member-name"><a href="members/niyujun.html">倪宇骏</a></div>
+                        <div class="member-role">程序员/UI/网站编辑</div>
+                        <p>负责代码实现、UI设计与网站内容编辑</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/dongshaojun_avatar.svg" alt="董绍军" class="member-photo">
+                        <div class="member-name"><a href="members/dongshaojun.html">董绍军</a></div>
+                        <div class="member-role">网站编辑、视频剪辑</div>
+                        <p>负责网站内容编辑与视频制作</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/zhangyiqiao_avatar.svg" alt="张祎桥" class="member-photo">
+                        <div class="member-name"><a href="members/zhangyiqiao.html">张祎桥</a></div>
+                        <div class="member-role">UI设计、美工、资料收集</div>
+                        <p>负责界面设计、视觉美化与资料收集</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/hushengyuan_avatar.svg" alt="胡晟源" class="member-photo">
+                        <div class="member-name"><a href="members/hushengyuan.html">胡晟源</a></div>
+                        <div class="member-role">网站编辑、程序员</div>
+                        <p>负责网站内容编辑与代码实现</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>联系我们</h2>
+                <p>如果您对网站有任何建议或问题，欢迎联系我们：</p>
+                <ul>
+                    <li>电子邮件：bit.edu.cn</li>
+                    <li>微信公众号：C++学习入门</li>
+                    <li>gittee：<a href="https://gitee.com/li_fjyr" target="_blank">https://gitee.com/li_fjyr</a></li>
+                </ul>
+                <p>我们会定期更新网站内容，添加新的教程和示例代码。感谢您的支持！</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+    <script src="js/main2.js"></script>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" placeholder="请输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="#forgot-password-modal" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="modal-btn">登录</button>
+                <p class="register-link">还没有账号? <a href="#register-modal">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">用户名</label>
+                    <input type="text" id="register-username" placeholder="请设置用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required> 我已阅读并同意<a href="#" class="terms-link">用户协议</a>和<a href="#" class="privacy-link">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-btn">注册</button>
+                <p class="login-link">已有账号? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 忘记密码模态框 -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>重置密码</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="forgot-email">邮箱</label>
+                    <input type="email" id="forgot-email" placeholder="请输入注册邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-new-password">新密码</label>
+                    <input type="password" id="forgot-new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-confirm-password">确认新密码</label>
+                    <input type="password" id="forgot-confirm-password" placeholder="请确认新密码" required>
+                </div>
+                <button type="submit" class="modal-btn">重置密码</button>
+                <p class="login-link">想起密码了? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户协议模态框 -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户协议</h2>
+            <div class="modal-text">
+                                <h3>第一条 协议概述</h3>
+                <p>欢迎使用C++学习入门网站（以下简称"本网站"）。本协议是您（以下简称"用户"）与本网站之间关于使用本网站服务的法律协议。请在使用本网站前仔细阅读本协议，一旦您开始使用本网站，即表示您同意接受本协议的全部条款。</p>
+                
+                <h3>第二条 服务内容</h3>
+                <p>本网站致力于为用户提供优质的C++编程学习服务，主要包括但不限于：</p>
+                <ul>
+                    <li>C++基础语法、面向对象、高级特性等教学内容</li>
+                    <li>在线测验题库和学习评估系统</li>
+                    <li>用户学习进度跟踪和成就系统</li>
+                    <li>学习论坛和用户交流平台</li>
+                    <li>AI智能助手服务</li>
+                    <li>其他与C++学习相关的辅助功能</li>
+                </ul>
+                
+                <h3>第三条 用户注册与账户管理</h3>
+                <ol>
+                    <li><strong>注册要求</strong>：用户需要提供真实有效的邮箱地址和用户名进行注册</li>
+                    <li><strong>账户安全</strong>：用户有责任保护自己的账户密码安全，不得将账户借给他人使用</li>
+                    <li><strong>信息准确性</strong>：用户应确保注册信息的真实性和准确性</li>
+                    <li><strong>账户停用</strong>：如发现用户提供虚假信息或违反本协议，网站有权停用相关账户</li>
+                </ol>
+                
+                <h3>第四条 用户行为规范</h3>
+                <p>用户在使用本网站时，应当遵守以下规范：</p>
+                <p><strong>允许的行为：</strong></p>
+                <ul>
+                    <li>正常学习C++编程知识</li>
+                    <li>在论坛中进行友善的学术讨论</li>
+                    <li>分享学习心得和编程经验</li>
+                    <li>合理使用AI助手进行学习辅导</li>
+                </ul>
+                <p><strong>禁止的行为：</strong></p>
+                <ul>
+                    <li>发布违法、有害、威胁、侮辱、诽谤的内容</li>
+                    <li>发布与C++学习无关的广告或垃圾信息</li>
+                    <li>恶意攻击网站系统或其他用户</li>
+                    <li>传播病毒、恶意代码或有害程序</li>
+                    <li>侵犯他人知识产权或隐私权</li>
+                    <li>利用技术手段绕过网站的限制措施</li>
+                </ul>
+                
+                <h3>第五条 知识产权</h3>
+                <ol>
+                    <li><strong>网站内容版权</strong>：本网站提供的所有教学内容、代码示例、题库等均受版权保护</li>
+                    <li><strong>用户生成内容</strong>：用户在论坛发表的原创内容，版权归用户所有，但用户授予本网站使用权</li>
+                    <li><strong>合理使用</strong>：用户可以将学习内容用于个人学习目的，但不得用于商业用途</li>
+                    <li><strong>侵权处理</strong>：如发现侵权行为，请及时联系我们处理</li>
+                </ol>
+                
+                <h3>第六条 AI助手服务条款</h3>
+                <ol>
+                    <li><strong>服务性质</strong>：AI助手仅作为学习辅助工具，提供编程相关的答疑和指导</li>
+                    <li><strong>服务限制</strong>：AI助手的回答仅供参考，不保证绝对准确性</li>
+                    <li><strong>使用规范</strong>：禁止利用AI助手进行违法、有害或与学习无关的活动</li>
+                    <li><strong>数据使用</strong>：与AI助手的对话可能被记录用于改进服务质量</li>
+                </ol>
+                
+                <h3>第七条 免责声明</h3>
+                <ol>
+                    <li><strong>服务可用性</strong>：网站不保证服务的不间断性和完全准确性</li>
+                    <li><strong>第三方链接</strong>：对于第三方网站的内容，本网站不承担责任</li>
+                    <li><strong>用户损失</strong>：因不可抗力或技术故障导致的用户损失，网站不承担责任</li>
+                    <li><strong>内容责任</strong>：用户对其发布的内容承担全部法律责任</li>
+                </ol>
+                
+                <h3>第八条 协议修改与终止</h3>
+                <ol>
+                    <li><strong>修改权利</strong>：本网站保留随时修改本协议的权利，修改后的协议将在网站上公布</li>
+                    <li><strong>终止条件</strong>：如用户违反本协议，网站有权终止提供服务</li>
+                    <li><strong>协议效力</strong>：本协议的终止不影响双方在终止前产生的权利义务</li>
+                </ol>
+                
+                <h3>第九条 争议解决</h3>
+                <p>本协议的解释和执行均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，可向网站所在地人民法院提起诉讼。</p>
+                
+                <h3>第十条 联系方式</h3>
+                <p>如对本协议有任何疑问，请通过以下方式与我们联系：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                
+                <p><strong>生效日期</strong>：本协议自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('terms-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 隐私政策模态框 -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>隐私政策</h2>
+            <div class="modal-text">
+                                <h3>第一条 隐私政策概述</h3>
+                <p>本隐私政策说明C++学习入门网站（以下简称"我们"或"本网站"）如何收集、使用、存储和保护您的个人信息。我们承诺保护您的隐私安全，请仔细阅读本政策。</p>
+                
+                <h3>第二条 信息收集</h3>
+                <p>我们收集的信息类型包括：</p>
+                
+                <h4>1. 注册信息</h4>
+                <ul>
+                    <li>用户名</li>
+                    <li>邮箱地址</li>
+                    <li>密码（经过加密处理）</li>
+                </ul>
+                
+                <h4>2. 学习数据</h4>
+                <ul>
+                    <li>学习进度和章节完成情况</li>
+                    <li>测验成绩和答题记录</li>
+                    <li>学习时长和访问频率</li>
+                    <li>成就获得记录</li>
+                </ul>
+                
+                <h4>3. 交互数据</h4>
+                <ul>
+                    <li>论坛发帖和回复内容</li>
+                    <li>与AI助手的对话记录</li>
+                    <li>用户反馈和建议</li>
+                </ul>
+                
+                <h4>4. 技术信息</h4>
+                <ul>
+                    <li>IP地址和设备信息</li>
+                    <li>浏览器类型和版本</li>
+                    <li>操作系统信息</li>
+                    <li>访问时间和页面浏览记录</li>
+                </ul>
+                
+                <h3>第三条 信息使用目的</h3>
+                <p>我们收集和使用您的个人信息主要用于以下目的：</p>
+                
+                <h4>1. 服务提供</h4>
+                <ul>
+                    <li>创建和管理用户账户</li>
+                    <li>提供个性化学习内容</li>
+                    <li>跟踪学习进度和成就</li>
+                    <li>提供AI助手服务</li>
+                </ul>
+                
+                <h4>2. 沟通联系</h4>
+                <ul>
+                    <li>发送重要通知和更新</li>
+                    <li>回应用户询问和反馈</li>
+                    <li>发送学习提醒和激励信息</li>
+                </ul>
+                
+                <h4>3. 服务改进</h4>
+                <ul>
+                    <li>分析用户学习行为和偏好</li>
+                    <li>优化网站功能和用户体验</li>
+                    <li>开发新的学习功能</li>
+                </ul>
+                
+                <h4>4. 安全保障</h4>
+                <ul>
+                    <li>防止欺诈和滥用行为</li>
+                    <li>维护网站和用户安全</li>
+                    <li>遵守法律法规要求</li>
+                </ul>
+                
+                <h3>第四条 信息共享与披露</h3>
+                <p>我们承诺不会出售您的个人信息，但在以下情况下可能共享信息：</p>
+                
+                <h4>1. 第三方服务商</h4>
+                <ul>
+                    <li>AI服务提供商（用于AI助手功能）</li>
+                    <li>邮件服务提供商（用于发送验证邮件）</li>
+                    <li>云存储服务商（用于数据备份）</li>
+                </ul>
+                
+                <h4>2. 法律要求</h4>
+                <ul>
+                    <li>遵守适用法律法规的要求</li>
+                    <li>响应政府部门的合法请求</li>
+                    <li>保护我们或他人的合法权益</li>
+                </ul>
+                
+                <h4>3. 业务转让</h4>
+                <ul>
+                    <li>在合并、收购或资产转让时，经用户同意后转让相关信息</li>
+                </ul>
+                
+                <h3>第五条 数据存储与安全</h3>
+                
+                <h4>1. 存储方式</h4>
+                <ul>
+                    <li>用户数据主要存储在用户本地浏览器中</li>
+                    <li>部分数据存储在安全的服务器环境中</li>
+                    <li>采用加密技术保护敏感信息</li>
+                </ul>
+                
+                <h4>2. 安全措施</h4>
+                <ul>
+                    <li>使用HTTPS协议保护数据传输</li>
+                    <li>对密码进行加密存储</li>
+                    <li>定期进行安全审计和漏洞修复</li>
+                </ul>
+                
+                <h4>3. 数据保留</h4>
+                <ul>
+                    <li>账户信息在账户存续期间保留</li>
+                    <li>学习数据保留期限不超过法律要求的期限</li>
+                    <li>用户可以要求删除特定数据</li>
+                </ul>
+                
+                <h3>第六条 用户权利</h3>
+                <p>您对自己的个人信息享有以下权利：</p>
+                <ol>
+                    <li><strong>访问权</strong>：查看我们持有的您的个人信息</li>
+                    <li><strong>更正权</strong>：更正不准确或不完整的个人信息</li>
+                    <li><strong>删除权</strong>：在特定情况下要求删除您的个人信息</li>
+                    <li><strong>限制处理权</strong>：限制我们处理您的个人信息</li>
+                    <li><strong>数据携带权</strong>：以结构化格式获取您的数据副本</li>
+                    <li><strong>撤回同意权</strong>：随时撤回对特定数据处理的同意</li>
+                </ol>
+                
+                <h3>第七条 Cookie和跟踪技术</h3>
+                
+                <h4>1. Cookie使用</h4>
+                <ul>
+                    <li>用于保持登录状态和用户偏好</li>
+                    <li>分析网站使用情况和性能</li>
+                    <li>您可以通过浏览器设置控制Cookie</li>
+                </ul>
+                
+                <h4>2. 本地存储</h4>
+                <ul>
+                    <li>使用localStorage存储学习进度</li>
+                    <li>存储用户界面偏好设置</li>
+                    <li>缓存常用数据以提升性能</li>
+                </ul>
+                
+                <h3>第八条 儿童隐私保护</h3>
+                <p>我们不会故意收集13岁以下儿童的个人信息。如果我们发现收集了儿童的个人信息，将立即删除相关信息。如果您是儿童的家长或监护人，发现儿童提供了个人信息，请联系我们。</p>
+                
+                <h3>第九条 国际数据传输</h3>
+                <p>如果您的数据需要跨境传输，我们将采取适当的保护措施，确保数据安全，并遵守相关法律法规的要求。</p>
+                
+                <h3>第十条 政策更新</h3>
+                <p>我们可能会不定期更新本隐私政策。重大变更时，我们会通过网站公告或邮件通知的方式告知您。继续使用我们的服务即表示您接受更新后的政策。</p>
+                
+                <h3>第十一条 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问、意见或投诉，或希望行使您的个人信息权利，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                <p>我们将在收到您的请求后30个工作日内给予回复。</p>
+                
+                <p><strong>生效日期</strong>：本隐私政策自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('privacy-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast-message" class="toast"></div>
+
+    <script src="js/main2.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <!-- 全局数据管理功能 -->
+    <script src="js/data-management-ui.js"></script>
+</body>
+
+</html>
