@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++高级特性 - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- 移动端主题切换按钮 -->
+            <button id="mobile-theme-toggle" class="mobile-theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html">基础语法</a></li>
+                <li><a href="oop.html">面向对象</a></li>
+                <li><a href="advanced.html" class="active">高级特性</a></li>
+                <li><a href="effective.html">Effective C++</a></li>
+                <li><a href="stl.html">STL源码剖析</a></li>
+                <li><a href="quiz.html">题库</a></li>
+                <li><a href="achievements.html">成就系统</a></li>
+                <li><a href="../forum.html">论坛</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">账户 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login-modal">登录</a></li>
+                        <li><a href="#register-modal">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about.html">关于我们</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#templates">模板</a></li>
+                <li><a href="#exceptions">异常处理</a></li>
+                <li><a href="#smart-pointers">智能指针</a></li>
+                <li><a href="#move-semantics">移动语义</a></li>
+                <li><a href="#lambda">Lambda表达式</a></li>
+                <li><a href="#constexpr">constexpr</a></li>
+                <li><a href="#type-traits">类型萃取</a></li>
+                <li><a href="#variadic-templates">可变参数模板</a></li>
+                <li><a href="#memory-model">内存模型</a></li>
+                <li><a href="#multithreading">多线程编程</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>C++高级特性</h1>
+            <p class="intro">C++提供了许多强大的高级特性，这些特性可以帮助开发者编写更加高效、灵活和可维护的代码。本章将详细介绍C++的一些高级特性。</p>
+
+            <section id="templates" class="section">
+                <h2>模板</h2>
+                <p>模板是C++支持泛型编程的基础，它允许定义可以处理不同数据类型的函数和类。</p>
+
+                <h3>函数模板</h3>
+                <div class="code-block">
+                    <pre><code>// 函数模板定义
+template &lt;typename T&gt;
+T max(T a, T b) {
+    return a > b ? a : b;
+}
+
+// 使用函数模板
+int main() {
+    int i = max(10, 20);       // T为int
+    double d = max(3.14, 2.71); // T为double
+    std::string s = max(std::string("hello"), std::string("world")); // T为string
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>类模板</h3>
+                <div class="code-block">
+                    <pre><code>// 类模板定义
+template &lt;typename T&gt;
+class Stack {
+private:
+    std::vector&lt;T&gt; elements;
+public:
+    void push(const T& item) {
+        elements.push_back(item);
+    }
+    void pop() {
+        if (!elements.empty()) {
+            elements.pop_back();
+        }
+    }
+    T top() const {
+        if (!elements.empty()) {
+            return elements.back();
+        }
+        throw std::out_of_range("Stack is empty");
+    }
+    bool empty() const {
+        return elements.empty();
+    }
+};
+
+// 使用类模板
+int main() {
+    Stack&lt;int&gt; intStack;
+    intStack.push(10);
+    intStack.push(20);
+    
+    Stack&lt;std::string&gt; stringStack;
+    stringStack.push("hello");
+    stringStack.push("world");
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="exceptions" class="section">
+                <h2>异常处理</h2>
+                <p>异常处理是C++中处理运行时错误的机制，它允许程序在出现错误时优雅地恢复。</p>
+
+                <h3>异常处理的基本语法</h3>
+                <div class="code-block">
+                    <pre><code>// 抛出异常
+void divide(int a, int b) {
+    if (b == 0) {
+        throw std::runtime_error("除数不能为零");
+    }
+    std::cout << "结果: " << (a / b) << std::endl;
+}
+
+// 捕获异常
+int main() {
+    try {
+        divide(10, 0);
+    } catch (const std::exception& e) {
+        std::cerr << "捕获到异常: " << e.what() << std::endl;
+    } catch (...) {
+        std::cerr << "捕获到未知异常" << std::endl;
+    }
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>自定义异常类</h3>
+                <div class="code-block">
+                    <pre><code>// 自定义异常类
+class FileNotFoundException : public std::exception {
+private:
+    std::string message;
+public:
+    explicit FileNotFoundException(const std::string& filename) 
+        : message("找不到文件: " + filename) {}
+    
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
+};
+
+// 使用自定义异常
+void openFile(const std::string& filename) {
+    // 模拟文件打开操作
+    bool fileExists = false;
+    if (!fileExists) {
+        throw FileNotFoundException(filename);
+    }
+    // 文件打开后的操作...
+}
+
+int main() {
+    try {
+        openFile("config.txt");
+    } catch (const FileNotFoundException& e) {
+        std::cerr << "文件错误: " << e.what() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "发生错误: " << e.what() << std::endl;
+    }
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="smart-pointers" class="section">
+                <h2>智能指针</h2>
+                <p>智能指针是C++11引入的用于自动管理动态内存的工具，可以有效避免内存泄漏。</p>
+
+                <h3>std::unique_ptr</h3>
+                <p>std::unique_ptr表示对资源的独占所有权，同一时刻只能有一个unique_ptr指向某一资源。</p>
+                <div class="code-block">
+                    <pre><code>int main() {
+    // 创建unique_ptr
+    std::unique_ptr&lt;int&gt; up1(new int(10));
+    // 使用make_unique (C++14)
+    auto up2 = std::make_unique&lt;int&gt;(20);
+    
+    // 不能复制，但可以移动
+    auto up3 = std::move(up1); // up1现在为空
+    
+    if (up1) {
+        std::cout << "up1的值: " << *up1 << std::endl;
+    } else {
+        std::cout << "up1为空" << std::endl;
+    }
+    
+    if (up3) {
+        std::cout << "up3的值: " << *up3 << std::endl;
+    }
+    
+    return 0; // unique_ptr离开作用域时自动释放内存
+}</code></pre>
+                </div>
+
+                <h3>std::shared_ptr</h3>
+                <p>std::shared_ptr允许多个指针共享对同一资源的所有权，使用引用计数来跟踪资源的使用情况。</p>
+                <div class="code-block">
+                    <pre><code>int main() {
+    // 创建shared_ptr
+    std::shared_ptr&lt;int&gt; sp1(new int(10));
+    // 使用make_shared (推荐)
+    auto sp2 = std::make_shared&lt;int&gt;(20);
+    
+    // 复制shared_ptr会增加引用计数
+    auto sp3 = sp1;
+    
+    std::cout << "sp1的引用计数: " << sp1.use_count() << std::endl;
+    std::cout << "sp3的引用计数: " << sp3.use_count() << std::endl;
+    
+    // 当最后一个shared_ptr离开作用域时，资源会被自动释放
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>std::weak_ptr</h3>
+                <p>std::weak_ptr是一种不增加引用计数的shared_ptr观察者，可以解决循环引用问题。</p>
+                <div class="code-block">
+                    <pre><code>int main() {
+    auto sp = std::make_shared&lt;int&gt;(42);
+    std::weak_ptr&lt;int&gt; wp = sp; // 不增加引用计数
+    
+    std::cout << "sp的引用计数: " << sp.use_count() << std::endl;
+    
+    // 检查wp是否还有效
+    if (auto temp = wp.lock()) {
+        std::cout << "wp指向的值: " << *temp << std::endl;
+    } else {
+        std::cout << "wp指向的对象已被销毁" << std::endl;
+    }
+    
+    sp.reset(); // 释放资源
+    
+    if (auto temp = wp.lock()) {
+        std::cout << "wp指向的值: " << *temp << std::endl;
+    } else {
+        std::cout << "wp指向的对象已被销毁" << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="move-semantics" class="section">
+                <h2>移动语义</h2>
+                <p>移动语义是C++11引入的特性，它允许我们将资源（如内存）从一个对象转移到另一个对象，而不是复制。</p>
+
+                <h3>移动构造函数和移动赋值运算符</h3>
+                <div class="code-block">
+                    <pre><code>class MyString {
+private:
+    char* data;
+    size_t size;
+public:
+    // 默认构造函数
+    MyString() : data(nullptr), size(0) {}
+    
+    // 构造函数
+    MyString(const char* str) {
+        if (str) {
+            size = std::strlen(str);
+            data = new char[size + 1];
+            std::memcpy(data, str, size + 1);
+        } else {
+            data = nullptr;
+            size = 0;
+        }
+    }
+    
+    // 拷贝构造函数
+    MyString(const MyString& other) {
+        size = other.size;
+        if (other.data) {
+            data = new char[size + 1];
+            std::memcpy(data, other.data, size + 1);
+        } else {
+            data = nullptr;
+        }
+    }
+    
+    // 移动构造函数
+    MyString(MyString&& other) noexcept : data(other.data), size(other.size) {
+        // 使other处于有效但不确定的状态
+        other.data = nullptr;
+        other.size = 0;
+    }
+    
+    // 拷贝赋值运算符
+    MyString& operator=(const MyString& other) {
+        if (this != &other) {
+            // 释放当前资源
+            delete[] data;
+            
+            size = other.size;
+            if (other.data) {
+                data = new char[size + 1];
+                std::memcpy(data, other.data, size + 1);
+            } else {
+                data = nullptr;
+            }
+        }
+        return *this;
+    }
+    
+    // 移动赋值运算符
+    MyString& operator=(MyString&& other) noexcept {
+        if (this != &other) {
+            // 释放当前资源
+            delete[] data;
+            
+            // 获取other的资源
+            data = other.data;
+            size = other.size;
+            
+            // 使other处于有效但不确定的状态
+            other.data = nullptr;
+            other.size = 0;
+        }
+        return *this;
+    }
+    
+    // 析构函数
+    ~MyString() {
+        delete[] data;
+    }
+    
+    // 获取字符串长度
+    size_t getSize() const { return size; }
+    
+    // 获取C风格字符串
+    const char* c_str() const { return data ? data : ""; }
+};
+
+int main() {
+    MyString s1("Hello");
+    
+    // 移动构造
+    MyString s2(std::move(s1));
+    
+    std::cout << "s2: " << s2.c_str() << std::endl;
+    std::cout << "s1 size after move: " << s1.getSize() << std::endl;
+    
+    MyString s3("World");
+    
+    // 移动赋值
+    s3 = std::move(s2);
+    
+    std::cout << "s3: " << s3.c_str() << std::endl;
+    std::cout << "s2 size after move: " << s2.getSize() << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="lambda" class="section">
+                <h2>Lambda表达式</h2>
+                <p>Lambda表达式是C++11引入的匿名函数，它允许在代码中直接定义短小的函数对象。</p>
+
+                <h3>基本语法</h3>
+                <div class="code-block">
+                    <pre><code>[capture](parameters) -> return_type { body }</code></pre>
+                </div>
+                <p>其中：</p>
+                <ul>
+                    <li><strong>capture</strong>：捕获列表，指定如何访问外部变量</li>
+                    <li><strong>parameters</strong>：参数列表（可选）</li>
+                    <li><strong>return_type</strong>：返回类型（可选，通常可以省略，由编译器推导）</li>
+                    <li><strong>body</strong>：函数体</li>
+                </ul>
+
+                <h3>Lambda表达式示例</h3>
+                <div class="code-block">
+                    <pre><code>int main() {
+    // 基本lambda表达式
+    auto add = [](int a, int b) { return a + b; };
+    std::cout << "3 + 5 = " << add(3, 5) << std::endl;
+    
+    // 捕获外部变量
+    int x = 10;
+    auto multiply = [x](int y) { return x * y; };
+    std::cout << "10 * 5 = " << multiply(5) << std::endl;
+    
+    // 引用捕获
+    auto increment = [&x]() { x++; };
+    increment();
+    std::cout << "x after increment: " << x << std::endl;
+    
+    // 混合捕获
+    int y = 20;
+    auto compute = [x, &y](int z) { 
+        y++; 
+        return x * y * z; 
+    };
+    std::cout << "compute(2): " << compute(2) << std::endl;
+    std::cout << "y after compute: " << y << std::endl;
+    
+    // 捕获所有外部变量（值捕获）
+    auto printAll = [=]() {
+        std::cout << "x: " << x << ", y: " << y << std::endl;
+    };
+    printAll();
+    
+    // 捕获所有外部变量（引用捕获）
+    auto modifyAll = [&]() {
+        x++; 
+        y++;
+    };
+    modifyAll();
+    std::cout << "After modifyAll - x: " << x << ", y: " << y << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>Lambda在STL中的应用</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+int main() {
+    std::vector&lt;int&gt; numbers = {3, 1, 4, 1, 5, 9, 2, 6};
+    
+    // 使用lambda排序
+    std::sort(numbers.begin(), numbers.end(), 
+              [](int a, int b) { return a > b; }); // 降序排序
+    
+    // 输出排序后的结果
+    std::cout << "降序排序后的数组: ";
+    for (int n : numbers) {
+        std::cout << n << " ";
+    }
+    std::cout << std::endl;
+    
+    // 使用lambda查找第一个大于5的元素
+    auto it = std::find_if(numbers.begin(), numbers.end(),
+                          [](int n) { return n > 5; });
+    
+    if (it != numbers.end()) {
+        std::cout << "第一个大于5的元素: " << *it << std::endl;
+    }
+    
+    // 使用lambda计算数组中所有元素的和
+    int sum = 0;
+    std::for_each(numbers.begin(), numbers.end(),
+                 [&sum](int n) { sum += n; });
+    
+    std::cout << "数组元素的和: " << sum << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="constexpr" class="section">
+                <h2>constexpr</h2>
+                <p>constexpr是C++11引入的关键字，用于在编译时计算表达式的值，从而提高程序的运行效率。</p>
+
+                <h3>constexpr函数</h3>
+                <div class="code-block">
+                    <pre><code>// constexpr函数
+constexpr int factorial(int n) {
+    return n <= 1 ? 1 : n * factorial(n - 1);
+}
+
+int main() {
+    // 编译时计算
+    constexpr int fact5 = factorial(5);
+    std::cout << "5! = " << fact5 << std::endl;
+    
+    // 运行时计算
+    int n;
+    std::cout << "请输入一个整数: ";
+    std::cin >> n;
+    std::cout << n << "! = " << factorial(n) << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>constexpr类</h3>
+                <div class="code-block">
+                    <pre><code>class Point {
+private:
+    int x, y;
+public:
+    constexpr Point(int x_val, int y_val) : x(x_val), y(y_val) {}
+    
+    constexpr int getX() const { return x; }
+    constexpr int getY() const { return y; }
+    
+    constexpr Point move(int dx, int dy) const {
+        return Point(x + dx, y + dy);
+    }
+};
+
+int main() {
+    // 编译时创建对象
+    constexpr Point p1(10, 20);
+    constexpr Point p2 = p1.move(5, -5);
+    
+    std::cout << "p1: (" << p1.getX() << ", " << p1.getY() << ")" << std::endl;
+    std::cout << "p2: (" << p2.getX() << ", " << p2.getY() << ")" << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="type-traits" class="section">
+                <h2>类型萃取</h2>
+                <p>类型萃取（Type Traits）是C++标准库中的一个工具集，用于在编译时获取和操作类型信息。</p>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;type_traits&gt;
+
+// 使用类型萃取编写一个通用函数
+template &lt;typename T&gt;
+void process(T value) {
+    if constexpr (std::is_integral_v&lt;T&gt;) {
+        std::cout << "处理整数: " << value << std::endl;
+    } else if constexpr (std::is_floating_point_v&lt;T&gt;) {
+        std::cout << "处理浮点数: " << value << std::endl;
+    } else if constexpr (std::is_pointer_v&lt;T&gt;) {
+        std::cout << "处理指针，地址: " << value;
+        if (value) {
+            std::cout << ", 值: " << *value;
+        }
+        std::cout << std::endl;
+    } else {
+        std::cout << "处理其他类型" << std::endl;
+    }
+}
+
+int main() {
+    int i = 42;
+    double d = 3.14;
+    int* p = &i;
+    std::string s = "hello";
+    
+    process(i); // 处理整数
+    process(d); // 处理浮点数
+    process(p); // 处理指针
+    process(s); // 处理其他类型
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="variadic-templates" class="section">
+                <h2>可变参数模板</h2>
+                <p>可变参数模板是C++11引入的特性，允许定义接受任意数量参数的模板函数和模板类。</p>
+
+                <h3>可变参数模板函数</h3>
+                <div class="code-block">
+                    <pre><code>// 递归终止函数
+void print() {
+    std::cout << std::endl;
+}
+
+// 可变参数模板函数
+template &lt;typename T, typename... Args&gt;
+void print(T first, Args... rest) {
+    std::cout << first;
+    if constexpr (sizeof...(rest) > 0) {
+        std::cout << ", ";
+    }
+    print(rest...); // 递归调用
+}
+
+int main() {
+    print(1, 2, 3, "hello", 3.14);
+    print("just one argument");
+    print(); // 空参数调用
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>使用折叠表达式（C++17）</h3>
+                <div class="code-block">
+                    <pre><code>// 使用折叠表达式计算参数和
+template &lt;typename... Args&gt;
+auto sum(Args... args) {
+    return (args + ...); // 二元左折叠: (((arg1 + arg2) + arg3) + ...) + argN
+}
+
+// 使用折叠表达式打印所有参数
+template &lt;typename... Args&gt;
+void printArgs(Args... args) {
+    (std::cout << ... << args) << std::endl;
+}
+
+int main() {
+    std::cout << "1 + 2 + 3 + 4 + 5 = " << sum(1, 2, 3, 4, 5) << std::endl;
+    std::cout << "3.14 + 2.71 = " << sum(3.14, 2.71) << std::endl;
+    
+    printArgs("Hello", ", ", "world", "!\n");
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="memory-model" class="section">
+                <h2>内存模型</h2>
+                <p>C++内存模型定义了程序中不同线程如何通过内存进行交互，确保多线程程序的正确性。</p>
+
+                <h3>内存序（Memory Order）</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;atomic&gt;
+#include &lt;thread&gt;
+
+std::atomic&lt;int&gt; data(0);
+std::atomic&lt;bool&gt; ready(false);
+
+void producer() {
+    data.store(42, std::memory_order_relaxed);
+    ready.store(true, std::memory_order_release); // 确保data的存储对consumer可见
+}
+
+void consumer() {
+    while (!ready.load(std::memory_order_acquire)) { // 等待ready变为true
+        std::this_thread::yield();
+    }
+    // 此时，我们可以安全地读取data
+    std::cout << "data = " << data.load(std::memory_order_relaxed) << std::endl;
+}
+
+int main() {
+    std::thread t1(producer);
+    std::thread t2(consumer);
+    
+    t1.join();
+    t2.join();
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="multithreading" class="section">
+                <h2>多线程编程</h2>
+                <p>C++11引入了标准的多线程库，使多线程编程变得更加简单和可移植。</p>
+
+                <h3>创建和管理线程</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;thread&gt;
+#include &lt;iostream&gt;
+
+void printHello() {
+    std::cout << "Hello from thread! Thread ID: " 
+              << std::this_thread::get_id() << std::endl;
+}
+
+void printNumber(int n) {
+    std::cout << "Number: " << n << " from thread ID: " 
+              << std::this_thread::get_id() << std::endl;
+}
+
+int main() {
+    std::cout << "Main thread ID: " << std::this_thread::get_id() << std::endl;
+    
+    // 创建线程1
+    std::thread t1(printHello);
+    
+    // 创建线程2，传递参数
+    std::thread t2(printNumber, 42);
+    
+    // 等待线程完成
+    t1.join();
+    t2.join();
+    
+    std::cout << "All threads completed." << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>互斥锁和锁守卫</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;vector&gt;
+
+std::mutex mtx; // 互斥锁
+int sharedCounter = 0;
+
+void incrementCounter(int iterations) {
+    for (int i = 0; i < iterations; ++i) {
+        // 使用lock_guard自动管理锁的获取和释放
+        std::lock_guard&lt;std::mutex&gt; lock(mtx);
+        ++sharedCounter;
+        // lock_guard离开作用域时自动释放锁
+    }
+}
+
+int main() {
+    const int numThreads = 10;
+    const int iterationsPerThread = 10000;
+    
+    std::vector&lt;std::thread&gt; threads;
+    
+    // 创建多个线程
+    for (int i = 0; i < numThreads; ++i) {
+        threads.push_back(std::thread(incrementCounter, iterationsPerThread));
+    }
+    
+    // 等待所有线程完成
+    for (auto& t : threads) {
+        t.join();
+    }
+    
+    std::cout << "Expected counter value: " << numThreads * iterationsPerThread << std::endl;
+    std::cout << "Actual counter value: " << sharedCounter << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+                <div class="navigation-buttons">
+                <a href="advanced.html" class="nav-button">上一章：高级特性</a>
+                <a href="effective.html" class="nav-button">下一章：Effective C++</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" placeholder="请输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="#forgot-password-modal" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="modal-btn">登录</button>
+                <p class="register-link">还没有账号? <a href="#register-modal">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">用户名</label>
+                    <input type="text" id="register-username" placeholder="请设置用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required> 我已阅读并同意<a href="#" class="terms-link">用户协议</a>和<a href="#" class="privacy-link">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-btn">注册</button>
+                <p class="login-link">已有账号? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 忘记密码模态框 -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>重置密码</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="forgot-email">邮箱</label>
+                    <input type="email" id="forgot-email" placeholder="请输入注册邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-new-password">新密码</label>
+                    <input type="password" id="forgot-new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-confirm-password">确认新密码</label>
+                    <input type="password" id="forgot-confirm-password" placeholder="请确认新密码" required>
+                </div>
+                <button type="submit" class="modal-btn">重置密码</button>
+                <p class="login-link">想起密码了? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户协议模态框 -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户协议</h2>
+            <div class="modal-text">
+                                <h3>第一条 协议概述</h3>
+                <p>欢迎使用C++学习入门网站（以下简称"本网站"）。本协议是您（以下简称"用户"）与本网站之间关于使用本网站服务的法律协议。请在使用本网站前仔细阅读本协议，一旦您开始使用本网站，即表示您同意接受本协议的全部条款。</p>
+                
+                <h3>第二条 服务内容</h3>
+                <p>本网站致力于为用户提供优质的C++编程学习服务，主要包括但不限于：</p>
+                <ul>
+                    <li>C++基础语法、面向对象、高级特性等教学内容</li>
+                    <li>在线测验题库和学习评估系统</li>
+                    <li>用户学习进度跟踪和成就系统</li>
+                    <li>学习论坛和用户交流平台</li>
+                    <li>AI智能助手服务</li>
+                    <li>其他与C++学习相关的辅助功能</li>
+                </ul>
+                
+                <h3>第三条 用户注册与账户管理</h3>
+                <ol>
+                    <li><strong>注册要求</strong>：用户需要提供真实有效的邮箱地址和用户名进行注册</li>
+                    <li><strong>账户安全</strong>：用户有责任保护自己的账户密码安全，不得将账户借给他人使用</li>
+                    <li><strong>信息准确性</strong>：用户应确保注册信息的真实性和准确性</li>
+                    <li><strong>账户停用</strong>：如发现用户提供虚假信息或违反本协议，网站有权停用相关账户</li>
+                </ol>
+                
+                <h3>第四条 用户行为规范</h3>
+                <p>用户在使用本网站时，应当遵守以下规范：</p>
+                <p><strong>允许的行为：</strong></p>
+                <ul>
+                    <li>正常学习C++编程知识</li>
+                    <li>在论坛中进行友善的学术讨论</li>
+                    <li>分享学习心得和编程经验</li>
+                    <li>合理使用AI助手进行学习辅导</li>
+                </ul>
+                <p><strong>禁止的行为：</strong></p>
+                <ul>
+                    <li>发布违法、有害、威胁、侮辱、诽谤的内容</li>
+                    <li>发布与C++学习无关的广告或垃圾信息</li>
+                    <li>恶意攻击网站系统或其他用户</li>
+                    <li>传播病毒、恶意代码或有害程序</li>
+                    <li>侵犯他人知识产权或隐私权</li>
+                    <li>利用技术手段绕过网站的限制措施</li>
+                </ul>
+                
+                <h3>第五条 知识产权</h3>
+                <ol>
+                    <li><strong>网站内容版权</strong>：本网站提供的所有教学内容、代码示例、题库等均受版权保护</li>
+                    <li><strong>用户生成内容</strong>：用户在论坛发表的原创内容，版权归用户所有，但用户授予本网站使用权</li>
+                    <li><strong>合理使用</strong>：用户可以将学习内容用于个人学习目的，但不得用于商业用途</li>
+                    <li><strong>侵权处理</strong>：如发现侵权行为，请及时联系我们处理</li>
+                </ol>
+                
+                <h3>第六条 AI助手服务条款</h3>
+                <ol>
+                    <li><strong>服务性质</strong>：AI助手仅作为学习辅助工具，提供编程相关的答疑和指导</li>
+                    <li><strong>服务限制</strong>：AI助手的回答仅供参考，不保证绝对准确性</li>
+                    <li><strong>使用规范</strong>：禁止利用AI助手进行违法、有害或与学习无关的活动</li>
+                    <li><strong>数据使用</strong>：与AI助手的对话可能被记录用于改进服务质量</li>
+                </ol>
+                
+                <h3>第七条 免责声明</h3>
+                <ol>
+                    <li><strong>服务可用性</strong>：网站不保证服务的不间断性和完全准确性</li>
+                    <li><strong>第三方链接</strong>：对于第三方网站的内容，本网站不承担责任</li>
+                    <li><strong>用户损失</strong>：因不可抗力或技术故障导致的用户损失，网站不承担责任</li>
+                    <li><strong>内容责任</strong>：用户对其发布的内容承担全部法律责任</li>
+                </ol>
+                
+                <h3>第八条 协议修改与终止</h3>
+                <ol>
+                    <li><strong>修改权利</strong>：本网站保留随时修改本协议的权利，修改后的协议将在网站上公布</li>
+                    <li><strong>终止条件</strong>：如用户违反本协议，网站有权终止提供服务</li>
+                    <li><strong>协议效力</strong>：本协议的终止不影响双方在终止前产生的权利义务</li>
+                </ol>
+                
+                <h3>第九条 争议解决</h3>
+                <p>本协议的解释和执行均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，可向网站所在地人民法院提起诉讼。</p>
+                
+                <h3>第十条 联系方式</h3>
+                <p>如对本协议有任何疑问，请通过以下方式与我们联系：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                
+                <p><strong>生效日期</strong>：本协议自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('terms-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 隐私政策模态框 -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>隐私政策</h2>
+            <div class="modal-text">
+                                <h3>第一条 隐私政策概述</h3>
+                <p>本隐私政策说明C++学习入门网站（以下简称"我们"或"本网站"）如何收集、使用、存储和保护您的个人信息。我们承诺保护您的隐私安全，请仔细阅读本政策。</p>
+                
+                <h3>第二条 信息收集</h3>
+                <p>我们收集的信息类型包括：</p>
+                
+                <h4>1. 注册信息</h4>
+                <ul>
+                    <li>用户名</li>
+                    <li>邮箱地址</li>
+                    <li>密码（经过加密处理）</li>
+                </ul>
+                
+                <h4>2. 学习数据</h4>
+                <ul>
+                    <li>学习进度和章节完成情况</li>
+                    <li>测验成绩和答题记录</li>
+                    <li>学习时长和访问频率</li>
+                    <li>成就获得记录</li>
+                </ul>
+                
+                <h4>3. 交互数据</h4>
+                <ul>
+                    <li>论坛发帖和回复内容</li>
+                    <li>与AI助手的对话记录</li>
+                    <li>用户反馈和建议</li>
+                </ul>
+                
+                <h4>4. 技术信息</h4>
+                <ul>
+                    <li>IP地址和设备信息</li>
+                    <li>浏览器类型和版本</li>
+                    <li>操作系统信息</li>
+                    <li>访问时间和页面浏览记录</li>
+                </ul>
+                
+                <h3>第三条 信息使用目的</h3>
+                <p>我们收集和使用您的个人信息主要用于以下目的：</p>
+                
+                <h4>1. 服务提供</h4>
+                <ul>
+                    <li>创建和管理用户账户</li>
+                    <li>提供个性化学习内容</li>
+                    <li>跟踪学习进度和成就</li>
+                    <li>提供AI助手服务</li>
+                </ul>
+                
+                <h4>2. 沟通联系</h4>
+                <ul>
+                    <li>发送重要通知和更新</li>
+                    <li>回应用户询问和反馈</li>
+                    <li>发送学习提醒和激励信息</li>
+                </ul>
+                
+                <h4>3. 服务改进</h4>
+                <ul>
+                    <li>分析用户学习行为和偏好</li>
+                    <li>优化网站功能和用户体验</li>
+                    <li>开发新的学习功能</li>
+                </ul>
+                
+                <h4>4. 安全保障</h4>
+                <ul>
+                    <li>防止欺诈和滥用行为</li>
+                    <li>维护网站和用户安全</li>
+                    <li>遵守法律法规要求</li>
+                </ul>
+                
+                <h3>第四条 信息共享与披露</h3>
+                <p>我们承诺不会出售您的个人信息，但在以下情况下可能共享信息：</p>
+                
+                <h4>1. 第三方服务商</h4>
+                <ul>
+                    <li>AI服务提供商（用于AI助手功能）</li>
+                    <li>邮件服务提供商（用于发送验证邮件）</li>
+                    <li>云存储服务商（用于数据备份）</li>
+                </ul>
+                
+                <h4>2. 法律要求</h4>
+                <ul>
+                    <li>遵守适用法律法规的要求</li>
+                    <li>响应政府部门的合法请求</li>
+                    <li>保护我们或他人的合法权益</li>
+                </ul>
+                
+                <h4>3. 业务转让</h4>
+                <ul>
+                    <li>在合并、收购或资产转让时，经用户同意后转让相关信息</li>
+                </ul>
+                
+                <h3>第五条 数据存储与安全</h3>
+                
+                <h4>1. 存储方式</h4>
+                <ul>
+                    <li>用户数据主要存储在用户本地浏览器中</li>
+                    <li>部分数据存储在安全的服务器环境中</li>
+                    <li>采用加密技术保护敏感信息</li>
+                </ul>
+                
+                <h4>2. 安全措施</h4>
+                <ul>
+                    <li>使用HTTPS协议保护数据传输</li>
+                    <li>对密码进行加密存储</li>
+                    <li>定期进行安全审计和漏洞修复</li>
+                </ul>
+                
+                <h4>3. 数据保留</h4>
+                <ul>
+                    <li>账户信息在账户存续期间保留</li>
+                    <li>学习数据保留期限不超过法律要求的期限</li>
+                    <li>用户可以要求删除特定数据</li>
+                </ul>
+                
+                <h3>第六条 用户权利</h3>
+                <p>您对自己的个人信息享有以下权利：</p>
+                <ol>
+                    <li><strong>访问权</strong>：查看我们持有的您的个人信息</li>
+                    <li><strong>更正权</strong>：更正不准确或不完整的个人信息</li>
+                    <li><strong>删除权</strong>：在特定情况下要求删除您的个人信息</li>
+                    <li><strong>限制处理权</strong>：限制我们处理您的个人信息</li>
+                    <li><strong>数据携带权</strong>：以结构化格式获取您的数据副本</li>
+                    <li><strong>撤回同意权</strong>：随时撤回对特定数据处理的同意</li>
+                </ol>
+                
+                <h3>第七条 Cookie和跟踪技术</h3>
+                
+                <h4>1. Cookie使用</h4>
+                <ul>
+                    <li>用于保持登录状态和用户偏好</li>
+                    <li>分析网站使用情况和性能</li>
+                    <li>您可以通过浏览器设置控制Cookie</li>
+                </ul>
+                
+                <h4>2. 本地存储</h4>
+                <ul>
+                    <li>使用localStorage存储学习进度</li>
+                    <li>存储用户界面偏好设置</li>
+                    <li>缓存常用数据以提升性能</li>
+                </ul>
+                
+                <h3>第八条 儿童隐私保护</h3>
+                <p>我们不会故意收集13岁以下儿童的个人信息。如果我们发现收集了儿童的个人信息，将立即删除相关信息。如果您是儿童的家长或监护人，发现儿童提供了个人信息，请联系我们。</p>
+                
+                <h3>第九条 国际数据传输</h3>
+                <p>如果您的数据需要跨境传输，我们将采取适当的保护措施，确保数据安全，并遵守相关法律法规的要求。</p>
+                
+                <h3>第十条 政策更新</h3>
+                <p>我们可能会不定期更新本隐私政策。重大变更时，我们会通过网站公告或邮件通知的方式告知您。继续使用我们的服务即表示您接受更新后的政策。</p>
+                
+                <h3>第十一条 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问、意见或投诉，或希望行使您的个人信息权利，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                <p>我们将在收到您的请求后30个工作日内给予回复。</p>
+                
+                <p><strong>生效日期</strong>：本隐私政策自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('privacy-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast-message" class="toast"></div>
+
+    <!-- 数据存储管理 -->
+    <script src="../js/data-storage.js"></script>
+    <!-- 主脚本 -->
+    <script src="../js/main2.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+    <!-- 全局数据管理功能 -->
+    <script src="../js/data-management-ui.js"></script>
+</body>
+
+</html>

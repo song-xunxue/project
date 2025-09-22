@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 使网页在不同设备上（尤其是移动设备）能正确自适应布局。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++基础语法 - C++学习入门</title>
+    <!-- 引入Googlez 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- 移动端主题切换按钮 -->
+            <button id="mobile-theme-toggle" class="mobile-theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html" class="active">基础语法</a></li>
+                <li><a href="oop.html">面向对象</a></li>
+                <li><a href="advanced.html">高级特性</a></li>
+                <li><a href="effective.html">Effective C++</a></li>
+                <li><a href="stl.html">STL源码剖析</a></li>
+                <li><a href="quiz.html">题库</a></li>
+                <li><a href="achievements.html">成就系统</a></li>
+                <li><a href="../forum.html">论坛</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">账户 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login-modal">登录</a></li>
+                        <li><a href="#register-modal">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about.html">关于我们</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#intro">C++简介</a></li>
+                <li><a href="#first-program">第一个程序</a></li>
+                <li><a href="#data-types">数据类型</a></li>
+                <li><a href="#variables">变量与常量</a></li>
+                <li><a href="#operators">运算符</a></li>
+                <li><a href="#control-flow">控制流</a></li>
+                <li><a href="#functions">函数</a></li>
+                <li><a href="#arrays">数组</a></li>
+                <li><a href="#pointers">指针</a></li>
+                <li><a href="#structures">结构体</a></li>
+                <li><a href="#references">引用</a></li>
+                <li><a href="#preprocessor">预处理器</a></li>
+                <li><a href="#best-practices">最佳实践</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>C++基础语法</h1>
+            <p class="intro">C++是一种通用的、静态类型的编程语言，它支持过程化编程、面向对象编程和泛型编程。本章将详细介绍C++的基础语法，适合初学者系统学习。</p>
+
+            <section id="intro" class="section">
+                <h2>C++简介</h2>
+                <p>C++是由Bjarne Stroustrup于1979年在贝尔实验室开始开发的一种编程语言，最初被称为"C with
+                    Classes"（带类的C）。它既保持了C语言的高效性和灵活性，又增加了面向对象编程的特性。</p>
+                <p>C++被广泛应用于系统软件、游戏开发、嵌入式系统、高性能计算、金融系统等领域。许多著名的软件和系统都是用C++编写的，包括Windows操作系统、Adobe系列软件、Chrome浏览器和Unreal游戏引擎等。
+                </p>
+
+                <h3>C++标准发展历史</h3>
+                <ul>
+                    <li><strong>C++98</strong>：第一个国际标准，奠定了C++的基础</li>
+                    <li><strong>C++03</strong>：小幅度修订版本，主要解决C++98中的问题</li>
+                    <li><strong>C++11</strong>：重大更新，引入了自动类型推导、lambda表达式等现代特性</li>
+                    <li><strong>C++14</strong>：小幅度扩展，完善C++11特性</li>
+                    <li><strong>C++17</strong>：引入了结构化绑定、文件系统库等新特性</li>
+                    <li><strong>C++20</strong>：引入了概念、范围视图、协程等重大特性</li>
+                </ul>
+
+                <h3>C++的特点</h3>
+                <ul>
+                    <li><strong>高效性</strong>：C++代码编译后运行效率高，接近C语言</li>
+                    <li><strong>面向对象</strong>：支持封装、继承和多态等面向对象特性</li>
+                    <li><strong>泛型编程</strong>：通过模板支持泛型编程</li>
+                    <li><strong>低级内存操作</strong>：可以直接操作内存地址，适合系统编程</li>
+                    <li><strong>可移植性</strong>：代码可以在多种平台上编译运行</li>
+                </ul>
+            </section>
+
+            <section id="first-program" class="section">
+                <h2>第一个C++程序</h2>
+                <p>以下是一个简单的C++程序，它输出"Hello, World!"到屏幕上：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+                </div>
+                <p>让我们逐行解释这个程序：</p>
+                <ul>
+                    <li><code>#include &lt;iostream&gt;</code>: 包含输入输出流库，提供了输入输出功能</li>
+                    <li><code>int main()</code>: 主函数，程序的入口点，每个C++程序都必须有且只有一个main函数</li>
+                    <li><code>std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;</code>: 输出字符串到屏幕，std::endl表示换行</li>
+                    <li><code>return 0;</code>: 返回0，表示程序正常结束</li>
+                </ul>
+
+                <h3>编译和运行C++程序</h3>
+                <p>要运行C++程序，需要先将其编译成可执行文件：</p>
+                <div class="code-block">
+                    <pre><code># 使用g++编译器（Linux/Mac）
+g++ -o hello hello.cpp
+
+# 使用Microsoft Visual Studio编译器（Windows）
+cl /EHsc hello.cpp
+
+# 运行程序
+./hello  # Linux/Mac
+hello.exe  # Windows</code></pre>
+                </div>
+
+                <h3>注释的使用</h3>
+                <p>C++支持两种注释方式：</p>
+                <div class="code-block">
+                    <pre><code>// 这是单行注释
+
+/*
+这是多行注释
+可以跨越多行
+*/
+
+#include &lt;iostream&gt;
+
+int main() {
+    // 输出欢迎信息
+    std::cout &lt;&lt; "Welcome to C++!" &lt;&lt; std::endl;
+    
+    /*
+    这是一个简单的C++程序
+    它演示了基本的输出功能
+    */
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>命名空间</h3>
+                <p>命名空间帮助避免命名冲突，std是C++标准库的命名空间：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 使用整个std命名空间
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+
+// 或者只使用特定的名称
+#include &lt;iostream&gt;
+
+using std::cout;
+using std::endl;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="data-types" class="section">
+                <h2>数据类型</h2>
+                <p>C++是一种静态类型语言，这意味着所有变量在使用前必须声明其类型。C++提供了丰富的数据类型：</p>
+
+                <h3>基本数据类型</h3>
+                <table>
+                    <tr>
+                        <th>类型</th>
+                        <th>描述</th>
+                        <th>大小(字节)</th>
+                        <th>范围</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td><code>int</code></td>
+                        <td>整数类型</td>
+                        <td>4</td>
+                        <td>-2,147,483,648 到 2,147,483,647</td>
+                        <td><code>int a = 10;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>short</code></td>
+                        <td>短整型</td>
+                        <td>2</td>
+                        <td>-32,768 到 32,767</td>
+                        <td><code>short s = 100;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>long</code></td>
+                        <td>长整型</td>
+                        <td>4或8</td>
+                        <td>取决于系统</td>
+                        <td><code>long l = 100000L;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>long long</code></td>
+                        <td>超长整型</td>
+                        <td>8</td>
+                        <td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td>
+                        <td><code>long long ll = 10000000000LL;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>float</code></td>
+                        <td>单精度浮点数</td>
+                        <td>4</td>
+                        <td>约±3.4e±38 (7位有效数字)</td>
+                        <td><code>float b = 3.14f;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>double</code></td>
+                        <td>双精度浮点数</td>
+                        <td>8</td>
+                        <td>约±1.7e±308 (15位有效数字)</td>
+                        <td><code>double c = 3.14159;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>long double</code></td>
+                        <td>扩展精度浮点数</td>
+                        <td>8,12或16</td>
+                        <td>取决于系统</td>
+                        <td><code>long double ld = 3.141592653589793238L;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>char</code></td>
+                        <td>字符类型</td>
+                        <td>1</td>
+                        <td>-128 到 127 或 0 到 255</td>
+                        <td><code>char d = 'A';</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>wchar_t</code></td>
+                        <td>宽字符类型</td>
+                        <td>2或4</td>
+                        <td>1个宽字符</td>
+                        <td><code>wchar_t wc = L'A';</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>bool</code></td>
+                        <td>布尔类型</td>
+                        <td>1</td>
+                        <td>true 或 false</td>
+                        <td><code>bool e = true;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>void</code></td>
+                        <td>无类型</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>用于函数无返回值</td>
+                    </tr>
+                </table>
+
+                <h3>类型修饰符</h3>
+                <p>C++允许使用修饰符来改变基本数据类型的含义：</p>
+                <ul>
+                    <li><code>signed</code>：表示有符号数（默认）</li>
+                    <li><code>unsigned</code>：表示无符号数</li>
+                    <li><code>short</code>：短整型</li>
+                    <li><code>long</code>：长整型</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>// 不同整数类型的示例
+short int si = 100;          // 短整型
+long int li = 100000L;       // 长整型
+unsigned int ui = 100U;      // 无符号整型
+signed long int sli = -100L; // 有符号长整型
+unsigned long long ull = 10000000000ULL; // 无符号超长整型
+
+// 不同浮点类型的示例
+float f = 3.14f;
+double d = 3.14159;
+long double ld = 3.141592653589793238L;
+
+// 字符类型示例
+char ch = 'A';
+wchar_t wch = L'B';
+char16_t c16 = u'C';  // C++11
+char32_t c32 = U'D';  // C++11
+
+// 布尔类型示例
+bool isTrue = true;
+bool isFalse = false;</code></pre>
+                </div>
+
+                <h3>类型转换</h3>
+                <p>C++支持隐式和显式类型转换：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // 隐式类型转换
+    int i = 10;
+    double d = i;  // int转换为double
+    std::cout << "d = " << d << std::endl;
+    
+    // 显式类型转换（C风格）
+    double pi = 3.14159;
+    int intPi = (int)pi;
+    std::cout << "intPi = " << intPi << std::endl;
+    
+    // 显式类型转换（C++风格）
+    int intPi2 = static_cast&lt;int&gt;(pi);
+    std::cout << "intPi2 = " << intPi2 << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>auto关键字（C++11）</h3>
+                <p>auto关键字可以让编译器自动推导变量类型：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    auto i = 10;           // i被推导为int
+    auto d = 3.14;         // d被推导为double
+    auto s = "hello";      // s被推导为const char*
+    
+    std::vector&lt;int&gt; vec = {1, 2, 3, 4, 5};
+    auto it = vec.begin(); // it被推导为std::vector&lt;int&gt;::iterator
+    
+    std::cout << "i = " << i << ", d = " << d << ", s = " << s << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="variables" class="section">
+                <h2>变量和常量</h2>
+                <p>变量是程序中用于存储数据的内存位置，而常量是固定值，在程序执行期间不能改变。</p>
+
+                <h3>变量声明和初始化</h3>
+                <div class="code-block">
+                    <pre><code>// 声明变量
+int age;
+float salary;
+
+// 初始化变量
+age = 25;
+salary = 5000.50f;
+
+// 声明并初始化
+int score = 95;
+std::string name = "John";
+
+// C++11引入的统一初始化语法
+int count{10};
+double price{19.99};
+std::string greeting{"Hello"};
+
+// 多个变量声明
+int a = 1, b = 2, c = 3;
+
+// 使用auto自动类型推导
+auto x = 10;        // x是int类型
+auto y = 3.14;      // y是double类型
+auto z = "string";  // z是const char*类型</code></pre>
+                </div>
+
+                <h3>常量</h3>
+                <div class="code-block">
+                    <pre><code>// 使用const关键字（推荐）
+const int MAX_AGE = 100;
+const double PI = 3.1415926535;
+const std::string COMPANY_NAME = "ABC Corp";
+
+// 使用constexpr（C++11引入，编译期常量）
+constexpr int ARRAY_SIZE = 100;
+constexpr double GRAVITY = 9.8;
+
+// 使用#define预处理指令（C风格，不推荐）
+#define MIN_AGE 18
+#define MAX_WIDTH 1024
+
+// 常量表达式函数
+constexpr int square(int x) {
+    return x * x;
+}
+
+constexpr int squaredValue = square(5);  // 编译期计算</code></pre>
+                </div>
+
+                <h3>作用域</h3>
+                <p>C++变量有不同的作用域：</p>
+                <ul>
+                    <li><strong>局部变量</strong>：在函数或代码块内部声明，只在该区域内有效</li>
+                    <li><strong>全局变量</strong>：在所有函数外部声明，在整个程序中有效</li>
+                    <li><strong>形式参数</strong>：在函数参数中声明，作为该函数的局部变量</li>
+                    <li><strong>命名空间变量</strong>：在命名空间内声明</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 全局变量
+int globalVar = 100;
+
+namespace MyNamespace {
+    // 命名空间变量
+    int namespaceVar = 200;
+}
+
+void function(int param) {  // param是形式参数
+    // 局部变量
+    int localVar = 300;
+    
+    std::cout << "参数: " << param << std::endl;
+    std::cout << "局部变量: " << localVar << std::endl;
+    std::cout << "全局变量: " << globalVar << std::endl;
+    std::cout << "命名空间变量: " << MyNamespace::namespaceVar << std::endl;
+    
+    {
+        // 块作用域变量
+        int blockVar = 400;
+        std::cout << "块变量: " << blockVar << std::endl;
+    }
+    // std::cout << blockVar << std::endl;  // 错误：blockVar不在作用域内
+}
+
+int main() {
+    function(50);
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>存储类别</h3>
+                <p>C++支持多种存储类别：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 自动存储期（默认）
+void autoStorage() {
+    int x = 10;  // 自动存储期
+    std::cout << "x = " << x << std::endl;
+    x++;
+}
+
+// 静态存储期
+void staticStorage() {
+    static int x = 10;  // 静态存储期
+    std::cout << "x = " << x << std::endl;
+    x++;
+}
+
+// 线程局部存储（C++11）
+thread_local int threadVar = 100;
+
+int main() {
+    std::cout << "自动存储期:" << std::endl;
+    for (int i = 0; i < 3; i++) {
+        autoStorage();  // 每次输出都是10
+    }
+    
+    std::cout << "静态存储期:" << std::endl;
+    for (int i = 0; i < 3; i++) {
+        staticStorage();  // 输出10, 11, 12
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="operators" class="section">
+                <h2>运算符</h2>
+                <p>C++支持多种运算符：</p>
+
+                <h3>算术运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>描述</th>
+                        <th>示例</th>
+                        <th>结果</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>加法</td>
+                        <td>5 + 3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>减法</td>
+                        <td>5 - 3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>乘法</td>
+                        <td>5 * 3</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>除法</td>
+                        <td>5 / 3</td>
+                        <td>1 (整数除法)</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>除法</td>
+                        <td>5.0 / 3.0</td>
+                        <td>1.666... (浮点除法)</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>取模</td>
+                        <td>5 % 3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>自增</td>
+                        <td>a++ 或 ++a</td>
+                        <td>a = a + 1</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>自减</td>
+                        <td>a-- 或 --a</td>
+                        <td>a = a - 1</td>
+                    </tr>
+                </table>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 10, b = 3;
+    
+    // 基本算术运算
+    std::cout << "a + b = " << a + b << std::endl;
+    std::cout << "a - b = " << a - b << std::endl;
+    std::cout << "a * b = " << a * b << std::endl;
+    std::cout << "a / b = " << a / b << std::endl;  // 整数除法
+    std::cout << "a % b = " << a % b << std::endl;
+    
+    // 浮点除法
+    double x = 10.0, y = 3.0;
+    std::cout << "x / y = " << x / y << std::endl;
+    
+    // 自增和自减运算符
+    int i = 5;
+    std::cout << "i = " << i << std::endl;
+    std::cout << "i++ = " << i++ << std::endl;  // 先使用后增加
+    std::cout << "i = " << i << std::endl;
+    std::cout << "++i = " << ++i << std::endl;  // 先增加后使用
+    std::cout << "i = " << i << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>赋值运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>示例</th>
+                        <th>等价于</th>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>a = b</td>
+                        <td>a = b</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>a += b</td>
+                        <td>a = a + b</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>a -= b</td>
+                        <td>a = a - b</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>a *= b</td>
+                        <td>a = a * b</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>a /= b</td>
+                        <td>a = a / b</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td>a %= b</td>
+                        <td>a = a % b</td>
+                    </tr>
+                    <tr>
+                        <td>&=</td>
+                        <td>a &= b</td>
+                        <td>a = a & b</td>
+                    </tr>
+                    <tr>
+                        <td>|=</td>
+                        <td>a |= b</td>
+                        <td>a = a | b</td>
+                    </tr>
+                    <tr>
+                        <td>^=</td>
+                        <td>a ^= b</td>
+                        <td>a = a ^ b</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <<=< /td>
+                        <td>a <<= b</td>
+                        <td>a = a << b</td>
+                    </tr>
+                    <tr>
+                        <td>>>=</td>
+                        <td>a >>= b</td>
+                        <td>a = a >> b</td>
+                    </tr>
+                </table>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 10;
+    
+    // 基本赋值
+    a = 5;
+    std::cout << "a = " << a << std::endl;
+    
+    // 复合赋值
+    a += 3;  // 等价于 a = a + 3
+    std::cout << "a += 3: " << a << std::endl;
+    
+    a -= 2;  // 等价于 a = a - 2
+    std::cout << "a -= 2: " << a << std::endl;
+    
+    a *= 4;  // 等价于 a = a * 4
+    std::cout << "a *= 4: " << a << std::endl;
+    
+    a /= 2;  // 等价于 a = a / 2
+    std::cout << "a /= 2: " << a << std::endl;
+    
+    a %= 5;  // 等价于 a = a % 5
+    std::cout << "a %= 5: " << a << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>比较运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>描述</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>等于</td>
+                        <td>a == b</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>不等于</td>
+                        <td>a != b</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>大于</td>
+                        <td>a &gt; b</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>小于</td>
+                        <td>a &lt; b</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>大于等于</td>
+                        <td>a &gt;= b</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>小于等于</td>
+                        <td>a &lt;= b</td>
+                    </tr>
+                </table>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 10, b = 20;
+    
+    std::cout << std::boolalpha;  // 以true/false形式输出布尔值
+    
+    std::cout << "a == b: " << (a == b) << std::endl;
+    std::cout << "a != b: " << (a != b) << std::endl;
+    std::cout << "a > b: " << (a > b) << std::endl;
+    std::cout << "a < b: " << (a < b) << std::endl;
+    std::cout << "a >= b: " << (a >= b) << std::endl;
+    std::cout << "a <= b: " << (a <= b) << std::endl;
+    
+    // 比较运算符常用于条件语句
+    if (a < b) {
+        std::cout << "a is less than b" << std::endl;
+    } else {
+        std::cout << "a is not less than b" << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>逻辑运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>描述</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td>&amp;&amp;</td>
+                        <td>逻辑与</td>
+                        <td>a &amp;&amp; b</td>
+                    </tr>
+                    <tr>
+                        <td>||</td>
+                        <td>逻辑或</td>
+                        <td>a || b</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>逻辑非</td>
+                        <td>!a</td>
+                    </tr>
+                </table>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    bool a = true, b = false;
+    
+    std::cout << std::boolalpha;
+    
+    std::cout << "a && b: " << (a && b) << std::endl;  // 与
+    std::cout << "a || b: " << (a || b) << std::endl;  // 或
+    std::cout << "!a: " << (!a) << std::endl;          // 非
+    
+    // 逻辑运算符的短路求值
+    int x = 5, y = 10;
+    bool result = (x > 0) && (y++ > 5);
+    std::cout << "result: " << result << ", y: " << y << std::endl;
+    
+    // 由于第一个条件为false，第二个条件不会执行
+    result = (x < 0) && (y++ > 5);
+    std::cout << "result: " << result << ", y: " << y << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>位运算符</h3>
+                <table>
+                    <tr>
+                        <th>运算符</th>
+                        <th>描述</th>
+                        <th>示例</th>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>按位与</td>
+                        <td>a &amp; b</td>
+                    </tr>
+                    <tr>
+                        <td>|</td>
+                        <td>按位或</td>
+                        <td>a | b</td>
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>按位异或</td>
+                        <td>a ^ b</td>
+                    </tr>
+                    <tr>
+                        <td>~</td>
+                        <td>按位取反</td>
+                        <td>~a</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;&lt;</td>
+                        <td>左移</td>
+                        <td>a &lt;&lt; b</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;&gt;</td>
+                        <td>右移</td>
+                        <td>a &gt;&gt; b</td>
+                    </tr>
+                </table>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+int main() {
+    unsigned char a = 0b00111100;  // 60
+    unsigned char b = 0b00001111;  // 15
+    
+    std::cout << "a = " << std::bitset<8>(a) << " (" << (int)a << ")" << std::endl;
+    std::cout << "b = " << std::bitset<8>(b) << " (" << (int)b << ")" << std::endl;
+    
+    // 按位与
+    std::cout << "a & b = " << std::bitset<8>(a & b) << " (" << (int)(a & b) << ")" << std::endl;
+    
+    // 按位或
+    std::cout << "a | b = " << std::bitset<8>(a | b) << " (" << (int)(a | b) << ")" << std::endl;
+    
+    // 按位异或
+    std::cout << "a ^ b = " << std::bitset<8>(a ^ b) << " (" << (int)(a ^ b) << ")" << std::endl;
+    
+    // 按位取反
+    std::cout << "~a = " << std::bitset<8>(~a) << " (" << (int)(~a) << ")" << std::endl;
+    
+    // 左移
+    std::cout << "a << 2 = " << std::bitset<8>(a << 2) << " (" << (int)(a << 2) << ")" << std::endl;
+    
+    // 右移
+    std::cout << "a >> 2 = " << std::bitset<8>(a >> 2) << " (" << (int)(a >> 2) << ")" << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>其他运算符</h3>
+                <ul>
+                    <li><strong>条件运算符</strong>: ? : (三元运算符)</li>
+                    <li><strong>逗号运算符</strong>: ,</li>
+                    <li><strong>成员访问运算符</strong>: ., -></li>
+                    <li><strong>指针运算符</strong>: & (取地址), * (解引用)</li>
+                    <li><strong>sizeof运算符</strong>: 获取类型或对象的大小</li>
+                    <li><strong>类型转换运算符</strong>: static_cast, dynamic_cast, const_cast, reinterpret_cast</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // 条件运算符（三元运算符）
+    int a = 10, b = 20;
+    int max = (a > b) ? a : b;
+    std::cout << "最大值: " << max << std::endl;
+    
+    // 逗号运算符
+    int x = (a++, b++, a + b);
+    std::cout << "x = " << x << ", a = " << a << ", b = " << b << std::endl;
+    
+    // sizeof运算符
+    std::cout << "sizeof(int): " << sizeof(int) << " bytes" << std::endl;
+    std::cout << "sizeof(double): " << sizeof(double) << " bytes" << std::endl;
+    std::cout << "sizeof(a): " << sizeof(a) << " bytes" << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="control-flow" class="section">
+                <h2>控制流</h2>
+                <p>C++提供了多种控制流语句来控制程序的执行流程：</p>
+
+                <h3>条件语句</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int age;
+    std::cout << "请输入您的年龄: ";
+    std::cin >> age;
+    
+    // if语句
+    if (age >= 18) {
+        std::cout << "成年人" << std::endl;
+    } else if (age >= 13) {
+        std::cout << "青少年" << std::endl;
+    } else {
+        std::cout << "儿童" << std::endl;
+    }
+    
+    char grade;
+    std::cout << "请输入您的等级 (A-F): ";
+    std::cin >> grade;
+    
+    // switch语句
+    switch (grade) {
+        case 'A':
+            std::cout << "优秀" << std::endl;
+            break;
+        case 'B':
+            std::cout << "良好" << std::endl;
+            break;
+        case 'C':
+            std::cout << "及格" << std::endl;
+            break;
+        case 'D':
+            std::cout << "需改进" << std::endl;
+            break;
+        case 'F':
+            std::cout << "不及格" << std::endl;
+            break;
+        default:
+            std::cout << "无效等级" << std::endl;
+    }
+    
+    // 条件运算符（三元运算符）
+    std::cout << (age >= 18 ? "已成年" : "未成年") << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>循环语句</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // for循环
+    std::cout << "for循环:" << std::endl;
+    for (int i = 0; i < 5; i++) {
+        std::cout << "i = " << i << std::endl;
+    }
+    
+    // 范围for循环 (C++11)
+    std::cout << "范围for循环:" << std::endl;
+    int arr[] = {1, 2, 3, 4, 5};
+    for (int num : arr) {
+        std::cout << "num = " << num << std::endl;
+    }
+    
+    // while循环
+    std::cout << "while循环:" << std::endl;
+    int j = 0;
+    while (j < 5) {
+        std::cout << "j = " << j << std::endl;
+        j++;
+    }
+    
+    // do-while循环
+    std::cout << "do-while循环:" << std::endl;
+    int k = 0;
+    do {
+        std::cout << "k = " << k << std::endl;
+        k++;
+    } while (k < 5);
+    
+    // 无限循环与break
+    std::cout << "无限循环与break:" << std::endl;
+    int count = 0;
+    while (true) {
+        std::cout << "count = " << count << std::endl;
+        count++;
+        if (count >= 3) {
+            break;  // 跳出循环
+        }
+    }
+    
+    // continue语句
+    std::cout << "continue语句:" << std::endl;
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+            continue;  // 跳过偶数
+        }
+        std::cout << "奇数: " << i << std::endl;
+    }
+    
+    // 嵌套循环
+    std::cout << "嵌套循环:" << std::endl;
+    for (int i = 1; i <= 3; i++) {
+        for (int j = 1; j <= 3; j++) {
+            std::cout << "(" << i << ", " << j << ") ";
+        }
+        std::cout << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>跳转语句</h3>
+                <ul>
+                    <li><code>break</code>: 跳出循环或switch语句</li>
+                    <li><code>continue</code>: 跳过当前循环的剩余部分，进入下一次循环</li>
+                    <li><code>goto</code>: 无条件跳转到标记的语句（不推荐使用）</li>
+                    <li><code>return</code>: 从函数返回</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // break示例
+    std::cout << "break示例:" << std::endl;
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            break;  // 当i等于5时跳出循环
+        }
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+    
+    // continue示例
+    std::cout << "continue示例:" << std::endl;
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+            continue;  // 跳过偶数
+        }
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+    
+    // goto示例（一般不推荐使用）
+    std::cout << "goto示例:" << std::endl;
+    int i = 0;
+loop:
+    std::cout << i << " ";
+    i++;
+    if (i < 5) {
+        goto loop;
+    }
+    std::cout << std::endl;
+    
+    return 0;  // 返回语句
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="functions" class="section">
+                <h2>函数</h2>
+                <p>函数是一组一起执行任务的语句，每个C++程序至少有一个main函数。</p>
+
+                <h3>函数定义</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// 函数声明（原型）
+int add(int a, int b);
+void printMessage(const std::string& message);
+double calculateCircleArea(double radius);
+
+// 主函数
+int main() {
+    // 调用函数
+    int result = add(5, 3);
+    std::cout << "5 + 3 = " << result << std::endl;
+    
+    printMessage("Hello, Functions!");
+    
+    double area = calculateCircleArea(2.5);
+    std::cout << "圆的面积: " << area << std::endl;
+    
+    return 0;
+}
+
+// 函数定义
+int add(int a, int b) {
+    return a + b;
+}
+
+void printMessage(const std::string& message) {
+    std::cout << "消息: " << message << std::endl;
+}
+
+double calculateCircleArea(double radius) {
+    const double PI = 3.14159;
+    return PI * radius * radius;
+}</code></pre>
+                </div>
+
+                <h3>函数参数传递</h3>
+                <p>C++支持三种参数传递方式：</p>
+                <ul>
+                    <li><strong>传值</strong>：函数接收参数的副本，修改不影响原值</li>
+                    <li><strong>传引用</strong>：函数接收参数的引用，修改会影响原值</li>
+                    <li><strong>传指针</strong>：函数接收参数的指针，通过指针修改原值</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 传值
+void incrementByValue(int x) {
+    x = x + 1;
+    std::cout << "函数内 (传值): x = " << x << std::endl;
+}
+
+// 传引用
+void incrementByReference(int &x) {
+    x = x + 1;
+    std::cout << "函数内 (传引用): x = " << x << std::endl;
+}
+
+// 传指针
+void incrementByPointer(int *x) {
+    *x = *x + 1;
+    std::cout << "函数内 (传指针): x = " << *x << std::endl;
+}
+
+// 常量引用（避免拷贝大型对象）
+void printLargeObject(const std::string& largeStr) {
+    std::cout << largeStr << std::endl;
+    // largeStr[0] = 'A';  // 错误：不能修改常量引用
+}
+
+int main() {
+    int a = 10;
+    
+    std::cout << "原始值: a = " << a << std::endl;
+    
+    incrementByValue(a);
+    std::cout << "传值调用后: a = " << a << std::endl;
+    
+    incrementByReference(a);
+    std::cout << "传引用调用后: a = " << a << std::endl;
+    
+    incrementByPointer(&a);
+    std::cout << "传指针调用后: a = " << a << std::endl;
+    
+    // 使用常量引用传递大型对象
+    std::string largeString = "这是一个很长的字符串...";
+    printLargeObject(largeString);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>函数重载</h3>
+                <p>C++允许在同一作用域内声明多个同名函数，只要它们的参数列表不同：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// 重载函数：参数类型不同
+int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+std::string add(const std::string& a, const std::string& b) {
+    return a + b;
+}
+
+// 重载函数：参数数量不同
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int multiply(int a, int b, int c) {
+    return a * b * c;
+}
+
+// 默认参数
+void display(std::string message, int times = 1) {
+    for (int i = 0; i < times; i++) {
+        std::cout << message << std::endl;
+    }
+}
+
+int main() {
+    // 调用不同的add函数
+    std::cout << add(5, 3) << std::endl;               // 调用int版本
+    std::cout << add(2.5, 3.7) << std::endl;           // 调用double版本
+    std::cout << add("Hello, ", "World!") << std::endl; // 调用string版本
+    
+    // 调用不同的multiply函数
+    std::cout << multiply(2, 3) << std::endl;      // 调用两个参数版本
+    std::cout << multiply(2, 3, 4) << std::endl;   // 调用三个参数版本
+    
+    // 使用默认参数
+    display("Hello");          // 使用默认times=1
+    display("Hello", 3);       // 指定times=3
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>内联函数</h3>
+                <p>内联函数可以减少函数调用的开销：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 内联函数
+inline int square(int x) {
+    return x * x;
+}
+
+// 常量表达式函数 (C++11)
+constexpr int cube(int x) {
+    return x * x * x;
+}
+
+int main() {
+    int a = 5;
+    
+    // 内联函数调用
+    std::cout << "5的平方: " << square(a) << std::endl;
+    
+    // 常量表达式函数调用
+    std::cout << "5的立方: " << cube(a) << std::endl;
+    
+    // 编译期计算
+    constexpr int result = cube(10);
+    std::cout << "10的立方: " << result << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>递归函数</h3>
+                <p>函数可以调用自身，这称为递归：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 递归函数计算阶乘
+unsigned long long factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// 递归函数计算斐波那契数列
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int num = 10;
+    
+    // 计算阶乘
+    std::cout << num << "! = " << factorial(num) << std::endl;
+    
+    // 计算斐波那契数列
+    std::cout << "斐波那契数列前" << num << "项: ";
+    for (int i = 0; i < num; i++) {
+        std::cout << fibonacci(i) << " ";
+    }
+    std::cout << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="arrays" class="section">
+                <h2>数组</h2>
+                <p>数组是相同类型元素的集合，存储在连续的内存位置中。</p>
+
+                <h3>数组声明和初始化</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // 声明数组
+    int numbers[5];  // 包含5个整数的数组
+    
+    // 初始化数组
+    int primes[5] = {2, 3, 5, 7, 11};
+    
+    // 省略大小
+    int primes2[] = {2, 3, 5, 7, 11};  // 编译器自动计算大小
+    
+    // 部分初始化
+    int partial[5] = {1, 2, 3};  // 前三个元素初始化，其余为0
+    
+    // 访问数组元素
+    std::cout << "第一个素数: " << primes[0] << std::endl;
+    std::cout << "最后一个素数: " << primes[4] << std::endl;
+    
+    // 修改数组元素
+    primes[0] = 13;
+    std::cout << "修改后的第一个素数: " << primes[0] << std::endl;
+    
+    // 遍历数组
+    std::cout << "所有素数: ";
+    for (int i = 0; i < 5; i++) {
+        std::cout << primes[i] << " ";
+    }
+    std::cout << std::endl;
+    
+    // 使用范围for循环遍历数组 (C++11)
+    std::cout << "使用范围for循环: ";
+    for (int prime : primes) {
+        std::cout << prime << " ";
+    }
+    std::cout << std::endl;
+    
+    // 计算数组长度
+    int length = sizeof(primes) / sizeof(primes[0]);
+    std::cout << "数组长度: " << length << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>多维数组</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // 二维数组
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    
+    // 访问二维数组元素
+    std::cout << "matrix[1][2] = " << matrix[1][2] << std::endl;  // 输出6
+    
+    // 遍历二维数组
+    std::cout << "二维数组:" << std::endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    
+    // 三维数组
+    int cube[2][2][2] = {
+        {
+            {1, 2},
+            {3, 4}
+        },
+        {
+            {5, 6},
+            {7, 8}
+        }
+    };
+    
+    // 遍历三维数组
+    std::cout << "三维数组:" << std::endl;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 2; k++) {
+                std::cout << cube[i][j][k] << " ";
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>标准库数组 (C++11)</h3>
+                <p>C++11引入了std::array，比传统数组更安全：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;array&gt;
+
+int main() {
+    // 使用std::array
+    std::array&lt;int, 5&gt; primes = {2, 3, 5, 7, 11};
+    
+    // 访问元素
+    std::cout << "第一个素数: " << primes[0] << std::endl;
+    std::cout << "最后一个素数: " << primes[4] << std::endl;
+    
+    // 使用at()方法（带边界检查）
+    try {
+        std::cout << "元素at(2): " << primes.at(2) << std::endl;
+        std::cout << "元素at(10): " << primes.at(10) << std::endl;  // 抛出异常
+    } catch (const std::out_of_range& e) {
+        std::cout << "超出范围: " << e.what() << std::endl;
+    }
+    
+    // 获取数组大小
+    std::cout << "数组大小: " << primes.size() << std::endl;
+    
+    // 遍历数组
+    std::cout << "所有素数: ";
+    for (int prime : primes) {
+        std::cout << prime << " ";
+    }
+    std::cout << std::endl;
+    
+    // 使用迭代器
+    std::cout << "使用迭代器: ";
+    for (auto it = primes.begin(); it != primes.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+    
+    // 填充数组
+    std::array&lt;int, 10&gt; numbers;
+    numbers.fill(42);  // 将所有元素设置为42
+    
+    std::cout << "填充后的数组: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>字符数组和字符串</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;  // 用于C风格字符串函数
+
+int main() {
+    // C风格字符数组
+    char greeting1[] = "Hello";  // 自动添加空字符'\0'
+    char greeting2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    
+    std::cout << "greeting1: " << greeting1 << std::endl;
+    std::cout << "greeting2: " << greeting2 << std::endl;
+    
+    // 使用C字符串函数
+    char name[20] = "John";
+    char copy[20];
+    
+    std::strcpy(copy, name);  // 复制字符串
+    std::cout << "copy: " << copy << std::endl;
+    
+    std::strcat(copy, " Doe");  // 连接字符串
+    std::cout << "连接后: " << copy << std::endl;
+    
+    std::cout << "字符串长度: " << std::strlen(copy) << std::endl;
+    
+    // 比较字符串
+    if (std::strcmp(name, copy) == 0) {
+        std::cout << "字符串相等" << std::endl;
+    } else {
+        std::cout << "字符串不相等" << std::endl;
+    }
+    
+    // C++字符串类 (推荐)
+    std::string str = "Hello, World!";
+    std::cout << "C++字符串: " << str << std::endl;
+    std::cout << "字符串长度: " << str.length() << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="pointers" class="section">
+                <h2>指针</h2>
+                <p>指针是存储变量内存地址的变量，是C++的重要特性。</p>
+
+                <h3>指针基础</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int var = 20;   // 实际变量
+    int *ptr;       // 指针变量
+    
+    ptr = &var;     // 在指针变量中存储var的地址
+    
+    std::cout << "var的值: " << var << std::endl;
+    std::cout << "var的地址: " << &var << std::endl;
+    std::cout << "ptr的值: " << ptr << std::endl;
+    std::cout << "ptr指向的值: " << *ptr << std::endl;
+    
+    // 修改指针指向的值
+    *ptr = 30;
+    std::cout << "修改后var的值: " << var << std::endl;
+    
+    // 空指针
+    int *nullPtr = nullptr;
+    if (nullPtr == nullptr) {
+        std::cout << "这是一个空指针" << std::endl;
+    }
+    
+    // void指针（通用指针）
+    void *voidPtr = &var;
+    // *voidPtr = 40;  // 错误：不能直接解引用void指针
+    int *intPtr = static_cast&lt;int*&gt;(voidPtr);
+    *intPtr = 40;
+    std::cout << "通过void指针修改后var的值: " << var << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>指针运算</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr;  // ptr指向arr的第一个元素
+    
+    std::cout << "指针运算示例:" << std::endl;
+    
+    // 使用指针遍历数组
+    for (int i = 0; i < 5; i++) {
+        std::cout << "arr[" << i << "] = " << *(ptr + i) << std::endl;
+    }
+    
+    // 指针算术
+    std::cout << "初始指针: " << ptr << std::endl;
+    std::cout << "指向的值: " << *ptr << std::endl;
+    
+    ptr++;  // 移动到下一个整数（增加4字节，取决于系统）
+    std::cout << "增加后的指针: " << ptr << std::endl;
+    std::cout << "指向的值: " << *ptr << std::endl;
+    
+    ptr--;  // 移回上一个整数
+    std::cout << "减少后的指针: " << ptr << std::endl;
+    std::cout << "指向的值: " << *ptr << std::endl;
+    
+    // 指针比较
+    int *ptr2 = &arr[3];
+    if (ptr < ptr2) {
+        std::cout << "ptr在ptr2之前" << std::endl;
+    }
+    
+    // 指针差值
+    std::cout << "ptr和ptr2之间的元素数量: " << (ptr2 - ptr) << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>动态内存分配</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    // 使用new分配单个对象
+    int *ptr = new int;   // 分配一个整数的内存
+    *ptr = 100;           // 在分配的内存中存储值
+    std::cout << "动态分配的整数: " << *ptr << std::endl;
+    
+    // 使用delete释放内存
+    delete ptr;
+    ptr = nullptr;  // 避免悬空指针
+    
+    // 使用new分配数组
+    int size = 5;
+    int *arr = new int[size];  // 分配5个整数的数组
+    
+    // 初始化数组
+    for (int i = 0; i < size; i++) {
+        arr[i] = i * 10;
+    }
+    
+    // 打印数组
+    std::cout << "动态分配的数组: ";
+    for (int i = 0; i < size; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+    
+    // 使用delete[]释放数组
+    delete[] arr;
+    arr = nullptr;
+    
+    // 动态分配二维数组
+    int rows = 3, cols = 4;
+    int **matrix = new int*[rows];  // 分配行指针数组
+    
+    for (int i = 0; i < rows; i++) {
+        matrix[i] = new int[cols];  // 为每一行分配列数组
+    }
+    
+    // 初始化二维数组
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            matrix[i][j] = i * cols + j;
+        }
+    }
+    
+    // 打印二维数组
+    std::cout << "动态分配的二维数组:" << std::endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    
+    // 释放二维数组内存
+    for (int i = 0; i < rows; i++) {
+        delete[] matrix[i];
+    }
+    delete[] matrix;
+    matrix = nullptr;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>智能指针（C++11）</h3>
+                <p>C++11引入了智能指针，可以自动管理内存，避免内存泄漏：</p>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;  // 智能指针头文件
+
+int main() {
+    // unique_ptr（独占所有权）
+    std::unique_ptr&lt;int&gt; uptr(new int(100));
+    std::cout << "unique_ptr: " << *uptr << std::endl;
+    
+    // 转移所有权
+    std::unique_ptr&lt;int&gt; uptr2 = std::move(uptr);
+    if (uptr == nullptr) {
+        std::cout << "uptr现在为空" << std::endl;
+    }
+    std::cout << "uptr2: " << *uptr2 << std::endl;
+    
+    // shared_ptr（共享所有权）
+    std::shared_ptr&lt;int&gt; sptr1 = std::make_shared&lt;int&gt;(200);
+    std::shared_ptr&lt;int&gt; sptr2 = sptr1;  // 共享所有权
+    
+    std::cout << "sptr1: " << *sptr1 << ", 使用计数: " << sptr1.use_count() << std::endl;
+    std::cout << "sptr2: " << *sptr2 << ", 使用计数: " << sptr2.use_count() << std::endl;
+    
+    // weak_ptr（不增加引用计数）
+    std::weak_ptr&lt;int&gt; wptr = sptr1;
+    std::cout << "使用计数: " << sptr1.use_count() << std::endl;  // 仍然是2
+    
+    if (auto shared = wptr.lock()) {
+        std::cout << "weak_ptr: " << *shared << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>指针和函数</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 指针作为函数参数
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// 返回指针的函数
+int* findMax(int *arr, int size) {
+    if (size == 0) return nullptr;
+    
+    int *max = arr;
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > *max) {
+            max = &arr[i];
+        }
+    }
+    return max;
+}
+
+// 函数指针
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int main() {
+    // 指针作为函数参数
+    int x = 5, y = 10;
+    std::cout << "交换前: x = " << x << ", y = " << y << std::endl;
+    swap(&x, &y);
+    std::cout << "交换后: x = " << x << ", y = " << y << std::endl;
+    
+    // 返回指针的函数
+    int arr[] = {3, 1, 4, 1, 5, 9, 2, 6};
+    int *max = findMax(arr, 8);
+    if (max != nullptr) {
+        std::cout << "数组中的最大值: " << *max << std::endl;
+    }
+    
+    // 函数指针
+    int (*operation)(int, int);  // 声明函数指针
+    
+    operation = add;
+    std::cout << "5 + 3 = " << operation(5, 3) << std::endl;
+    
+    operation = subtract;
+    std::cout << "5 - 3 = " << operation(5, 3) << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="structures" class="section">
+                <h2>结构体</h2>
+                <p>结构体是一种用户自定义的数据类型，允许将不同类型的数据组合在一起。</p>
+
+                <h3>结构体定义和使用</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// 定义结构体
+struct Person {
+    std::string name;
+    int age;
+    float height;
+    
+    // 成员函数（方法）
+    void introduce() {
+        std::cout << "大家好，我是" << name << "，今年" << age << "岁，身高" << height << "厘米。" << std::endl;
+    }
+};
+
+// 创建结构体变量
+Person person1;
+person1.name = "张三";
+person1.age = 25;
+person1.height = 175.5f;
+
+// 初始化结构体
+Person person2 = {"李四", 30, 180.0f};
+
+// 结构体指针
+Person *ptr = &person1;
+std::cout << ptr->name << std::endl;  // 使用->访问成员
+
+int main() {
+    // 使用结构体变量
+    person1.introduce();
+    person2.introduce();
+    
+    // 使用结构体指针
+    Person *ptr = &person1;
+    ptr->age = 26;  // 修改年龄
+    ptr->introduce();
+    
+    // 结构体数组
+    Person people[3] = {
+        {"王五", 22, 170.0f},
+        {"赵六", 28, 165.5f},
+        {"孙七", 35, 185.0f}
+    };
+    
+    std::cout << "所有人介绍:" << std::endl;
+    for (int i = 0; i < 3; i++) {
+        people[i].introduce();
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>结构体与函数</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Point {
+    int x;
+    int y;
+};
+
+// 结构体作为函数参数（传值）
+void printPoint(Point p) {
+    std::cout << "(" << p.x << ", " << p.y << ")" << std::endl;
+}
+
+// 结构体作为函数参数（传引用）
+void movePoint(Point &p, int dx, int dy) {
+    p.x += dx;
+    p.y += dy;
+}
+
+// 结构体作为函数参数（传指针）
+void scalePoint(Point *p, float factor) {
+    p->x = static_cast&lt;int&gt;(p->x * factor);
+    p->y = static_cast&lt;int&gt;(p->y * factor);
+}
+
+// 结构体作为函数返回值
+Point createPoint(int x, int y) {
+    Point p;
+    p.x = x;
+    p.y = y;
+    return p;
+}
+
+int main() {
+    Point pt = {10, 20};
+    
+    std::cout << "原始点: ";
+    printPoint(pt);
+    
+    movePoint(pt, 5, -3);
+    std::cout << "移动后: ";
+    printPoint(pt);
+    
+    scalePoint(&pt, 1.5f);
+    std::cout << "缩放后: ";
+    printPoint(pt);
+    
+    Point newPt = createPoint(100, 200);
+    std::cout << "新创建的点: ";
+    printPoint(newPt);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>结构体嵌套</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Address {
+    std::string street;
+    std::string city;
+    std::string zipCode;
+};
+
+struct Person {
+    std::string name;
+    int age;
+    Address address;  // 嵌套结构体
+};
+
+int main() {
+    Person person = {
+        "张三",
+        25,
+        {"人民路123号", "北京市", "100000"}
+    };
+    
+    std::cout << "姓名: " << person.name << std::endl;
+    std::cout << "年龄: " << person.age << std::endl;
+    std::cout << "地址: " << person.address.street << ", "
+              << person.address.city << ", "
+              << person.address.zipCode << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="references" class="section">
+                <h2>引用</h2>
+                <p>引用是变量的别名，通过引用可以间接访问变量。</p>
+
+                <h3>引用基础</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int original = 10;
+    
+    // 创建引用
+    int &ref = original;
+    
+    std::cout << "original = " << original << std::endl;
+    std::cout << "ref = " << ref << std::endl;
+    
+    // 通过引用修改变量
+    ref = 20;
+    std::cout << "修改后 original = " << original << std::endl;
+    
+    // 引用必须在创建时初始化
+    // int &invalidRef;  // 错误：必须初始化
+    
+    // 引用不能重新绑定
+    int another = 30;
+    // &ref = another;  // 错误：不能重新绑定引用
+    
+    // 常量引用
+    const int &constRef = original;
+    // constRef = 40;  // 错误：不能通过常量引用修改值
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>引用和函数</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 引用作为函数参数
+void increment(int &num) {
+    num++;
+}
+
+// 返回引用（注意不要返回局部变量的引用）
+int &getLargest(int &a, int &b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    int x = 5, y = 10;
+    
+    std::cout << "原始值: x = " << x << ", y = " << y << std::endl;
+    
+    // 使用引用参数
+    increment(x);
+    std::cout << "增加后: x = " << x << std::endl;
+    
+    // 使用返回的引用
+    getLargest(x, y) = 100;
+    std::cout << "修改后: x = " << x << ", y = " << y << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>引用与指针的比较</h3>
+                <table>
+                    <tr>
+                        <th>特性</th>
+                        <th>引用</th>
+                        <th>指针</th>
+                    </tr>
+                    <tr>
+                        <td>初始化</td>
+                        <td>必须初始化</td>
+                        <td>可以不初始化</td>
+                    </tr>
+                    <tr>
+                        <td>重新绑定</td>
+                        <td>不能重新绑定</td>
+                        <td>可以指向不同对象</td>
+                    </tr>
+                    <tr>
+                        <td>空值</td>
+                        <td>不能为空</td>
+                        <td>可以为nullptr</td>
+                    </tr>
+                    <tr>
+                        <td>语法</td>
+                        <td>更简洁</td>
+                        <td>需要解引用</td>
+                    </tr>
+                    <tr>
+                        <td>安全性</td>
+                        <td>更安全</td>
+                        <td>可能产生悬空指针</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="preprocessor" class="section">
+                <h2>预处理器</h2>
+                <p>预处理器在编译之前处理源代码，执行宏替换、条件编译等操作。</p>
+
+                <h3>宏定义</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+// 对象宏
+#define PI 3.14159
+#define MAX_SIZE 100
+
+// 函数宏
+#define SQUARE(x) ((x) * (x))
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+
+// 多行宏
+#define PRINT_SUM(a, b) \
+    std::cout << "Sum of " << a << " and " << b << " is " << (a + b) << std::endl
+
+int main() {
+    std::cout << "PI = " << PI << std::endl;
+    std::cout << "SQUARE(5) = " << SQUARE(5) << std::endl;
+    std::cout << "MAX(10, 20) = " << MAX(10, 20) << std::endl;
+    
+    PRINT_SUM(15, 25);
+    
+    // 预定义宏
+    std::cout << "当前日期: " << __DATE__ << std::endl;
+    std::cout << "当前时间: " << __TIME__ << std::endl;
+    std::cout << "文件名: " << __FILE__ << std::endl;
+    std::cout << "行号: " << __LINE__ << std::endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>条件编译</h3>
+                <div class="code-block">
+                    <pre><code>#include &lt;iostream&gt;
+
+#define DEBUG 1
+#define VERSION 2
+
+int main() {
+    // #ifdef / #ifndef
+    #ifdef DEBUG
+        std::cout << "调试模式已启用" << std::endl;
+    #endif
+    
+    #ifndef RELEASE
+        std::cout << "这不是发布版本" << std::endl;
+    #endif
+    
+    // #if / #elif / #else
+    #if VERSION == 1
+        std::cout << "版本 1.0" << std::endl;
+    #elif VERSION == 2
+        std::cout << "版本 2.0" << std::endl;
+    #else
+        std::cout << "未知版本" << std::endl;
+    #endif
+    
+    return 0;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="best-practices" class="section">
+                <h2>C++编程最佳实践</h2>
+                <p>以下是一些C++编程的最佳实践，帮助您编写更高质量、更易维护的代码：</p>
+
+                <h3>命名约定</h3>
+                <ul>
+                    <li>使用有意义的变量名、函数名和类名</li>
+                    <li>遵循一致的命名约定（如camelCase、snake_case）</li>
+                    <li>避免使用缩写，除非是广泛接受的</li>
+                </ul>
+
+                <h3>代码组织</h3>
+                <ul>
+                    <li>将声明放在头文件(.h)中，定义放在源文件(.cpp)中</li>
+                    <li>使用命名空间避免命名冲突</li>
+                    <li>保持函数简短且专注于单一任务</li>
+                </ul>
+
+                <h3>内存管理</h3>
+                <ul>
+                    <li>优先使用智能指针而不是原始指针</li>
+                    <li>确保new和delete成对出现</li>
+                    <li>避免内存泄漏和悬空指针</li>
+                </ul>
+
+                <h3>错误处理</h3>
+                <ul>
+                    <li>使用异常处理错误情况</li>
+                    <li>提供有意义的错误消息</li>
+                    <li>检查函数参数的有效性</li>
+                </ul>
+
+                <h3>性能考虑</h3>
+                <ul>
+                    <li>使用const引用传递大型对象</li>
+                    <li>避免不必要的拷贝</li>
+                    <li>使用移动语义（C++11）优化性能</li>
+                </ul>
+
+                <h3>可读性和维护性</h3>
+                <ul>
+                    <li>添加有意义的注释</li>
+                    <li>保持一致的代码风格</li>
+                    <li>使用版本控制系统</li>
+                </ul>
+            </section>
+
+            <div class="navigation-buttons">
+                <a href="../index.html" class="nav-button">返回首页</a>
+                <a href="oop.html" class="nav-button">下一章：面向对象编程</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 C++学习入门网站. 保留所有权利.</p>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" placeholder="请输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="#forgot-password-modal" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="modal-btn">登录</button>
+                <p class="register-link">还没有账号? <a href="#register-modal">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">用户名</label>
+                    <input type="text" id="register-username" placeholder="请设置用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required> 我已阅读并同意<a href="#" class="terms-link">用户协议</a>和<a href="#" class="privacy-link">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-btn">注册</button>
+                <p class="login-link">已有账号? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 忘记密码模态框 -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>重置密码</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="forgot-email">邮箱</label>
+                    <input type="email" id="forgot-email" placeholder="请输入注册邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-new-password">新密码</label>
+                    <input type="password" id="forgot-new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-confirm-password">确认新密码</label>
+                    <input type="password" id="forgot-confirm-password" placeholder="请确认新密码" required>
+                </div>
+                <button type="submit" class="modal-btn">重置密码</button>
+                <p class="login-link">想起密码了? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户协议模态框 -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户协议</h2>
+            <div class="modal-text">
+                                <h3>第一条 协议概述</h3>
+                <p>欢迎使用C++学习入门网站（以下简称"本网站"）。本协议是您（以下简称"用户"）与本网站之间关于使用本网站服务的法律协议。请在使用本网站前仔细阅读本协议，一旦您开始使用本网站，即表示您同意接受本协议的全部条款。</p>
+                
+                <h3>第二条 服务内容</h3>
+                <p>本网站致力于为用户提供优质的C++编程学习服务，主要包括但不限于：</p>
+                <ul>
+                    <li>C++基础语法、面向对象、高级特性等教学内容</li>
+                    <li>在线测验题库和学习评估系统</li>
+                    <li>用户学习进度跟踪和成就系统</li>
+                    <li>学习论坛和用户交流平台</li>
+                    <li>AI智能助手服务</li>
+                    <li>其他与C++学习相关的辅助功能</li>
+                </ul>
+                
+                <h3>第三条 用户注册与账户管理</h3>
+                <ol>
+                    <li><strong>注册要求</strong>：用户需要提供真实有效的邮箱地址和用户名进行注册</li>
+                    <li><strong>账户安全</strong>：用户有责任保护自己的账户密码安全，不得将账户借给他人使用</li>
+                    <li><strong>信息准确性</strong>：用户应确保注册信息的真实性和准确性</li>
+                    <li><strong>账户停用</strong>：如发现用户提供虚假信息或违反本协议，网站有权停用相关账户</li>
+                </ol>
+                
+                <h3>第四条 用户行为规范</h3>
+                <p>用户在使用本网站时，应当遵守以下规范：</p>
+                <p><strong>允许的行为：</strong></p>
+                <ul>
+                    <li>正常学习C++编程知识</li>
+                    <li>在论坛中进行友善的学术讨论</li>
+                    <li>分享学习心得和编程经验</li>
+                    <li>合理使用AI助手进行学习辅导</li>
+                </ul>
+                <p><strong>禁止的行为：</strong></p>
+                <ul>
+                    <li>发布违法、有害、威胁、侮辱、诽谤的内容</li>
+                    <li>发布与C++学习无关的广告或垃圾信息</li>
+                    <li>恶意攻击网站系统或其他用户</li>
+                    <li>传播病毒、恶意代码或有害程序</li>
+                    <li>侵犯他人知识产权或隐私权</li>
+                    <li>利用技术手段绕过网站的限制措施</li>
+                </ul>
+                
+                <h3>第五条 知识产权</h3>
+                <ol>
+                    <li><strong>网站内容版权</strong>：本网站提供的所有教学内容、代码示例、题库等均受版权保护</li>
+                    <li><strong>用户生成内容</strong>：用户在论坛发表的原创内容，版权归用户所有，但用户授予本网站使用权</li>
+                    <li><strong>合理使用</strong>：用户可以将学习内容用于个人学习目的，但不得用于商业用途</li>
+                    <li><strong>侵权处理</strong>：如发现侵权行为，请及时联系我们处理</li>
+                </ol>
+                
+                <h3>第六条 AI助手服务条款</h3>
+                <ol>
+                    <li><strong>服务性质</strong>：AI助手仅作为学习辅助工具，提供编程相关的答疑和指导</li>
+                    <li><strong>服务限制</strong>：AI助手的回答仅供参考，不保证绝对准确性</li>
+                    <li><strong>使用规范</strong>：禁止利用AI助手进行违法、有害或与学习无关的活动</li>
+                    <li><strong>数据使用</strong>：与AI助手的对话可能被记录用于改进服务质量</li>
+                </ol>
+                
+                <h3>第七条 免责声明</h3>
+                <ol>
+                    <li><strong>服务可用性</strong>：网站不保证服务的不间断性和完全准确性</li>
+                    <li><strong>第三方链接</strong>：对于第三方网站的内容，本网站不承担责任</li>
+                    <li><strong>用户损失</strong>：因不可抗力或技术故障导致的用户损失，网站不承担责任</li>
+                    <li><strong>内容责任</strong>：用户对其发布的内容承担全部法律责任</li>
+                </ol>
+                
+                <h3>第八条 协议修改与终止</h3>
+                <ol>
+                    <li><strong>修改权利</strong>：本网站保留随时修改本协议的权利，修改后的协议将在网站上公布</li>
+                    <li><strong>终止条件</strong>：如用户违反本协议，网站有权终止提供服务</li>
+                    <li><strong>协议效力</strong>：本协议的终止不影响双方在终止前产生的权利义务</li>
+                </ol>
+                
+                <h3>第九条 争议解决</h3>
+                <p>本协议的解释和执行均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，可向网站所在地人民法院提起诉讼。</p>
+                
+                <h3>第十条 联系方式</h3>
+                <p>如对本协议有任何疑问，请通过以下方式与我们联系：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                
+                <p><strong>生效日期</strong>：本协议自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('terms-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 隐私政策模态框 -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>隐私政策</h2>
+            <div class="modal-text">
+                                <h3>第一条 隐私政策概述</h3>
+                <p>本隐私政策说明C++学习入门网站（以下简称"我们"或"本网站"）如何收集、使用、存储和保护您的个人信息。我们承诺保护您的隐私安全，请仔细阅读本政策。</p>
+                
+                <h3>第二条 信息收集</h3>
+                <p>我们收集的信息类型包括：</p>
+                
+                <h4>1. 注册信息</h4>
+                <ul>
+                    <li>用户名</li>
+                    <li>邮箱地址</li>
+                    <li>密码（经过加密处理）</li>
+                </ul>
+                
+                <h4>2. 学习数据</h4>
+                <ul>
+                    <li>学习进度和章节完成情况</li>
+                    <li>测验成绩和答题记录</li>
+                    <li>学习时长和访问频率</li>
+                    <li>成就获得记录</li>
+                </ul>
+                
+                <h4>3. 交互数据</h4>
+                <ul>
+                    <li>论坛发帖和回复内容</li>
+                    <li>与AI助手的对话记录</li>
+                    <li>用户反馈和建议</li>
+                </ul>
+                
+                <h4>4. 技术信息</h4>
+                <ul>
+                    <li>IP地址和设备信息</li>
+                    <li>浏览器类型和版本</li>
+                    <li>操作系统信息</li>
+                    <li>访问时间和页面浏览记录</li>
+                </ul>
+                
+                <h3>第三条 信息使用目的</h3>
+                <p>我们收集和使用您的个人信息主要用于以下目的：</p>
+                
+                <h4>1. 服务提供</h4>
+                <ul>
+                    <li>创建和管理用户账户</li>
+                    <li>提供个性化学习内容</li>
+                    <li>跟踪学习进度和成就</li>
+                    <li>提供AI助手服务</li>
+                </ul>
+                
+                <h4>2. 沟通联系</h4>
+                <ul>
+                    <li>发送重要通知和更新</li>
+                    <li>回应用户询问和反馈</li>
+                    <li>发送学习提醒和激励信息</li>
+                </ul>
+                
+                <h4>3. 服务改进</h4>
+                <ul>
+                    <li>分析用户学习行为和偏好</li>
+                    <li>优化网站功能和用户体验</li>
+                    <li>开发新的学习功能</li>
+                </ul>
+                
+                <h4>4. 安全保障</h4>
+                <ul>
+                    <li>防止欺诈和滥用行为</li>
+                    <li>维护网站和用户安全</li>
+                    <li>遵守法律法规要求</li>
+                </ul>
+                
+                <h3>第四条 信息共享与披露</h3>
+                <p>我们承诺不会出售您的个人信息，但在以下情况下可能共享信息：</p>
+                
+                <h4>1. 第三方服务商</h4>
+                <ul>
+                    <li>AI服务提供商（用于AI助手功能）</li>
+                    <li>邮件服务提供商（用于发送验证邮件）</li>
+                    <li>云存储服务商（用于数据备份）</li>
+                </ul>
+                
+                <h4>2. 法律要求</h4>
+                <ul>
+                    <li>遵守适用法律法规的要求</li>
+                    <li>响应政府部门的合法请求</li>
+                    <li>保护我们或他人的合法权益</li>
+                </ul>
+                
+                <h4>3. 业务转让</h4>
+                <ul>
+                    <li>在合并、收购或资产转让时，经用户同意后转让相关信息</li>
+                </ul>
+                
+                <h3>第五条 数据存储与安全</h3>
+                
+                <h4>1. 存储方式</h4>
+                <ul>
+                    <li>用户数据主要存储在用户本地浏览器中</li>
+                    <li>部分数据存储在安全的服务器环境中</li>
+                    <li>采用加密技术保护敏感信息</li>
+                </ul>
+                
+                <h4>2. 安全措施</h4>
+                <ul>
+                    <li>使用HTTPS协议保护数据传输</li>
+                    <li>对密码进行加密存储</li>
+                    <li>定期进行安全审计和漏洞修复</li>
+                </ul>
+                
+                <h4>3. 数据保留</h4>
+                <ul>
+                    <li>账户信息在账户存续期间保留</li>
+                    <li>学习数据保留期限不超过法律要求的期限</li>
+                    <li>用户可以要求删除特定数据</li>
+                </ul>
+                
+                <h3>第六条 用户权利</h3>
+                <p>您对自己的个人信息享有以下权利：</p>
+                <ol>
+                    <li><strong>访问权</strong>：查看我们持有的您的个人信息</li>
+                    <li><strong>更正权</strong>：更正不准确或不完整的个人信息</li>
+                    <li><strong>删除权</strong>：在特定情况下要求删除您的个人信息</li>
+                    <li><strong>限制处理权</strong>：限制我们处理您的个人信息</li>
+                    <li><strong>数据携带权</strong>：以结构化格式获取您的数据副本</li>
+                    <li><strong>撤回同意权</strong>：随时撤回对特定数据处理的同意</li>
+                </ol>
+                
+                <h3>第七条 Cookie和跟踪技术</h3>
+                
+                <h4>1. Cookie使用</h4>
+                <ul>
+                    <li>用于保持登录状态和用户偏好</li>
+                    <li>分析网站使用情况和性能</li>
+                    <li>您可以通过浏览器设置控制Cookie</li>
+                </ul>
+                
+                <h4>2. 本地存储</h4>
+                <ul>
+                    <li>使用localStorage存储学习进度</li>
+                    <li>存储用户界面偏好设置</li>
+                    <li>缓存常用数据以提升性能</li>
+                </ul>
+                
+                <h3>第八条 儿童隐私保护</h3>
+                <p>我们不会故意收集13岁以下儿童的个人信息。如果我们发现收集了儿童的个人信息，将立即删除相关信息。如果您是儿童的家长或监护人，发现儿童提供了个人信息，请联系我们。</p>
+                
+                <h3>第九条 国际数据传输</h3>
+                <p>如果您的数据需要跨境传输，我们将采取适当的保护措施，确保数据安全，并遵守相关法律法规的要求。</p>
+                
+                <h3>第十条 政策更新</h3>
+                <p>我们可能会不定期更新本隐私政策。重大变更时，我们会通过网站公告或邮件通知的方式告知您。继续使用我们的服务即表示您接受更新后的政策。</p>
+                
+                <h3>第十一条 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问、意见或投诉，或希望行使您的个人信息权利，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                <p>我们将在收到您的请求后30个工作日内给予回复。</p>
+                
+                <p><strong>生效日期</strong>：本隐私政策自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('privacy-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast-message" class="toast"></div>
+
+    <!-- 数据存储管理 -->
+    <script src="../js/data-storage.js"></script>
+    <!-- 主脚本 -->
+    <script src="../js/main2.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+    <!-- 全局数据管理功能 -->
+    <script src="../js/data-management-ui.js"></script>
+</body>
+
+</html>

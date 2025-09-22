@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective C++ - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- 移动端主题切换按钮 -->
+            <button id="mobile-theme-toggle" class="mobile-theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html">基础语法</a></li>
+                <li><a href="oop.html">面向对象</a></li>
+                <li><a href="advanced.html">高级特性</a></li>
+                <li><a href="effective.html" class="active">Effective C++</a></li>
+                <li><a href="stl.html">STL源码剖析</a></li>
+                <li><a href="quiz.html">题库</a></li>
+                <li><a href="achievements.html">成就系统</a></li>
+                <li><a href="../forum.html">论坛</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">账户 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login-modal">登录</a></li>
+                        <li><a href="#register-modal">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about.html">关于我们</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#intro">Effective C++简介</a></li>
+                <li><a href="#accustoming">让自己习惯C++</a></li>
+                <li><a href="#constructors">构造、析构与赋值运算</a></li>
+                <li><a href="#resource">资源管理</a></li>
+                <li><a href="#designing">设计与声明</a></li>
+                <li><a href="#implementing">实现</a></li>
+                <li><a href="#inheritance">继承与面向对象设计</a></li>
+                <li><a href="#templates">模板与泛型编程</a></li>
+                <li><a href="#miscellany">杂项讨论</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>Effective C++ 实践指南</h1>
+            <p class="intro">《Effective C++》是由Scott Meyers编写的经典C++编程指南，其中包含了55个改善C++程序设计的具体做法。本章将介绍这些实践经验的核心要点。</p>
+
+            <section id="intro" class="section">
+                <h2>Effective C++简介</h2>
+                <p>《Effective C++》是C++领域的经典著作，作者Scott Meyers通过55个具体的指导原则，帮助开发者写出更高效、更健壮、更易维护的C++代码。这些指导原则涵盖了C++的各个方面，从基础语法到高级特性，从设计模式到性能优化。</p>
+                <p>本章节将重点介绍这些原则的核心思想，帮助读者在实际编程中应用这些最佳实践。</p>
+            </section>
+
+            <section id="accustoming" class="section">
+                <h2>让自己习惯C++</h2>
+                
+                <div class="principle">
+                    <h3>原则1：视C++为一个语言联邦</h3>
+                    <p>C++不是一个单一的语言，而是由四个主要部分组成的语言联邦：</p>
+                    <ul>
+                        <li><strong>C语言</strong>：块、语句、预处理器、内置数据类型、数组、指针等</li>
+                        <li><strong>面向对象C++</strong>：类、封装、继承、多态、虚函数等</li>
+                        <li><strong>模板C++</strong>：泛型编程、模板元编程</li>
+                        <li><strong>STL</strong>：容器、迭代器、算法、函数对象</li>
+                    </ul>
+                    <p>不同部分有不同的编程风格和最佳实践，理解这一点有助于编写高质量的C++代码。</p>
+                </div>
+
+                <div class="principle">
+                    <h3>原则2：尽量以const、enum、inline替换#define</h3>
+                    <p>预处理器宏存在一些问题：可能导致名称冲突、不进入符号表、无法调试等。建议使用C++语言特性替代：</p>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：使用宏
+#define PI 3.14159
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+
+// 更好的做法：使用const、enum、inline
+const double Pi = 3.14159;
+enum { BufferSize = 1024 };
+template &lt;typename T&gt;
+inline T max(const T& a, const T& b) { return a > b ? a : b; }</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则3：尽可能使用const</h3>
+                    <p>const可以帮助编译器检测错误用法，也可以让代码更加清晰。const可以修饰：</p>
+                    <ul>
+                        <li>变量</li>
+                        <li>指针（指向常量的指针、常量指针）</li>
+                        <li>函数参数和返回值</li>
+                        <li>成员函数</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>// const变量
+const int MAX_COUNT = 100;
+
+// 指向常量的指针
+const int* p1;
+
+// 常量指针
+int* const p2 = &value;
+
+// 指向常量的常量指针
+const int* const p3 = &value;
+
+// const成员函数
+class MyClass {
+public:
+    int getValue() const; // 不修改对象状态的成员函数
+};
+
+// 返回const引用
+const std::string& getName() const;</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则4：确定对象被使用前已被初始化</h3>
+                    <p>未初始化的对象可能导致未定义行为。C++保证全局对象会被初始化，但局部对象不会。</p>
+                    <ul>
+                        <li>对于内置类型，手动初始化</li>
+                        <li>对于自定义类型，确保构造函数初始化所有成员</li>
+                        <li>使用初始化列表而非赋值操作</li>
+                        <li>注意跨编译单元的初始化顺序问题（Nifty Counter Idiom）</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：先声明后赋值
+class Person {
+private:
+    std::string name;
+    int age;
+public:
+    Person(const std::string& n, int a) {
+        name = n; // 赋值而非初始化
+        age = a;  // 赋值而非初始化
+    }
+};
+
+// 好的做法：使用初始化列表
+class Person {
+private:
+    std::string name;
+    int age;
+public:
+    Person(const std::string& n, int a) : name(n), age(a) {}
+};</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="constructors" class="section">
+                <h2>构造、析构与赋值运算</h2>
+                
+                <div class="principle">
+                    <h3>原则5：了解C++默默编写并调用了哪些函数</h3>
+                    <p>如果没有显式定义，编译器会为类自动生成以下函数：</p>
+                    <ul>
+                        <li>默认构造函数</li>
+                        <li>析构函数</li>
+                        <li>拷贝构造函数</li>
+                        <li>拷贝赋值运算符</li>
+                    </ul>
+                    <p>注意：这些默认生成的函数可能不总是符合我们的期望，特别是当类包含指针或其他资源时。</p>
+                </div>
+
+                <div class="principle">
+                    <h3>原则6：若不想使用编译器自动生成的函数，就该明确拒绝</h3>
+                    <p>有两种方法可以阻止编译器生成默认函数：</p>
+                    <ol>
+                        <li>将函数声明为private且不提供实现</li>
+                        <li>在C++11及以上版本中，使用=delete标记</li>
+                    </ol>
+                    <div class="code-block">
+                        <pre><code>// C++03方法：私有声明不实现
+class NonCopyable {
+private:
+    NonCopyable(const NonCopyable&);            // 私有拷贝构造
+    NonCopyable& operator=(const NonCopyable&); // 私有拷贝赋值
+public:
+    NonCopyable() {}                            // 公开默认构造
+    ~NonCopyable() {}                           // 公开析构
+};
+
+// C++11方法：使用=delete
+class NonCopyable {
+public:
+    NonCopyable() = default;
+    ~NonCopyable() = default;
+    NonCopyable(const NonCopyable&) = delete;
+    NonCopyable& operator=(const NonCopyable&) = delete;
+};</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则7：为多态基类声明virtual析构函数</h3>
+                    <p>当通过基类指针删除派生类对象时，如果基类的析构函数不是virtual的，将导致未定义行为。</p>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：基类析构函数非虚
+class Base {
+public:
+    ~Base() { std::cout << "Base destroyed" << std::endl; }
+};
+
+class Derived : public Base {
+private:
+    std::string* resource;
+public:
+    Derived() : resource(new std::string("Resource")) {}
+    ~Derived() {
+        delete resource;
+        std::cout << "Derived destroyed" << std::endl;
+    }
+};
+
+// 好的做法：基类析构函数为虚
+class Base {
+public:
+    virtual ~Base() { std::cout << "Base destroyed" << std::endl; }
+};
+
+// 使用示例
+int main() {
+    Base* b = new Derived();
+    delete b; // 如果Base::~Base不是virtual，Derived::~Derived不会被调用
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则8：别让异常逃离析构函数</h3>
+                    <p>析构函数抛出异常可能导致程序崩溃或不明确行为。处理方法：</p>
+                    <ol>
+                        <li>在析构函数中捕获所有异常并处理</li>
+                        <li>如果必须报告错误，使用日志或其他方式</li>
+                        <li>考虑提供一个单独的函数来执行可能抛出异常的操作</li>
+                    </ol>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：析构函数抛出异常
+class DatabaseConnection {
+public:
+    ~DatabaseConnection() {
+        close(); // 可能抛出异常
+    }
+    void close() {
+        // 关闭数据库连接，可能抛出异常
+    }
+};
+
+// 好的做法：在析构函数中处理异常
+class DatabaseConnection {
+public:
+    ~DatabaseConnection() {
+        try {
+            close();
+        } catch (const std::exception& e) {
+            // 记录异常，但不传播
+            std::cerr << "Error closing database: " << e.what() << std::endl;
+        }
+    }
+    
+    // 提供单独的方法让用户主动关闭并处理异常
+    void close() {
+        // 关闭数据库连接，可能抛出异常
+    }
+};</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resource" class="section">
+                <h2>资源管理</h2>
+                
+                <div class="principle">
+                    <h3>原则13：以对象管理资源</h3>
+                    <p>使用RAII（资源获取即初始化）对象管理资源，确保资源在不再需要时被自动释放。</p>
+                    <ul>
+                        <li>资源在构造函数中获取</li>
+                        <li>资源在析构函数中释放</li>
+                        <li>复制RAII对象时，决定是转移资源所有权还是共享资源</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：手动管理资源
+void processFile(const std::string& filename) {
+    FILE* file = fopen(filename.c_str(), "r");
+    if (!file) return;
+    // 使用file...
+    // 如果提前返回或发生异常，fclose可能不会被调用
+    fclose(file);
+}
+
+// 好的做法：使用RAII对象管理资源
+class FileRAII {
+private:
+    FILE* file;
+public:
+    FileRAII(const std::string& filename, const std::string& mode) 
+        : file(fopen(filename.c_str(), mode.c_str())) {}
+    
+    ~FileRAII() {
+        if (file) fclose(file);
+    }
+    
+    // 禁止复制（或实现移动语义）
+    FileRAII(const FileRAII&) = delete;
+    FileRAII& operator=(const FileRAII&) = delete;
+    
+    // 访问底层资源
+    FILE* get() const { return file; }
+};
+
+void processFile(const std::string& filename) {
+    FileRAII file(filename, "r");
+    if (!file.get()) return;
+    // 使用file.get()...
+    // 即使提前返回或发生异常，析构函数也会调用fclose
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则14：在资源管理类中小心copy行为</h3>
+                    <p>对于RAII对象，需要明确复制语义：</p>
+                    <ul>
+                        <li>禁止复制（如std::unique_ptr）</li>
+                        <li>引用计数（如std::shared_ptr）</li>
+                        <li>深度复制（复制底层资源）</li>
+                        <li>转移所有权（C++11移动语义）</li>
+                    </ul>
+                </div>
+
+                <div class="principle">
+                    <h3>原则15：在资源管理类中提供对原始资源的访问</h3>
+                    <p>RAII类应该提供访问原始资源的方法，以兼容需要直接使用原始资源的API。</p>
+                </div>
+            </section>
+
+            <section id="designing" class="section">
+                <h2>设计与声明</h2>
+                
+                <div class="principle">
+                    <h3>原则18：让接口容易被正确使用，不易被误用</h3>
+                    <p>好的接口应该：</p>
+                    <ul>
+                        <li>类型安全</li>
+                        <li>不容易混淆参数顺序</li>
+                        <li>提供默认值</li>
+                        <li>使用自定义类型而非基本类型</li>
+                        <li>一致性命名</li>
+                    </ul>
+                </div>
+
+                <div class="principle">
+                    <h3>原则20：宁以pass-by-reference-to-const替换pass-by-value</h3>
+                    <p>传递引用而非值可以避免不必要的对象复制，提高效率。</p>
+                    <div class="code-block">
+                        <pre><code>// 不好的做法：值传递
+void printPerson(Person p) {
+    std::cout << p.getName() << std::endl;
+}
+
+// 好的做法：const引用传递
+void printPerson(const Person& p) {
+    std::cout << p.getName() << std::endl;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则22：将成员变量声明为private</h3>
+                    <p>将成员变量设为private可以：</p>
+                    <ul>
+                        <li>封装实现细节</li>
+                        <li>提供一致的接口</li>
+                        <li>允许实现更改而不影响用户</li>
+                        <li>支持不变式检查</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="inheritance" class="section">
+                <h2>继承与面向对象设计</h2>
+                
+                <div class="principle">
+                    <h3>原则32：确定你的public继承塑模出is-a关系</h3>
+                    <p>public继承意味着"is-a"关系，派生类应该可以被用作基类。</p>
+                    <div class="code-block">
+                        <pre><code>// is-a关系示例
+class Shape {
+public:
+    virtual void draw() const = 0;
+    virtual ~Shape() {}
+};
+
+class Rectangle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a rectangle" << std::endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a circle" << std::endl;
+    }
+};
+
+// 任何接受Shape的地方都可以接受Rectangle或Circle
+void drawShape(const Shape& shape) {
+    shape.draw();
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则36：绝不重新定义继承而来的non-virtual函数</h3>
+                    <p>重新定义非虚函数会破坏"is-a"关系，导致不一致行为。</p>
+                </div>
+
+                <div class="principle">
+                    <h3>原则38：通过复合塑模出has-a或"根据某物实现"</h3>
+                    <p>当不是"is-a"关系时，考虑使用复合（包含）而非继承。</p>
+                </div>
+            </section>
+
+            <section id="templates" class="section">
+                <h2>模板与泛型编程</h2>
+                
+                <div class="principle">
+                    <h3>原则41：了解隐式接口和编译期多态</h3>
+                    <p>模板参数使用的是隐式接口和编译期多态，而非类继承的显式接口和运行期多态。</p>
+                </div>
+
+                <div class="principle">
+                    <h3>原则42：了解typename的双重意义</h3>
+                    <p>在模板声明中，typename用于指定类型参数；在模板定义中，typename用于表示嵌套依赖类型名称。</p>
+                    <div class="code-block">
+                        <pre><code>// typename用于指定类型参数
+template &lt;typename T, class U&gt;
+class Pair {
+    // ...
+};
+
+// typename用于表示嵌套依赖类型名称
+template &lt;typename T&gt;
+void processContainer(const T& container) {
+    // 使用typename告诉编译器::iterator是类型
+    typename T::iterator it = container.begin();
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则47：使用traits classes获取类型信息</h3>
+                    <p>Traits类用于在编译期获取类型的特性，是模板元编程的重要工具。</p>
+                    <div class="code-block">
+                        <pre><code>// 标准库中的traits示例
+#include &lt;type_traits&gt;
+
+void processIntegral(auto value) {
+    if constexpr (std::is_integral_v&lt;decltype(value)&gt;) {
+        std::cout << "处理整数类型" << std::endl;
+    } else if constexpr (std::is_floating_point_v&lt;decltype(value)&gt;) {
+        std::cout << "处理浮点类型" << std::endl;
+    } else {
+        std::cout << "处理其他类型" << std::endl;
+    }
+}
+
+// 自定义traits类
+template &lt;typename T&gt;
+struct is_container {
+    // 默认值为false
+    static constexpr bool value = false;
+};
+
+// 为std::vector特化
+template &lt;typename T, typename Alloc&gt;
+struct is_container&lt;std::vector&lt;T, Alloc&gt;&gt; {
+    static constexpr bool value = true;
+};
+
+// 为std::list特化
+template &lt;typename T, typename Alloc&gt;
+struct is_container&lt;std::list&lt;T, Alloc&gt;&gt; {
+    static constexpr bool value = true;
+};
+
+// 使用自定义traits
+template &lt;typename T&gt;
+void process(const T& t) {
+    if constexpr (is_container&lt;T&gt;::value) {
+        std::cout << "容器大小: " << t.size() << std::endl;
+    } else {
+        std::cout << "非容器类型" << std::endl;
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="principle">
+                    <h3>原则48：认识template元编程的威力与限制</h3>
+                    <p>模板元编程（TMP）是在编译期执行的编程技术，具有以下特点：</p>
+                    <ul>
+                        <li>可以在编译期计算值</li>
+                        <li>可以在编译期进行类型操作</li>
+                        <li>可以生成高度优化的代码</li>
+                        <li>编译错误信息可能难以理解</li>
+                        <li>编译时间可能增加</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>// 模板元编程示例：编译期计算阶乘
+template &lt;int N&gt;
+struct Factorial {
+    static constexpr int value = N * Factorial&lt;N-1&gt;::value;
+};
+
+// 特化递归终止条件
+template &lt;&gt;
+struct Factorial&lt;0&gt; {
+    static constexpr int value = 1;
+};
+
+// 编译期计算斐波那契数列
+template &lt;int N&gt;
+struct Fibonacci {
+    static constexpr int value = Fibonacci&lt;N-1&gt;::value + Fibonacci&lt;N-2&gt;::value;
+};
+
+template &lt;&gt;
+struct Fibonacci&lt;0&gt; {
+    static constexpr int value = 0;
+};
+
+template &lt;&gt;
+struct Fibonacci&lt;1&gt; {
+    static constexpr int value = 1;
+};
+
+// 使用示例
+int main() {
+    // 这些值在编译期计算
+    constexpr int fact5 = Factorial&lt;5&gt;::value; // 120
+    constexpr int fib10 = Fibonacci&lt;10&gt;::value; // 55
+    
+    std::cout << "5! = " << fact5 << std::endl;
+    std::cout << "Fib(10) = " << fib10 << std::endl;
+    
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="miscellany" class="section">
+                <h2>杂项讨论</h2>
+                
+                <div class="principle">
+                    <h3>原则49：了解new-handler的行为</h3>
+                    <p>new-handler是当operator new无法分配内存时调用的函数。</p>
+                    <div class="code-block">
+                        <pre><code>// 设置new-handler
+void outOfMemoryHandler() {
+    std::cerr << "Memory allocation failed!" << std::endl;
+    std::abort();
+}
+
+int main() {
+    // 设置全局new-handler
+    std::set_new_handler(outOfMemoryHandler);
+    
+    try {
+        // 尝试分配大量内存
+        void* p = new char[1000000000000000];
+        delete[] p;
+    } catch (const std::bad_alloc& e) {
+        std::cerr << "Caught bad_alloc: " << e.what() << std::endl;
+    }
+    
+    return 0;
+}</code></pre>
+                <div class="principle">
+                    <h3>原则53：不要轻忽编译器的警告</h3>
+                    <p>编译器警告通常指示潜在的问题，应尽量消除所有警告。</p>
+                    <ul>
+                        <li>将警告级别设置为最高</li>
+                        <li>将警告视为错误</li>
+                        <li>理解每个警告的含义</li>
+                        <li>修复问题而不是禁用警告</li>
+                    </ul>
+                </div>
+
+                <div class="principle">
+                    <h3>原则54：让自己熟悉包括TR1在内的标准程序库</h3>
+                    <p>标准库是C++程序员的重要工具，应熟悉其内容和用法。</p>
+                    <ul>
+                        <li>容器（vector, list, map等）</li>
+                        <li>迭代器</li>
+                        <li>算法</li>
+                        <li>函数对象</li>
+                        <li>智能指针</li>
+                        <li>字符串处理</li>
+                        <li>IO流</li>
+                        <li>异常处理</li>
+                    </ul>
+                </div>
+
+                <div class="principle">
+                    <h3>原则55：让自己熟悉Boost库</h3>
+                    <p>Boost是一个高质量的C++库集合，提供了许多有用的工具和组件，很多Boost功能后来被纳入C++标准。</p>
+                    <ul>
+                        <li>智能指针（如boost::scoped_ptr, boost::shared_ptr）</li>
+                        <li>容器（如boost::array, boost::unordered_map）</li>
+                        <li>字符串算法</li>
+                        <li>正则表达式</li>
+                        <li>文件系统</li>
+                        <li>多线程</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="summary">
+                <h2>总结</h2>
+                <p>《Effective C++》的55个原则涵盖了C++编程的各个方面，从基础语法到高级特性，从设计模式到性能优化。掌握这些原则可以帮助你编写更高效、更健壮、更易维护的C++代码。</p>
+                <p>值得注意的是，这些原则并不是一成不变的规则，而是经验的总结。在实际编程中，应根据具体情况灵活应用，并结合C++语言的最新发展进行调整。</p>
+                <p>如果你想深入了解这些原则，建议阅读Scott Meyers的原著《Effective C++》，以及他的其他著作《More Effective C++》和《Effective STL》。</p>
+            </div>
+            <div class="navigation-buttons">
+                <a href="advanced.html" class="nav-button">上一章：高级特性</a>
+                <a href="stl.html" class="nav-button">下一章：STL源码剖析</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 C++学习入门. All rights reserved.</p>
+            <p>本站提供C++基础到高级的学习教程，帮助你成为C++编程高手。</p>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" placeholder="请输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="#forgot-password-modal" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="modal-btn">登录</button>
+                <p class="register-link">还没有账号? <a href="#register-modal">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">用户名</label>
+                    <input type="text" id="register-username" placeholder="请设置用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required> 我已阅读并同意<a href="#" class="terms-link">用户协议</a>和<a href="#" class="privacy-link">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-btn">注册</button>
+                <p class="login-link">已有账号? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 忘记密码模态框 -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>重置密码</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="forgot-email">邮箱</label>
+                    <input type="email" id="forgot-email" placeholder="请输入注册邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-new-password">新密码</label>
+                    <input type="password" id="forgot-new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-confirm-password">确认新密码</label>
+                    <input type="password" id="forgot-confirm-password" placeholder="请确认新密码" required>
+                </div>
+                <button type="submit" class="modal-btn">重置密码</button>
+                <p class="login-link">想起密码了? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户协议模态框 -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户协议</h2>
+            <div class="modal-text">
+                                <h3>第一条 协议概述</h3>
+                <p>欢迎使用C++学习入门网站（以下简称"本网站"）。本协议是您（以下简称"用户"）与本网站之间关于使用本网站服务的法律协议。请在使用本网站前仔细阅读本协议，一旦您开始使用本网站，即表示您同意接受本协议的全部条款。</p>
+                
+                <h3>第二条 服务内容</h3>
+                <p>本网站致力于为用户提供优质的C++编程学习服务，主要包括但不限于：</p>
+                <ul>
+                    <li>C++基础语法、面向对象、高级特性等教学内容</li>
+                    <li>在线测验题库和学习评估系统</li>
+                    <li>用户学习进度跟踪和成就系统</li>
+                    <li>学习论坛和用户交流平台</li>
+                    <li>AI智能助手服务</li>
+                    <li>其他与C++学习相关的辅助功能</li>
+                </ul>
+                
+                <h3>第三条 用户注册与账户管理</h3>
+                <ol>
+                    <li><strong>注册要求</strong>：用户需要提供真实有效的邮箱地址和用户名进行注册</li>
+                    <li><strong>账户安全</strong>：用户有责任保护自己的账户密码安全，不得将账户借给他人使用</li>
+                    <li><strong>信息准确性</strong>：用户应确保注册信息的真实性和准确性</li>
+                    <li><strong>账户停用</strong>：如发现用户提供虚假信息或违反本协议，网站有权停用相关账户</li>
+                </ol>
+                
+                <h3>第四条 用户行为规范</h3>
+                <p>用户在使用本网站时，应当遵守以下规范：</p>
+                <p><strong>允许的行为：</strong></p>
+                <ul>
+                    <li>正常学习C++编程知识</li>
+                    <li>在论坛中进行友善的学术讨论</li>
+                    <li>分享学习心得和编程经验</li>
+                    <li>合理使用AI助手进行学习辅导</li>
+                </ul>
+                <p><strong>禁止的行为：</strong></p>
+                <ul>
+                    <li>发布违法、有害、威胁、侮辱、诽谤的内容</li>
+                    <li>发布与C++学习无关的广告或垃圾信息</li>
+                    <li>恶意攻击网站系统或其他用户</li>
+                    <li>传播病毒、恶意代码或有害程序</li>
+                    <li>侵犯他人知识产权或隐私权</li>
+                    <li>利用技术手段绕过网站的限制措施</li>
+                </ul>
+                
+                <h3>第五条 知识产权</h3>
+                <ol>
+                    <li><strong>网站内容版权</strong>：本网站提供的所有教学内容、代码示例、题库等均受版权保护</li>
+                    <li><strong>用户生成内容</strong>：用户在论坛发表的原创内容，版权归用户所有，但用户授予本网站使用权</li>
+                    <li><strong>合理使用</strong>：用户可以将学习内容用于个人学习目的，但不得用于商业用途</li>
+                    <li><strong>侵权处理</strong>：如发现侵权行为，请及时联系我们处理</li>
+                </ol>
+                
+                <h3>第六条 AI助手服务条款</h3>
+                <ol>
+                    <li><strong>服务性质</strong>：AI助手仅作为学习辅助工具，提供编程相关的答疑和指导</li>
+                    <li><strong>服务限制</strong>：AI助手的回答仅供参考，不保证绝对准确性</li>
+                    <li><strong>使用规范</strong>：禁止利用AI助手进行违法、有害或与学习无关的活动</li>
+                    <li><strong>数据使用</strong>：与AI助手的对话可能被记录用于改进服务质量</li>
+                </ol>
+                
+                <h3>第七条 免责声明</h3>
+                <ol>
+                    <li><strong>服务可用性</strong>：网站不保证服务的不间断性和完全准确性</li>
+                    <li><strong>第三方链接</strong>：对于第三方网站的内容，本网站不承担责任</li>
+                    <li><strong>用户损失</strong>：因不可抗力或技术故障导致的用户损失，网站不承担责任</li>
+                    <li><strong>内容责任</strong>：用户对其发布的内容承担全部法律责任</li>
+                </ol>
+                
+                <h3>第八条 协议修改与终止</h3>
+                <ol>
+                    <li><strong>修改权利</strong>：本网站保留随时修改本协议的权利，修改后的协议将在网站上公布</li>
+                    <li><strong>终止条件</strong>：如用户违反本协议，网站有权终止提供服务</li>
+                    <li><strong>协议效力</strong>：本协议的终止不影响双方在终止前产生的权利义务</li>
+                </ol>
+                
+                <h3>第九条 争议解决</h3>
+                <p>本协议的解释和执行均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，可向网站所在地人民法院提起诉讼。</p>
+                
+                <h3>第十条 联系方式</h3>
+                <p>如对本协议有任何疑问，请通过以下方式与我们联系：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                
+                <p><strong>生效日期</strong>：本协议自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('terms-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 隐私政策模态框 -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>隐私政策</h2>
+            <div class="modal-text">
+                                <h3>第一条 隐私政策概述</h3>
+                <p>本隐私政策说明C++学习入门网站（以下简称"我们"或"本网站"）如何收集、使用、存储和保护您的个人信息。我们承诺保护您的隐私安全，请仔细阅读本政策。</p>
+                
+                <h3>第二条 信息收集</h3>
+                <p>我们收集的信息类型包括：</p>
+                
+                <h4>1. 注册信息</h4>
+                <ul>
+                    <li>用户名</li>
+                    <li>邮箱地址</li>
+                    <li>密码（经过加密处理）</li>
+                </ul>
+                
+                <h4>2. 学习数据</h4>
+                <ul>
+                    <li>学习进度和章节完成情况</li>
+                    <li>测验成绩和答题记录</li>
+                    <li>学习时长和访问频率</li>
+                    <li>成就获得记录</li>
+                </ul>
+                
+                <h4>3. 交互数据</h4>
+                <ul>
+                    <li>论坛发帖和回复内容</li>
+                    <li>与AI助手的对话记录</li>
+                    <li>用户反馈和建议</li>
+                </ul>
+                
+                <h4>4. 技术信息</h4>
+                <ul>
+                    <li>IP地址和设备信息</li>
+                    <li>浏览器类型和版本</li>
+                    <li>操作系统信息</li>
+                    <li>访问时间和页面浏览记录</li>
+                </ul>
+                
+                <h3>第三条 信息使用目的</h3>
+                <p>我们收集和使用您的个人信息主要用于以下目的：</p>
+                
+                <h4>1. 服务提供</h4>
+                <ul>
+                    <li>创建和管理用户账户</li>
+                    <li>提供个性化学习内容</li>
+                    <li>跟踪学习进度和成就</li>
+                    <li>提供AI助手服务</li>
+                </ul>
+                
+                <h4>2. 沟通联系</h4>
+                <ul>
+                    <li>发送重要通知和更新</li>
+                    <li>回应用户询问和反馈</li>
+                    <li>发送学习提醒和激励信息</li>
+                </ul>
+                
+                <h4>3. 服务改进</h4>
+                <ul>
+                    <li>分析用户学习行为和偏好</li>
+                    <li>优化网站功能和用户体验</li>
+                    <li>开发新的学习功能</li>
+                </ul>
+                
+                <h4>4. 安全保障</h4>
+                <ul>
+                    <li>防止欺诈和滥用行为</li>
+                    <li>维护网站和用户安全</li>
+                    <li>遵守法律法规要求</li>
+                </ul>
+                
+                <h3>第四条 信息共享与披露</h3>
+                <p>我们承诺不会出售您的个人信息，但在以下情况下可能共享信息：</p>
+                
+                <h4>1. 第三方服务商</h4>
+                <ul>
+                    <li>AI服务提供商（用于AI助手功能）</li>
+                    <li>邮件服务提供商（用于发送验证邮件）</li>
+                    <li>云存储服务商（用于数据备份）</li>
+                </ul>
+                
+                <h4>2. 法律要求</h4>
+                <ul>
+                    <li>遵守适用法律法规的要求</li>
+                    <li>响应政府部门的合法请求</li>
+                    <li>保护我们或他人的合法权益</li>
+                </ul>
+                
+                <h4>3. 业务转让</h4>
+                <ul>
+                    <li>在合并、收购或资产转让时，经用户同意后转让相关信息</li>
+                </ul>
+                
+                <h3>第五条 数据存储与安全</h3>
+                
+                <h4>1. 存储方式</h4>
+                <ul>
+                    <li>用户数据主要存储在用户本地浏览器中</li>
+                    <li>部分数据存储在安全的服务器环境中</li>
+                    <li>采用加密技术保护敏感信息</li>
+                </ul>
+                
+                <h4>2. 安全措施</h4>
+                <ul>
+                    <li>使用HTTPS协议保护数据传输</li>
+                    <li>对密码进行加密存储</li>
+                    <li>定期进行安全审计和漏洞修复</li>
+                </ul>
+                
+                <h4>3. 数据保留</h4>
+                <ul>
+                    <li>账户信息在账户存续期间保留</li>
+                    <li>学习数据保留期限不超过法律要求的期限</li>
+                    <li>用户可以要求删除特定数据</li>
+                </ul>
+                
+                <h3>第六条 用户权利</h3>
+                <p>您对自己的个人信息享有以下权利：</p>
+                <ol>
+                    <li><strong>访问权</strong>：查看我们持有的您的个人信息</li>
+                    <li><strong>更正权</strong>：更正不准确或不完整的个人信息</li>
+                    <li><strong>删除权</strong>：在特定情况下要求删除您的个人信息</li>
+                    <li><strong>限制处理权</strong>：限制我们处理您的个人信息</li>
+                    <li><strong>数据携带权</strong>：以结构化格式获取您的数据副本</li>
+                    <li><strong>撤回同意权</strong>：随时撤回对特定数据处理的同意</li>
+                </ol>
+                
+                <h3>第七条 Cookie和跟踪技术</h3>
+                
+                <h4>1. Cookie使用</h4>
+                <ul>
+                    <li>用于保持登录状态和用户偏好</li>
+                    <li>分析网站使用情况和性能</li>
+                    <li>您可以通过浏览器设置控制Cookie</li>
+                </ul>
+                
+                <h4>2. 本地存储</h4>
+                <ul>
+                    <li>使用localStorage存储学习进度</li>
+                    <li>存储用户界面偏好设置</li>
+                    <li>缓存常用数据以提升性能</li>
+                </ul>
+                
+                <h3>第八条 儿童隐私保护</h3>
+                <p>我们不会故意收集13岁以下儿童的个人信息。如果我们发现收集了儿童的个人信息，将立即删除相关信息。如果您是儿童的家长或监护人，发现儿童提供了个人信息，请联系我们。</p>
+                
+                <h3>第九条 国际数据传输</h3>
+                <p>如果您的数据需要跨境传输，我们将采取适当的保护措施，确保数据安全，并遵守相关法律法规的要求。</p>
+                
+                <h3>第十条 政策更新</h3>
+                <p>我们可能会不定期更新本隐私政策。重大变更时，我们会通过网站公告或邮件通知的方式告知您。继续使用我们的服务即表示您接受更新后的政策。</p>
+                
+                <h3>第十一条 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问、意见或投诉，或希望行使您的个人信息权利，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                <p>我们将在收到您的请求后30个工作日内给予回复。</p>
+                
+                <p><strong>生效日期</strong>：本隐私政策自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('privacy-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast-message" class="toast"></div>
+
+    <!-- 数据存储管理 -->
+    <script src="../js/data-storage.js"></script>
+    <!-- 主脚本 -->
+    <script src="../js/main2.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+    <!-- 全局数据管理功能 -->
+    <script src="../js/data-management-ui.js"></script>
+</body>
+
+</html>

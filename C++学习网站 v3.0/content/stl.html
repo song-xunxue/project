@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STL源码剖析 - C++学习入门</title>
+    <!-- 引入Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style2.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- 移动端主题切换按钮 -->
+            <button id="mobile-theme-toggle" class="mobile-theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo">C++学习入门</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="basics.html">基础语法</a></li>
+                <li><a href="oop.html">面向对象</a></li>
+                <li><a href="advanced.html">高级特性</a></li>
+                <li><a href="effective.html">Effective C++</a></li>
+                <li><a href="stl.html" class="active">STL源码剖析</a></li>
+                <li><a href="quiz.html">题库</a></li>
+                <li><a href="achievements.html">成就系统</a></li>
+                <li><a href="../forum.html">论坛</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">账户 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#login-modal">登录</a></li>
+                        <li><a href="#register-modal">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about.html">关于我们</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorial-container">
+        <div class="tutorial-sidebar">
+            <h3>目录</h3>
+            <ul class="tutorial-nav">
+                <li><a href="#intro">STL简介</a></li>
+                <li><a href="#containers">STL容器</a></li>
+                <li><a href="#iterators">迭代器</a></li>
+                <li><a href="#algorithms">STL算法</a></li>
+                <li><a href="#functors">函数对象</a></li>
+                <li><a href="#allocators">空间配置器</a></li>
+                <li><a href="#adaptors">配接器</a></li>
+                <li><a href="#implementation">源码实现技巧</a></li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h1>STL源码剖析</h1>
+            <p class="intro">STL（Standard Template Library，标准模板库）是C++标准库中非常重要的一部分，它提供了一系列通用的容器、迭代器、算法和函数对象，是C++程序员的强大工具。本章将深入剖析STL的内部实现原理。</p>
+
+            <section id="intro" class="section">
+                <h2>STL简介</h2>
+                <p>STL是由Alexander Stepanov和Meng Lee在惠普实验室开发的，后来被纳入C++标准库。STL的核心思想是将数据结构和算法分离，通过迭代器连接它们，实现了高度的代码重用。</p>
+                <p>STL主要由以下六个部分组成：</p>
+                <ul>
+                    <li><strong>容器（Containers）</strong>：用于存储数据的对象，如vector、list、map等</li>
+                    <li><strong>迭代器（Iterators）</strong>：用于遍历容器中的元素，行为类似指针</li>
+                    <li><strong>算法（Algorithms）</strong>：用于操作容器中元素的函数，如sort、find、copy等</li>
+                    <li><strong>函数对象（Functors）</strong>：行为类似函数的对象，可用于算法中的回调</li>
+                    <li><strong>空间配置器（Allocators）</strong>：负责容器的内存管理</li>
+                    <li><strong>配接器（Adaptors）</strong>：用于修改其他组件接口的组件，如stack、queue等</li>
+                </ul>
+                <p>STL的设计体现了泛型编程的思想，通过模板实现了高度的参数化和通用性。</p>
+            </section>
+
+            <section id="containers" class="section">
+                <h2>STL容器</h2>
+                
+                <p>STL容器是一种数据结构，用于存储元素并提供对元素的访问方法。根据不同的特性，容器可以分为以下几类：</p>
+                
+                <div class="container-type">
+                    <h3>序列容器（Sequence Containers）</h3>
+                    <p>序列容器按照元素的插入顺序存储和访问元素。主要包括：</p>
+                    
+                    <div class="container-detail">
+                        <h4>vector</h4>
+                        <p>vector是一个动态数组，支持快速随机访问，在尾部插入和删除元素效率高。</p>
+                        <div class="code-block">
+                            <pre><code>// vector的内部结构简化版
+class vector {
+private:
+    T* start_;       // 数据区起始位置
+    T* finish_;      // 已使用空间的结束位置
+    T* end_of_storage_; // 整个空间的结束位置
+    
+public:
+    // 构造、析构、赋值等操作
+    
+    // 元素访问
+    reference operator[](size_type n) { return *(start_ + n); }
+    
+    // 迭代器
+    iterator begin() { return start_; }
+    iterator end() { return finish_; }
+    
+    // 容量操作
+    size_type size() const { return finish_ - start_; }
+    size_type capacity() const { return end_of_storage_ - start_; }
+    bool empty() const { return start_ == finish_; }
+    
+    // 修改器
+    void push_back(const T& x) {
+        if (finish_ != end_of_storage_) {
+            construct(finish_, x);
+            ++finish_;
+        } else {
+            // 需要扩容
+            reallocate();
+            push_back(x);
+        }
+    }
+    
+    // 其他操作...
+};</code></pre>
+                        </div>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>使用连续的内存空间存储元素</li>
+                            <li>当容量不足时，会重新分配更大的内存并拷贝元素（通常扩容为原来的1.5倍或2倍）</li>
+                            <li>支持随机访问，时间复杂度O(1)</li>
+                            <li>在尾部插入和删除的均摊时间复杂度为O(1)</li>
+                            <li>在中间插入和删除的时间复杂度为O(n)</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>list</h4>
+                        <p>list是一个双向链表，支持高效的插入和删除操作，但不支持随机访问。</p>
+                        <div class="code-block">
+                            <pre><code>// list节点结构
+struct __list_node {
+    typedef void* void_pointer;
+    void_pointer prev;
+    void_pointer next;
+    T data;
+};
+
+// list的内部结构简化版
+class list {
+protected:
+    typedef __list_node&lt;T&gt; list_node;
+    
+    // 节点构造和析构
+    list_node* create_node(const T& x) { /* ... */ }
+    void destroy_node(list_node* p) { /* ... */ }
+    
+private:
+    list_node* node_; // 指向哨兵节点
+    
+public:
+    // 构造、析构、赋值等操作
+    
+    // 迭代器
+    iterator begin() { return (link_type)((*node_).next); }
+    iterator end() { return node_; }
+    
+    // 容量操作
+    bool empty() const { return node_->next == node_; }
+    
+    // 修改器
+    void push_back(const T& x) { insert(end(), x); }
+    void push_front(const T& x) { insert(begin(), x); }
+    
+    iterator insert(iterator position, const T& x) {
+        list_node* tmp = create_node(x);
+        // 插入节点
+        tmp->next = position.node_;
+        tmp->prev = position.node_->prev;
+        (link_type(position.node_->prev))->next = tmp;
+        position.node_->prev = tmp;
+        return tmp;
+    }
+    
+    // 其他操作...
+};</code></pre>
+                        </div>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>使用双向链表实现，每个节点包含前驱和后继指针</li>
+                            <li>使用哨兵节点（sentinel node）简化边界条件处理</li>
+                            <li>在任意位置插入和删除的时间复杂度为O(1)</li>
+                            <li>不支持随机访问，访问元素的时间复杂度为O(n)</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>deque</h4>
+                        <p>deque（double-ended queue）是一个双端队列，支持在两端高效地插入和删除元素，同时支持随机访问。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>使用分段连续空间（分段数组）实现</li>
+                            <li>维护一个指向各个分段数组的中央控制结构</li>
+                            <li>两端插入和删除的均摊时间复杂度为O(1)</li>
+                            <li>随机访问的时间复杂度为O(1)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container-type">
+                    <h3>关联容器（Associative Containers）</h3>
+                    <p>关联容器按照键（key）存储和访问元素，元素在容器中按照键自动排序。主要包括：</p>
+                    
+                    <div class="container-detail">
+                        <h4>set/map</h4>
+                        <p>set存储唯一的键，map存储键值对（key-value pair），两者都按照键自动排序。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>通常使用红黑树（Red-Black Tree）实现</li>
+                            <li>插入、删除、查找的时间复杂度为O(log n)</li>
+                            <li>set中的元素就是键，且不能修改；map中的键不能修改，但值可以修改</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>multiset/multimap</h4>
+                        <p>与set/map类似，但允许存储重复的键。</p>
+                    </div>
+                </div>
+
+                <div class="container-type">
+                    <h3>无序关联容器（Unordered Associative Containers）</h3>
+                    <p>无序关联容器不排序元素，而是通过哈希表来存储和访问元素。C++11引入。主要包括：</p>
+                    
+                    <div class="container-detail">
+                        <h4>unordered_set/unordered_map</h4>
+                        <p>与set/map类似，但不排序元素，而是通过哈希函数快速访问元素。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>使用哈希表实现，通常是开链法（separate chaining）</li>
+                            <li>平均情况下，插入、删除、查找的时间复杂度为O(1)</li>
+                            <li>最坏情况下（哈希冲突严重），时间复杂度为O(n)</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>unordered_multiset/unordered_multimap</h4>
+                        <p>与unordered_set/unordered_map类似，但允许存储重复的键。</p>
+                    </div>
+                </div>
+
+                <div class="container-type">
+                    <h3>容器适配器（Container Adaptors）</h3>
+                    <p>容器适配器是对现有容器的封装，提供特定的接口和行为。主要包括：</p>
+                    
+                    <div class="container-detail">
+                        <h4>stack</h4>
+                        <p>stack（栈）提供后进先出（LIFO）的数据访问方式。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>默认基于deque实现，也可以基于其他序列容器</li>
+                            <li>限制元素的插入和删除只能在容器的一端进行</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>queue</h4>
+                        <p>queue（队列）提供先进先出（FIFO）的数据访问方式。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>默认基于deque实现，也可以基于其他序列容器</li>
+                            <li>限制元素的插入只能在容器的一端，删除只能在另一端进行</li>
+                        </ul>
+                    </div>
+
+                    <div class="container-detail">
+                        <h4>priority_queue</h4>
+                        <p>priority_queue（优先队列）中的元素具有优先级，队首元素总是优先级最高的。</p>
+                        <p><strong>实现要点</strong>：</p>
+                        <ul>
+                            <li>默认基于vector实现，使用堆（heap）算法维护元素的优先级</li>
+                            <li>插入和删除的时间复杂度为O(log n)</li>
+                            <li>访问队首元素的时间复杂度为O(1)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="iterators" class="section">
+                <h2>迭代器</h2>
+                
+                <p>迭代器是STL中的重要组件，它提供了一种方法来访问容器中的元素，行为类似于指针。迭代器将算法和容器连接起来，使算法可以独立于容器的具体实现。</p>
+                
+                <h3>迭代器的分类</h3>
+                <p>根据功能的强弱，迭代器可以分为五类：</p>
+                <ol>
+                    <li><strong>输入迭代器（Input Iterators）</strong>：只读一次，只能向前移动</li>
+                    <li><strong>输出迭代器（Output Iterators）</strong>：只写一次，只能向前移动</li>
+                    <li><strong>前向迭代器（Forward Iterators）</strong>：可读写多次，只能向前移动</li>
+                    <li><strong>双向迭代器（Bidirectional Iterators）</strong>：可读写多次，可向前向后移动</li>
+                    <li><strong>随机访问迭代器（Random Access Iterators）</strong>：可读写多次，支持随机访问</li>
+                </ol>
+                
+                <h3>迭代器的实现</h3>
+                <p>每种容器都提供了自己的迭代器实现，这些迭代器通常是嵌套在容器类中的类型。下面以vector为例，简单介绍迭代器的实现：</p>
+                
+                <div class="code-block">
+                    <pre><code>// vector的迭代器实现简化版
+class vector {
+public:
+    // 定义迭代器类型
+    typedef T* iterator;
+    typedef const T* const_iterator;
+    
+    // 迭代器方法
+    iterator begin() { return start_; }
+    iterator end() { return finish_; }
+    const_iterator begin() const { return start_; }
+    const_iterator end() const { return finish_; }
+    
+    // 其他成员...
+};
+
+// 迭代器的使用示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+for (vector&lt;int&gt;::iterator it = v.begin(); it != v.end(); ++it) {
+    cout << *it << " "; // 输出：1 2 3 4 5
+}</code></pre>
+                </div>
+                
+                <h3>迭代器的特性萃取</h3>
+                <p>STL使用迭代器特性萃取（iterator_traits）来获取迭代器的特性，如值类型、差量类型、指针类型、引用类型和迭代器类别。这使得算法可以针对不同类型的迭代器进行优化。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 迭代器特性萃取机简化版
+template &lt;typename Iterator&gt;
+struct iterator_traits {
+    typedef typename Iterator::value_type        value_type;
+    typedef typename Iterator::difference_type   difference_type;
+    typedef typename Iterator::pointer           pointer;
+    typedef typename Iterator::reference         reference;
+    typedef typename Iterator::iterator_category iterator_category;
+};
+
+// 针对原生指针的偏特化
+template &lt;typename T&gt;
+struct iterator_traits&lt;T*&gt; {
+    typedef T                          value_type;
+    typedef ptrdiff_t                  difference_type;
+    typedef T*                         pointer;
+    typedef T&                         reference;
+    typedef random_access_iterator_tag iterator_category;
+};
+
+// 针对const原生指针的偏特化
+template &lt;typename T&gt;
+struct iterator_traits&lt;const T*&gt; {
+    typedef T                          value_type;
+    typedef ptrdiff_t                  difference_type;
+    typedef const T*                   pointer;
+    typedef const T&                   reference;
+    typedef random_access_iterator_tag iterator_category;
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="algorithms" class="section">
+                <h2>STL算法</h2>
+                
+                <p>STL算法是一系列独立于任何特定容器的通用函数，它们通过迭代器操作容器中的元素。STL算法主要包括以下几类：</p>
+                
+                <h3>非修改性序列操作（Non-modifying Sequence Operations）</h3>
+                <p>这些算法不修改容器中的元素，仅进行查询或统计。</p>
+                
+                <div class="algorithm-detail">
+                    <h4>find</h4>
+                    <p>在序列中查找等于给定值的第一个元素。</p>
+                    <div class="code-block">
+                        <pre><code>// find算法实现简化版
+template &lt;typename InputIterator, typename T&gt;
+InputIterator find(InputIterator first, InputIterator last, const T& value) {
+    while (first != last && *first != value) {
+        ++first;
+    }
+    return first;
+}
+
+// 使用示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+auto it = find(v.begin(), v.end(), 3);
+if (it != v.end()) {
+    cout << "Found: " << *it << endl; // 输出：Found: 3
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="algorithm-detail">
+                    <h4>count</h4>
+                    <p>统计序列中等于给定值的元素个数。</p>
+                </div>
+
+                <h3>修改性序列操作（Modifying Sequence Operations）</h3>
+                <p>这些算法修改容器中的元素。</p>
+                
+                <div class="algorithm-detail">
+                    <h4>copy</h4>
+                    <p>将一个序列中的元素复制到另一个序列中。</p>
+                    <div class="code-block">
+                        <pre><code>// copy算法实现简化版
+template &lt;typename InputIterator, typename OutputIterator&gt;
+OutputIterator copy(InputIterator first, InputIterator last, OutputIterator result) {
+    while (first != last) {
+        *result = *first;
+        ++first;
+        ++result;
+    }
+    return result;
+}
+
+// 使用示例
+vector&lt;int&gt; src = {1, 2, 3, 4, 5};
+vector&lt;int&gt; dest(5);
+copy(src.begin(), src.end(), dest.begin());
+// dest现在包含：1, 2, 3, 4, 5</code></pre>
+                    </div>
+                </div>
+
+                <div class="algorithm-detail">
+                    <h4>fill</h4>
+                    <p>用给定值填充序列。</p>
+                </div>
+
+                <h3>排序和相关操作（Sorting and Related Operations）</h3>
+                <p>这些算法对序列进行排序和其他相关操作。</p>
+                
+                <div class="algorithm-detail">
+                    <h4>sort</h4>
+                    <p>对序列进行排序。</p>
+                    <div class="code-block">
+                        <pre><code>// sort算法通常结合了快速排序、堆排序和插入排序
+// 以下是一个简化版实现，实际实现要复杂得多
+template &lt;typename RandomAccessIterator&gt;
+void sort(RandomAccessIterator first, RandomAccessIterator last) {
+    if (first != last) {
+        // 进行排序操作
+        // ...
+    }
+}
+
+// 使用示例
+vector&lt;int&gt; v = {5, 2, 4, 1, 3};
+sort(v.begin(), v.end());
+// v现在包含：1, 2, 3, 4, 5</code></pre>
+                    </div>
+                </div>
+
+                <div class="algorithm-detail">
+                    <h4>merge</h4>
+                    <p>合并两个已排序的序列。</p>
+                </div>
+
+                <h3>数值算法（Numeric Operations）</h3>
+                <p>这些算法执行数值计算。</p>
+                
+                <div class="algorithm-detail">
+                    <h4>accumulate</h4>
+                    <p>计算序列中元素的累积和。</p>
+                    <div class="code-block">
+                        <pre><code>// accumulate算法实现简化版
+template &lt;typename InputIterator, typename T&gt;
+T accumulate(InputIterator first, InputIterator last, T init) {
+    for (; first != last; ++first) {
+        init = init + *first;
+    }
+    return init;
+}
+
+// 使用示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+int sum = accumulate(v.begin(), v.end(), 0);
+cout << "Sum: " << sum << endl; // 输出：Sum: 15</code></pre>
+                    </div>
+                </div>
+
+                <div class="algorithm-detail">
+                    <h4>inner_product</h4>
+                    <p>计算两个序列的内积（点积）。</p>
+                </div>
+            </section>
+
+            <section id="functors" class="section">
+                <h2>函数对象</h2>
+                
+                <p>函数对象（Functors，也称为仿函数）是一种行为类似函数的对象。在STL中，函数对象常被用作算法的参数，以提供自定义的操作。</p>
+                
+                <h3>函数对象的类型</h3>
+                <p>STL中的函数对象主要包括以下几类：</p>
+                
+                <div class="functor-type">
+                    <h4>算术类函数对象</h4>
+                    <ul>
+                        <li>plus&lt;T&gt;：加法操作</li>
+                        <li>minus&lt;T&gt;：减法操作</li>
+                        <li>multiplies&lt;T&gt;：乘法操作</li>
+                        <li>divides&lt;T&gt;：除法操作</li>
+                        <li>modulus&lt;T&gt;：取模操作</li>
+                        <li>negate&lt;T&gt;：取反操作</li>
+                    </ul>
+                </div>
+
+                <div class="functor-type">
+                    <h4>关系类函数对象</h4>
+                    <ul>
+                        <li>equal_to&lt;T&gt;：等于操作</li>
+                        <li>not_equal_to&lt;T&gt;：不等于操作</li>
+                        <li>greater&lt;T&gt;：大于操作</li>
+                        <li>less&lt;T&gt;：小于操作</li>
+                        <li>greater_equal&lt;T&gt;：大于等于操作</li>
+                        <li>less_equal&lt;T&gt;：小于等于操作</li>
+                    </ul>
+                </div>
+
+                <div class="functor-type">
+                    <h4>逻辑类函数对象</h4>
+                    <ul>
+                        <li>logical_and&lt;T&gt;：逻辑与操作</li>
+                        <li>logical_or&lt;T&gt;：逻辑或操作</li>
+                        <li>logical_not&lt;T&gt;：逻辑非操作</li>
+                    </ul>
+                </div>
+
+                <h3>自定义函数对象</h3>
+                <p>除了使用STL提供的函数对象，我们还可以自定义函数对象。自定义函数对象需要重载函数调用运算符（operator()）。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 自定义函数对象示例：计算平方
+struct Square {
+    template &lt;typename T&gt;
+    T operator()(const T& x) const {
+        return x * x;
+    }
+};
+
+// 使用自定义函数对象
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+vector&lt;int&gt; squares(5);
+
+// 使用transform算法和Square函数对象
+transform(v.begin(), v.end(), squares.begin(), Square());
+// squares现在包含：1, 4, 9, 16, 25
+
+// 输出结果
+for (int n : squares) {
+    cout << n << " "; // 输出：1 4 9 16 25
+}</code></pre>
+                </div>
+
+                <h3>函数适配器</h3>
+                <p>函数适配器用于修改函数对象的行为。STL提供了多种函数适配器，如绑定器（binders）、否定器（negators）等。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 使用函数适配器示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+// 查找第一个大于5的元素
+auto it1 = find_if(v.begin(), v.end(), bind2nd(greater&lt;int&gt;(), 5));
+if (it1 != v.end()) {
+    cout << "First element > 5: " << *it1 << endl; // 输出：6
+}
+
+// 查找第一个不大于5的元素（使用not1适配器）
+auto it2 = find_if(v.begin(), v.end(), not1(bind2nd(greater&lt;int&gt;(), 5)));
+if (it2 != v.end()) {
+    cout << "First element <= 5: " << *it2 << endl; // 输出：1
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="allocators" class="section">
+                <h2>空间配置器</h2>
+                
+                <p>空间配置器（Allocator）负责容器的内存管理，包括内存的分配、释放以及对象的构造和析构。空间配置器是容器的模板参数之一，默认情况下使用std::allocator。</p>
+                
+                <h3>空间配置器的设计</h3>
+                <p>STL的空间配置器设计采用了两级分配器的架构：</p>
+                <ol>
+                    <li><strong>第一级分配器</strong>：直接调用malloc和free进行内存分配和释放，处理较大的内存块（通常大于128字节）。</li>
+                    <li><strong>第二级分配器</strong>：使用内存池（memory pool）管理较小的内存块（通常小于等于128字节），以减少内存碎片。</li>
+                </ol>
+                
+                <h3>std::allocator的简化实现</h3>
+                <div class="code-block">
+                    <pre><code>// std::allocator简化版实现
+template &lt;typename T&gt;
+class allocator {
+public:
+    typedef T            value_type;
+    typedef T*           pointer;
+    typedef const T*     const_pointer;
+    typedef T&           reference;
+    typedef const T&     const_reference;
+    typedef size_t       size_type;
+    typedef ptrdiff_t    difference_type;
+    
+    // 类型转换：将allocator&lt;T&gt;转换为allocator&lt;U&gt;
+    template &lt;typename U&gt;
+    struct rebind {
+        typedef allocator&lt;U&gt; other;
+    };
+    
+    // 分配内存但不构造对象
+    pointer allocate(size_type n, const void* hint = 0) {
+        return static_cast&lt;pointer&gt;(::operator new(n * sizeof(T)));
+    }
+    
+    // 释放内存但不析构对象
+    void deallocate(pointer p, size_type n) {
+        ::operator delete(p);
+    }
+    
+    // 构造对象
+    void construct(pointer p, const T& val) {
+        new (p) T(val); // placement new
+    }
+    
+    // 析构对象
+    void destroy(pointer p) {
+        p->~T();
+    }
+    
+    // 其他成员...
+};</code></pre>
+                </div>
+
+                <h3>内存池的实现</h3>
+                <p>内存池是一种内存分配方式，它预先分配一大块内存，然后从中分割出所需的小内存块，以减少内存碎片和提高内存分配效率。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 内存池简化版实现
+template &lt;typename T&gt;
+class simple_allocator {
+private:
+    // 内存块结构
+    union obj {
+        union obj* free_list_link;
+        char client_data[1];  // 客户端数据
+    };
+    
+    // 自由链表
+    static obj* free_list[16]; // 16个自由链表，分别管理8, 16, 24, ..., 128字节的内存块
+    
+public:
+    // 分配内存
+    static T* allocate(size_t n) {
+        if (n > (size_t)__MAX_BYTES) {
+            // 超过128字节，使用第一级分配器
+            return (T*)malloc_alloc::allocate(n);
+        }
+        
+        // 找到合适的自由链表
+        size_t index = FREELIST_INDEX(n);
+        obj* list = free_list[index];
+        
+        if (list == 0) {
+            // 自由链表为空，填充内存
+            T* result = refill(ROUND_UP(n));
+            return result;
+        }
+        
+        // 从自由链表中获取内存
+        free_list[index] = list->free_list_link;
+        return (T*)list;
+    }
+    
+    // 释放内存
+    static void deallocate(T* p, size_t n) {
+        if (n > (size_t)__MAX_BYTES) {
+            // 超过128字节，使用第一级分配器
+            malloc_alloc::deallocate(p, n);
+            return;
+        }
+        
+        // 找到合适的自由链表
+        size_t index = FREELIST_INDEX(n);
+        obj* q = (obj*)p;
+        
+        // 将内存块放回自由链表
+        q->free_list_link = free_list[index];
+        free_list[index] = q;
+    }
+    
+    // 其他成员...
+};</code></pre>
+                </div>
+            </section>
+
+            <section id="adaptors" class="section">
+                <h2>配接器</h2>
+                
+                <p>配接器（Adaptors）是一种修改其他组件接口的组件，在STL中主要包括容器配接器、迭代器配接器和函数配接器。</p>
+                
+                <h3>容器配接器</h3>
+                <p>容器配接器是对现有容器的封装，提供特定的接口和行为。STL提供了三种容器配接器：stack、queue和priority_queue。</p>
+                
+                <div class="code-block">
+                    <pre><code>// stack容器配接器简化版实现
+template &lt;typename T, typename Container = deque&lt;T&gt;&gt;
+class stack {
+protected:
+    Container c; // 底层容器
+    
+public:
+    // 使用底层容器的类型
+    typedef typename Container::value_type      value_type;
+    typedef typename Container::size_type       size_type;
+    typedef          Container                  container_type;
+    typedef typename Container::reference       reference;
+    typedef typename Container::const_reference const_reference;
+    
+    // 构造函数
+    explicit stack(const Container& = Container());
+    
+    // 容量操作
+    bool empty() const { return c.empty(); }
+    size_type size() const { return c.size(); }
+    
+    // 元素访问
+    reference top() { return c.back(); }
+    const_reference top() const { return c.back(); }
+    
+    // 修改器
+    void push(const value_type& x) { c.push_back(x); }
+    void pop() { c.pop_back(); }
+    
+    // 比较操作
+    bool operator==(const stack& s) const { return c == s.c; }
+    bool operator&lt;(const stack& s) const { return c &lt; s.c; }
+    
+    // 其他成员...
+};</code></pre>
+                </div>
+
+                <h3>迭代器配接器</h3>
+                <p>迭代器配接器用于修改迭代器的行为。STL提供了多种迭代器配接器，如反向迭代器（reverse_iterator）、插入迭代器（insert_iterator）等。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 使用反向迭代器示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+// 正向遍历
+cout << "Forward: ";
+for (auto it = v.begin(); it != v.end(); ++it) {
+    cout << *it << " "; // 输出：1 2 3 4 5
+}
+cout << endl;
+
+// 反向遍历
+cout << "Reverse: ";
+for (auto it = v.rbegin(); it != v.rend(); ++it) {
+    cout << *it << " "; // 输出：5 4 3 2 1
+}
+cout << endl;</code></pre>
+                </div>
+
+                <h3>函数配接器</h3>
+                <p>函数配接器用于修改函数对象的行为。STL提供了多种函数配接器，如绑定器（bind1st, bind2nd）、否定器（not1, not2）等。</p>
+                
+                <div class="code-block">
+                    <pre><code>// 使用函数配接器示例
+vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+// 计算所有元素的和
+sum = accumulate(v.begin(), v.end(), 0, plus&lt;int&gt;());
+cout << "Sum: " << sum << endl; // 输出：15
+
+// 计算所有元素的乘积
+product = accumulate(v.begin(), v.end(), 1, multiplies&lt;int&gt;());
+cout << "Product: " << product << endl; // 输出：120</code></pre>
+                </div>
+            </section>
+
+            <section id="implementation" class="section">
+                <h2>源码实现技巧</h2>
+                
+                <p>STL源码中使用了许多高级C++技巧，下面介绍一些常见的实现技巧：</p>
+                
+                <div class="implementation-tip">
+                    <h3>1. 类型萃取（Type Traits）</h3>
+                    <p>类型萃取是一种在编译期获取类型信息的技术，STL中广泛使用类型萃取来优化算法的实现。</p>
+                    <div class="code-block">
+                        <pre><code>// 类型萃取示例：判断类型是否为POD（Plain Old Data）
+template &lt;typename T&gt;
+struct is_pod {
+    static constexpr bool value = /* 实现细节 */;
+};
+
+// 使用类型萃取
+template &lt;typename T&gt;
+void copy_optimized(T* src, T* dest, size_t n) {
+    if constexpr (is_pod&lt;T&gt;::value) {
+        // 如果是POD类型，可以使用memcpy进行优化
+        memcpy(dest, src, n * sizeof(T));
+    } else {
+        // 否则，需要逐个构造对象
+        for (size_t i = 0; i < n; ++i) {
+            new (dest + i) T(src[i]);
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="implementation-tip">
+                    <h3>2. 特化与偏特化</h3>
+                    <p>模板特化和偏特化是STL中另一个常用的技巧，用于针对特定类型提供优化的实现。</p>
+                    <div class="code-block">
+                        <pre><code>// 主模板
+template &lt;typename T, typename Alloc&gt;
+class vector {
+    // 通用实现
+};
+
+// 针对bool类型的特化
+template &lt;typename Alloc&gt;
+class vector&lt;bool, Alloc&gt; {
+    // bool向量的特殊实现，通常使用位压缩
+};
+
+// 迭代器特性萃取机的偏特化
+template &lt;typename T&gt;
+struct iterator_traits&lt;T*&gt; {
+    typedef T                          value_type;
+    typedef ptrdiff_t                  difference_type;
+    typedef T*                         pointer;
+    typedef T&                         reference;
+    typedef random_access_iterator_tag iterator_category;
+};</code></pre>
+                    </div>
+                </div>
+
+                <div class="implementation-tip">
+                    <h3>3. 小对象优化（Small Object Optimization）</h3>
+                    <p>小对象优化是一种空间优化技术，用于减少小对象的内存开销。</p>
+                </div>
+
+                <div class="implementation-tip">
+                    <h3>4. 移动语义（Move Semantics）</h3>
+                    <p>C++11引入的移动语义允许资源（如内存）在对象之间高效转移，而不是复制。</p>
+                    <div class="code-block">
+                        <pre><code>// 移动构造函数示例
+class MyString {
+private:
+    char* data_;
+    size_t size_;
+    
+public:
+    // 构造函数
+    MyString(const char* str) {
+        if (str) {
+            size_ = strlen(str);
+            data_ = new char[size_ + 1];
+            memcpy(data_, str, size_ + 1);
+        } else {
+            size_ = 0;
+            data_ = new char[1];
+            data_[0] = '\0';
+        }
+    }
+    
+    // 移动构造函数
+    MyString(MyString&& other) noexcept 
+        : data_(other.data_), size_(other.size_) {
+        // 窃取other的资源
+        other.data_ = nullptr;
+        other.size_ = 0;
+    }
+    
+    // 析构函数
+    ~MyString() {
+        delete[] data_;
+    }
+    
+    // 其他成员...
+};</code></pre>
+                    </div>
+                </div>
+
+                <div class="implementation-tip">
+                    <h3>5. 完美转发（Perfect Forwarding）</h3>
+                    <p>完美转发是一种保持参数的值类别（左值/右值）的技术，通常与可变参数模板结合使用。</p>
+                    <div class="code-block">
+                        <pre><code>// 完美转发示例
+template &lt;typename T, typename... Args&gt;
+std::unique_ptr&lt;T&gt; make_unique(Args&&... args) {
+    return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)...));
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <div class="summary">
+                <h2>总结</h2>
+                <p>STL是C++标准库中非常重要的一部分，它提供了一系列通用的容器、迭代器、算法和函数对象，是C++程序员的强大工具。通过剖析STL的源码，我们可以深入理解C++的设计理念和实现技巧，提高我们的编程水平。</p>
+                <p>STL的设计体现了泛型编程的思想，通过模板实现了高度的参数化和通用性。同时，STL的源码中也使用了许多高级C++技巧，如类型萃取、模板特化、小对象优化等，这些技巧值得我们学习和借鉴。</p>
+                <p>如果你想深入学习STL，建议阅读《STL源码剖析》（侯捷 著）这本书，它对STL的源码进行了深入的解析，是学习STL的经典教材。</p>
+            </div>
+            <div class="navigation-buttons">
+                <a href="effective.html" class="nav-button">上一章：Effective C++</a>
+                <a href="quiz.html" class="nav-button">前往题库</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 C++学习入门. All rights reserved.</p>
+            <p>本站提供C++基础到高级的学习教程，帮助你成为C++编程高手。</p>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">用户名</label>
+                    <input type="text" id="login-username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">密码</label>
+                    <input type="password" id="login-password" placeholder="请输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a href="#forgot-password-modal" class="forgot-password">忘记密码?</a>
+                </div>
+                <button type="submit" class="modal-btn">登录</button>
+                <p class="register-link">还没有账号? <a href="#register-modal">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户注册</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">用户名</label>
+                    <input type="text" id="register-username" placeholder="请设置用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">邮箱</label>
+                    <input type="email" id="register-email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">密码</label>
+                    <input type="password" id="register-password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">确认密码</label>
+                    <input type="password" id="register-confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required> 我已阅读并同意<a href="#" class="terms-link">用户协议</a>和<a href="#" class="privacy-link">隐私政策</a>
+                    </label>
+                </div>
+                <button type="submit" class="modal-btn">注册</button>
+                <p class="login-link">已有账号? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 忘记密码模态框 -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>重置密码</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="forgot-email">邮箱</label>
+                    <input type="email" id="forgot-email" placeholder="请输入注册邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-new-password">新密码</label>
+                    <input type="password" id="forgot-new-password" placeholder="请输入新密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="forgot-confirm-password">确认新密码</label>
+                    <input type="password" id="forgot-confirm-password" placeholder="请确认新密码" required>
+                </div>
+                <button type="submit" class="modal-btn">重置密码</button>
+                <p class="login-link">想起密码了? <a href="#login-modal">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 用户协议模态框 -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>用户协议</h2>
+            <div class="modal-text">
+                                <h3>第一条 协议概述</h3>
+                <p>欢迎使用C++学习入门网站（以下简称"本网站"）。本协议是您（以下简称"用户"）与本网站之间关于使用本网站服务的法律协议。请在使用本网站前仔细阅读本协议，一旦您开始使用本网站，即表示您同意接受本协议的全部条款。</p>
+                
+                <h3>第二条 服务内容</h3>
+                <p>本网站致力于为用户提供优质的C++编程学习服务，主要包括但不限于：</p>
+                <ul>
+                    <li>C++基础语法、面向对象、高级特性等教学内容</li>
+                    <li>在线测验题库和学习评估系统</li>
+                    <li>用户学习进度跟踪和成就系统</li>
+                    <li>学习论坛和用户交流平台</li>
+                    <li>AI智能助手服务</li>
+                    <li>其他与C++学习相关的辅助功能</li>
+                </ul>
+                
+                <h3>第三条 用户注册与账户管理</h3>
+                <ol>
+                    <li><strong>注册要求</strong>：用户需要提供真实有效的邮箱地址和用户名进行注册</li>
+                    <li><strong>账户安全</strong>：用户有责任保护自己的账户密码安全，不得将账户借给他人使用</li>
+                    <li><strong>信息准确性</strong>：用户应确保注册信息的真实性和准确性</li>
+                    <li><strong>账户停用</strong>：如发现用户提供虚假信息或违反本协议，网站有权停用相关账户</li>
+                </ol>
+                
+                <h3>第四条 用户行为规范</h3>
+                <p>用户在使用本网站时，应当遵守以下规范：</p>
+                <p><strong>允许的行为：</strong></p>
+                <ul>
+                    <li>正常学习C++编程知识</li>
+                    <li>在论坛中进行友善的学术讨论</li>
+                    <li>分享学习心得和编程经验</li>
+                    <li>合理使用AI助手进行学习辅导</li>
+                </ul>
+                <p><strong>禁止的行为：</strong></p>
+                <ul>
+                    <li>发布违法、有害、威胁、侮辱、诽谤的内容</li>
+                    <li>发布与C++学习无关的广告或垃圾信息</li>
+                    <li>恶意攻击网站系统或其他用户</li>
+                    <li>传播病毒、恶意代码或有害程序</li>
+                    <li>侵犯他人知识产权或隐私权</li>
+                    <li>利用技术手段绕过网站的限制措施</li>
+                </ul>
+                
+                <h3>第五条 知识产权</h3>
+                <ol>
+                    <li><strong>网站内容版权</strong>：本网站提供的所有教学内容、代码示例、题库等均受版权保护</li>
+                    <li><strong>用户生成内容</strong>：用户在论坛发表的原创内容，版权归用户所有，但用户授予本网站使用权</li>
+                    <li><strong>合理使用</strong>：用户可以将学习内容用于个人学习目的，但不得用于商业用途</li>
+                    <li><strong>侵权处理</strong>：如发现侵权行为，请及时联系我们处理</li>
+                </ol>
+                
+                <h3>第六条 AI助手服务条款</h3>
+                <ol>
+                    <li><strong>服务性质</strong>：AI助手仅作为学习辅助工具，提供编程相关的答疑和指导</li>
+                    <li><strong>服务限制</strong>：AI助手的回答仅供参考，不保证绝对准确性</li>
+                    <li><strong>使用规范</strong>：禁止利用AI助手进行违法、有害或与学习无关的活动</li>
+                    <li><strong>数据使用</strong>：与AI助手的对话可能被记录用于改进服务质量</li>
+                </ol>
+                
+                <h3>第七条 免责声明</h3>
+                <ol>
+                    <li><strong>服务可用性</strong>：网站不保证服务的不间断性和完全准确性</li>
+                    <li><strong>第三方链接</strong>：对于第三方网站的内容，本网站不承担责任</li>
+                    <li><strong>用户损失</strong>：因不可抗力或技术故障导致的用户损失，网站不承担责任</li>
+                    <li><strong>内容责任</strong>：用户对其发布的内容承担全部法律责任</li>
+                </ol>
+                
+                <h3>第八条 协议修改与终止</h3>
+                <ol>
+                    <li><strong>修改权利</strong>：本网站保留随时修改本协议的权利，修改后的协议将在网站上公布</li>
+                    <li><strong>终止条件</strong>：如用户违反本协议，网站有权终止提供服务</li>
+                    <li><strong>协议效力</strong>：本协议的终止不影响双方在终止前产生的权利义务</li>
+                </ol>
+                
+                <h3>第九条 争议解决</h3>
+                <p>本协议的解释和执行均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，可向网站所在地人民法院提起诉讼。</p>
+                
+                <h3>第十条 联系方式</h3>
+                <p>如对本协议有任何疑问，请通过以下方式与我们联系：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                
+                <p><strong>生效日期</strong>：本协议自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('terms-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 隐私政策模态框 -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>隐私政策</h2>
+            <div class="modal-text">
+                                <h3>第一条 隐私政策概述</h3>
+                <p>本隐私政策说明C++学习入门网站（以下简称"我们"或"本网站"）如何收集、使用、存储和保护您的个人信息。我们承诺保护您的隐私安全，请仔细阅读本政策。</p>
+                
+                <h3>第二条 信息收集</h3>
+                <p>我们收集的信息类型包括：</p>
+                
+                <h4>1. 注册信息</h4>
+                <ul>
+                    <li>用户名</li>
+                    <li>邮箱地址</li>
+                    <li>密码（经过加密处理）</li>
+                </ul>
+                
+                <h4>2. 学习数据</h4>
+                <ul>
+                    <li>学习进度和章节完成情况</li>
+                    <li>测验成绩和答题记录</li>
+                    <li>学习时长和访问频率</li>
+                    <li>成就获得记录</li>
+                </ul>
+                
+                <h4>3. 交互数据</h4>
+                <ul>
+                    <li>论坛发帖和回复内容</li>
+                    <li>与AI助手的对话记录</li>
+                    <li>用户反馈和建议</li>
+                </ul>
+                
+                <h4>4. 技术信息</h4>
+                <ul>
+                    <li>IP地址和设备信息</li>
+                    <li>浏览器类型和版本</li>
+                    <li>操作系统信息</li>
+                    <li>访问时间和页面浏览记录</li>
+                </ul>
+                
+                <h3>第三条 信息使用目的</h3>
+                <p>我们收集和使用您的个人信息主要用于以下目的：</p>
+                
+                <h4>1. 服务提供</h4>
+                <ul>
+                    <li>创建和管理用户账户</li>
+                    <li>提供个性化学习内容</li>
+                    <li>跟踪学习进度和成就</li>
+                    <li>提供AI助手服务</li>
+                </ul>
+                
+                <h4>2. 沟通联系</h4>
+                <ul>
+                    <li>发送重要通知和更新</li>
+                    <li>回应用户询问和反馈</li>
+                    <li>发送学习提醒和激励信息</li>
+                </ul>
+                
+                <h4>3. 服务改进</h4>
+                <ul>
+                    <li>分析用户学习行为和偏好</li>
+                    <li>优化网站功能和用户体验</li>
+                    <li>开发新的学习功能</li>
+                </ul>
+                
+                <h4>4. 安全保障</h4>
+                <ul>
+                    <li>防止欺诈和滥用行为</li>
+                    <li>维护网站和用户安全</li>
+                    <li>遵守法律法规要求</li>
+                </ul>
+                
+                <h3>第四条 信息共享与披露</h3>
+                <p>我们承诺不会出售您的个人信息，但在以下情况下可能共享信息：</p>
+                
+                <h4>1. 第三方服务商</h4>
+                <ul>
+                    <li>AI服务提供商（用于AI助手功能）</li>
+                    <li>邮件服务提供商（用于发送验证邮件）</li>
+                    <li>云存储服务商（用于数据备份）</li>
+                </ul>
+                
+                <h4>2. 法律要求</h4>
+                <ul>
+                    <li>遵守适用法律法规的要求</li>
+                    <li>响应政府部门的合法请求</li>
+                    <li>保护我们或他人的合法权益</li>
+                </ul>
+                
+                <h4>3. 业务转让</h4>
+                <ul>
+                    <li>在合并、收购或资产转让时，经用户同意后转让相关信息</li>
+                </ul>
+                
+                <h3>第五条 数据存储与安全</h3>
+                
+                <h4>1. 存储方式</h4>
+                <ul>
+                    <li>用户数据主要存储在用户本地浏览器中</li>
+                    <li>部分数据存储在安全的服务器环境中</li>
+                    <li>采用加密技术保护敏感信息</li>
+                </ul>
+                
+                <h4>2. 安全措施</h4>
+                <ul>
+                    <li>使用HTTPS协议保护数据传输</li>
+                    <li>对密码进行加密存储</li>
+                    <li>定期进行安全审计和漏洞修复</li>
+                </ul>
+                
+                <h4>3. 数据保留</h4>
+                <ul>
+                    <li>账户信息在账户存续期间保留</li>
+                    <li>学习数据保留期限不超过法律要求的期限</li>
+                    <li>用户可以要求删除特定数据</li>
+                </ul>
+                
+                <h3>第六条 用户权利</h3>
+                <p>您对自己的个人信息享有以下权利：</p>
+                <ol>
+                    <li><strong>访问权</strong>：查看我们持有的您的个人信息</li>
+                    <li><strong>更正权</strong>：更正不准确或不完整的个人信息</li>
+                    <li><strong>删除权</strong>：在特定情况下要求删除您的个人信息</li>
+                    <li><strong>限制处理权</strong>：限制我们处理您的个人信息</li>
+                    <li><strong>数据携带权</strong>：以结构化格式获取您的数据副本</li>
+                    <li><strong>撤回同意权</strong>：随时撤回对特定数据处理的同意</li>
+                </ol>
+                
+                <h3>第七条 Cookie和跟踪技术</h3>
+                
+                <h4>1. Cookie使用</h4>
+                <ul>
+                    <li>用于保持登录状态和用户偏好</li>
+                    <li>分析网站使用情况和性能</li>
+                    <li>您可以通过浏览器设置控制Cookie</li>
+                </ul>
+                
+                <h4>2. 本地存储</h4>
+                <ul>
+                    <li>使用localStorage存储学习进度</li>
+                    <li>存储用户界面偏好设置</li>
+                    <li>缓存常用数据以提升性能</li>
+                </ul>
+                
+                <h3>第八条 儿童隐私保护</h3>
+                <p>我们不会故意收集13岁以下儿童的个人信息。如果我们发现收集了儿童的个人信息，将立即删除相关信息。如果您是儿童的家长或监护人，发现儿童提供了个人信息，请联系我们。</p>
+                
+                <h3>第九条 国际数据传输</h3>
+                <p>如果您的数据需要跨境传输，我们将采取适当的保护措施，确保数据安全，并遵守相关法律法规的要求。</p>
+                
+                <h3>第十条 政策更新</h3>
+                <p>我们可能会不定期更新本隐私政策。重大变更时，我们会通过网站公告或邮件通知的方式告知您。继续使用我们的服务即表示您接受更新后的政策。</p>
+                
+                <h3>第十一条 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问、意见或投诉，或希望行使您的个人信息权利，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>邮箱：Hsy@bit.edu.cn</li>
+                    <li>地址：北京理工大学良乡校区</li>
+                </ul>
+                <p>我们将在收到您的请求后30个工作日内给予回复。</p>
+                
+                <p><strong>生效日期</strong>：本隐私政策自2025年9月14日起生效。
+            </div>
+            <button class="modal-btn" onclick="closeModal('privacy-modal'); showModal('register-modal')">返回</button>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast-message" class="toast"></div>
+
+    <!-- 数据存储管理 -->
+    <script src="../js/data-storage.js"></script>
+    <!-- 主脚本 -->
+    <script src="../js/main2.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+    <!-- 全局数据管理功能 -->
+    <script src="../js/data-management-ui.js"></script>
+</body>
+
+</html>
