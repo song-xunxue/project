@@ -1,0 +1,620 @@
+========== 阶段 1: 接力训练  ==========
+加载已有模型: model_train/best_model_01.pth ...
+[11:44:36] 正在扫描数据集: cowface-verification-U/train/train ...
+[11:44:37] 扫描完成。
+  Train: 6630 张 | Val: 1894 张 | 类别数: 5500
+Initializing Model (Num Classes: 5500)...
+[12:48:15] 开始训练 (FP32 + Warmup)... Epochs: 50
+[12:48:46] Epoch 1 | Batch  20/177 | Loss: 23.7256 (Avg: 23.8814) | Acc: 0.00% | LR: 0.000050
+[12:48:52] Epoch 1 | Batch  40/177 | Loss: 23.5747 (Avg: 23.7788) | Acc: 0.00% | LR: 0.000050
+[12:48:58] Epoch 1 | Batch  60/177 | Loss: 23.4760 (Avg: 23.7237) | Acc: 0.00% | LR: 0.000050
+[12:49:04] Epoch 1 | Batch  80/177 | Loss: 23.4066 (Avg: 23.6903) | Acc: 0.00% | LR: 0.000050
+[12:49:10] Epoch 1 | Batch 100/177 | Loss: 23.3384 (Avg: 23.6540) | Acc: 0.00% | LR: 0.000050
+[12:49:16] Epoch 1 | Batch 120/177 | Loss: 23.3389 (Avg: 23.6196) | Acc: 0.00% | LR: 0.000050
+[12:49:22] Epoch 1 | Batch 140/177 | Loss: 23.4795 (Avg: 23.5938) | Acc: 0.00% | LR: 0.000050
+[12:49:27] Epoch 1 | Batch 160/177 | Loss: 23.5432 (Avg: 23.5633) | Acc: 0.00% | LR: 0.000050
+[12:49:32] Epoch 1 | Batch 177/177 | Loss: 23.0729 (Avg: 23.5367) | Acc: 0.00% | LR: 0.000050
+=== Epoch 1 Done. Loss: 23.5367, Train Acc: 0.00% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:50:05] Epoch 2 | Batch  20/177 | Loss: 22.5552 (Avg: 22.7213) | Acc: 0.00% | LR: 0.000100
+[12:50:10] Epoch 2 | Batch  40/177 | Loss: 22.3284 (Avg: 22.7010) | Acc: 0.00% | LR: 0.000100
+[12:50:16] Epoch 2 | Batch  60/177 | Loss: 22.6622 (Avg: 22.6491) | Acc: 0.00% | LR: 0.000100
+[12:50:22] Epoch 2 | Batch  80/177 | Loss: 22.8334 (Avg: 22.6448) | Acc: 0.00% | LR: 0.000100
+[12:50:28] Epoch 2 | Batch 100/177 | Loss: 22.0997 (Avg: 22.6123) | Acc: 0.00% | LR: 0.000100
+[12:50:34] Epoch 2 | Batch 120/177 | Loss: 22.6325 (Avg: 22.5812) | Acc: 0.00% | LR: 0.000100
+[12:50:39] Epoch 2 | Batch 140/177 | Loss: 22.8014 (Avg: 22.5561) | Acc: 0.00% | LR: 0.000100
+[12:50:45] Epoch 2 | Batch 160/177 | Loss: 22.2425 (Avg: 22.5148) | Acc: 0.00% | LR: 0.000100
+[12:50:50] Epoch 2 | Batch 177/177 | Loss: 22.2495 (Avg: 22.4948) | Acc: 0.00% | LR: 0.000100
+=== Epoch 2 Done. Loss: 22.4948, Train Acc: 0.00% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:51:20] Epoch 3 | Batch  20/177 | Loss: 20.0487 (Avg: 20.5833) | Acc: 0.00% | LR: 0.000100
+[12:51:26] Epoch 3 | Batch  40/177 | Loss: 20.5295 (Avg: 20.6258) | Acc: 0.00% | LR: 0.000100
+[12:51:32] Epoch 3 | Batch  60/177 | Loss: 20.6859 (Avg: 20.6569) | Acc: 0.00% | LR: 0.000100
+[12:51:37] Epoch 3 | Batch  80/177 | Loss: 20.6201 (Avg: 20.6816) | Acc: 0.00% | LR: 0.000100
+[12:51:43] Epoch 3 | Batch 100/177 | Loss: 21.0198 (Avg: 20.6689) | Acc: 0.00% | LR: 0.000100
+[12:51:49] Epoch 3 | Batch 120/177 | Loss: 20.7590 (Avg: 20.6695) | Acc: 0.00% | LR: 0.000100
+[12:51:54] Epoch 3 | Batch 140/177 | Loss: 21.0948 (Avg: 20.6536) | Acc: 0.00% | LR: 0.000100
+[12:52:00] Epoch 3 | Batch 160/177 | Loss: 20.2216 (Avg: 20.6362) | Acc: 0.00% | LR: 0.000100
+[12:52:05] Epoch 3 | Batch 177/177 | Loss: 20.2573 (Avg: 20.6316) | Acc: 0.00% | LR: 0.000100
+=== Epoch 3 Done. Loss: 20.6316, Train Acc: 0.00% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:52:35] Epoch 4 | Batch  20/177 | Loss: 18.1494 (Avg: 18.3563) | Acc: 0.00% | LR: 0.000100
+[12:52:41] Epoch 4 | Batch  40/177 | Loss: 18.5548 (Avg: 18.4123) | Acc: 0.05% | LR: 0.000100
+[12:52:47] Epoch 4 | Batch  60/177 | Loss: 18.2126 (Avg: 18.4598) | Acc: 0.03% | LR: 0.000100
+[12:52:53] Epoch 4 | Batch  80/177 | Loss: 19.4412 (Avg: 18.5139) | Acc: 0.03% | LR: 0.000100
+[12:52:58] Epoch 4 | Batch 100/177 | Loss: 18.4891 (Avg: 18.5604) | Acc: 0.02% | LR: 0.000100
+[12:53:04] Epoch 4 | Batch 120/177 | Loss: 18.5409 (Avg: 18.5875) | Acc: 0.02% | LR: 0.000100
+[12:53:10] Epoch 4 | Batch 140/177 | Loss: 18.4780 (Avg: 18.5894) | Acc: 0.01% | LR: 0.000100
+[12:53:16] Epoch 4 | Batch 160/177 | Loss: 18.4652 (Avg: 18.6123) | Acc: 0.01% | LR: 0.000100
+[12:53:20] Epoch 4 | Batch 177/177 | Loss: 18.7488 (Avg: 18.6173) | Acc: 0.01% | LR: 0.000100
+=== Epoch 4 Done. Loss: 18.6173, Train Acc: 0.01% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:53:50] Epoch 5 | Batch  20/177 | Loss: 16.3318 (Avg: 16.3198) | Acc: 0.00% | LR: 0.000100
+[12:53:56] Epoch 5 | Batch  40/177 | Loss: 17.2601 (Avg: 16.4498) | Acc: 0.00% | LR: 0.000100
+[12:54:02] Epoch 5 | Batch  60/177 | Loss: 16.3178 (Avg: 16.5119) | Acc: 0.03% | LR: 0.000100
+[12:54:07] Epoch 5 | Batch  80/177 | Loss: 16.7947 (Avg: 16.5595) | Acc: 0.13% | LR: 0.000100
+[12:54:13] Epoch 5 | Batch 100/177 | Loss: 17.0016 (Avg: 16.5825) | Acc: 0.12% | LR: 0.000100
+[12:54:19] Epoch 5 | Batch 120/177 | Loss: 16.4263 (Avg: 16.6237) | Acc: 0.12% | LR: 0.000100
+[12:54:25] Epoch 5 | Batch 140/177 | Loss: 17.0915 (Avg: 16.6542) | Acc: 0.12% | LR: 0.000100
+[12:54:31] Epoch 5 | Batch 160/177 | Loss: 16.6663 (Avg: 16.6741) | Acc: 0.13% | LR: 0.000100
+[12:54:36] Epoch 5 | Batch 177/177 | Loss: 16.6507 (Avg: 16.6943) | Acc: 0.16% | LR: 0.000100
+=== Epoch 5 Done. Loss: 16.6943, Train Acc: 0.16% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:55:05] Epoch 6 | Batch  20/177 | Loss: 13.1525 (Avg: 14.3862) | Acc: 0.52% | LR: 0.000099
+[12:55:11] Epoch 6 | Batch  40/177 | Loss: 14.9732 (Avg: 14.5883) | Acc: 0.52% | LR: 0.000099
+[12:55:17] Epoch 6 | Batch  60/177 | Loss: 13.7790 (Avg: 14.6695) | Acc: 0.59% | LR: 0.000099
+[12:55:23] Epoch 6 | Batch  80/177 | Loss: 16.2631 (Avg: 14.7966) | Acc: 0.60% | LR: 0.000099
+[12:55:28] Epoch 6 | Batch 100/177 | Loss: 14.4624 (Avg: 14.8362) | Acc: 0.62% | LR: 0.000099
+[12:55:34] Epoch 6 | Batch 120/177 | Loss: 14.7959 (Avg: 14.8628) | Acc: 0.64% | LR: 0.000099
+[12:55:40] Epoch 6 | Batch 140/177 | Loss: 14.9519 (Avg: 14.8677) | Acc: 0.65% | LR: 0.000099
+[12:55:46] Epoch 6 | Batch 160/177 | Loss: 15.3731 (Avg: 14.8881) | Acc: 0.68% | LR: 0.000099
+[12:55:50] Epoch 6 | Batch 177/177 | Loss: 14.5643 (Avg: 14.9264) | Acc: 0.67% | LR: 0.000099
+=== Epoch 6 Done. Loss: 14.9264, Train Acc: 0.67% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:56:20] Epoch 7 | Batch  20/177 | Loss: 11.8710 (Avg: 13.1367) | Acc: 0.83% | LR: 0.000098
+[12:56:26] Epoch 7 | Batch  40/177 | Loss: 13.2486 (Avg: 13.2910) | Acc: 0.94% | LR: 0.000098
+[12:56:32] Epoch 7 | Batch  60/177 | Loss: 14.2207 (Avg: 13.3461) | Acc: 1.18% | LR: 0.000098
+[12:56:37] Epoch 7 | Batch  80/177 | Loss: 13.4933 (Avg: 13.3111) | Acc: 1.09% | LR: 0.000098
+[12:56:43] Epoch 7 | Batch 100/177 | Loss: 13.8784 (Avg: 13.3575) | Acc: 1.04% | LR: 0.000098
+[12:56:49] Epoch 7 | Batch 120/177 | Loss: 13.3156 (Avg: 13.3983) | Acc: 1.04% | LR: 0.000098
+[12:56:55] Epoch 7 | Batch 140/177 | Loss: 13.7269 (Avg: 13.4270) | Acc: 1.01% | LR: 0.000098
+[12:57:00] Epoch 7 | Batch 160/177 | Loss: 13.0714 (Avg: 13.4292) | Acc: 1.11% | LR: 0.000098
+[12:57:05] Epoch 7 | Batch 177/177 | Loss: 13.5150 (Avg: 13.4556) | Acc: 1.14% | LR: 0.000098
+=== Epoch 7 Done. Loss: 13.4556, Train Acc: 1.14% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:57:35] Epoch 8 | Batch  20/177 | Loss: 12.1179 (Avg: 11.6277) | Acc: 1.98% | LR: 0.000097
+[12:57:40] Epoch 8 | Batch  40/177 | Loss: 12.3762 (Avg: 11.9676) | Acc: 1.77% | LR: 0.000097
+[12:57:46] Epoch 8 | Batch  60/177 | Loss: 12.9299 (Avg: 12.0119) | Acc: 1.70% | LR: 0.000097
+[12:57:52] Epoch 8 | Batch  80/177 | Loss: 12.5880 (Avg: 12.1144) | Acc: 1.64% | LR: 0.000097
+[12:57:58] Epoch 8 | Batch 100/177 | Loss: 11.4187 (Avg: 12.0884) | Acc: 1.77% | LR: 0.000097
+[12:58:03] Epoch 8 | Batch 120/177 | Loss: 11.3394 (Avg: 12.0807) | Acc: 1.81% | LR: 0.000097
+[12:58:09] Epoch 8 | Batch 140/177 | Loss: 11.8333 (Avg: 12.0880) | Acc: 1.89% | LR: 0.000097
+[12:58:15] Epoch 8 | Batch 160/177 | Loss: 11.5805 (Avg: 12.1221) | Acc: 1.84% | LR: 0.000097
+[12:58:20] Epoch 8 | Batch 177/177 | Loss: 12.5676 (Avg: 12.1389) | Acc: 1.86% | LR: 0.000097
+=== Epoch 8 Done. Loss: 12.1389, Train Acc: 1.86% ===
+🔥 Model Saved! (Lowest Loss)
+
+[12:58:49] Epoch 9 | Batch  20/177 | Loss: 10.3397 (Avg: 10.6465) | Acc: 2.71% | LR: 0.000096
+[12:58:55] Epoch 9 | Batch  40/177 | Loss: 10.5417 (Avg: 10.5781) | Acc: 2.86% | LR: 0.000096
+[12:59:01] Epoch 9 | Batch  60/177 | Loss: 11.4755 (Avg: 10.6796) | Acc: 2.88% | LR: 0.000096
+[12:59:06] Epoch 9 | Batch  80/177 | Loss: 11.3613 (Avg: 10.7529) | Acc: 2.63% | LR: 0.000096
+[12:59:12] Epoch 9 | Batch 100/177 | Loss: 10.1973 (Avg: 10.8014) | Acc: 2.71% | LR: 0.000096
+[12:59:18] Epoch 9 | Batch 120/177 | Loss: 12.0043 (Avg: 10.8441) | Acc: 2.59% | LR: 0.000096
+[12:59:24] Epoch 9 | Batch 140/177 | Loss: 11.8800 (Avg: 10.9020) | Acc: 2.66% | LR: 0.000096
+[12:59:29] Epoch 9 | Batch 160/177 | Loss: 11.9835 (Avg: 10.9455) | Acc: 2.60% | LR: 0.000096
+[12:59:34] Epoch 9 | Batch 177/177 | Loss: 12.4799 (Avg: 10.9888) | Acc: 2.57% | LR: 0.000096
+=== Epoch 9 Done. Loss: 10.9888, Train Acc: 2.57% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:00:04] Epoch 10 | Batch  20/177 | Loss: 9.2526 (Avg: 9.3879) | Acc: 3.96% | LR: 0.000095
+[13:00:09] Epoch 10 | Batch  40/177 | Loss: 9.9825 (Avg: 9.4185) | Acc: 4.79% | LR: 0.000095
+[13:00:15] Epoch 10 | Batch  60/177 | Loss: 9.9780 (Avg: 9.4852) | Acc: 4.86% | LR: 0.000095
+[13:00:21] Epoch 10 | Batch  80/177 | Loss: 9.6231 (Avg: 9.5442) | Acc: 4.61% | LR: 0.000095
+[13:00:27] Epoch 10 | Batch 100/177 | Loss: 10.0657 (Avg: 9.6328) | Acc: 4.35% | LR: 0.000095
+[13:00:32] Epoch 10 | Batch 120/177 | Loss: 10.1357 (Avg: 9.6898) | Acc: 4.29% | LR: 0.000095
+[13:00:38] Epoch 10 | Batch 140/177 | Loss: 10.2207 (Avg: 9.7606) | Acc: 4.18% | LR: 0.000095
+[13:00:44] Epoch 10 | Batch 160/177 | Loss: 9.8446 (Avg: 9.7992) | Acc: 4.13% | LR: 0.000095
+[13:00:48] Epoch 10 | Batch 177/177 | Loss: 9.2206 (Avg: 9.8514) | Acc: 3.99% | LR: 0.000095
+=== Epoch 10 Done. Loss: 9.8514, Train Acc: 3.99% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:01:17] Epoch 11 | Batch  20/177 | Loss: 9.1501 (Avg: 8.5595) | Acc: 6.04% | LR: 0.000093
+[13:01:22] Epoch 11 | Batch  40/177 | Loss: 9.4527 (Avg: 8.6979) | Acc: 6.51% | LR: 0.000093
+[13:01:28] Epoch 11 | Batch  60/177 | Loss: 8.8916 (Avg: 8.7365) | Acc: 6.25% | LR: 0.000093
+[13:01:34] Epoch 11 | Batch  80/177 | Loss: 8.7337 (Avg: 8.7519) | Acc: 5.94% | LR: 0.000093
+[13:01:39] Epoch 11 | Batch 100/177 | Loss: 9.8095 (Avg: 8.7988) | Acc: 6.17% | LR: 0.000093
+[13:01:45] Epoch 11 | Batch 120/177 | Loss: 8.4127 (Avg: 8.8126) | Acc: 6.27% | LR: 0.000093
+[13:01:51] Epoch 11 | Batch 140/177 | Loss: 9.0209 (Avg: 8.8567) | Acc: 6.25% | LR: 0.000093
+[13:01:57] Epoch 11 | Batch 160/177 | Loss: 8.7838 (Avg: 8.9044) | Acc: 6.07% | LR: 0.000093
+[13:02:01] Epoch 11 | Batch 177/177 | Loss: 8.7145 (Avg: 8.9287) | Acc: 6.05% | LR: 0.000093
+=== Epoch 11 Done. Loss: 8.9287, Train Acc: 6.05% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:02:30] Epoch 12 | Batch  20/177 | Loss: 7.9724 (Avg: 7.7057) | Acc: 6.56% | LR: 0.000092
+[13:02:35] Epoch 12 | Batch  40/177 | Loss: 7.4008 (Avg: 7.9480) | Acc: 7.76% | LR: 0.000092
+[13:02:41] Epoch 12 | Batch  60/177 | Loss: 6.4251 (Avg: 7.9707) | Acc: 8.33% | LR: 0.000092
+[13:02:47] Epoch 12 | Batch  80/177 | Loss: 9.1999 (Avg: 8.0329) | Acc: 8.18% | LR: 0.000092
+[13:02:52] Epoch 12 | Batch 100/177 | Loss: 8.8728 (Avg: 8.0778) | Acc: 8.15% | LR: 0.000092
+[13:02:58] Epoch 12 | Batch 120/177 | Loss: 7.0893 (Avg: 8.1199) | Acc: 8.04% | LR: 0.000092
+[13:03:04] Epoch 12 | Batch 140/177 | Loss: 8.2826 (Avg: 8.1662) | Acc: 7.93% | LR: 0.000092
+[13:03:09] Epoch 12 | Batch 160/177 | Loss: 8.0200 (Avg: 8.2046) | Acc: 7.86% | LR: 0.000092
+[13:03:14] Epoch 12 | Batch 177/177 | Loss: 8.5249 (Avg: 8.2075) | Acc: 7.82% | LR: 0.000092
+=== Epoch 12 Done. Loss: 8.2075, Train Acc: 7.82% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:03:42] Epoch 13 | Batch  20/177 | Loss: 7.8708 (Avg: 7.2901) | Acc: 11.67% | LR: 0.000090
+[13:03:48] Epoch 13 | Batch  40/177 | Loss: 7.1653 (Avg: 7.1979) | Acc: 10.99% | LR: 0.000090
+[13:03:53] Epoch 13 | Batch  60/177 | Loss: 7.1918 (Avg: 7.2518) | Acc: 11.04% | LR: 0.000090
+[13:03:59] Epoch 13 | Batch  80/177 | Loss: 7.9602 (Avg: 7.3310) | Acc: 10.89% | LR: 0.000090
+[13:04:05] Epoch 13 | Batch 100/177 | Loss: 7.4111 (Avg: 7.3808) | Acc: 11.04% | LR: 0.000090
+[13:04:10] Epoch 13 | Batch 120/177 | Loss: 7.2958 (Avg: 7.4719) | Acc: 10.75% | LR: 0.000090
+[13:04:16] Epoch 13 | Batch 140/177 | Loss: 7.9687 (Avg: 7.4910) | Acc: 10.58% | LR: 0.000090
+[13:04:22] Epoch 13 | Batch 160/177 | Loss: 8.3231 (Avg: 7.5129) | Acc: 10.39% | LR: 0.000090
+[13:04:27] Epoch 13 | Batch 177/177 | Loss: 7.8555 (Avg: 7.5836) | Acc: 10.10% | LR: 0.000090
+=== Epoch 13 Done. Loss: 7.5836, Train Acc: 10.10% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:04:55] Epoch 14 | Batch  20/177 | Loss: 6.8495 (Avg: 6.6493) | Acc: 13.85% | LR: 0.000088
+[13:05:01] Epoch 14 | Batch  40/177 | Loss: 6.0574 (Avg: 6.4946) | Acc: 15.16% | LR: 0.000088
+[13:05:07] Epoch 14 | Batch  60/177 | Loss: 6.8280 (Avg: 6.5111) | Acc: 15.10% | LR: 0.000088
+[13:05:12] Epoch 14 | Batch  80/177 | Loss: 7.3735 (Avg: 6.6653) | Acc: 14.82% | LR: 0.000088
+[13:05:18] Epoch 14 | Batch 100/177 | Loss: 6.7041 (Avg: 6.7479) | Acc: 14.10% | LR: 0.000088
+[13:05:24] Epoch 14 | Batch 120/177 | Loss: 8.0786 (Avg: 6.7868) | Acc: 14.18% | LR: 0.000088
+[13:05:29] Epoch 14 | Batch 140/177 | Loss: 6.4490 (Avg: 6.8247) | Acc: 13.91% | LR: 0.000088
+[13:05:35] Epoch 14 | Batch 160/177 | Loss: 7.6839 (Avg: 6.8713) | Acc: 13.59% | LR: 0.000088
+[13:05:40] Epoch 14 | Batch 177/177 | Loss: 7.5970 (Avg: 6.9239) | Acc: 13.31% | LR: 0.000088
+=== Epoch 14 Done. Loss: 6.9239, Train Acc: 13.31% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:06:10] Epoch 15 | Batch  20/177 | Loss: 6.8526 (Avg: 6.3256) | Acc: 17.40% | LR: 0.000085
+[13:06:15] Epoch 15 | Batch  40/177 | Loss: 6.9149 (Avg: 6.3545) | Acc: 17.03% | LR: 0.000085
+[13:06:21] Epoch 15 | Batch  60/177 | Loss: 7.1825 (Avg: 6.2924) | Acc: 16.53% | LR: 0.000085
+[13:06:27] Epoch 15 | Batch  80/177 | Loss: 5.8098 (Avg: 6.2387) | Acc: 17.11% | LR: 0.000085
+[13:06:32] Epoch 15 | Batch 100/177 | Loss: 5.5707 (Avg: 6.2463) | Acc: 17.21% | LR: 0.000085
+[13:06:38] Epoch 15 | Batch 120/177 | Loss: 6.6045 (Avg: 6.3286) | Acc: 16.96% | LR: 0.000085
+[13:06:44] Epoch 15 | Batch 140/177 | Loss: 7.3987 (Avg: 6.3426) | Acc: 17.19% | LR: 0.000085
+[13:06:50] Epoch 15 | Batch 160/177 | Loss: 5.9638 (Avg: 6.3882) | Acc: 16.90% | LR: 0.000085
+[13:06:54] Epoch 15 | Batch 177/177 | Loss: 6.6680 (Avg: 6.4077) | Acc: 16.73% | LR: 0.000085
+=== Epoch 15 Done. Loss: 6.4077, Train Acc: 16.73% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:07:24] Epoch 16 | Batch  20/177 | Loss: 5.1423 (Avg: 5.5833) | Acc: 24.90% | LR: 0.000083
+[13:07:30] Epoch 16 | Batch  40/177 | Loss: 5.8361 (Avg: 5.6249) | Acc: 23.33% | LR: 0.000083
+[13:07:36] Epoch 16 | Batch  60/177 | Loss: 6.3718 (Avg: 5.7226) | Acc: 22.60% | LR: 0.000083
+[13:07:41] Epoch 16 | Batch  80/177 | Loss: 5.2864 (Avg: 5.7799) | Acc: 22.06% | LR: 0.000083
+[13:07:47] Epoch 16 | Batch 100/177 | Loss: 5.9834 (Avg: 5.8410) | Acc: 21.44% | LR: 0.000083
+[13:07:53] Epoch 16 | Batch 120/177 | Loss: 5.9313 (Avg: 5.8946) | Acc: 20.89% | LR: 0.000083
+[13:07:58] Epoch 16 | Batch 140/177 | Loss: 5.8500 (Avg: 5.9513) | Acc: 20.45% | LR: 0.000083
+[13:08:04] Epoch 16 | Batch 160/177 | Loss: 4.9741 (Avg: 5.9557) | Acc: 20.60% | LR: 0.000083
+[13:08:09] Epoch 16 | Batch 177/177 | Loss: 7.5916 (Avg: 6.0175) | Acc: 20.32% | LR: 0.000083
+=== Epoch 16 Done. Loss: 6.0175, Train Acc: 20.32% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:08:39] Epoch 17 | Batch  20/177 | Loss: 5.5438 (Avg: 5.3474) | Acc: 27.08% | LR: 0.000080
+[13:08:44] Epoch 17 | Batch  40/177 | Loss: 4.4237 (Avg: 5.3085) | Acc: 27.34% | LR: 0.000080
+[13:08:50] Epoch 17 | Batch  60/177 | Loss: 5.3467 (Avg: 5.4583) | Acc: 26.42% | LR: 0.000080
+[13:08:56] Epoch 17 | Batch  80/177 | Loss: 5.6587 (Avg: 5.4822) | Acc: 26.04% | LR: 0.000080
+[13:09:01] Epoch 17 | Batch 100/177 | Loss: 4.7242 (Avg: 5.4981) | Acc: 25.73% | LR: 0.000080
+[13:09:07] Epoch 17 | Batch 120/177 | Loss: 6.3887 (Avg: 5.5797) | Acc: 24.83% | LR: 0.000080
+[13:09:13] Epoch 17 | Batch 140/177 | Loss: 6.0252 (Avg: 5.6198) | Acc: 24.84% | LR: 0.000080
+[13:09:19] Epoch 17 | Batch 160/177 | Loss: 5.2190 (Avg: 5.6166) | Acc: 24.40% | LR: 0.000080
+[13:09:23] Epoch 17 | Batch 177/177 | Loss: 5.5717 (Avg: 5.6186) | Acc: 24.23% | LR: 0.000080
+=== Epoch 17 Done. Loss: 5.6186, Train Acc: 24.23% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:09:53] Epoch 18 | Batch  20/177 | Loss: 6.0680 (Avg: 4.9375) | Acc: 30.52% | LR: 0.000078
+[13:09:59] Epoch 18 | Batch  40/177 | Loss: 5.4536 (Avg: 5.0281) | Acc: 31.56% | LR: 0.000078
+[13:10:05] Epoch 18 | Batch  60/177 | Loss: 5.5072 (Avg: 5.1105) | Acc: 30.73% | LR: 0.000078
+[13:10:10] Epoch 18 | Batch  80/177 | Loss: 5.5365 (Avg: 5.1370) | Acc: 30.18% | LR: 0.000078
+[13:10:16] Epoch 18 | Batch 100/177 | Loss: 5.8001 (Avg: 5.0981) | Acc: 29.81% | LR: 0.000078
+[13:10:22] Epoch 18 | Batch 120/177 | Loss: 5.0680 (Avg: 5.1603) | Acc: 29.43% | LR: 0.000078
+[13:10:27] Epoch 18 | Batch 140/177 | Loss: 5.5345 (Avg: 5.1676) | Acc: 29.03% | LR: 0.000078
+[13:10:33] Epoch 18 | Batch 160/177 | Loss: 5.8845 (Avg: 5.2191) | Acc: 28.50% | LR: 0.000078
+[13:10:38] Epoch 18 | Batch 177/177 | Loss: 4.7603 (Avg: 5.2393) | Acc: 28.31% | LR: 0.000078
+=== Epoch 18 Done. Loss: 5.2393, Train Acc: 28.31% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:11:08] Epoch 19 | Batch  20/177 | Loss: 5.1898 (Avg: 4.8092) | Acc: 35.83% | LR: 0.000075
+[13:11:13] Epoch 19 | Batch  40/177 | Loss: 4.4247 (Avg: 4.8602) | Acc: 35.42% | LR: 0.000075
+[13:11:19] Epoch 19 | Batch  60/177 | Loss: 3.5462 (Avg: 4.7529) | Acc: 34.93% | LR: 0.000075
+[13:11:25] Epoch 19 | Batch  80/177 | Loss: 5.5997 (Avg: 4.7659) | Acc: 34.69% | LR: 0.000075
+[13:11:31] Epoch 19 | Batch 100/177 | Loss: 4.0026 (Avg: 4.8138) | Acc: 34.44% | LR: 0.000075
+[13:11:36] Epoch 19 | Batch 120/177 | Loss: 5.0131 (Avg: 4.8448) | Acc: 33.89% | LR: 0.000075
+[13:11:42] Epoch 19 | Batch 140/177 | Loss: 4.9350 (Avg: 4.8845) | Acc: 33.11% | LR: 0.000075
+[13:11:48] Epoch 19 | Batch 160/177 | Loss: 4.9992 (Avg: 4.8980) | Acc: 32.77% | LR: 0.000075
+[13:11:53] Epoch 19 | Batch 177/177 | Loss: 5.2044 (Avg: 4.9100) | Acc: 32.83% | LR: 0.000075
+=== Epoch 19 Done. Loss: 4.9100, Train Acc: 32.83% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:12:22] Epoch 20 | Batch  20/177 | Loss: 4.6882 (Avg: 4.3460) | Acc: 42.19% | LR: 0.000072
+[13:12:28] Epoch 20 | Batch  40/177 | Loss: 4.6457 (Avg: 4.4535) | Acc: 39.90% | LR: 0.000072
+[13:12:34] Epoch 20 | Batch  60/177 | Loss: 4.6001 (Avg: 4.4640) | Acc: 39.62% | LR: 0.000072
+[13:12:40] Epoch 20 | Batch  80/177 | Loss: 4.5699 (Avg: 4.4447) | Acc: 39.30% | LR: 0.000072
+[13:12:45] Epoch 20 | Batch 100/177 | Loss: 4.4905 (Avg: 4.5066) | Acc: 38.42% | LR: 0.000072
+[13:12:51] Epoch 20 | Batch 120/177 | Loss: 5.1358 (Avg: 4.5246) | Acc: 37.83% | LR: 0.000072
+[13:12:57] Epoch 20 | Batch 140/177 | Loss: 7.3018 (Avg: 4.5795) | Acc: 37.50% | LR: 0.000072
+[13:13:02] Epoch 20 | Batch 160/177 | Loss: 4.5219 (Avg: 4.6085) | Acc: 37.17% | LR: 0.000072
+[13:13:07] Epoch 20 | Batch 177/177 | Loss: 4.7313 (Avg: 4.6243) | Acc: 37.02% | LR: 0.000072
+=== Epoch 20 Done. Loss: 4.6243, Train Acc: 37.02% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:13:37] Epoch 21 | Batch  20/177 | Loss: 3.3109 (Avg: 4.1611) | Acc: 42.29% | LR: 0.000069
+[13:13:43] Epoch 21 | Batch  40/177 | Loss: 4.4170 (Avg: 4.1697) | Acc: 42.66% | LR: 0.000069
+[13:13:48] Epoch 21 | Batch  60/177 | Loss: 4.2748 (Avg: 4.2882) | Acc: 42.08% | LR: 0.000069
+[13:13:54] Epoch 21 | Batch  80/177 | Loss: 4.4488 (Avg: 4.2890) | Acc: 42.19% | LR: 0.000069
+[13:14:00] Epoch 21 | Batch 100/177 | Loss: 4.6469 (Avg: 4.3381) | Acc: 41.31% | LR: 0.000069
+[13:14:06] Epoch 21 | Batch 120/177 | Loss: 4.6904 (Avg: 4.3647) | Acc: 40.90% | LR: 0.000069
+[13:14:11] Epoch 21 | Batch 140/177 | Loss: 4.4421 (Avg: 4.3848) | Acc: 41.10% | LR: 0.000069
+[13:14:17] Epoch 21 | Batch 160/177 | Loss: 4.3260 (Avg: 4.4136) | Acc: 40.46% | LR: 0.000069
+[13:14:22] Epoch 21 | Batch 177/177 | Loss: 4.3846 (Avg: 4.4378) | Acc: 40.36% | LR: 0.000069
+=== Epoch 21 Done. Loss: 4.4378, Train Acc: 40.36% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:14:52] Epoch 22 | Batch  20/177 | Loss: 4.2124 (Avg: 4.1504) | Acc: 45.42% | LR: 0.000066
+[13:14:58] Epoch 22 | Batch  40/177 | Loss: 4.8575 (Avg: 4.0737) | Acc: 45.73% | LR: 0.000066
+[13:15:04] Epoch 22 | Batch  60/177 | Loss: 4.1583 (Avg: 4.0678) | Acc: 45.83% | LR: 0.000066
+[13:15:10] Epoch 22 | Batch  80/177 | Loss: 4.5888 (Avg: 4.0241) | Acc: 45.96% | LR: 0.000066
+[13:15:15] Epoch 22 | Batch 100/177 | Loss: 4.7827 (Avg: 4.0176) | Acc: 45.46% | LR: 0.000066
+[13:15:21] Epoch 22 | Batch 120/177 | Loss: 5.3920 (Avg: 4.0436) | Acc: 45.12% | LR: 0.000066
+[13:15:27] Epoch 22 | Batch 140/177 | Loss: 3.7603 (Avg: 4.0614) | Acc: 44.54% | LR: 0.000066
+[13:15:33] Epoch 22 | Batch 160/177 | Loss: 3.8184 (Avg: 4.1091) | Acc: 44.05% | LR: 0.000066
+[13:15:37] Epoch 22 | Batch 177/177 | Loss: 4.9988 (Avg: 4.1353) | Acc: 43.68% | LR: 0.000066
+=== Epoch 22 Done. Loss: 4.1353, Train Acc: 43.68% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:16:07] Epoch 23 | Batch  20/177 | Loss: 3.7071 (Avg: 3.8439) | Acc: 49.58% | LR: 0.000063
+[13:16:13] Epoch 23 | Batch  40/177 | Loss: 4.7612 (Avg: 3.9192) | Acc: 48.12% | LR: 0.000063
+[13:16:19] Epoch 23 | Batch  60/177 | Loss: 2.8558 (Avg: 3.9531) | Acc: 47.74% | LR: 0.000063
+[13:16:25] Epoch 23 | Batch  80/177 | Loss: 3.2015 (Avg: 3.9268) | Acc: 47.76% | LR: 0.000063
+[13:16:30] Epoch 23 | Batch 100/177 | Loss: 4.2630 (Avg: 3.9329) | Acc: 47.42% | LR: 0.000063
+[13:16:36] Epoch 23 | Batch 120/177 | Loss: 3.8093 (Avg: 3.9366) | Acc: 47.64% | LR: 0.000063
+[13:16:42] Epoch 23 | Batch 140/177 | Loss: 3.3309 (Avg: 3.9625) | Acc: 47.28% | LR: 0.000063
+[13:16:47] Epoch 23 | Batch 160/177 | Loss: 3.9902 (Avg: 3.9911) | Acc: 47.10% | LR: 0.000063
+[13:16:52] Epoch 23 | Batch 177/177 | Loss: 3.3088 (Avg: 3.9832) | Acc: 46.96% | LR: 0.000063
+=== Epoch 23 Done. Loss: 3.9832, Train Acc: 46.96% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:17:22] Epoch 24 | Batch  20/177 | Loss: 2.7500 (Avg: 3.7673) | Acc: 51.15% | LR: 0.000060
+[13:17:28] Epoch 24 | Batch  40/177 | Loss: 4.3230 (Avg: 3.6398) | Acc: 52.24% | LR: 0.000060
+[13:17:34] Epoch 24 | Batch  60/177 | Loss: 5.3686 (Avg: 3.6625) | Acc: 51.94% | LR: 0.000060
+[13:17:39] Epoch 24 | Batch  80/177 | Loss: 3.7986 (Avg: 3.7076) | Acc: 51.28% | LR: 0.000060
+[13:17:45] Epoch 24 | Batch 100/177 | Loss: 4.0558 (Avg: 3.7256) | Acc: 51.02% | LR: 0.000060
+[13:17:51] Epoch 24 | Batch 120/177 | Loss: 4.7050 (Avg: 3.7812) | Acc: 50.50% | LR: 0.000060
+[13:17:56] Epoch 24 | Batch 140/177 | Loss: 4.1226 (Avg: 3.8154) | Acc: 50.33% | LR: 0.000060
+[13:18:02] Epoch 24 | Batch 160/177 | Loss: 3.4696 (Avg: 3.8003) | Acc: 50.04% | LR: 0.000060
+[13:18:07] Epoch 24 | Batch 177/177 | Loss: 4.4365 (Avg: 3.8408) | Acc: 49.64% | LR: 0.000060
+=== Epoch 24 Done. Loss: 3.8408, Train Acc: 49.64% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:18:36] Epoch 25 | Batch  20/177 | Loss: 4.2136 (Avg: 3.5509) | Acc: 52.60% | LR: 0.000057
+[13:18:42] Epoch 25 | Batch  40/177 | Loss: 4.0829 (Avg: 3.5419) | Acc: 53.91% | LR: 0.000057
+[13:18:48] Epoch 25 | Batch  60/177 | Loss: 3.2110 (Avg: 3.5980) | Acc: 53.26% | LR: 0.000057
+[13:18:54] Epoch 25 | Batch  80/177 | Loss: 3.7946 (Avg: 3.6083) | Acc: 53.20% | LR: 0.000057
+[13:18:59] Epoch 25 | Batch 100/177 | Loss: 3.1482 (Avg: 3.6266) | Acc: 53.02% | LR: 0.000057
+[13:19:05] Epoch 25 | Batch 120/177 | Loss: 4.0842 (Avg: 3.6188) | Acc: 52.83% | LR: 0.000057
+[13:19:11] Epoch 25 | Batch 140/177 | Loss: 4.9074 (Avg: 3.6634) | Acc: 52.28% | LR: 0.000057
+[13:19:16] Epoch 25 | Batch 160/177 | Loss: 3.5866 (Avg: 3.6677) | Acc: 51.81% | LR: 0.000057
+[13:19:21] Epoch 25 | Batch 177/177 | Loss: 3.0088 (Avg: 3.6647) | Acc: 51.91% | LR: 0.000057
+=== Epoch 25 Done. Loss: 3.6647, Train Acc: 51.91% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:19:51] Epoch 26 | Batch  20/177 | Loss: 3.4279 (Avg: 3.5691) | Acc: 53.12% | LR: 0.000053
+[13:19:56] Epoch 26 | Batch  40/177 | Loss: 2.6641 (Avg: 3.5561) | Acc: 54.01% | LR: 0.000053
+[13:20:02] Epoch 26 | Batch  60/177 | Loss: 3.8626 (Avg: 3.5535) | Acc: 54.10% | LR: 0.000053
+[13:20:08] Epoch 26 | Batch  80/177 | Loss: 5.0460 (Avg: 3.6019) | Acc: 53.18% | LR: 0.000053
+[13:20:14] Epoch 26 | Batch 100/177 | Loss: 3.9456 (Avg: 3.5925) | Acc: 53.54% | LR: 0.000053
+[13:20:19] Epoch 26 | Batch 120/177 | Loss: 3.9586 (Avg: 3.5967) | Acc: 53.56% | LR: 0.000053
+[13:20:25] Epoch 26 | Batch 140/177 | Loss: 3.2663 (Avg: 3.6063) | Acc: 53.56% | LR: 0.000053
+[13:20:31] Epoch 26 | Batch 160/177 | Loss: 3.7523 (Avg: 3.6563) | Acc: 53.40% | LR: 0.000053
+[13:20:36] Epoch 26 | Batch 177/177 | Loss: 3.9784 (Avg: 3.6590) | Acc: 53.30% | LR: 0.000053
+=== Epoch 26 Done. Loss: 3.6590, Train Acc: 53.30% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:21:05] Epoch 27 | Batch  20/177 | Loss: 2.9512 (Avg: 3.3991) | Acc: 58.44% | LR: 0.000050
+[13:21:10] Epoch 27 | Batch  40/177 | Loss: 3.5241 (Avg: 3.4679) | Acc: 56.82% | LR: 0.000050
+[13:21:16] Epoch 27 | Batch  60/177 | Loss: 3.4040 (Avg: 3.3876) | Acc: 57.53% | LR: 0.000050
+[13:21:22] Epoch 27 | Batch  80/177 | Loss: 3.7076 (Avg: 3.4072) | Acc: 57.14% | LR: 0.000050
+[13:21:27] Epoch 27 | Batch 100/177 | Loss: 3.4977 (Avg: 3.4308) | Acc: 56.46% | LR: 0.000050
+[13:21:33] Epoch 27 | Batch 120/177 | Loss: 3.2141 (Avg: 3.4425) | Acc: 56.60% | LR: 0.000050
+[13:21:39] Epoch 27 | Batch 140/177 | Loss: 3.5701 (Avg: 3.4581) | Acc: 56.34% | LR: 0.000050
+[13:21:44] Epoch 27 | Batch 160/177 | Loss: 4.3491 (Avg: 3.4734) | Acc: 55.99% | LR: 0.000050
+[13:21:49] Epoch 27 | Batch 177/177 | Loss: 4.5752 (Avg: 3.4961) | Acc: 55.54% | LR: 0.000050
+=== Epoch 27 Done. Loss: 3.4961, Train Acc: 55.54% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:22:18] Epoch 28 | Batch  20/177 | Loss: 2.8714 (Avg: 3.2492) | Acc: 58.44% | LR: 0.000047
+[13:22:24] Epoch 28 | Batch  40/177 | Loss: 3.1191 (Avg: 3.2699) | Acc: 57.55% | LR: 0.000047
+[13:22:30] Epoch 28 | Batch  60/177 | Loss: 3.3253 (Avg: 3.2072) | Acc: 58.51% | LR: 0.000047
+[13:22:35] Epoch 28 | Batch  80/177 | Loss: 4.2681 (Avg: 3.2165) | Acc: 58.23% | LR: 0.000047
+[13:22:41] Epoch 28 | Batch 100/177 | Loss: 3.0606 (Avg: 3.2709) | Acc: 57.56% | LR: 0.000047
+[13:22:47] Epoch 28 | Batch 120/177 | Loss: 3.5280 (Avg: 3.3181) | Acc: 57.29% | LR: 0.000047
+[13:22:52] Epoch 28 | Batch 140/177 | Loss: 2.4710 (Avg: 3.3159) | Acc: 57.05% | LR: 0.000047
+[13:22:58] Epoch 28 | Batch 160/177 | Loss: 5.0196 (Avg: 3.3206) | Acc: 57.01% | LR: 0.000047
+[13:23:03] Epoch 28 | Batch 177/177 | Loss: 2.2204 (Avg: 3.3334) | Acc: 57.11% | LR: 0.000047
+=== Epoch 28 Done. Loss: 3.3334, Train Acc: 57.11% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:23:31] Epoch 29 | Batch  20/177 | Loss: 2.7202 (Avg: 3.1091) | Acc: 59.38% | LR: 0.000043
+[13:23:37] Epoch 29 | Batch  40/177 | Loss: 2.1282 (Avg: 3.1724) | Acc: 59.48% | LR: 0.000043
+[13:23:43] Epoch 29 | Batch  60/177 | Loss: 4.4545 (Avg: 3.1597) | Acc: 59.55% | LR: 0.000043
+[13:23:48] Epoch 29 | Batch  80/177 | Loss: 3.8755 (Avg: 3.1690) | Acc: 59.35% | LR: 0.000043
+[13:23:54] Epoch 29 | Batch 100/177 | Loss: 3.9719 (Avg: 3.1778) | Acc: 59.10% | LR: 0.000043
+[13:24:00] Epoch 29 | Batch 120/177 | Loss: 3.0630 (Avg: 3.2409) | Acc: 58.68% | LR: 0.000043
+[13:24:05] Epoch 29 | Batch 140/177 | Loss: 2.6437 (Avg: 3.2637) | Acc: 58.39% | LR: 0.000043
+[13:24:11] Epoch 29 | Batch 160/177 | Loss: 3.4014 (Avg: 3.2623) | Acc: 58.40% | LR: 0.000043
+[13:24:16] Epoch 29 | Batch 177/177 | Loss: 4.3997 (Avg: 3.2776) | Acc: 58.27% | LR: 0.000043
+=== Epoch 29 Done. Loss: 3.2776, Train Acc: 58.27% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:24:44] Epoch 30 | Batch  20/177 | Loss: 3.2821 (Avg: 3.1391) | Acc: 59.06% | LR: 0.000040
+[13:24:50] Epoch 30 | Batch  40/177 | Loss: 2.7239 (Avg: 3.1527) | Acc: 60.16% | LR: 0.000040
+[13:24:55] Epoch 30 | Batch  60/177 | Loss: 2.7792 (Avg: 3.1620) | Acc: 59.69% | LR: 0.000040
+[13:25:01] Epoch 30 | Batch  80/177 | Loss: 3.1049 (Avg: 3.2027) | Acc: 59.74% | LR: 0.000040
+[13:25:07] Epoch 30 | Batch 100/177 | Loss: 3.3146 (Avg: 3.1853) | Acc: 59.79% | LR: 0.000040
+[13:25:12] Epoch 30 | Batch 120/177 | Loss: 3.1142 (Avg: 3.1759) | Acc: 59.95% | LR: 0.000040
+[13:25:18] Epoch 30 | Batch 140/177 | Loss: 3.2385 (Avg: 3.1555) | Acc: 60.24% | LR: 0.000040
+[13:25:24] Epoch 30 | Batch 160/177 | Loss: 3.2293 (Avg: 3.1875) | Acc: 60.01% | LR: 0.000040
+[13:25:28] Epoch 30 | Batch 177/177 | Loss: 2.3615 (Avg: 3.1765) | Acc: 59.95% | LR: 0.000040
+=== Epoch 30 Done. Loss: 3.1765, Train Acc: 59.95% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:25:57] Epoch 31 | Batch  20/177 | Loss: 4.1035 (Avg: 3.2438) | Acc: 59.06% | LR: 0.000037
+[13:26:03] Epoch 31 | Batch  40/177 | Loss: 2.5651 (Avg: 3.0525) | Acc: 60.52% | LR: 0.000037
+[13:26:09] Epoch 31 | Batch  60/177 | Loss: 3.5546 (Avg: 3.1013) | Acc: 59.97% | LR: 0.000037
+[13:26:14] Epoch 31 | Batch  80/177 | Loss: 2.9717 (Avg: 3.0838) | Acc: 60.18% | LR: 0.000037
+[13:26:20] Epoch 31 | Batch 100/177 | Loss: 2.9688 (Avg: 3.1021) | Acc: 60.48% | LR: 0.000037
+[13:26:26] Epoch 31 | Batch 120/177 | Loss: 2.4817 (Avg: 3.1112) | Acc: 60.47% | LR: 0.000037
+[13:26:31] Epoch 31 | Batch 140/177 | Loss: 3.4124 (Avg: 3.1049) | Acc: 60.60% | LR: 0.000037
+[13:26:37] Epoch 31 | Batch 160/177 | Loss: 3.6471 (Avg: 3.1455) | Acc: 60.38% | LR: 0.000037
+[13:26:42] Epoch 31 | Batch 177/177 | Loss: 2.8094 (Avg: 3.1341) | Acc: 60.44% | LR: 0.000037
+=== Epoch 31 Done. Loss: 3.1341, Train Acc: 60.44% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:27:10] Epoch 32 | Batch  20/177 | Loss: 3.8001 (Avg: 2.9606) | Acc: 63.65% | LR: 0.000034
+[13:27:16] Epoch 32 | Batch  40/177 | Loss: 4.1086 (Avg: 3.0539) | Acc: 63.23% | LR: 0.000034
+[13:27:21] Epoch 32 | Batch  60/177 | Loss: 2.4868 (Avg: 3.0857) | Acc: 62.74% | LR: 0.000034
+[13:27:27] Epoch 32 | Batch  80/177 | Loss: 2.8727 (Avg: 3.0774) | Acc: 62.32% | LR: 0.000034
+[13:27:33] Epoch 32 | Batch 100/177 | Loss: 3.8119 (Avg: 3.0746) | Acc: 62.02% | LR: 0.000034
+[13:27:39] Epoch 32 | Batch 120/177 | Loss: 2.7660 (Avg: 3.0727) | Acc: 62.00% | LR: 0.000034
+[13:27:44] Epoch 32 | Batch 140/177 | Loss: 2.3238 (Avg: 3.0446) | Acc: 62.41% | LR: 0.000034
+[13:27:50] Epoch 32 | Batch 160/177 | Loss: 3.8525 (Avg: 3.0322) | Acc: 62.17% | LR: 0.000034
+[13:27:55] Epoch 32 | Batch 177/177 | Loss: 2.7950 (Avg: 3.0192) | Acc: 62.34% | LR: 0.000034
+=== Epoch 32 Done. Loss: 3.0192, Train Acc: 62.34% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:28:23] Epoch 33 | Batch  20/177 | Loss: 2.1477 (Avg: 2.7208) | Acc: 65.52% | LR: 0.000031
+[13:28:29] Epoch 33 | Batch  40/177 | Loss: 3.7560 (Avg: 2.7918) | Acc: 63.70% | LR: 0.000031
+[13:28:35] Epoch 33 | Batch  60/177 | Loss: 2.4784 (Avg: 2.8266) | Acc: 63.99% | LR: 0.000031
+[13:28:40] Epoch 33 | Batch  80/177 | Loss: 3.5803 (Avg: 2.8762) | Acc: 63.72% | LR: 0.000031
+[13:28:46] Epoch 33 | Batch 100/177 | Loss: 3.0859 (Avg: 2.8895) | Acc: 64.00% | LR: 0.000031
+[13:28:52] Epoch 33 | Batch 120/177 | Loss: 2.1754 (Avg: 2.9049) | Acc: 63.45% | LR: 0.000031
+[13:28:57] Epoch 33 | Batch 140/177 | Loss: 2.2237 (Avg: 2.9239) | Acc: 63.21% | LR: 0.000031
+[13:29:03] Epoch 33 | Batch 160/177 | Loss: 3.4700 (Avg: 2.9182) | Acc: 63.10% | LR: 0.000031
+[13:29:08] Epoch 33 | Batch 177/177 | Loss: 4.3576 (Avg: 2.9557) | Acc: 62.77% | LR: 0.000031
+=== Epoch 33 Done. Loss: 2.9557, Train Acc: 62.77% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:29:36] Epoch 34 | Batch  20/177 | Loss: 1.9196 (Avg: 2.7389) | Acc: 66.15% | LR: 0.000028
+[13:29:42] Epoch 34 | Batch  40/177 | Loss: 2.4215 (Avg: 2.8579) | Acc: 65.21% | LR: 0.000028
+[13:29:48] Epoch 34 | Batch  60/177 | Loss: 2.3367 (Avg: 2.7527) | Acc: 65.73% | LR: 0.000028
+[13:29:53] Epoch 34 | Batch  80/177 | Loss: 4.2776 (Avg: 2.8304) | Acc: 64.71% | LR: 0.000028
+[13:29:59] Epoch 34 | Batch 100/177 | Loss: 1.9915 (Avg: 2.8476) | Acc: 64.75% | LR: 0.000028
+[13:30:05] Epoch 34 | Batch 120/177 | Loss: 2.9404 (Avg: 2.8594) | Acc: 64.53% | LR: 0.000028
+[13:30:10] Epoch 34 | Batch 140/177 | Loss: 3.1044 (Avg: 2.8538) | Acc: 64.81% | LR: 0.000028
+[13:30:16] Epoch 34 | Batch 160/177 | Loss: 2.7228 (Avg: 2.8671) | Acc: 64.41% | LR: 0.000028
+[13:30:21] Epoch 34 | Batch 177/177 | Loss: 2.4003 (Avg: 2.8783) | Acc: 64.11% | LR: 0.000028
+=== Epoch 34 Done. Loss: 2.8783, Train Acc: 64.11% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:30:49] Epoch 35 | Batch  20/177 | Loss: 3.0145 (Avg: 2.6239) | Acc: 68.12% | LR: 0.000025
+[13:30:55] Epoch 35 | Batch  40/177 | Loss: 4.5605 (Avg: 2.7320) | Acc: 66.51% | LR: 0.000025
+[13:31:01] Epoch 35 | Batch  60/177 | Loss: 3.9984 (Avg: 2.8708) | Acc: 64.51% | LR: 0.000025
+[13:31:07] Epoch 35 | Batch  80/177 | Loss: 2.4746 (Avg: 2.7895) | Acc: 65.00% | LR: 0.000025
+[13:31:12] Epoch 35 | Batch 100/177 | Loss: 2.6859 (Avg: 2.7647) | Acc: 65.75% | LR: 0.000025
+[13:31:18] Epoch 35 | Batch 120/177 | Loss: 3.6712 (Avg: 2.7286) | Acc: 65.68% | LR: 0.000025
+[13:31:24] Epoch 35 | Batch 140/177 | Loss: 2.2001 (Avg: 2.7742) | Acc: 65.22% | LR: 0.000025
+[13:31:29] Epoch 35 | Batch 160/177 | Loss: 4.0837 (Avg: 2.8249) | Acc: 64.78% | LR: 0.000025
+[13:31:34] Epoch 35 | Batch 177/177 | Loss: 2.4516 (Avg: 2.8251) | Acc: 64.84% | LR: 0.000025
+=== Epoch 35 Done. Loss: 2.8251, Train Acc: 64.84% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:32:02] Epoch 36 | Batch  20/177 | Loss: 2.0246 (Avg: 2.8842) | Acc: 64.06% | LR: 0.000022
+[13:32:08] Epoch 36 | Batch  40/177 | Loss: 2.8315 (Avg: 2.9279) | Acc: 64.22% | LR: 0.000022
+[13:32:14] Epoch 36 | Batch  60/177 | Loss: 2.6864 (Avg: 2.8840) | Acc: 64.86% | LR: 0.000022
+[13:32:19] Epoch 36 | Batch  80/177 | Loss: 3.6105 (Avg: 2.8793) | Acc: 64.56% | LR: 0.000022
+[13:32:25] Epoch 36 | Batch 100/177 | Loss: 4.2064 (Avg: 2.8816) | Acc: 64.54% | LR: 0.000022
+[13:32:31] Epoch 36 | Batch 120/177 | Loss: 4.7746 (Avg: 2.8929) | Acc: 64.81% | LR: 0.000022
+[13:32:36] Epoch 36 | Batch 140/177 | Loss: 2.5372 (Avg: 2.8859) | Acc: 64.84% | LR: 0.000022
+[13:32:42] Epoch 36 | Batch 160/177 | Loss: 2.2943 (Avg: 2.9069) | Acc: 64.54% | LR: 0.000022
+[13:32:47] Epoch 36 | Batch 177/177 | Loss: 2.3825 (Avg: 2.9014) | Acc: 64.60% | LR: 0.000022
+=== Epoch 36 Done. Loss: 2.9014, Train Acc: 64.60% ===
+
+[13:33:16] Epoch 37 | Batch  20/177 | Loss: 3.5288 (Avg: 2.9362) | Acc: 63.96% | LR: 0.000020
+[13:33:21] Epoch 37 | Batch  40/177 | Loss: 2.3233 (Avg: 2.9675) | Acc: 64.64% | LR: 0.000020
+[13:33:27] Epoch 37 | Batch  60/177 | Loss: 3.3593 (Avg: 2.9066) | Acc: 64.90% | LR: 0.000020
+[13:33:33] Epoch 37 | Batch  80/177 | Loss: 2.4065 (Avg: 2.8109) | Acc: 66.07% | LR: 0.000020
+[13:33:38] Epoch 37 | Batch 100/177 | Loss: 2.3476 (Avg: 2.7663) | Acc: 66.58% | LR: 0.000020
+[13:33:44] Epoch 37 | Batch 120/177 | Loss: 2.7904 (Avg: 2.8002) | Acc: 66.56% | LR: 0.000020
+[13:33:50] Epoch 37 | Batch 140/177 | Loss: 3.5299 (Avg: 2.8069) | Acc: 66.26% | LR: 0.000020
+[13:33:55] Epoch 37 | Batch 160/177 | Loss: 3.2129 (Avg: 2.7888) | Acc: 66.17% | LR: 0.000020
+[13:34:00] Epoch 37 | Batch 177/177 | Loss: 2.3969 (Avg: 2.8139) | Acc: 65.87% | LR: 0.000020
+=== Epoch 37 Done. Loss: 2.8139, Train Acc: 65.87% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:34:28] Epoch 38 | Batch  20/177 | Loss: 3.4417 (Avg: 2.6867) | Acc: 67.71% | LR: 0.000017
+[13:34:34] Epoch 38 | Batch  40/177 | Loss: 2.8427 (Avg: 2.6753) | Acc: 66.93% | LR: 0.000017
+[13:34:40] Epoch 38 | Batch  60/177 | Loss: 2.8903 (Avg: 2.6478) | Acc: 67.36% | LR: 0.000017
+[13:34:45] Epoch 38 | Batch  80/177 | Loss: 3.1850 (Avg: 2.6914) | Acc: 67.01% | LR: 0.000017
+[13:34:51] Epoch 38 | Batch 100/177 | Loss: 2.5321 (Avg: 2.6546) | Acc: 67.62% | LR: 0.000017
+[13:34:57] Epoch 38 | Batch 120/177 | Loss: 1.4201 (Avg: 2.6184) | Acc: 67.97% | LR: 0.000017
+[13:35:02] Epoch 38 | Batch 140/177 | Loss: 2.3915 (Avg: 2.5986) | Acc: 68.33% | LR: 0.000017
+[13:35:08] Epoch 38 | Batch 160/177 | Loss: 2.9875 (Avg: 2.6377) | Acc: 68.07% | LR: 0.000017
+[13:35:13] Epoch 38 | Batch 177/177 | Loss: 2.4685 (Avg: 2.6348) | Acc: 67.97% | LR: 0.000017
+=== Epoch 38 Done. Loss: 2.6348, Train Acc: 67.97% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:35:41] Epoch 39 | Batch  20/177 | Loss: 2.9668 (Avg: 2.5001) | Acc: 66.67% | LR: 0.000015
+[13:35:47] Epoch 39 | Batch  40/177 | Loss: 3.3987 (Avg: 2.6136) | Acc: 65.99% | LR: 0.000015
+[13:35:53] Epoch 39 | Batch  60/177 | Loss: 1.6760 (Avg: 2.6546) | Acc: 66.56% | LR: 0.000015
+[13:35:58] Epoch 39 | Batch  80/177 | Loss: 2.7237 (Avg: 2.6283) | Acc: 66.56% | LR: 0.000015
+[13:36:04] Epoch 39 | Batch 100/177 | Loss: 2.2580 (Avg: 2.6844) | Acc: 66.25% | LR: 0.000015
+[13:36:10] Epoch 39 | Batch 120/177 | Loss: 3.1818 (Avg: 2.6764) | Acc: 66.15% | LR: 0.000015
+[13:36:15] Epoch 39 | Batch 140/177 | Loss: 2.1517 (Avg: 2.6652) | Acc: 66.26% | LR: 0.000015
+[13:36:21] Epoch 39 | Batch 160/177 | Loss: 2.1548 (Avg: 2.6579) | Acc: 66.50% | LR: 0.000015
+[13:36:26] Epoch 39 | Batch 177/177 | Loss: 3.1987 (Avg: 2.6581) | Acc: 66.69% | LR: 0.000015
+=== Epoch 39 Done. Loss: 2.6581, Train Acc: 66.69% ===
+
+[13:36:54] Epoch 40 | Batch  20/177 | Loss: 2.8154 (Avg: 2.8083) | Acc: 65.21% | LR: 0.000012
+[13:36:59] Epoch 40 | Batch  40/177 | Loss: 3.5342 (Avg: 2.7460) | Acc: 66.09% | LR: 0.000012
+[13:37:05] Epoch 40 | Batch  60/177 | Loss: 3.4430 (Avg: 2.7430) | Acc: 65.66% | LR: 0.000012
+[13:37:11] Epoch 40 | Batch  80/177 | Loss: 4.1828 (Avg: 2.7854) | Acc: 65.34% | LR: 0.000012
+[13:37:17] Epoch 40 | Batch 100/177 | Loss: 2.6616 (Avg: 2.7289) | Acc: 66.02% | LR: 0.000012
+[13:37:22] Epoch 40 | Batch 120/177 | Loss: 2.2876 (Avg: 2.7234) | Acc: 66.06% | LR: 0.000012
+[13:37:28] Epoch 40 | Batch 140/177 | Loss: 2.0419 (Avg: 2.7269) | Acc: 65.89% | LR: 0.000012
+[13:37:34] Epoch 40 | Batch 160/177 | Loss: 2.1470 (Avg: 2.7187) | Acc: 66.05% | LR: 0.000012
+[13:37:38] Epoch 40 | Batch 177/177 | Loss: 2.6226 (Avg: 2.7355) | Acc: 65.95% | LR: 0.000012
+=== Epoch 40 Done. Loss: 2.7355, Train Acc: 65.95% ===
+
+[13:38:07] Epoch 41 | Batch  20/177 | Loss: 3.0844 (Avg: 2.5110) | Acc: 69.17% | LR: 0.000010
+[13:38:12] Epoch 41 | Batch  40/177 | Loss: 2.3492 (Avg: 2.4661) | Acc: 69.27% | LR: 0.000010
+[13:38:18] Epoch 41 | Batch  60/177 | Loss: 2.5925 (Avg: 2.6154) | Acc: 68.33% | LR: 0.000010
+[13:38:24] Epoch 41 | Batch  80/177 | Loss: 2.5967 (Avg: 2.5944) | Acc: 68.28% | LR: 0.000010
+[13:38:29] Epoch 41 | Batch 100/177 | Loss: 3.0839 (Avg: 2.5928) | Acc: 68.00% | LR: 0.000010
+[13:38:35] Epoch 41 | Batch 120/177 | Loss: 2.1823 (Avg: 2.5961) | Acc: 67.99% | LR: 0.000010
+[13:38:41] Epoch 41 | Batch 140/177 | Loss: 2.5926 (Avg: 2.6028) | Acc: 67.78% | LR: 0.000010
+[13:38:46] Epoch 41 | Batch 160/177 | Loss: 2.3153 (Avg: 2.6187) | Acc: 67.71% | LR: 0.000010
+[13:38:51] Epoch 41 | Batch 177/177 | Loss: 3.0770 (Avg: 2.6361) | Acc: 67.63% | LR: 0.000010
+=== Epoch 41 Done. Loss: 2.6361, Train Acc: 67.63% ===
+
+[13:39:19] Epoch 42 | Batch  20/177 | Loss: 2.4646 (Avg: 2.6189) | Acc: 68.65% | LR: 0.000008
+[13:39:25] Epoch 42 | Batch  40/177 | Loss: 4.0660 (Avg: 2.6873) | Acc: 67.45% | LR: 0.000008
+[13:39:31] Epoch 42 | Batch  60/177 | Loss: 2.5266 (Avg: 2.7260) | Acc: 67.36% | LR: 0.000008
+[13:39:36] Epoch 42 | Batch  80/177 | Loss: 2.9138 (Avg: 2.6870) | Acc: 67.55% | LR: 0.000008
+[13:39:42] Epoch 42 | Batch 100/177 | Loss: 2.4622 (Avg: 2.7121) | Acc: 67.23% | LR: 0.000008
+[13:39:48] Epoch 42 | Batch 120/177 | Loss: 2.4933 (Avg: 2.6777) | Acc: 67.69% | LR: 0.000008
+[13:39:53] Epoch 42 | Batch 140/177 | Loss: 1.3646 (Avg: 2.6481) | Acc: 68.04% | LR: 0.000008
+[13:39:59] Epoch 42 | Batch 160/177 | Loss: 2.9497 (Avg: 2.6327) | Acc: 68.15% | LR: 0.000008
+[13:40:04] Epoch 42 | Batch 177/177 | Loss: 2.7287 (Avg: 2.6291) | Acc: 68.10% | LR: 0.000008
+=== Epoch 42 Done. Loss: 2.6291, Train Acc: 68.10% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:40:32] Epoch 43 | Batch  20/177 | Loss: 2.7691 (Avg: 2.5917) | Acc: 68.23% | LR: 0.000007
+[13:40:38] Epoch 43 | Batch  40/177 | Loss: 2.0661 (Avg: 2.6127) | Acc: 68.18% | LR: 0.000007
+[13:40:43] Epoch 43 | Batch  60/177 | Loss: 2.1759 (Avg: 2.7385) | Acc: 66.91% | LR: 0.000007
+[13:40:49] Epoch 43 | Batch  80/177 | Loss: 3.0228 (Avg: 2.6764) | Acc: 66.67% | LR: 0.000007
+[13:40:55] Epoch 43 | Batch 100/177 | Loss: 3.0645 (Avg: 2.6880) | Acc: 66.77% | LR: 0.000007
+[13:41:01] Epoch 43 | Batch 120/177 | Loss: 2.0029 (Avg: 2.6885) | Acc: 66.42% | LR: 0.000007
+[13:41:07] Epoch 43 | Batch 140/177 | Loss: 3.8128 (Avg: 2.6776) | Acc: 66.83% | LR: 0.000007
+[13:41:13] Epoch 43 | Batch 160/177 | Loss: 2.4746 (Avg: 2.6675) | Acc: 66.99% | LR: 0.000007
+[13:41:17] Epoch 43 | Batch 177/177 | Loss: 3.0894 (Avg: 2.6583) | Acc: 67.08% | LR: 0.000007
+=== Epoch 43 Done. Loss: 2.6583, Train Acc: 67.08% ===
+
+[13:41:48] Epoch 44 | Batch  20/177 | Loss: 2.3090 (Avg: 2.5499) | Acc: 68.75% | LR: 0.000005
+[13:41:54] Epoch 44 | Batch  40/177 | Loss: 2.5765 (Avg: 2.6846) | Acc: 67.60% | LR: 0.000005
+[13:42:00] Epoch 44 | Batch  60/177 | Loss: 2.4484 (Avg: 2.6316) | Acc: 68.65% | LR: 0.000005
+[13:42:05] Epoch 44 | Batch  80/177 | Loss: 1.7515 (Avg: 2.6246) | Acc: 68.41% | LR: 0.000005
+[13:42:11] Epoch 44 | Batch 100/177 | Loss: 2.9315 (Avg: 2.6180) | Acc: 68.23% | LR: 0.000005
+[13:42:17] Epoch 44 | Batch 120/177 | Loss: 3.4142 (Avg: 2.6401) | Acc: 67.76% | LR: 0.000005
+[13:42:23] Epoch 44 | Batch 140/177 | Loss: 2.4702 (Avg: 2.6270) | Acc: 67.53% | LR: 0.000005
+[13:42:28] Epoch 44 | Batch 160/177 | Loss: 2.6621 (Avg: 2.6122) | Acc: 67.41% | LR: 0.000005
+[13:42:33] Epoch 44 | Batch 177/177 | Loss: 3.0418 (Avg: 2.6127) | Acc: 67.43% | LR: 0.000005
+=== Epoch 44 Done. Loss: 2.6127, Train Acc: 67.43% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:43:03] Epoch 45 | Batch  20/177 | Loss: 2.9193 (Avg: 2.5115) | Acc: 70.31% | LR: 0.000004
+[13:43:09] Epoch 45 | Batch  40/177 | Loss: 2.1277 (Avg: 2.4901) | Acc: 69.64% | LR: 0.000004
+[13:43:15] Epoch 45 | Batch  60/177 | Loss: 2.8752 (Avg: 2.5890) | Acc: 68.82% | LR: 0.000004
+[13:43:20] Epoch 45 | Batch  80/177 | Loss: 2.5426 (Avg: 2.5904) | Acc: 68.26% | LR: 0.000004
+[13:43:26] Epoch 45 | Batch 100/177 | Loss: 1.6293 (Avg: 2.5795) | Acc: 68.02% | LR: 0.000004
+[13:43:32] Epoch 45 | Batch 120/177 | Loss: 2.2938 (Avg: 2.6299) | Acc: 68.07% | LR: 0.000004
+[13:43:38] Epoch 45 | Batch 140/177 | Loss: 3.3543 (Avg: 2.6238) | Acc: 68.10% | LR: 0.000004
+[13:43:43] Epoch 45 | Batch 160/177 | Loss: 3.2769 (Avg: 2.6104) | Acc: 68.15% | LR: 0.000004
+[13:43:48] Epoch 45 | Batch 177/177 | Loss: 3.7903 (Avg: 2.5986) | Acc: 68.36% | LR: 0.000004
+=== Epoch 45 Done. Loss: 2.5986, Train Acc: 68.36% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:44:17] Epoch 46 | Batch  20/177 | Loss: 2.1472 (Avg: 2.7403) | Acc: 67.29% | LR: 0.000003
+[13:44:23] Epoch 46 | Batch  40/177 | Loss: 2.5871 (Avg: 2.6647) | Acc: 66.98% | LR: 0.000003
+[13:44:29] Epoch 46 | Batch  60/177 | Loss: 1.8270 (Avg: 2.6800) | Acc: 67.01% | LR: 0.000003
+[13:44:35] Epoch 46 | Batch  80/177 | Loss: 1.8637 (Avg: 2.6314) | Acc: 67.60% | LR: 0.000003
+[13:44:40] Epoch 46 | Batch 100/177 | Loss: 2.3491 (Avg: 2.5917) | Acc: 68.29% | LR: 0.000003
+[13:44:46] Epoch 46 | Batch 120/177 | Loss: 3.1683 (Avg: 2.5707) | Acc: 68.80% | LR: 0.000003
+[13:44:52] Epoch 46 | Batch 140/177 | Loss: 2.7157 (Avg: 2.5822) | Acc: 68.53% | LR: 0.000003
+[13:44:58] Epoch 46 | Batch 160/177 | Loss: 1.8911 (Avg: 2.5915) | Acc: 68.41% | LR: 0.000003
+[13:45:03] Epoch 46 | Batch 177/177 | Loss: 2.5548 (Avg: 2.5929) | Acc: 68.37% | LR: 0.000003
+=== Epoch 46 Done. Loss: 2.5929, Train Acc: 68.37% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:45:32] Epoch 47 | Batch  20/177 | Loss: 2.7598 (Avg: 2.4391) | Acc: 67.92% | LR: 0.000002
+[13:45:38] Epoch 47 | Batch  40/177 | Loss: 2.3417 (Avg: 2.5802) | Acc: 67.34% | LR: 0.000002
+[13:45:44] Epoch 47 | Batch  60/177 | Loss: 2.4511 (Avg: 2.5555) | Acc: 68.37% | LR: 0.000002
+[13:45:50] Epoch 47 | Batch  80/177 | Loss: 2.6292 (Avg: 2.5881) | Acc: 68.41% | LR: 0.000002
+[13:45:55] Epoch 47 | Batch 100/177 | Loss: 2.4877 (Avg: 2.6126) | Acc: 68.52% | LR: 0.000002
+[13:46:01] Epoch 47 | Batch 120/177 | Loss: 2.4960 (Avg: 2.5708) | Acc: 68.96% | LR: 0.000002
+[13:46:07] Epoch 47 | Batch 140/177 | Loss: 2.1912 (Avg: 2.5650) | Acc: 68.88% | LR: 0.000002
+[13:46:13] Epoch 47 | Batch 160/177 | Loss: 1.8490 (Avg: 2.5758) | Acc: 68.89% | LR: 0.000002
+[13:46:18] Epoch 47 | Batch 177/177 | Loss: 2.3044 (Avg: 2.5557) | Acc: 69.02% | LR: 0.000002
+=== Epoch 47 Done. Loss: 2.5557, Train Acc: 69.02% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:46:47] Epoch 48 | Batch  20/177 | Loss: 2.4734 (Avg: 2.5884) | Acc: 70.21% | LR: 0.000001
+[13:46:53] Epoch 48 | Batch  40/177 | Loss: 2.0910 (Avg: 2.5230) | Acc: 69.43% | LR: 0.000001
+[13:46:59] Epoch 48 | Batch  60/177 | Loss: 1.7598 (Avg: 2.4537) | Acc: 69.97% | LR: 0.000001
+[13:47:04] Epoch 48 | Batch  80/177 | Loss: 2.3005 (Avg: 2.4953) | Acc: 69.53% | LR: 0.000001
+[13:47:10] Epoch 48 | Batch 100/177 | Loss: 2.4436 (Avg: 2.5215) | Acc: 69.33% | LR: 0.000001
+[13:47:16] Epoch 48 | Batch 120/177 | Loss: 2.2142 (Avg: 2.4994) | Acc: 69.25% | LR: 0.000001
+[13:47:22] Epoch 48 | Batch 140/177 | Loss: 2.5785 (Avg: 2.5012) | Acc: 69.23% | LR: 0.000001
+[13:47:27] Epoch 48 | Batch 160/177 | Loss: 2.1346 (Avg: 2.5023) | Acc: 69.23% | LR: 0.000001
+[13:47:32] Epoch 48 | Batch 177/177 | Loss: 3.0141 (Avg: 2.5316) | Acc: 69.09% | LR: 0.000001
+=== Epoch 48 Done. Loss: 2.5316, Train Acc: 69.09% ===
+🔥 Model Saved! (Lowest Loss)
+
+[13:48:03] Epoch 49 | Batch  20/177 | Loss: 3.0959 (Avg: 2.6953) | Acc: 67.92% | LR: 0.000000
+[13:48:08] Epoch 49 | Batch  40/177 | Loss: 1.9492 (Avg: 2.6802) | Acc: 68.02% | LR: 0.000000
+[13:48:14] Epoch 49 | Batch  60/177 | Loss: 3.2150 (Avg: 2.6208) | Acc: 67.99% | LR: 0.000000
+[13:48:20] Epoch 49 | Batch  80/177 | Loss: 3.0076 (Avg: 2.6094) | Acc: 67.97% | LR: 0.000000
+[13:48:26] Epoch 49 | Batch 100/177 | Loss: 3.1670 (Avg: 2.5829) | Acc: 68.71% | LR: 0.000000
+[13:48:31] Epoch 49 | Batch 120/177 | Loss: 3.0506 (Avg: 2.5539) | Acc: 68.78% | LR: 0.000000
+[13:48:37] Epoch 49 | Batch 140/177 | Loss: 1.7295 (Avg: 2.6007) | Acc: 68.36% | LR: 0.000000
+[13:48:43] Epoch 49 | Batch 160/177 | Loss: 2.4180 (Avg: 2.5869) | Acc: 68.44% | LR: 0.000000
+[13:48:48] Epoch 49 | Batch 177/177 | Loss: 2.7194 (Avg: 2.5749) | Acc: 68.51% | LR: 0.000000
+=== Epoch 49 Done. Loss: 2.5749, Train Acc: 68.51% ===
+
+[13:49:17] Epoch 50 | Batch  20/177 | Loss: 3.2278 (Avg: 2.4009) | Acc: 67.50% | LR: 0.000000
+[13:49:23] Epoch 50 | Batch  40/177 | Loss: 2.4801 (Avg: 2.4993) | Acc: 68.49% | LR: 0.000000
+[13:49:29] Epoch 50 | Batch  60/177 | Loss: 3.2425 (Avg: 2.5715) | Acc: 67.60% | LR: 0.000000
+[13:49:35] Epoch 50 | Batch  80/177 | Loss: 2.8756 (Avg: 2.5721) | Acc: 68.18% | LR: 0.000000
+[13:49:40] Epoch 50 | Batch 100/177 | Loss: 2.3968 (Avg: 2.6203) | Acc: 67.92% | LR: 0.000000
+[13:49:46] Epoch 50 | Batch 120/177 | Loss: 3.1277 (Avg: 2.6062) | Acc: 67.97% | LR: 0.000000
+[13:49:52] Epoch 50 | Batch 140/177 | Loss: 2.8020 (Avg: 2.5623) | Acc: 68.44% | LR: 0.000000
+[13:49:58] Epoch 50 | Batch 160/177 | Loss: 2.9196 (Avg: 2.5812) | Acc: 68.36% | LR: 0.000000
+[13:50:02] Epoch 50 | Batch 177/177 | Loss: 2.3101 (Avg: 2.5766) | Acc: 68.40% | LR: 0.000000
+=== Epoch 50 Done. Loss: 2.5766, Train Acc: 68.40% ===
+
+
+========== 阶段 2: 极限推理 ==========
+正在生成预测结果 (Threshold=0.4)...
+[13:50:03] Predicting with model_train\best_model_01.pth (Thresh: 0.4)
+开始推理...
+2800/2847
+Saved to submission_final_40_01.csv
+正在生成预测结果 (Threshold=0.45)...
+[13:52:59] Predicting with model_train\best_model_01.pth (Thresh: 0.45)
+开始推理...
+2800/2847
+Saved to submission_final_45_01.csv
+正在生成预测结果 (Threshold=0.5)...
+[13:55:50] Predicting with model_train\best_model_01.pth (Thresh: 0.5)
+开始推理...
+2800/2847
+Saved to submission_final_50_01.csv
+==============================
+
+终极训练耗时: 01小时 10分钟
