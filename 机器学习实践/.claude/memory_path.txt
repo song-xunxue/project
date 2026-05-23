@@ -1,0 +1,7 @@
+记忆目录完整路径：
+C:\Users\26904\.claude\projects\D--code-Git-Local-project-机器学习实践\memory\
+
+推导规则：
+1. 取当前工作目录绝对路径：D:\code\Git_Local\project\机器学习实践
+2. 去除盘符冒号（D: → D），将所有反斜杠替换为 -（\ → -）
+3. 拼接为 C:\Users\26904\.claude\projects\<推导结果>\memory\

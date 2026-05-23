@@ -1,0 +1,14 @@
+# IDE
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# 环境和隐私
+.env
+*.db
+*.sqlite
+
+# Claude Code
+.claude/settings.local.json
+.claude/chat.md
