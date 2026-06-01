@@ -1,0 +1,55 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, fit, backgrounds, decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=0.5cm and 0.6cm,
+    block/.style={rectangle, draw, rounded corners=3pt, minimum width=2.2cm, minimum height=0.6cm, align=center, font=\footnotesize, fill=blue!8},
+    sum/.style={circle, draw, minimum size=0.5cm, fill=orange!20, font=\footnotesize},
+    arrow/.style={-{Stealth[length=2.5mm]}, thick},
+    label/.style={font=\small\bfseries},
+]
+
+% ====== 训练时（多分支）======
+\node[label] at (0, 3.8) {训练时（多分支）};
+
+\node[sum] (input1) at (-3, 3) {$\mathbf{x}$};
+
+\node[block, fill=green!15] (conv3) at (-1.5, 3.8) {$3{\times}3$ DW Conv+BN};
+\node[block, fill=yellow!15] (conv1) at (-1.5, 3.0) {$1{\times}1$ DW Conv};
+\node[block, fill=gray!15] (identity) at (-1.5, 2.2) {Identity};
+
+\node[sum] (add1) at (1.2, 3.0) {$+$};
+\node[block, fill=blue!15] (bn1) at (2.8, 3.0) {BatchNorm};
+\node[sum] (out1) at (4.5, 3.0) {$\mathbf{y}$};
+
+\draw[arrow] (input1) |- (conv3);
+\draw[arrow] (input1) -- (conv1);
+\draw[arrow] (input1) |- (identity);
+\draw[arrow] (conv3) -| (add1);
+\draw[arrow] (conv1) -- (add1);
+\draw[arrow] (identity) -| (add1);
+\draw[arrow] (add1) -- (bn1);
+\draw[arrow] (bn1) -- (out1);
+
+% ====== 融合箭头 ======
+\draw[-{Stealth[length=4mm]}, ultra thick, red!60] (2.5, 1.6) -- (2.5, 0.6) node[midway, right, font=\small] {融合 (fuse)};
+
+% ====== 推理时（单分支）======
+\node[label] at (0, 0.0) {推理时（单分支）};
+
+\node[sum] (input2) at (-3, -0.8) {$\mathbf{x}$};
+\node[block, fill=green!25] (fused) at (0.5, -0.8) {$3{\times}3$ DW Conv（融合后）};
+\node[sum] (out2) at (4.5, -0.8) {$\mathbf{y}$};
+
+\draw[arrow] (input2) -- (fused);
+\draw[arrow] (fused) -- (out2);
+
+% 大括号标注
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}] (-3.5, 1.5) -- (-3.5, 4.3)
+    node[midway, left=8pt, font=\footnotesize, align=right] {RepVGGDW\\模块};
+
+\end{tikzpicture}
+\end{document}

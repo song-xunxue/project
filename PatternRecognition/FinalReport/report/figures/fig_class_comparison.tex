@@ -1,0 +1,42 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{ctex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=6pt,
+    xlabel={类别},
+    ylabel={准确率 (\%)},
+    symbolic x coords={T-shirt, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot},
+    xtick=data,
+    x tick label style={rotate=45, anchor=east, font=\footnotesize},
+    legend pos=south east,
+    ymin=50, ymax=100,
+    nodes near coords,
+    nodes near coords style={font=\tiny},
+    every node near coord/.append style={rotate=90, anchor=west},
+    width=14cm, height=7cm,
+    enlarge x limits=0.08,
+]
+    % LeNet-5 各类别准确率
+    \addplot[fill=red!40] coordinates {
+        (T-shirt, 83.40) (Trouser, 97.20) (Pullover, 75.60) (Dress, 85.60)
+        (Coat, 81.70) (Sandal, 96.50) (Shirt, 57.90) (Sneaker, 95.70)
+        (Bag, 95.20) (Ankle boot, 94.60)
+    };
+    \addlegendentry{LeNet-5}
+
+    % RepViT-M0.6 各类别准确率
+    \addplot[fill=blue!40] coordinates {
+        (T-shirt, 86.00) (Trouser, 98.20) (Pullover, 87.20) (Dress, 92.30)
+        (Coat, 88.00) (Sandal, 97.90) (Shirt, 76.00) (Sneaker, 97.50)
+        (Bag, 98.90) (Ankle boot, 96.20)
+    };
+    \addlegendentry{RepViT-M0.6}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

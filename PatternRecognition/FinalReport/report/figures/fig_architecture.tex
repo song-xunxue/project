@@ -1,0 +1,68 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, fit, backgrounds}
+
+\begin{document}
+\begin{tikzpicture}[
+    node distance=0.4cm,
+    stage/.style={rectangle, draw, rounded corners=3pt, minimum width=3cm, minimum height=0.7cm, align=center, font=\small},
+    block/.style={rectangle, draw, rounded corners=2pt, minimum width=2.6cm, minimum height=0.55cm, align=center, fill=blue!8, font=\footnotesize},
+    arrow/.style={-{Stealth[length=2.5mm]}, thick},
+    slabel/.style={font=\footnotesize\bfseries, text=blue!70},
+    dimlabel/.style={font=\tiny, text=gray},
+]
+
+% 输入
+\node[stage, fill=gray!15] (input) {输入 $1{\times}28{\times}28$};
+
+% Stem
+\node[block, fill=green!12, below=of input] (stem1) {Conv2d-BN $3{\times}3$, $s{=}2$};
+\node[block, below=0.15cm of stem1] (gelu) {GELU};
+\node[block, fill=green!12, below=0.15cm of gelu] (stem2) {Conv2d-BN $3{\times}3$, $s{=}2$};
+\node[dimlabel, right=0.3cm of stem2] {$20{\times}14{\times}14 \to 40{\times}7{\times}7$};
+
+% Stage 1
+\node[block, fill=yellow!12, below=of stem2] (s1b1) {RepViT Block ($40$, $s{=}1$, SE)};
+\node[block, fill=yellow!12, below=0.15cm of s1b1] (s1b2) {RepViT Block ($40$, $s{=}1$)};
+\node[slabel, left=0.3cm of s1b1] {Stage 1};
+\node[dimlabel, right=0.3cm of s1b2] {$40{\times}7{\times}7$};
+
+% Stage 2
+\node[block, fill=orange!12, below=of s1b2] (s2b1) {RepViT Block ($80$, $s{=}2$)};
+\node[block, fill=orange!12, below=0.15cm of s2b1] (s2b2) {RepViT Block ($80$, $s{=}1$, SE)};
+\node[block, fill=orange!12, below=0.15cm of s2b2] (s2b3) {RepViT Block ($80$, $s{=}1$)};
+\node[slabel, left=0.3cm of s2b1] {Stage 2};
+\node[dimlabel, right=0.3cm of s2b3] {$80{\times}4{\times}4$};
+
+% Stage 3
+\node[block, fill=red!10, below=of s2b3] (s3b1) {RepViT Block ($160$, $s{=}2$)};
+\node[block, fill=red!10, below=0.15cm of s3b1] (s3b2) {RepViT Block ($160$, $s{=}1$, SE)};
+\node[block, fill=red!10, below=0.15cm of s3b2] (s3b3) {RepViT Block ($160$, $s{=}1$)};
+\node[dimlabel, right=0.3cm of s3b3] {$\vdots$};
+\node[block, fill=red!10, below=0.15cm of s3b3] (s3b9) {RepViT Block ($160$, $s{=}1$)};
+\node[slabel, left=0.3cm of s3b1] {Stage 3};
+\node[dimlabel, right=0.3cm of s3b9] {$160{\times}2{\times}2$};
+
+% Stage 4
+\node[block, fill=purple!12, below=of s3b9] (s4b1) {RepViT Block ($320$, $s{=}2$)};
+\node[block, fill=purple!12, below=0.15cm of s4b1] (s4b2) {RepViT Block ($320$, $s{=}1$, SE)};
+\node[slabel, left=0.3cm of s4b1] {Stage 4};
+\node[dimlabel, right=0.3cm of s4b2] {$320{\times}1{\times}1$};
+
+% 分类头
+\node[block, fill=blue!15, below=of s4b2] (gap) {Global Avg Pool};
+\node[block, fill=blue!15, below=0.15cm of gap] (cls) {BN + Linear $\to 10$};
+\node[stage, fill=gray!15, below=of cls] (output) {输出 (10类)};
+
+% 连接箭头
+\foreach \a/\b in {input/stem1, stem1/gelu, gelu/stem2, stem2/s1b1, s1b1/s1b2, s1b2/s2b1, s2b1/s2b2, s2b2/s2b3, s2b3/s3b1, s3b1/s3b2, s3b2/s3b3, s3b3/s3b9, s3b9/s4b1, s4b1/s4b2, s4b2/gap, gap/cls, cls/output} {
+    \draw[arrow] (\a) -- (\b);
+}
+
+% 右侧尺寸标注
+\node[dimlabel, right=0.3cm of input] {$1{\times}28{\times}28$};
+\node[dimlabel, right=0.3cm of s4b2] {$320{\times}1{\times}1$};
+
+\end{tikzpicture}
+\end{document}

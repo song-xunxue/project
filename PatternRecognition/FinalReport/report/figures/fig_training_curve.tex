@@ -1,0 +1,47 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{ctex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    name=acc,
+    xlabel={Epoch},
+    ylabel={准确率 (\%)},
+    legend pos=south east,
+    grid=major,
+    width=9cm, height=5.5cm,
+    ymin=70, ymax=95,
+    xtick={5,10,15,20,25,30},
+]
+    \addplot[blue, thick, mark=*, mark size=1.5pt] coordinates {
+        (1,73.27) (2,80.62) (3,83.30) (4,84.58) (5,85.60)
+        (6,86.31) (7,86.91) (8,87.51) (9,87.84) (10,88.17)
+        (11,88.46) (12,88.87) (13,89.14) (14,89.43) (15,89.63)
+        (16,89.95) (17,90.22) (18,90.56) (19,90.57) (20,91.03)
+        (21,91.23) (22,91.36) (23,91.65) (24,91.88) (25,91.99)
+        (26,92.08) (27,92.30) (28,92.24) (29,92.33) (30,92.26)
+    };
+    \addlegendentry{RepViT 训练}
+
+    \addplot[blue, thick, dashed, mark=triangle*, mark size=1.5pt] coordinates {
+        (1,80.50) (2,84.13) (3,85.64) (4,86.63) (5,87.25)
+        (6,87.19) (7,88.09) (8,87.86) (9,88.09) (10,89.27)
+        (11,88.91) (12,88.72) (13,89.89) (14,90.04) (15,90.15)
+        (16,89.95) (17,90.98) (18,90.68) (19,91.00) (20,91.21)
+        (21,91.31) (22,91.38) (23,91.37) (24,91.54) (25,91.64)
+        (26,91.66) (27,91.73) (28,91.80) (29,91.71) (30,91.82)
+    };
+    \addlegendentry{RepViT 测试}
+
+    % LeNet-5 基线
+    \addplot[red, thick, dotted, mark=square*, mark size=1.2pt] coordinates {
+        (1,80.50) (2,84.13) (3,85.64) (4,86.63) (5,87.25)
+        (6,87.19) (7,88.09) (8,87.86) (9,88.09) (10,89.27)
+    };
+    \addlegendentry{LeNet-5 测试 (86.34\%)}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
