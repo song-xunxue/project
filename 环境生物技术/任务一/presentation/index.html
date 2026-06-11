@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>纤维素乙醇产业化投资评估</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* 封面页特有样式 */
+    .cover-hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .cover-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .cover-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    .cover-student {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .cover-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .cover-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+    }
+
+    .cover-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .cover-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      border-color: var(--accent);
+    }
+
+    .cover-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .cover-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+
+    .cover-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .cover-card-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .cover-card-tag {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .cover-card:hover .cover-card-tag {
+      background: var(--accent);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link active" data-section="home" href="index.html">封面</a>
+      <a class="nav-link" data-section="timeline" href="timeline/index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="simulation/index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <div class="cover-hero fade-in">
+    <h1 class="cover-title">纤维素乙醇产业化投资评估</h1>
+    <p class="cover-subtitle">从全链条技术瓶颈到风险投资穿透性拷问</p>
+    <p class="cover-student">李文煜 &nbsp;|&nbsp; 1120233042</p>
+
+    <div class="cover-cards">
+      <!-- 第一部分：背景与技术时间线 -->
+      <a class="cover-card" href="timeline/index.html">
+        <div class="cover-card-icon">&#128218;</div>
+        <div class="cover-card-title">背景与技术</div>
+        <div class="cover-card-desc">
+          从1970s石油危机到2026年最新进展，纵览纤维素乙醇半个世纪的技术演进与产业化困境
+        </div>
+        <span class="cover-card-tag">Part 1 &mdash; 时间线</span>
+      </a>
+
+      <!-- 第二部分：角色模拟 -->
+      <a class="cover-card" href="simulation/index.html">
+        <div class="cover-card-icon">&#127919;</div>
+        <div class="cover-card-title">角色模拟</div>
+        <div class="cover-card-desc">
+          以风险投资人视角，穿透纤维素乙醇全链条技术壁垒，直面产业化核心拷问
+        </div>
+        <span class="cover-card-tag">Part 2 &mdash; 投资拷问</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

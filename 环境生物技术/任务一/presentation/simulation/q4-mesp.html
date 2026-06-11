@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿透问题四：MESP计算模型的假设 - 纤维素乙醇交互演示</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/simulation.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link" data-section="timeline" href="../timeline/index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <div class="breadcrumb">
+      <a href="index.html">角色模拟</a> &gt; <span class="current">穿透问题四</span>
+    </div>
+
+    <section class="question-progress fade-in">
+      <div class="progress-dots">
+        <span class="dot done" id="qdot-0"></span>
+        <span class="dot done" id="qdot-1"></span>
+        <span class="dot done" id="qdot-2"></span>
+        <span class="dot active" id="qdot-3"></span>
+        <span class="dot" id="qdot-4"></span>
+      </div>
+      <p class="progress-label">问题 4 / 5</p>
+    </section>
+
+    <h2 class="fade-in">穿透问题四：MESP计算模型的假设</h2>
+
+    <div class="flip-card fade-in" data-question="3">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>$1.80/加仑用的什么酶成本和折旧年限？</h3>
+          <p>元分析显示，不同研究给出的MESP从$0.90到$6.00不等，差距高达6倍以上。常见的"美化"手段包括：使用过低的酶成本假设、过长的设备折旧年限、以及100%的原料利用率。公司报告中$1.80的数字，究竟建立在怎样的假设之上？</p>
+          <span class="flip-hint">[ 点击翻转查看真相 ]</span>
+        </div>
+        <div class="flip-card-back">
+          <h3>真相：自我欺骗的数字游戏</h3>
+          <p>调整假设到合理水平 → 酶成本$0.40/加仑、折旧15年、年运行8000小时 → MESP从$1.80升至$2.50-3.00 → 与汽油价格相比毫无竞争力 → 所谓"成本优势"只是精心挑选假设后的自我欺骗。投资者需要用NREL标准模型重新验算。</p>
+          <span class="ref-tag">文献: NREL 2011 [13], 2018 [14], 元分析 2021 [15]</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mesp-display fade-in">
+      <span class="mesp-value" id="mespValue">$1.80</span>
+      <span class="mesp-unit">/加仑</span>
+      <span class="mesp-arrow">→</span>
+      <span class="mesp-value danger">$3.00</span>
+      <span class="mesp-unit">/加仑</span>
+    </div>
+  </main>
+
+  <footer class="page-nav">
+    <a href="q3-pentose.html">← 上一页</a>
+    <a href="index.html">返回目录</a>
+    <a href="q5-supply.html">下一页 →</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/flip-card.js"></script>
+  <script src="../js/counter.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      observeCounter('mespValue', 1.80, 3.00, 0.05, 80);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>预处理技术突破 — 纤维素乙醇投资评估</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link active" data-section="timeline" href="index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="../simulation/index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">时间线</a> <span class="sep">&gt;</span> <span class="current">预处理技术突破</span>
+  </div>
+
+  <main class="detail-page">
+    <section class="detail-hero fade-in">
+      <span class="year-badge">2019-21</span>
+      <h1>预处理技术突破</h1>
+    </section>
+
+    <section class="detail-content fade-in">
+      <!-- 预处理的重要性 -->
+      <h2>预处理的重要性</h2>
+      <p>
+        预处理是纤维素乙醇生产链条中成本第二高的环节（占总成本约18-20%），
+        其目的是打破木质纤维素的天然屏障，使纤维素链暴露出来以便后续酶解。
+        主流方法包括：
+      </p>
+      <ul class="detail-list">
+        <li><strong>稀酸预处理</strong>（Dilute Acid）：成本低，但产生抑制物，需废水处理</li>
+        <li><strong>蒸汽爆破</strong>（Steam Explosion）：工业化程度较高，但能耗大</li>
+        <li><strong>AFEX</strong>（Ammonia Fiber Expansion）：氨回收率高，但处理效果对原料种类敏感</li>
+        <li><strong>SAA</strong>（Soaking in Aqueous Ammonia）：条件温和，但处理时间长</li>
+      </ul>
+
+      <!-- 新一代氨处理技术 -->
+      <h2>新一代氨处理技术</h2>
+      <p>
+        2019-2021年间，氨基预处理领域出现了两代重要迭代——
+        从AFEX到<strong>EA</strong>（Extractive Ammonia），再到<strong>ELLA</strong>（Enhanced Low-Liquid Ammonia），
+        显著提升了纤维素可及性和酶解效率。
+      </p>
+
+      <div class="img-row fade-in">
+        <figure class="img-block">
+          <img src="../assets/images/refs/L6_fig29.png" alt="EA预处理效果对比" loading="lazy">
+          <figcaption>EA预处理效果对比 [来源: Bali 2019]</figcaption>
+        </figure>
+        <figure class="img-block">
+          <img src="../assets/images/refs/L7_fig40.png" alt="ELLA预处理工艺" loading="lazy">
+          <figcaption>ELLA预处理工艺 [来源: ELLA 2021]</figcaption>
+        </figure>
+      </div>
+
+      <!-- 技术演进路线 -->
+      <div class="chart-container fade-in">
+        <h3>氨基预处理技术演进路线</h3>
+        <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="技术演进路线图">
+          <!-- 连接线 -->
+          <line x1="190" y1="90" x2="250" y2="90" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+          <line x1="400" y1="90" x2="460" y2="90" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="var(--text-muted)"/>
+            </marker>
+          </defs>
+          <!-- AFEX -->
+          <rect x="30" y="50" width="160" height="80" rx="10" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1"/>
+          <text x="110" y="78" text-anchor="middle" fill="var(--accent)" font-size="14" font-weight="700">AFEX</text>
+          <text x="110" y="98" text-anchor="middle" fill="var(--text-secondary)" font-size="11">氨纤维膨胀法</text>
+          <text x="110" y="118" text-anchor="middle" fill="var(--text-muted)" font-size="10">成熟技术，NREL基准</text>
+          <!-- EA -->
+          <rect x="250" y="50" width="150" height="80" rx="10" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="325" y="78" text-anchor="middle" fill="var(--accent)" font-size="14" font-weight="700">EA (2019)</text>
+          <text x="325" y="98" text-anchor="middle" fill="var(--text-secondary)" font-size="11">Extractive Ammonia</text>
+          <text x="325" y="118" text-anchor="middle" fill="var(--text-muted)" font-size="10">纤维素可及性提升2x</text>
+          <!-- ELLA -->
+          <rect x="460" y="50" width="130" height="80" rx="10" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="525" y="78" text-anchor="middle" fill="var(--accent)" font-size="14" font-weight="700">ELLA (2021)</text>
+          <text x="525" y="98" text-anchor="middle" fill="var(--text-secondary)" font-size="11">低液量增强氨处理</text>
+          <text x="525" y="118" text-anchor="middle" fill="var(--text-muted)" font-size="10">酶用量降低40%+</text>
+        </svg>
+      </div>
+
+      <!-- 放大效应风险 -->
+      <div class="highlight-box danger fade-in">
+        <h3>放大效应风险</h3>
+        <p>
+          实验室条件下的预处理效果在工业规模放大时往往大打折扣。
+          <strong>Abengoa</strong>（2016年破产）和<strong>DuPont</strong>（2017年出售装置）
+          的失败案例均表明：预处理环节的工程放大风险被严重低估。
+          氨回收系统的腐蚀、能耗和安全性在实验室阶段难以充分暴露，
+          而这些恰恰是决定工业可行性的关键因素。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-nav">
+    <a href="node3-china.html" class="btn btn-outline">&larr; 上一节</a>
+    <a href="index.html" class="btn btn-outline">返回时间线</a>
+    <a href="node5-enzyme.html" class="btn btn-solid">下一节 &rarr;</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NREL基准报告与全球现状 — 纤维素乙醇投资评估</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link active" data-section="timeline" href="index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="../simulation/index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">时间线</a> <span class="sep">&gt;</span> <span class="current">NREL基准报告与全球现状</span>
+  </div>
+
+  <main class="detail-page">
+    <section class="detail-hero fade-in">
+      <span class="year-badge">2011</span>
+      <h1>NREL基准报告与全球现状</h1>
+    </section>
+
+    <section class="detail-content fade-in">
+      <!-- 全球产业化进程 -->
+      <h2>全球产业化进程</h2>
+      <p>
+        美国国家可再生能源实验室（NREL）2011年发布的基准报告是纤维素乙醇产业化的里程碑文件，
+        建立了技术经济分析（TEA）的标准化框架，为全球研究与投资提供了统一的成本基准。
+      </p>
+
+      <!-- 全球产量趋势图 -->
+      <figure class="img-block">
+        <img src="../assets/images/refs/L3_fig1.png" alt="全球生物乙醇产量趋势" loading="lazy">
+        <figcaption>全球生物乙醇产量趋势 (2007-2024) [来源: L3]</figcaption>
+      </figure>
+
+      <!-- 关键数据 -->
+      <div class="stat-grid fade-in">
+        <div class="stat-card">
+          <span class="stat-value">$2.15</span>
+          <span class="stat-label">NREL MESP基准<br>(美元/加仑)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">1.5-2.5x</span>
+          <span class="stat-label">实际成本与玉米乙醇<br>差距倍数</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">50年</span>
+          <span class="stat-label">纤维素乙醇<br>研发历程</span>
+        </div>
+      </div>
+
+      <!-- 成本对比柱状图 -->
+      <div class="chart-container">
+        <h3>纤维素乙醇 vs 玉米乙醇成本对比</h3>
+        <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="成本对比柱状图">
+          <!-- 坐标轴 -->
+          <line x1="80" y1="20" x2="80" y2="200" stroke="var(--text-muted)" stroke-width="1"/>
+          <line x1="80" y1="200" x2="460" y2="200" stroke="var(--text-muted)" stroke-width="1"/>
+          <!-- Y轴标签 -->
+          <text x="70" y="200" text-anchor="end" fill="var(--text-muted)" font-size="11">$0</text>
+          <text x="70" y="150" text-anchor="end" fill="var(--text-muted)" font-size="11">$1.5</text>
+          <text x="70" y="100" text-anchor="end" fill="var(--text-muted)" font-size="11">$3.0</text>
+          <text x="70" y="50" text-anchor="end" fill="var(--text-muted)" font-size="11">$4.5</text>
+          <text x="70" y="24" text-anchor="end" fill="var(--text-muted)" font-size="11">$6.0</text>
+          <!-- 网格线 -->
+          <line x1="80" y1="150" x2="460" y2="150" stroke="var(--border-color)" stroke-width="0.5" stroke-dasharray="4"/>
+          <line x1="80" y1="100" x2="460" y2="100" stroke="var(--border-color)" stroke-width="0.5" stroke-dasharray="4"/>
+          <line x1="80" y1="50" x2="460" y2="50" stroke="var(--border-color)" stroke-width="0.5" stroke-dasharray="4"/>
+          <!-- 玉米乙醇 - $1.50 -->
+          <rect x="130" y="150" width="80" height="50" rx="4" fill="#4fc3f7" opacity="0.85"/>
+          <text x="170" y="143" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-weight="600">$1.50</text>
+          <text x="170" y="220" text-anchor="middle" fill="var(--text-secondary)" font-size="11">玉米乙醇</text>
+          <!-- NREL MESP基准 - $2.15 -->
+          <rect x="240" y="128" width="80" height="72" rx="4" fill="var(--accent)" opacity="0.85"/>
+          <text x="280" y="121" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-weight="600">$2.15</text>
+          <text x="280" y="220" text-anchor="middle" fill="var(--text-secondary)" font-size="11">NREL基准</text>
+          <!-- 实际纤维素乙醇 - $3.50 (取中间值) -->
+          <rect x="350" y="83" width="80" height="117" rx="4" fill="#ef5350" opacity="0.85"/>
+          <text x="390" y="76" text-anchor="middle" fill="var(--text-primary)" font-size="12" font-weight="600">$3.50</text>
+          <text x="390" y="220" text-anchor="middle" fill="var(--text-secondary)" font-size="11">实际纤维素乙醇</text>
+          <!-- 单位说明 -->
+          <text x="270" y="250" text-anchor="middle" fill="var(--text-muted)" font-size="11">单位: 美元/加仑 (MESP)</text>
+        </svg>
+      </div>
+
+      <!-- 详细说明 -->
+      <h2>成本差距的现实</h2>
+      <p>
+        NREL经过数十年持续优化，已将最低乙醇售价（MESP）降至 <strong>$2.15/加仑</strong> 的理论基准。
+        但实际工业运行中，纤维素乙醇的生产成本仍在 <strong>$3.0-4.5/加仑</strong> 区间，
+        为玉米乙醇（约 $1.50/加仑）的 <strong>1.5-2.5倍</strong>。
+      </p>
+      <p>
+        这种差距的根源不仅仅在于单一技术环节，而是贯穿了从原料收集、预处理、酶解、发酵到蒸馏的
+        <strong>全链条</strong>。每一个环节的效率损失在系统中层层放大，最终导致总成本居高不下。
+      </p>
+    </section>
+  </main>
+
+  <footer class="page-nav">
+    <a href="node1-origin.html" class="btn btn-outline">&larr; 上一节</a>
+    <a href="index.html" class="btn btn-outline">返回时间线</a>
+    <a href="node3-china.html" class="btn btn-solid">下一节 &rarr;</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

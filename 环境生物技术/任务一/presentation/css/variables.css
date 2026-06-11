@@ -1,0 +1,60 @@
+/* ========== CSS 变量 ========== */
+:root {
+  /* 配色 */
+  --primary: #1a535c;
+  --primary-light: #4ecdc4;
+  --primary-dark: #0d3b42;
+  --accent: #ffd700;
+  --accent-dark: #d4b200;
+  --bg: #0d1b2a;
+  --bg-card: #1b2838;
+  --bg-overlay: #142231;
+  --text: #e8e8e8;
+  --text-dim: #8a9ab0;
+  --danger: #ff6b6b;
+  --success: #4ecdc4;
+  --border: rgba(78, 205, 196, 0.2);
+
+  /* 字体 */
+  --font: "Microsoft YaHei", "SimHei", "PingFang SC", sans-serif;
+  --font-mono: "Consolas", "Source Code Pro", monospace;
+
+  /* 间距 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* 过渡 */
+  --transition-fast: 0.2s ease;
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s ease;
+
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  /* 容器宽度 */
+  --container: 960px;
+  --container-wide: 1200px;
+
+  /* 导航栏高度 */
+  --nav-height: 56px;
+
+  /* 别名（兼容Agent生成的HTML引用） */
+  --text-primary: #e8e8e8;
+  --text-secondary: #8a9ab0;
+  --text-muted: #8a9ab0;
+  --bg-primary: #0d1b2a;
+  --bg-secondary: #1b2838;
+  --border-color: rgba(78, 205, 196, 0.2);
+}

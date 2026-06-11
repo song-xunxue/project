@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工程酵母共发酵 — 纤维素乙醇投资评估</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link active" data-section="timeline" href="index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="../simulation/index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">时间线</a> <span class="sep">&gt;</span> <span class="current">工程酵母共发酵</span>
+  </div>
+
+  <main class="detail-page">
+    <section class="detail-hero fade-in">
+      <span class="year-badge">2022</span>
+      <h1>工程酵母共发酵</h1>
+    </section>
+
+    <section class="detail-content fade-in">
+      <!-- 五碳糖利用的关键挑战 -->
+      <h2>五碳糖利用的关键挑战</h2>
+      <p>
+        木质纤维素水解液中含有约 <strong>60-70% 葡萄糖</strong>（六碳糖）和
+        <strong>30-40% 木糖</strong>（五碳糖）。传统酿酒酵母（<em>Saccharomyces cerevisiae</em>）
+        只能高效发酵葡萄糖，对木糖的利用能力极差。如果丢弃木糖部分，
+        意味着原料中有近三分之一的碳源被浪费——这在经济上是完全不可接受的。
+      </p>
+      <p>
+        因此，构建能够<strong>同步高效利用葡萄糖和木糖</strong>的工程菌株，
+        是纤维素乙醇发酵环节的核心挑战。
+      </p>
+
+      <!-- 代谢工程路径图 -->
+      <div class="img-row fade-in">
+        <figure class="img-block">
+          <img src="../assets/images/refs/L12_fig50.png" alt="代谢工程路径" loading="lazy">
+          <figcaption>代谢工程路径 [来源: L12 2022]</figcaption>
+        </figure>
+        <figure class="img-block">
+          <img src="../assets/images/refs/L12_fig53.png" alt="共发酵性能数据" loading="lazy">
+          <figcaption>共发酵性能数据 [来源: L12 2022]</figcaption>
+        </figure>
+      </div>
+
+      <!-- 两条技术路线对比 -->
+      <div class="chart-container fade-in">
+        <h3>木糖代谢的两条工程路线</h3>
+        <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="XR-XDH vs XI技术路线对比">
+          <!-- XR-XDH 路线 -->
+          <rect x="20" y="20" width="260" height="160" rx="12" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="150" y="50" text-anchor="middle" fill="var(--accent)" font-size="14" font-weight="700">XR-XDH 路线</text>
+          <text x="150" y="70" text-anchor="middle" fill="var(--text-muted)" font-size="10">氧化还原酶途径</text>
+          <line x1="40" y1="80" x2="260" y2="80" stroke="var(--border-color)" stroke-width="0.5"/>
+          <text x="40" y="100" fill="var(--text-secondary)" font-size="11">木糖 --XR--> 木糖醇 --XDH--> 木酮糖</text>
+          <text x="40" y="122" fill="var(--text-secondary)" font-size="11">木糖醇产率较高，辅酶不平衡</text>
+          <text x="40" y="144" fill="#81c784" font-size="11">+ 已在多个工程菌株中验证</text>
+          <text x="40" y="166" fill="#ef5350" font-size="11">- 木糖醇副产物积累抑制发酵</text>
+
+          <!-- XI 路线 -->
+          <rect x="320" y="20" width="260" height="160" rx="12" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="450" y="50" text-anchor="middle" fill="var(--accent)" font-size="14" font-weight="700">XI 路线</text>
+          <text x="450" y="70" text-anchor="middle" fill="var(--text-muted)" font-size="10">木糖异构酶途径</text>
+          <line x1="340" y1="80" x2="560" y2="80" stroke="var(--border-color)" stroke-width="0.5"/>
+          <text x="340" y="100" fill="var(--text-secondary)" font-size="11">木糖 --XI--> 木酮糖 (一步转化)</text>
+          <text x="340" y="122" fill="var(--text-secondary)" font-size="11">无木糖醇副产物，理论产率更高</text>
+          <text x="340" y="144" fill="#81c784" font-size="11">+ 途径简洁，不依赖辅酶</text>
+          <text x="340" y="166" fill="#ef5350" font-size="11">- XI在酵母中活性低，需大量改造</text>
+        </svg>
+      </div>
+
+      <p>
+        2022年的研究（L12）在代谢工程方面取得了重要进展，通过多基因编辑手段优化了木糖代谢途径，
+        在实验室摇瓶条件下实现了接近理论值的乙醇产率。然而——
+      </p>
+
+      <!-- 风险提示 -->
+      <div class="highlight-box danger fade-in">
+        <h3>工业条件下性能显著下降</h3>
+        <p>
+          实验室条件下的共发酵性能在工业环境中面临严峻挑战：
+          高底物浓度带来的渗透压、预处理产生的抑制物（糠醛、HMF、酚类化合物）、
+          非无菌操作条件下的杂菌污染风险、以及长时间连续发酵中菌株遗传稳定性等问题，
+          都会导致实际发酵效率<strong>比实验室低30-50%</strong>。
+          这也是从实验室到工厂"最后一公里"的典型困境。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-nav">
+    <a href="node5-enzyme.html" class="btn btn-outline">&larr; 上一节</a>
+    <a href="index.html" class="btn btn-outline">返回时间线</a>
+    <a href="node7-computer.html" class="btn btn-solid">下一节 &rarr;</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

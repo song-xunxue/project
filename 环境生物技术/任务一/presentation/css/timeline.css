@@ -1,0 +1,150 @@
+/* ========== 时间线：垂直单线 + 上下交错 ========== */
+
+.timeline-hero {
+  text-align: center;
+  padding: calc(var(--nav-height) + 48px) var(--space-lg) 24px;
+}
+.timeline-hero h1 {
+  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--primary-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.timeline-hero p { color: var(--text-dim); max-width: 600px; margin: 12px auto 0; font-size: 18px; }
+
+/* 垂直时间线容器 */
+.timeline-vertical {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0 60px;
+}
+
+/* 中间竖线 */
+.timeline-vertical::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-light), var(--accent));
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+/* 每个节点项 */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 16px 40px 32px;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.timeline-item.visible { opacity: 1; }
+
+/* 奇数节点：左侧 */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+  transform: translateX(-30px);
+}
+.timeline-item:nth-child(odd).visible { transform: translateX(0); }
+
+/* 偶数节点：右侧 */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+  transform: translateX(30px);
+}
+.timeline-item:nth-child(even).visible { transform: translateX(0); }
+
+/* 中间圆点 */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 4px solid var(--accent);
+  z-index: 2;
+  transition: box-shadow 0.4s ease, background 0.4s ease;
+}
+.timeline-item:nth-child(odd)::before { right: -10px; }
+.timeline-item:nth-child(even)::before { left: -10px; }
+.timeline-item:hover::before {
+  background: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* 节点卡片 */
+.timeline-item a {
+  display: block;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: var(--transition);
+}
+.timeline-item a:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.12);
+}
+
+/* 节点内容 */
+.node-year {
+  display: inline-block;
+  font-size: 28px; font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.node-title {
+  display: block;
+  font-size: 18px; font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.node-tag {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px; font-weight: 600;
+  background: rgba(78,205,196,0.15);
+  color: var(--primary-light);
+}
+/* 不同颜色的tag */
+.tag-ind { background: rgba(255,215,0,0.12); color: var(--accent); }
+.tag-cn { background: rgba(255,107,107,0.12); color: var(--danger); }
+.tag-pre { background: rgba(78,205,196,0.15); color: var(--primary-light); }
+.tag-enz { background: rgba(255,107,107,0.12); color: var(--danger); }
+.tag-fer { background: rgba(78,205,196,0.15); color: var(--primary-light); }
+.tag-cs { background: rgba(255,215,0,0.12); color: var(--accent); }
+.tag-core { background: rgba(255,107,107,0.15); color: var(--danger); }
+
+/* 箭头提示 */
+.node-arrow {
+  font-size: 18px; color: var(--accent);
+  opacity: 0; transition: opacity 0.3s, transform 0.3s;
+}
+.timeline-item:nth-child(odd) a:hover .node-arrow { opacity: 1; transform: translateX(6px); }
+.timeline-item:nth-child(even) a:hover .node-arrow { opacity: 1; transform: translateX(6px); }
+
+/* 响应式：窄屏全部靠左 */
+@media (max-width: 768px) {
+  .timeline-vertical::before { left: 20px; }
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%; left: 0;
+    text-align: left;
+    padding-left: 56px; padding-right: 16px;
+    transform: translateX(20px);
+  }
+  .timeline-item.visible { transform: translateX(0); }
+  .timeline-item::before,
+  .timeline-item:nth-child(odd)::before,
+  .timeline-item:nth-child(even)::before { left: 10px; right: auto; }
+}

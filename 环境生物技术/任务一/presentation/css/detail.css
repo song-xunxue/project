@@ -1,0 +1,50 @@
+/* ========== 详情页通用样式 ========== */
+
+/* Hero区域 */
+.detail-hero {
+  text-align: center; padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+}
+.detail-hero h1 { color: var(--accent); margin-top: var(--space-sm); }
+
+/* 内容区域 */
+.detail-content {
+  max-width: var(--container); margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+.detail-content h2 {
+  color: var(--primary-light); margin: 32px 0 14px;
+  padding-left: 14px; border-left: 4px solid var(--accent);
+  font-size: 22px;
+}
+.detail-content h3 {
+  color: var(--text); margin: 24px 0 10px; font-size: 18px;
+}
+
+/* 两栏图文布局 */
+.layout-text-image {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);
+  align-items: start; margin: var(--space-lg) 0;
+}
+.layout-image-text {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);
+  align-items: start; margin: var(--space-lg) 0;
+}
+.layout-image-text .text-col { order: 2; }
+.layout-image-text .image-col { order: 1; }
+
+@media (max-width: 768px) {
+  .layout-text-image, .layout-image-text {
+    grid-template-columns: 1fr;
+  }
+  .layout-image-text .text-col { order: 1; }
+  .layout-image-text .image-col { order: 2; }
+}
+
+/* 浮入动画 */
+.fade-in {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1; transform: translateY(0);
+}

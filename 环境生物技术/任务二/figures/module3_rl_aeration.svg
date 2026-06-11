@@ -1,0 +1,6974 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="999.718437pt" height="710.390625pt" viewBox="0 0 999.718437 710.390625" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-04T15:51:51.300291</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.5, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 710.390625 
+L 999.718437 710.390625 
+L 999.718437 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 50.598438 316.63125 
+L 494.487997 316.63125 
+L 494.487997 24.39125 
+L 50.598438 24.39125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 70.775236 316.63125 
+L 70.775236 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mdfe835672f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdfe835672f" x="70.775236" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <g transform="translate(67.843204 331.625) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-30" d="M 284 2325 
+Q 284 3606 709 4264 
+Q 1134 4922 1941 4922 
+Q 3478 4922 3478 2441 
+Q 3478 1216 3045 567 
+Q 2613 -81 1831 -81 
+Q 1094 -81 689 534 
+Q 284 1150 284 2325 
+z
+M 909 2353 
+Q 909 425 1888 425 
+Q 2850 425 2850 2384 
+Q 2850 4413 1906 4413 
+Q 909 4413 909 2353 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 140.350402 316.63125 
+L 140.350402 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mdfe835672f" x="140.350402" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 5 -->
+      <g transform="translate(137.418371 331.625) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-35" d="M 3294 1494 
+Q 3294 784 2823 350 
+Q 2353 -84 1559 -84 
+Q 878 -84 544 119 
+L 544 744 
+Q 1034 425 1544 425 
+Q 2050 425 2361 704 
+Q 2672 984 2672 1447 
+Q 2672 1909 2348 2167 
+Q 2025 2425 1434 2425 
+Q 978 2425 613 2384 
+L 791 4841 
+L 3053 4841 
+L 3053 4303 
+L 1306 4303 
+L 1206 2931 
+L 1647 2950 
+Q 2416 2950 2855 2567 
+Q 3294 2184 3294 1494 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-35"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 209.925568 316.63125 
+L 209.925568 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mdfe835672f" x="209.925568" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 10 -->
+      <g transform="translate(204.061505 331.625) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-31" d="M 1781 0 
+L 1781 4141 
+Q 1638 3997 1295 3819 
+Q 953 3641 663 3569 
+L 663 4169 
+Q 1047 4275 1484 4508 
+Q 1922 4741 2156 4947 
+L 2388 4947 
+L 2388 0 
+L 1781 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 279.500734 316.63125 
+L 279.500734 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mdfe835672f" x="279.500734" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 15 -->
+      <g transform="translate(273.636671 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="58.642578"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 349.0759 316.63125 
+L 349.0759 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mdfe835672f" x="349.0759" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 20 -->
+      <g transform="translate(343.211838 331.625) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-32" d="M 2666 3572 
+Q 2666 3963 2419 4186 
+Q 2172 4409 1747 4409 
+Q 1447 4409 1140 4256 
+Q 834 4103 569 3819 
+L 569 4413 
+Q 806 4659 1107 4790 
+Q 1409 4922 1816 4922 
+Q 2472 4922 2872 4570 
+Q 3272 4219 3272 3619 
+Q 3272 3084 3026 2693 
+Q 2781 2303 2188 1894 
+Q 1581 1475 1376 1294 
+Q 1172 1113 1090 947 
+Q 1009 781 1009 544 
+L 3416 544 
+L 3416 0 
+L 372 0 
+L 372 241 
+Q 372 659 486 951 
+Q 600 1244 862 1520 
+Q 1125 1797 1681 2184 
+Q 2250 2584 2458 2886 
+Q 2666 3188 2666 3572 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 418.651066 316.63125 
+L 418.651066 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mdfe835672f" x="418.651066" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 25 -->
+      <g transform="translate(412.787004 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="58.642578"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 488.226232 316.63125 
+L 488.226232 24.39125 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mdfe835672f" x="488.226232" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 30 -->
+      <g transform="translate(482.36217 331.625) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-33" d="M 447 809 
+Q 944 425 1569 425 
+Q 2069 425 2361 670 
+Q 2653 916 2653 1328 
+Q 2653 2247 1338 2247 
+L 934 2247 
+L 934 2753 
+L 1319 2753 
+Q 2484 2753 2484 3616 
+Q 2484 4413 1594 4413 
+Q 1084 4413 634 4069 
+L 634 4647 
+Q 1109 4922 1744 4922 
+Q 2363 4922 2738 4598 
+Q 3113 4275 3113 3759 
+Q 3113 2809 2144 2538 
+L 2144 2525 
+Q 2669 2469 2973 2155 
+Q 3278 1841 3278 1372 
+Q 3278 719 2808 319 
+Q 2338 -81 1556 -81 
+Q 869 -81 447 175 
+L 447 809 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-33"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_8">
+     <!-- Episode -->
+     <g transform="translate(253.740874 346.104687) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-45" d="M 3228 0 
+L 625 0 
+L 625 4841 
+L 3119 4841 
+L 3119 4284 
+L 1250 4284 
+L 1250 2734 
+L 2981 2734 
+L 2981 2181 
+L 1250 2181 
+L 1250 553 
+L 3228 553 
+L 3228 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-70" d="M 1159 488 
+L 1159 -1591 
+L 547 -1591 
+L 547 3456 
+L 1159 3456 
+L 1159 2859 
+L 1172 2859 
+Q 1578 3538 2359 3538 
+Q 3022 3538 3398 3073 
+Q 3775 2609 3775 1828 
+Q 3775 966 3348 442 
+Q 2922 -81 2200 -81 
+Q 1534 -81 1172 488 
+L 1159 488 
+z
+M 1156 1425 
+Q 1156 1003 1428 714 
+Q 1700 425 2109 425 
+Q 2597 425 2872 800 
+Q 3147 1175 3147 1838 
+Q 3147 2397 2890 2714 
+Q 2634 3031 2191 3031 
+Q 1738 3031 1447 2709 
+Q 1156 2388 1156 1884 
+L 1156 1425 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-69" d="M 472 4675 
+Q 472 4838 583 4948 
+Q 694 5059 856 5059 
+Q 1022 5059 1136 4950 
+Q 1250 4841 1250 4675 
+Q 1250 4513 1136 4405 
+Q 1022 4297 856 4297 
+Q 691 4297 581 4405 
+Q 472 4513 472 4675 
+z
+M 544 0 
+L 544 3456 
+L 1156 3456 
+L 1156 0 
+L 544 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-73" d="M 353 747 
+Q 816 413 1350 413 
+Q 2066 413 2066 881 
+Q 2066 1081 1909 1211 
+Q 1753 1341 1275 1519 
+Q 700 1750 528 1976 
+Q 356 2203 356 2525 
+Q 356 2984 745 3261 
+Q 1134 3538 1703 3538 
+Q 2144 3538 2522 3384 
+L 2522 2794 
+Q 2134 3044 1644 3044 
+Q 1350 3044 1165 2916 
+Q 981 2788 981 2578 
+Q 981 2372 1114 2256 
+Q 1247 2141 1703 1959 
+Q 2281 1744 2484 1512 
+Q 2688 1281 2688 941 
+Q 2688 466 2298 192 
+Q 1909 -81 1291 -81 
+Q 753 -81 353 122 
+L 353 747 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6f" d="M 316 1691 
+Q 316 2547 794 3042 
+Q 1272 3538 2091 3538 
+Q 2869 3538 3311 3061 
+Q 3753 2584 3753 1744 
+Q 3753 925 3281 422 
+Q 2809 -81 2016 -81 
+Q 1241 -81 778 406 
+Q 316 894 316 1691 
+z
+M 941 1709 
+Q 941 1113 1242 769 
+Q 1544 425 2053 425 
+Q 2578 425 2853 761 
+Q 3128 1097 3128 1725 
+Q 3128 2356 2853 2693 
+Q 2578 3031 2053 3031 
+Q 1538 3031 1239 2678 
+Q 941 2325 941 1709 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-64" d="M 3547 0 
+L 2934 0 
+L 2934 575 
+L 2922 575 
+Q 2544 -81 1747 -81 
+Q 1091 -81 703 386 
+Q 316 853 316 1647 
+Q 316 2503 753 3020 
+Q 1191 3538 1897 3538 
+Q 2603 3538 2922 2988 
+L 2934 2988 
+L 2934 5116 
+L 3547 5116 
+L 3547 0 
+z
+M 2938 2056 
+Q 2938 2472 2664 2751 
+Q 2391 3031 1991 3031 
+Q 1503 3031 1222 2667 
+Q 941 2303 941 1675 
+Q 941 1097 1211 761 
+Q 1481 425 1931 425 
+Q 2375 425 2656 754 
+Q 2938 1084 2938 1575 
+L 2938 2056 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-65" d="M 3363 1572 
+L 944 1572 
+Q 959 1019 1246 717 
+Q 1534 416 2050 416 
+Q 2631 416 3116 788 
+L 3116 241 
+Q 2659 -81 1906 -81 
+Q 1156 -81 736 394 
+Q 316 869 316 1713 
+Q 316 2506 777 3022 
+Q 1238 3538 1922 3538 
+Q 2600 3538 2981 3102 
+Q 3363 2666 3363 1881 
+L 3363 1572 
+z
+M 2750 2063 
+Q 2747 2531 2528 2787 
+Q 2309 3044 1913 3044 
+Q 1547 3044 1280 2772 
+Q 1013 2500 944 2063 
+L 2750 2063 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-45"/>
+      <use xlink:href="#MicrosoftYaHei-70" x="54.980469"/>
+      <use xlink:href="#MicrosoftYaHei-69" x="118.847656"/>
+      <use xlink:href="#MicrosoftYaHei-73" x="145.458984"/>
+      <use xlink:href="#MicrosoftYaHei-6f" x="191.748047"/>
+      <use xlink:href="#MicrosoftYaHei-64" x="255.322266"/>
+      <use xlink:href="#MicrosoftYaHei-65" x="319.287109"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <path d="M 50.598438 305.057217 
+L 494.487997 305.057217 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <defs>
+       <path id="m2412f84298" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="305.057217" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- -866 -->
+      <g transform="translate(21.679688 309.054092) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-2d" d="M 2328 1681 
+L 488 1681 
+L 488 2153 
+L 2328 2153 
+L 2328 1681 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-38" d="M 306 1350 
+Q 306 1769 556 2122 
+Q 806 2475 1200 2625 
+Q 884 2803 700 3081 
+Q 516 3359 516 3684 
+Q 516 4028 692 4312 
+Q 869 4597 1183 4759 
+Q 1497 4922 1875 4922 
+Q 2256 4922 2572 4761 
+Q 2888 4600 3063 4315 
+Q 3238 4031 3238 3684 
+Q 3238 3366 3058 3086 
+Q 2878 2806 2559 2625 
+Q 2953 2472 3200 2119 
+Q 3447 1766 3447 1350 
+Q 3447 938 3250 611 
+Q 3053 284 2690 103 
+Q 2328 -78 1875 -78 
+Q 1425 -78 1065 103 
+Q 706 284 506 612 
+Q 306 941 306 1350 
+z
+M 906 1378 
+Q 906 947 1172 687 
+Q 1438 428 1878 428 
+Q 2309 428 2582 692 
+Q 2856 956 2856 1378 
+Q 2856 1778 2579 2051 
+Q 2303 2325 1878 2325 
+Q 1456 2325 1181 2058 
+Q 906 1791 906 1378 
+z
+M 1081 3634 
+Q 1081 3309 1312 3076 
+Q 1544 2844 1878 2844 
+Q 2206 2844 2445 3078 
+Q 2684 3313 2684 3634 
+Q 2684 3963 2454 4191 
+Q 2225 4419 1878 4419 
+Q 1534 4419 1307 4195 
+Q 1081 3972 1081 3634 
+z
+" transform="scale(0.015625)"/>
+        <path id="MicrosoftYaHei-36" d="M 3181 4219 
+Q 2803 4413 2391 4413 
+Q 1763 4413 1381 3866 
+Q 1000 3319 994 2372 
+L 1009 2372 
+Q 1353 3038 2106 3038 
+Q 2734 3038 3109 2628 
+Q 3484 2219 3484 1541 
+Q 3484 831 3051 375 
+Q 2619 -81 1947 -81 
+Q 1209 -81 789 495 
+Q 369 1072 369 2131 
+Q 369 3413 920 4167 
+Q 1472 4922 2372 4922 
+Q 2888 4922 3181 4781 
+L 3181 4219 
+z
+M 1031 1584 
+Q 1031 1106 1286 765 
+Q 1541 425 1963 425 
+Q 2363 425 2613 719 
+Q 2863 1013 2863 1475 
+Q 2863 1975 2627 2253 
+Q 2391 2531 1956 2531 
+Q 1544 2531 1287 2250 
+Q 1031 1969 1031 1584 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_17">
+      <path d="M 50.598438 270.938514 
+L 494.487997 270.938514 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="270.938514" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- -865 -->
+      <g transform="translate(21.679688 274.935389) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19">
+      <path d="M 50.598438 236.819812 
+L 494.487997 236.819812 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="236.819812" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- -864 -->
+      <g transform="translate(21.679688 240.816687) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-34" d="M 2906 4841 
+L 2906 1644 
+L 3631 1644 
+L 3631 1138 
+L 2906 1138 
+L 2906 0 
+L 2313 0 
+L 2313 1138 
+L 53 1138 
+L 53 1616 
+Q 656 2294 1265 3178 
+Q 1875 4063 2272 4841 
+L 2906 4841 
+z
+M 741 1644 
+L 2313 1644 
+L 2313 3950 
+Q 1988 3366 1616 2817 
+Q 1244 2269 741 1644 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-34" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_21">
+      <path d="M 50.598438 202.70111 
+L 494.487997 202.70111 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="202.70111" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- -863 -->
+      <g transform="translate(21.679688 206.697985) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-33" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_23">
+      <path d="M 50.598438 168.582407 
+L 494.487997 168.582407 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="168.582407" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- -862 -->
+      <g transform="translate(21.679688 172.579282) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-32" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_25">
+      <path d="M 50.598438 134.463705 
+L 494.487997 134.463705 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="134.463705" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- -861 -->
+      <g transform="translate(21.679688 138.46058) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-31" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_27">
+      <path d="M 50.598438 100.345003 
+L 494.487997 100.345003 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="100.345003" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- -860 -->
+      <g transform="translate(21.679688 104.341878) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_29">
+      <path d="M 50.598438 66.2263 
+L 494.487997 66.2263 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="66.2263" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- -859 -->
+      <g transform="translate(21.679688 70.223175) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-39" d="M 578 656 
+Q 978 425 1441 425 
+Q 2091 425 2448 937 
+Q 2806 1450 2806 2394 
+Q 2800 2388 2794 2394 
+Q 2475 1788 1722 1788 
+Q 1113 1788 713 2206 
+Q 313 2625 313 3294 
+Q 313 4006 750 4464 
+Q 1188 4922 1884 4922 
+Q 2606 4922 3012 4355 
+Q 3419 3788 3419 2703 
+Q 3419 1363 2894 641 
+Q 2369 -81 1441 -81 
+Q 931 -81 578 84 
+L 578 656 
+z
+M 931 3372 
+Q 931 2884 1181 2598 
+Q 1431 2313 1872 2313 
+Q 2253 2313 2512 2573 
+Q 2772 2834 2772 3206 
+Q 2772 3728 2514 4070 
+Q 2256 4413 1834 4413 
+Q 1444 4413 1187 4116 
+Q 931 3819 931 3372 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-39" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_31">
+      <path d="M 50.598438 32.107598 
+L 494.487997 32.107598 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="32.107598" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- -858 -->
+      <g transform="translate(21.679688 36.104473) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-2d"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="43.261719"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="101.904297"/>
+       <use xlink:href="#MicrosoftYaHei-38" x="160.546875"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_18">
+     <!-- 累计奖励 -->
+     <g transform="translate(15.19375 190.51125) rotate(-90) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-7d2f" d="M 4550 1991 
+Q 5425 1278 5944 772 
+L 5600 422 
+Q 5356 675 5097 922 
+Q 4334 891 3556 856 
+L 3556 22 
+Q 3556 -753 2775 -753 
+Q 2375 -753 1881 -747 
+Q 1844 -497 1788 -228 
+Q 2269 -272 2650 -272 
+Q 3069 -272 3069 184 
+L 3069 834 
+Q 2231 794 1375 753 
+Q 1100 741 844 703 
+L 675 1178 
+Q 1056 1222 1531 1403 
+Q 2172 1650 2916 1984 
+Q 2138 1959 1531 1922 
+Q 1231 1903 1081 1884 
+L 919 2297 
+Q 1231 2359 1550 2503 
+Q 1969 2691 2378 2909 
+L 1206 2909 
+L 1206 2728 
+L 731 2728 
+L 731 5103 
+L 5675 5103 
+L 5675 2728 
+L 5200 2728 
+L 5200 2909 
+L 3125 2909 
+Q 2434 2559 1763 2272 
+Q 2581 2294 3669 2334 
+Q 4100 2538 4563 2772 
+L 4888 2434 
+Q 3394 1728 1825 1147 
+Q 3403 1216 4684 1297 
+Q 4456 1500 4219 1697 
+L 4550 1991 
+z
+M 3431 3272 
+L 5200 3272 
+L 5200 3841 
+L 3431 3841 
+L 3431 3272 
+z
+M 1206 3272 
+L 2969 3272 
+L 2969 3841 
+L 1206 3841 
+L 1206 3272 
+z
+M 5200 4741 
+L 3431 4741 
+L 3431 4178 
+L 5200 4178 
+L 5200 4741 
+z
+M 1206 4178 
+L 2969 4178 
+L 2969 4741 
+L 1206 4741 
+L 1206 4178 
+z
+M 1894 572 
+L 2175 184 
+Q 1263 -272 381 -616 
+Q 288 -422 163 -197 
+Q 1094 166 1894 572 
+z
+M 4431 547 
+Q 5363 234 6219 -147 
+L 6025 -572 
+Q 5188 -191 4219 134 
+L 4431 547 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8ba1" d="M 2100 3153 
+L 3919 3153 
+L 3919 5303 
+L 4456 5303 
+L 4456 3153 
+L 6288 3153 
+L 6288 2703 
+L 4456 2703 
+L 4456 -822 
+L 3919 -822 
+L 3919 2703 
+L 2100 2703 
+L 2100 3153 
+z
+M 2675 903 
+Q 2694 578 2719 359 
+Q 1719 -266 1069 -728 
+L 769 -303 
+Q 988 -116 988 266 
+L 988 2741 
+L 100 2741 
+L 100 3191 
+L 1488 3191 
+L 1488 153 
+Q 2031 484 2675 903 
+z
+M 738 5222 
+Q 1419 4522 1725 4184 
+L 1288 3816 
+Q 894 4334 356 4891 
+L 738 5222 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5956" d="M 6306 -284 
+Q 6119 -528 5944 -803 
+Q 4031 -491 3197 859 
+Q 2550 -472 406 -878 
+Q 281 -666 100 -403 
+Q 2175 -84 2709 972 
+L 225 972 
+L 225 1403 
+L 2900 1403 
+Q 2969 1600 3019 1822 
+L 3531 1822 
+Q 3484 1603 3422 1403 
+L 6200 1403 
+L 6200 972 
+L 3647 972 
+Q 4472 -169 6306 -284 
+z
+M 2388 3553 
+Q 3181 4228 3588 5334 
+L 4056 5241 
+Q 3941 4938 3803 4666 
+L 5988 4666 
+L 5988 4278 
+Q 5181 2359 2788 1853 
+Q 2706 2072 2531 2316 
+Q 3434 2463 4094 2831 
+Q 3688 3222 3288 3516 
+L 3588 3822 
+Q 4056 3481 4491 3084 
+Q 5116 3550 5463 4266 
+L 3588 4266 
+Q 3228 3666 2763 3234 
+Q 2588 3428 2388 3553 
+z
+M 1744 5291 
+L 2231 5291 
+L 2231 1728 
+L 1744 1728 
+L 1744 2925 
+Q 1231 2694 256 2253 
+L 94 2747 
+Q 991 3088 1744 3425 
+L 1744 5291 
+z
+M 281 4584 
+L 588 4891 
+Q 1088 4503 1513 4072 
+L 1169 3741 
+Q 700 4253 281 4584 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-52b1" d="M 3756 3997 
+L 4303 3997 
+Q 4316 4669 4319 5297 
+L 4775 5297 
+Q 4763 4559 4750 3997 
+L 6031 3997 
+Q 5963 1203 5925 278 
+Q 5888 -678 5169 -678 
+Q 4969 -678 4444 -666 
+Q 4406 -378 4350 -134 
+Q 4856 -178 5081 -178 
+Q 5425 -178 5456 272 
+Q 5513 1266 5563 3528 
+L 4741 3528 
+Q 4731 3028 4725 2716 
+Q 4688 334 3600 -859 
+Q 3469 -666 3281 -447 
+Q 4238 634 4275 2634 
+Q 4288 3091 4297 3528 
+L 3756 3528 
+L 3756 3997 
+z
+M 1225 3728 
+L 3563 3728 
+L 3563 3291 
+L 2194 3291 
+Q 2184 2784 2172 2372 
+L 3375 2372 
+Q 3319 766 3275 91 
+Q 3206 -628 2581 -628 
+Q 2406 -628 2050 -622 
+Q 2013 -416 1956 -159 
+Q 2306 -197 2475 -197 
+Q 2819 -203 2850 216 
+Q 2894 797 2931 1959 
+L 2153 1959 
+Q 2125 1378 2081 1034 
+Q 1969 -3 1300 -828 
+Q 1175 -659 981 -453 
+Q 1531 209 1644 1097 
+Q 1728 1641 1756 3291 
+L 1225 3291 
+L 1225 3728 
+z
+M 1044 4472 
+L 1044 2166 
+Q 1044 147 475 -809 
+Q 306 -647 94 -478 
+Q 588 341 588 2184 
+L 588 4909 
+L 3663 4909 
+L 3663 4472 
+L 1044 4472 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-7d2f"/>
+      <use xlink:href="#MicrosoftYaHei-8ba1" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-5956" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-52b1" x="300"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_33">
+    <path d="M 70.775236 260.892631 
+L 84.690269 303.347614 
+L 98.605302 275.727227 
+L 112.520335 258.62305 
+L 126.435369 217.350007 
+L 140.350402 222.586995 
+L 154.265435 202.219533 
+L 168.180468 260.153132 
+L 182.095501 191.552396 
+L 196.010535 218.908891 
+L 209.925568 236.836482 
+L 223.840601 204.412504 
+L 237.755634 251.148195 
+L 251.670668 149.688413 
+L 265.585701 222.104667 
+L 279.500734 104.943933 
+L 293.415767 232.310452 
+L 307.3308 225.901764 
+L 321.245834 132.529266 
+L 335.160867 212.305401 
+L 349.0759 167.913854 
+L 362.990933 119.291088 
+L 376.905966 95.065702 
+L 390.821 206.337661 
+L 404.736033 37.674886 
+L 418.651066 89.820336 
+L 432.566099 192.75325 
+L 446.481133 162.936551 
+L 460.396166 107.71758 
+L 474.311199 144.631815 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #4682b4; stroke-opacity: 0.5; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_34">
+    <path d="M 126.435369 263.188106 
+L 140.350402 255.526979 
+L 154.265435 235.301362 
+L 168.180468 232.186543 
+L 182.095501 218.772412 
+L 196.010535 219.084189 
+L 209.925568 221.934087 
+L 223.840601 222.372681 
+L 237.755634 220.571694 
+L 251.670668 212.198897 
+L 265.585701 212.838052 
+L 279.500734 186.459543 
+L 293.415767 192.039132 
+L 307.3308 186.989846 
+L 321.245834 183.558016 
+L 335.160867 181.598163 
+L 349.0759 194.192148 
+L 362.990933 171.588275 
+L 376.905966 145.421062 
+L 390.821 160.182741 
+L 404.736033 125.256638 
+L 418.651066 109.637935 
+L 432.566099 124.330367 
+L 446.481133 137.904537 
+L 460.396166 118.180521 
+L 474.311199 139.571907 
+" clip-path="url(#p09f0b4a0f7)" style="fill: none; stroke: #ff0000; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 50.598438 316.63125 
+L 50.598438 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 494.487997 316.63125 
+L 494.487997 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 50.598438 316.63125 
+L 494.487997 316.63125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 50.598438 24.39125 
+L 494.487997 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_19">
+    <!-- DQN训练奖励曲线 -->
+    <g transform="translate(213.815405 18.39125) scale(0.14 -0.14)">
+     <defs>
+      <path id="MicrosoftYaHei-44" d="M 625 0 
+L 625 4841 
+L 2006 4841 
+Q 3106 4841 3836 4200 
+Q 4566 3559 4566 2481 
+Q 4566 1356 3836 678 
+Q 3106 0 1956 0 
+L 625 0 
+z
+M 1250 4284 
+L 1250 553 
+L 1953 553 
+Q 2875 553 3392 1056 
+Q 3909 1559 3909 2466 
+Q 3909 3372 3378 3828 
+Q 2847 4284 1981 4284 
+L 1250 4284 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-51" d="M 313 2363 
+Q 313 3534 947 4228 
+Q 1581 4922 2666 4922 
+Q 3675 4922 4290 4244 
+Q 4906 3566 4906 2478 
+Q 4906 1300 4275 609 
+Q 4125 447 3953 322 
+L 5313 -653 
+L 4284 -653 
+L 3366 28 
+Q 3009 -81 2588 -81 
+Q 1556 -81 934 597 
+Q 313 1275 313 2363 
+z
+M 969 2413 
+Q 969 1534 1417 1004 
+Q 1866 475 2588 475 
+Q 3363 475 3805 983 
+Q 4247 1491 4247 2403 
+Q 4247 3341 3814 3850 
+Q 3381 4359 2628 4359 
+Q 1888 4359 1428 3821 
+Q 969 3284 969 2413 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-4e" d="M 4578 0 
+L 3838 0 
+L 1403 3766 
+Q 1300 3925 1238 4081 
+L 1219 4081 
+Q 1244 3919 1244 3403 
+L 1244 0 
+L 625 0 
+L 625 4841 
+L 1409 4841 
+L 3778 1141 
+Q 3947 878 3978 806 
+L 3991 806 
+Q 3959 1013 3959 1513 
+L 3959 4841 
+L 4578 4841 
+L 4578 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-8bad" d="M 2581 5178 
+L 3056 5178 
+L 3056 2722 
+Q 3056 1272 2831 466 
+Q 2613 -297 1981 -872 
+Q 1769 -678 1550 -534 
+Q 2156 -66 2375 647 
+Q 2581 1353 2581 2678 
+L 2581 5178 
+z
+M 5506 5184 
+L 5981 5184 
+L 5981 -772 
+L 5506 -772 
+L 5506 5184 
+z
+M 4038 4953 
+L 4513 4953 
+L 4513 -403 
+L 4038 -403 
+L 4038 4953 
+z
+M 2025 1372 
+Q 2025 1059 2069 784 
+Q 1438 247 913 -284 
+L 625 116 
+Q 838 316 838 691 
+L 838 2803 
+L 81 2803 
+L 81 3253 
+L 1313 3253 
+L 1313 709 
+Q 1650 1009 2025 1372 
+z
+M 875 5191 
+Q 1438 4628 1850 4166 
+L 1413 3797 
+Q 1031 4303 500 4872 
+L 875 5191 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-7ec3" d="M 2363 3403 
+L 3059 3403 
+Q 3203 3781 3344 4197 
+L 2213 4197 
+L 2213 4622 
+L 3488 4622 
+Q 3603 4975 3719 5353 
+L 4219 5253 
+Q 4109 4931 4000 4622 
+L 6000 4622 
+L 6000 4197 
+L 3847 4197 
+Q 3700 3791 3553 3403 
+L 4763 3403 
+L 4763 2016 
+L 6025 2016 
+L 6025 1591 
+L 4763 1591 
+L 4763 3 
+Q 4763 -734 4056 -734 
+Q 3788 -734 3369 -728 
+Q 3331 -516 3263 -241 
+Q 3638 -284 3931 -284 
+Q 4300 -284 4300 109 
+L 4300 1591 
+L 2475 1591 
+L 2475 1997 
+Q 2688 2450 2897 2978 
+L 2363 2978 
+L 2363 3403 
+z
+M 888 1566 
+Q 1531 1659 2219 1778 
+Q 2181 1547 2163 1297 
+Q 1600 1216 319 1003 
+L 219 1472 
+Q 669 1969 1175 2794 
+Q 666 2763 219 2722 
+L 100 3147 
+Q 700 3966 1294 5366 
+L 1750 5178 
+Q 1088 3878 644 3184 
+Q 1078 3194 1419 3203 
+Q 1669 3638 1931 4147 
+L 2388 3916 
+Q 1656 2659 888 1566 
+z
+M 3013 2016 
+L 4300 2016 
+L 4300 2978 
+L 3394 2978 
+Q 3203 2484 3013 2016 
+z
+M 94 122 
+Q 1031 291 2219 559 
+Q 2200 316 2206 78 
+Q 1231 -103 219 -353 
+L 94 122 
+z
+M 3194 1272 
+L 3638 1066 
+Q 3194 203 2700 -547 
+Q 2500 -397 2275 -278 
+Q 2813 459 3194 1272 
+z
+M 5094 1041 
+L 5500 1278 
+Q 5963 578 6381 -122 
+L 5950 -391 
+Q 5544 366 5094 1041 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-66f2" d="M 2163 5322 
+L 2625 5322 
+L 2625 4291 
+L 3775 4291 
+L 3775 5328 
+L 4238 5328 
+L 4238 4291 
+L 5850 4291 
+L 5850 -822 
+L 5388 -822 
+L 5388 -409 
+L 1013 -409 
+L 1013 -822 
+L 550 -822 
+L 550 4291 
+L 2163 4291 
+L 2163 5322 
+z
+M 1013 41 
+L 2163 41 
+L 2163 1753 
+L 1013 1753 
+L 1013 41 
+z
+M 4238 41 
+L 5388 41 
+L 5388 1753 
+L 4238 1753 
+L 4238 41 
+z
+M 2625 41 
+L 3775 41 
+L 3775 1753 
+L 2625 1753 
+L 2625 41 
+z
+M 1013 2203 
+L 2163 2203 
+L 2163 3841 
+L 1013 3841 
+L 1013 2203 
+z
+M 5388 3841 
+L 4238 3841 
+L 4238 2203 
+L 5388 2203 
+L 5388 3841 
+z
+M 2625 2203 
+L 3775 2203 
+L 3775 3841 
+L 2625 3841 
+L 2625 2203 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-7ebf" d="M 1969 -347 
+Q 3144 75 4003 631 
+Q 3781 1197 3653 1972 
+L 2319 1784 
+L 2244 2234 
+L 3591 2422 
+Q 3538 2859 3513 3356 
+L 2381 3228 
+L 2306 3678 
+L 3488 3809 
+Q 3453 4459 3425 5303 
+L 3938 5303 
+Q 3953 4497 3978 3866 
+L 6069 4103 
+L 6125 3659 
+L 3997 3413 
+Q 4019 2919 4069 2488 
+L 6225 2791 
+L 6281 2347 
+L 4128 2041 
+Q 4234 1394 4416 916 
+Q 5078 1416 5519 2009 
+L 5925 1703 
+Q 5363 1025 4619 475 
+Q 4859 44 5194 -184 
+Q 5606 -428 5725 66 
+Q 5806 466 5856 953 
+Q 6144 828 6338 772 
+Q 6231 97 6125 -247 
+Q 5944 -778 5506 -778 
+Q 5050 -778 4663 -403 
+Q 4409 -163 4209 194 
+Q 3350 -363 2281 -772 
+Q 2169 -597 1969 -347 
+z
+M 900 1541 
+Q 1456 1622 2213 1753 
+Q 2175 1522 2156 1272 
+Q 1113 1109 325 978 
+L 225 1447 
+Q 659 1913 1178 2775 
+Q 672 2747 225 2703 
+L 106 3128 
+Q 688 3922 1300 5353 
+L 1775 5166 
+Q 1131 3897 669 3166 
+Q 1041 3178 1422 3194 
+Q 1638 3578 1869 4028 
+L 2331 3797 
+Q 1569 2478 900 1541 
+z
+M 106 97 
+Q 1206 334 2331 616 
+Q 2313 366 2313 141 
+Q 1269 -103 244 -378 
+L 106 97 
+z
+M 4463 4972 
+L 4731 5284 
+Q 5175 5003 5681 4609 
+L 5381 4247 
+Q 4863 4691 4463 4972 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MicrosoftYaHei-44"/>
+     <use xlink:href="#MicrosoftYaHei-51" x="76.171875"/>
+     <use xlink:href="#MicrosoftYaHei-4e" x="157.666016"/>
+     <use xlink:href="#MicrosoftYaHei-8bad" x="238.964844"/>
+     <use xlink:href="#MicrosoftYaHei-7ec3" x="338.964844"/>
+     <use xlink:href="#MicrosoftYaHei-5956" x="438.964844"/>
+     <use xlink:href="#MicrosoftYaHei-52b1" x="538.964844"/>
+     <use xlink:href="#MicrosoftYaHei-66f2" x="638.964844"/>
+     <use xlink:href="#MicrosoftYaHei-7ebf" x="738.964844"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 548.628878 316.63125 
+L 992.518437 316.63125 
+L 992.518437 24.39125 
+L 548.628878 24.39125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_8">
+     <g id="line2d_35">
+      <path d="M 568.805676 316.63125 
+L 568.805676 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mdfe835672f" x="568.805676" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <!-- 0 -->
+      <g transform="translate(565.873645 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_37">
+      <path d="M 649.674606 316.63125 
+L 649.674606 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#mdfe835672f" x="649.674606" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <!-- 100 -->
+      <g transform="translate(640.878513 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_39">
+      <path d="M 730.543537 316.63125 
+L 730.543537 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#mdfe835672f" x="730.543537" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <!-- 200 -->
+      <g transform="translate(721.747443 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_41">
+      <path d="M 811.412468 316.63125 
+L 811.412468 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#mdfe835672f" x="811.412468" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <!-- 300 -->
+      <g transform="translate(802.616374 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-33"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_43">
+      <path d="M 892.281398 316.63125 
+L 892.281398 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#mdfe835672f" x="892.281398" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <!-- 400 -->
+      <g transform="translate(883.485304 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-34"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_45">
+      <path d="M 973.150329 316.63125 
+L 973.150329 24.39125 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#mdfe835672f" x="973.150329" y="316.63125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <!-- 500 -->
+      <g transform="translate(964.354235 331.625) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-35"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_26">
+     <!-- 时间步 -->
+     <g transform="translate(755.573658 346.104687) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-65f6" d="M 344 4728 
+L 2500 4728 
+L 2500 -366 
+L 2006 -366 
+L 2006 153 
+L 838 153 
+L 838 -441 
+L 344 -441 
+L 344 4728 
+z
+M 2706 3941 
+L 4925 3941 
+L 4925 5322 
+L 5425 5322 
+L 5425 3941 
+L 6313 3941 
+L 6313 3478 
+L 5425 3478 
+L 5425 116 
+Q 5425 -722 4625 -722 
+Q 4263 -722 3563 -703 
+Q 3531 -478 3463 -178 
+Q 4119 -228 4488 -228 
+Q 4925 -228 4925 216 
+L 4925 3478 
+L 2706 3478 
+L 2706 3941 
+z
+M 838 616 
+L 2006 616 
+L 2006 2234 
+L 838 2234 
+L 838 616 
+z
+M 2006 4266 
+L 838 4266 
+L 838 2684 
+L 2006 2684 
+L 2006 4266 
+z
+M 3406 2878 
+Q 3906 1966 4163 1422 
+Q 4000 1347 3663 1172 
+Q 3419 1766 2963 2653 
+L 3406 2878 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-95f4" d="M 1863 3647 
+L 4513 3647 
+L 4513 553 
+L 2313 553 
+L 2313 166 
+L 1863 166 
+L 1863 3647 
+z
+M 2388 4453 
+L 2388 4922 
+L 6013 4922 
+L 6013 -28 
+Q 6013 -816 5119 -816 
+Q 4756 -816 4169 -803 
+Q 4144 -616 4069 -297 
+Q 4588 -334 5056 -334 
+Q 5525 -334 5525 122 
+L 5525 4453 
+L 2388 4453 
+z
+M 419 4084 
+L 906 4084 
+L 906 -816 
+L 419 -816 
+L 419 4084 
+z
+M 2313 997 
+L 4063 997 
+L 4063 1884 
+L 2313 1884 
+L 2313 997 
+z
+M 4063 3203 
+L 2313 3203 
+L 2313 2328 
+L 4063 2328 
+L 4063 3203 
+z
+M 744 5003 
+L 1100 5322 
+Q 1575 4872 1981 4447 
+L 1575 4091 
+Q 1194 4541 744 5003 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6b65" d="M 188 2997 
+L 1250 2997 
+L 1250 4759 
+L 1750 4759 
+L 1750 2997 
+L 3088 2997 
+L 3088 5328 
+L 3588 5328 
+L 3588 4416 
+L 5744 4416 
+L 5744 3966 
+L 3588 3966 
+L 3588 2997 
+L 6225 2997 
+L 6225 2534 
+L 188 2534 
+L 188 2997 
+z
+M 188 -441 
+Q 3744 -9 5400 1872 
+L 5794 1484 
+Q 4013 -453 375 -891 
+Q 306 -691 188 -441 
+z
+M 1794 2147 
+L 2194 1803 
+Q 1369 947 613 322 
+Q 469 497 275 691 
+Q 1044 1291 1794 2147 
+z
+M 3038 2378 
+L 3538 2378 
+L 3538 528 
+L 3038 528 
+L 3038 2378 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-65f6"/>
+      <use xlink:href="#MicrosoftYaHei-95f4" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-6b65" x="200"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_10">
+     <g id="line2d_47">
+      <path d="M 548.628878 290.033014 
+L 992.518437 290.033014 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="290.033014" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <!-- 1.00 -->
+      <g transform="translate(521.628878 294.029889) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-2e" d="M 372 322 
+Q 372 491 487 606 
+Q 603 722 775 722 
+Q 950 722 1065 605 
+Q 1181 488 1181 322 
+Q 1181 159 1065 42 
+Q 950 -75 772 -75 
+Q 600 -75 486 42 
+Q 372 159 372 322 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_49">
+      <path d="M 548.628878 256.934753 
+L 992.518437 256.934753 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="256.934753" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <!-- 1.25 -->
+      <g transform="translate(521.628878 260.931628) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-32" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_51">
+      <path d="M 548.628878 223.836492 
+L 992.518437 223.836492 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="223.836492" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <!-- 1.50 -->
+      <g transform="translate(521.628878 227.833367) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_53">
+      <path d="M 548.628878 190.738231 
+L 992.518437 190.738231 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="190.738231" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <!-- 1.75 -->
+      <g transform="translate(521.628878 194.735106) scale(0.1 -0.1)">
+       <defs>
+        <path id="MicrosoftYaHei-37" d="M 3422 4463 
+Q 2659 3131 2223 1998 
+Q 1788 866 1684 0 
+L 1047 0 
+Q 1163 853 1594 1947 
+Q 2025 3041 2747 4300 
+L 347 4300 
+L 347 4841 
+L 3422 4841 
+L 3422 4463 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-37" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_55">
+      <path d="M 548.628878 157.639971 
+L 992.518437 157.639971 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="157.639971" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <!-- 2.00 -->
+      <g transform="translate(521.628878 161.636846) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_57">
+      <path d="M 548.628878 124.54171 
+L 992.518437 124.54171 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_58">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="124.54171" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <!-- 2.25 -->
+      <g transform="translate(521.628878 128.538585) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-32" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_59">
+      <path d="M 548.628878 91.443449 
+L 992.518437 91.443449 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_60">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="91.443449" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <!-- 2.50 -->
+      <g transform="translate(521.628878 95.440324) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_61">
+      <path d="M 548.628878 58.345188 
+L 992.518437 58.345188 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_62">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="58.345188" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <!-- 2.75 -->
+      <g transform="translate(521.628878 62.342063) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-37" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_63">
+      <path d="M 548.628878 25.246927 
+L 992.518437 25.246927 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_64">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="25.246927" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <!-- 3.00 -->
+      <g transform="translate(521.628878 29.243802) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-33"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_36">
+     <!-- DO (mg/L) -->
+     <g transform="translate(515.085128 195.800312) rotate(-90) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-4f" d="M 313 2363 
+Q 313 3534 947 4228 
+Q 1581 4922 2666 4922 
+Q 3675 4922 4290 4244 
+Q 4906 3566 4906 2478 
+Q 4906 1300 4275 609 
+Q 3644 -81 2588 -81 
+Q 1556 -81 934 597 
+Q 313 1275 313 2363 
+z
+M 969 2413 
+Q 969 1534 1417 1004 
+Q 1866 475 2588 475 
+Q 3363 475 3805 983 
+Q 4247 1491 4247 2403 
+Q 4247 3341 3814 3850 
+Q 3381 4359 2628 4359 
+Q 1888 4359 1428 3821 
+Q 969 3284 969 2413 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-20" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-28" d="M 1531 -1100 
+Q 478 100 478 1847 
+Q 478 3594 1531 4841 
+L 2072 4841 
+Q 1016 3544 1016 1853 
+Q 1016 166 2066 -1100 
+L 1531 -1100 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6d" d="M 5522 0 
+L 4909 0 
+L 4909 1984 
+Q 4909 2547 4734 2789 
+Q 4559 3031 4159 3031 
+Q 3822 3031 3581 2715 
+Q 3341 2400 3341 1969 
+L 3341 0 
+L 2728 0 
+L 2728 2047 
+Q 2728 3031 1969 3031 
+Q 1619 3031 1389 2731 
+Q 1159 2431 1159 1966 
+L 1159 0 
+L 547 0 
+L 547 3456 
+L 1159 3456 
+L 1159 2909 
+L 1172 2909 
+Q 1541 3538 2250 3538 
+Q 2597 3538 2862 3347 
+Q 3128 3156 3231 2831 
+Q 3616 3538 4381 3538 
+Q 5522 3538 5522 2131 
+L 5522 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-67" d="M 3547 291 
+Q 3547 -1628 1684 -1628 
+Q 1041 -1628 566 -1388 
+L 566 -797 
+Q 1144 -1119 1675 -1119 
+Q 2934 -1119 2934 206 
+L 2934 572 
+L 2922 572 
+Q 2528 -81 1747 -81 
+Q 1097 -81 706 384 
+Q 316 850 316 1619 
+Q 316 2503 747 3020 
+Q 1178 3538 1897 3538 
+Q 2588 3538 2922 2988 
+L 2934 2988 
+L 2934 3456 
+L 3547 3456 
+L 3547 291 
+z
+M 2934 2056 
+Q 2938 2456 2666 2743 
+Q 2394 3031 1997 3031 
+Q 1497 3031 1219 2664 
+Q 941 2297 941 1656 
+Q 941 1106 1209 765 
+Q 1478 425 1922 425 
+Q 2369 425 2653 750 
+Q 2938 1075 2934 1575 
+L 2934 2056 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-2f" d="M 2791 4841 
+L 469 -803 
+L -103 -803 
+L 2219 4841 
+L 2791 4841 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-4c" d="M 3178 0 
+L 625 0 
+L 625 4841 
+L 1250 4841 
+L 1250 553 
+L 3178 553 
+L 3178 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-29" d="M 78 -1100 
+Q 1131 163 1131 1853 
+Q 1131 3547 72 4841 
+L 616 4841 
+Q 1672 3603 1672 1847 
+Q 1672 91 616 -1100 
+L 78 -1100 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-44"/>
+      <use xlink:href="#MicrosoftYaHei-4f" x="76.171875"/>
+      <use xlink:href="#MicrosoftYaHei-20" x="157.666016"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="187.255859"/>
+      <use xlink:href="#MicrosoftYaHei-6d" x="220.654297"/>
+      <use xlink:href="#MicrosoftYaHei-67" x="314.355469"/>
+      <use xlink:href="#MicrosoftYaHei-2f" x="378.320312"/>
+      <use xlink:href="#MicrosoftYaHei-4c" x="421.044922"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="472.363281"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_65">
+    <path d="M 568.805676 134.142009 
+L 569.614365 145.098263 
+L 570.423055 139.560641 
+L 571.231744 187.887875 
+L 572.849122 179.424808 
+L 573.657812 133.286421 
+L 574.466501 133.266296 
+L 575.27519 169.860813 
+L 576.08388 144.455372 
+L 576.892569 147.804643 
+L 577.701258 153.921083 
+L 578.509948 149.811279 
+L 579.318637 152.668365 
+L 580.127326 167.441728 
+L 580.936016 175.073159 
+L 581.744705 127.2942 
+L 582.553394 144.485727 
+L 583.362083 144.299847 
+L 584.170773 142.342709 
+L 584.979462 139.942566 
+L 585.788151 165.944056 
+L 586.596841 154.373062 
+L 587.40553 187.598457 
+L 589.022909 148.502565 
+L 589.831598 183.887105 
+L 591.448977 131.289304 
+L 592.257666 144.814231 
+L 593.066355 145.974009 
+L 593.875044 146.18793 
+L 594.683734 170.524436 
+L 595.492423 150.843922 
+L 596.301112 166.991224 
+L 597.109802 165.550773 
+L 597.918491 158.66468 
+L 598.72718 134.608623 
+L 599.53587 124.466975 
+L 600.344559 141.810031 
+L 601.153248 145.474762 
+L 601.961937 205.757148 
+L 602.770627 164.920455 
+L 603.579316 157.019244 
+L 604.388005 146.832117 
+L 605.196695 163.190739 
+L 606.005384 144.242273 
+L 606.814073 148.881483 
+L 607.622763 157.365531 
+L 608.431452 155.640642 
+L 609.240141 138.07824 
+L 610.048831 151.210191 
+L 610.85752 193.223292 
+L 611.666209 173.285542 
+L 612.474898 156.987379 
+L 613.283588 152.582152 
+L 614.092277 95.8549 
+L 614.900966 148.629808 
+L 615.709656 161.07387 
+L 616.518345 168.545132 
+L 617.327034 155.180717 
+L 618.135724 174.061887 
+L 618.944413 144.014778 
+L 619.753102 142.907687 
+L 620.561792 140.710241 
+L 621.370481 147.702146 
+L 622.17917 137.982789 
+L 622.987859 160.386274 
+L 623.796549 168.19972 
+L 624.605238 159.944231 
+L 625.413927 157.843346 
+L 626.222617 157.979715 
+L 627.031306 148.808956 
+L 627.839995 159.994553 
+L 628.648685 152.191045 
+L 629.457374 124.370554 
+L 630.266063 147.325295 
+L 631.074752 156.520193 
+L 631.883442 158.406301 
+L 632.692131 180.597394 
+L 633.50082 157.188108 
+L 634.30951 155.492674 
+L 635.118199 146.183714 
+L 635.926888 135.569262 
+L 636.735578 158.681126 
+L 637.544267 145.584498 
+L 638.352956 135.943219 
+L 639.161646 175.465744 
+L 640.779024 156.476705 
+L 641.587713 173.267548 
+L 642.396403 172.276194 
+L 644.013781 127.496026 
+L 644.822471 150.774924 
+L 645.63116 162.014255 
+L 646.439849 168.076189 
+L 647.248539 159.001331 
+L 648.057228 148.466525 
+L 648.865917 167.502161 
+L 649.674606 162.042736 
+L 650.483296 158.183915 
+L 651.291985 141.724566 
+L 652.100674 144.422278 
+L 652.909364 145.441225 
+L 653.718053 166.953602 
+L 654.526742 182.56588 
+L 655.335432 152.565324 
+L 656.144121 172.986806 
+L 656.95281 152.038736 
+L 657.7615 168.564679 
+L 658.570189 168.443542 
+L 659.378878 168.584064 
+L 660.187567 148.856737 
+L 660.996257 143.676341 
+L 661.804946 154.163249 
+L 662.613635 176.536586 
+L 663.422325 177.823836 
+L 664.231014 170.726451 
+L 665.039703 169.474169 
+L 665.848393 173.580414 
+L 666.657082 156.954739 
+L 667.465771 101.428094 
+L 668.274461 87.350701 
+L 669.08315 133.658718 
+L 669.891839 169.571834 
+L 670.700528 162.735209 
+L 671.509218 164.73783 
+L 672.317907 156.317496 
+L 673.126596 158.69327 
+L 673.935286 145.808597 
+L 674.743975 162.242336 
+L 675.552664 150.423857 
+L 676.361354 156.085845 
+L 677.170043 168.253484 
+L 677.978732 140.193168 
+L 678.787421 139.425839 
+L 679.596111 161.119619 
+L 680.4048 201.626941 
+L 681.213489 182.695802 
+L 682.022179 174.594006 
+L 682.830868 162.78885 
+L 683.639557 146.537358 
+L 684.448247 142.531348 
+L 685.256936 148.479073 
+L 686.065625 151.654842 
+L 686.874315 147.05744 
+L 687.683004 169.720773 
+L 688.491693 184.132052 
+L 689.300382 170.517702 
+L 690.109072 171.918662 
+L 690.917761 156.959072 
+L 691.72645 134.920464 
+L 692.53514 153.356057 
+L 693.343829 165.831142 
+L 694.152518 147.100709 
+L 695.769897 197.373675 
+L 696.578586 179.254487 
+L 697.387276 145.486463 
+L 698.195965 159.077082 
+L 699.004654 133.715294 
+L 699.813343 168.812805 
+L 700.622033 143.911048 
+L 701.430722 160.340287 
+L 702.239411 173.39444 
+L 703.048101 156.076117 
+L 703.85679 162.425994 
+L 704.665479 152.957378 
+L 705.474169 135.545766 
+L 706.282858 166.315606 
+L 707.091547 157.125673 
+L 707.900236 136.451968 
+L 708.708926 181.485326 
+L 709.517615 164.876384 
+L 710.326304 145.93085 
+L 711.134994 191.795739 
+L 711.943683 158.456484 
+L 712.752372 153.944065 
+L 713.561062 164.807292 
+L 714.369751 164.031377 
+L 715.17844 151.039864 
+L 715.98713 145.992159 
+L 716.795819 156.007296 
+L 717.604508 178.973179 
+L 718.413197 147.844137 
+L 719.221887 181.069505 
+L 720.030576 162.682877 
+L 720.839265 156.553273 
+L 721.647955 137.567869 
+L 723.265333 155.61087 
+L 724.074023 170.85486 
+L 724.882712 151.9961 
+L 725.691401 149.191534 
+L 726.500091 184.274497 
+L 727.30878 147.770711 
+L 728.117469 173.409955 
+L 728.926158 165.711338 
+L 729.734848 131.967639 
+L 730.543537 118.546274 
+L 732.160916 156.339588 
+L 732.969605 152.595223 
+L 733.778294 150.631362 
+L 734.586984 209.052796 
+L 735.395673 170.941646 
+L 736.204362 181.127233 
+L 737.013051 150.139247 
+L 737.821741 139.515492 
+L 738.63043 157.921282 
+L 739.439119 137.766442 
+L 740.247809 155.730019 
+L 741.056498 202.559434 
+L 741.865187 178.683414 
+L 742.673877 162.155879 
+L 743.482566 185.829356 
+L 744.291255 144.453576 
+L 745.099945 138.865626 
+L 745.908634 140.539596 
+L 746.717323 141.159508 
+L 747.526012 150.818136 
+L 748.334702 146.933851 
+L 749.143391 171.100385 
+L 749.95208 167.011409 
+L 750.76077 183.886784 
+L 751.569459 167.523797 
+L 752.378148 166.474738 
+L 753.186838 161.955348 
+L 753.995527 116.545534 
+L 754.804216 164.037327 
+L 755.612905 148.638827 
+L 756.421595 173.675201 
+L 757.230284 168.937023 
+L 758.038973 185.868372 
+L 758.847663 194.215838 
+L 759.656352 172.900043 
+L 760.465041 168.721878 
+L 761.273731 146.070042 
+L 762.08242 151.775323 
+L 762.891109 169.294862 
+L 763.699799 165.041802 
+L 764.508488 151.686569 
+L 765.317177 167.616288 
+L 766.125866 169.329501 
+L 766.934556 154.583017 
+L 767.743245 163.848554 
+L 768.551934 150.323268 
+L 769.360624 161.088454 
+L 770.169313 139.266909 
+L 770.978002 136.590408 
+L 771.786692 175.306395 
+L 772.595381 176.064282 
+L 773.40407 144.531471 
+L 774.21276 171.85725 
+L 775.021449 144.285963 
+L 775.830138 139.67344 
+L 776.638827 154.784124 
+L 777.447517 140.101145 
+L 778.256206 160.258235 
+L 779.064895 166.773701 
+L 779.873585 174.336208 
+L 780.682274 146.037844 
+L 781.490963 177.411394 
+L 782.299653 158.624853 
+L 783.108342 134.452129 
+L 783.917031 153.63822 
+L 784.72572 132.844396 
+L 785.53441 165.644815 
+L 786.343099 142.929324 
+L 787.151788 169.15044 
+L 787.960478 174.896918 
+L 788.769167 153.455684 
+L 789.577856 181.055586 
+L 790.386546 176.682688 
+L 791.195235 146.596953 
+L 792.003924 161.139401 
+L 792.812614 136.250357 
+L 793.621303 173.598307 
+L 794.429992 177.960058 
+L 795.238681 150.012299 
+L 796.047371 145.88457 
+L 797.664749 169.319776 
+L 798.473439 151.109213 
+L 799.282128 165.170129 
+L 800.090817 174.391448 
+L 800.899507 132.765078 
+L 801.708196 142.5716 
+L 802.516885 138.596214 
+L 803.325575 161.986624 
+L 804.134264 181.272489 
+L 804.942953 155.415185 
+L 805.751642 178.503008 
+L 806.560332 165.263814 
+L 807.369021 126.334724 
+L 808.17771 167.5441 
+L 808.9864 169.107609 
+L 809.795089 148.769635 
+L 811.412468 178.625734 
+L 812.221157 181.768764 
+L 813.029846 183.284126 
+L 813.838535 180.877888 
+L 814.647225 175.61848 
+L 816.264603 145.620981 
+L 817.073293 134.244005 
+L 817.881982 148.111987 
+L 818.690671 183.776337 
+L 819.499361 188.115145 
+L 820.30805 155.465301 
+L 821.116739 168.205298 
+L 821.925429 171.982771 
+L 822.734118 121.922818 
+L 823.542807 155.960777 
+L 824.351496 133.998839 
+L 825.160186 163.949993 
+L 825.968875 150.065942 
+L 826.777564 159.03341 
+L 827.586254 153.024868 
+L 828.394943 133.797864 
+L 829.203632 148.962877 
+L 830.012322 175.160535 
+L 830.821011 132.42433 
+L 831.6297 117.604345 
+L 832.43839 146.073639 
+L 833.247079 159.532756 
+L 834.055768 146.626398 
+L 834.864457 164.397026 
+L 835.673147 200.320807 
+L 836.481836 165.268949 
+L 837.290525 174.4575 
+L 838.099215 150.522151 
+L 838.907904 163.414196 
+L 839.716593 163.512644 
+L 840.525283 159.178821 
+L 841.333972 180.449677 
+L 842.142661 182.962194 
+L 842.95135 176.334299 
+L 843.76004 174.370953 
+L 844.568729 175.064429 
+L 845.377418 174.549354 
+L 846.186108 148.381017 
+L 846.994797 139.390139 
+L 847.803486 144.523431 
+L 848.612176 135.915464 
+L 849.420865 139.669852 
+L 850.229554 184.020957 
+L 851.038244 168.911388 
+L 851.846933 161.38245 
+L 852.655622 147.702488 
+L 853.464311 147.40416 
+L 854.273001 130.742907 
+L 855.08169 140.533552 
+L 855.890379 168.897301 
+L 856.699069 144.317304 
+L 857.507758 162.340906 
+L 858.316447 196.620251 
+L 859.125137 206.057366 
+L 859.933826 178.20372 
+L 860.742515 166.270164 
+L 861.551204 157.21871 
+L 862.359894 165.874334 
+L 863.168583 139.9622 
+L 863.977272 138.635342 
+L 864.785962 133.757356 
+L 865.594651 167.990388 
+L 866.40334 223.911787 
+L 867.21203 186.452418 
+L 868.020719 165.001576 
+L 868.829408 155.414373 
+L 869.638098 154.322081 
+L 870.446787 170.970188 
+L 871.255476 107.414612 
+L 872.064165 179.253187 
+L 872.872855 158.893934 
+L 873.681544 158.903687 
+L 874.490233 185.006986 
+L 875.298923 148.614266 
+L 876.107612 167.461142 
+L 876.916301 153.926636 
+L 877.724991 157.844439 
+L 878.53368 172.70715 
+L 879.342369 136.231499 
+L 880.151059 177.242814 
+L 880.959748 143.692645 
+L 881.768437 180.278185 
+L 882.577126 210.079326 
+L 883.385816 179.833441 
+L 884.194505 160.146645 
+L 885.003194 158.535022 
+L 885.811884 114.725524 
+L 886.620573 138.767977 
+L 887.429262 139.199822 
+L 888.237952 150.982379 
+L 889.046641 159.79811 
+L 889.85533 173.417761 
+L 890.664019 167.067014 
+L 891.472709 172.53395 
+L 892.281398 175.992015 
+L 893.090087 145.584742 
+L 893.898777 152.297484 
+L 894.707466 137.546567 
+L 895.516155 156.305312 
+L 896.324845 164.982031 
+L 897.133534 199.231307 
+L 897.942223 167.232602 
+L 898.750913 165.495395 
+L 899.559602 150.658951 
+L 900.368291 139.427575 
+L 901.17698 135.210521 
+L 901.98567 147.40052 
+L 902.794359 129.809339 
+L 903.603048 163.861108 
+L 904.411738 150.916955 
+L 906.029116 183.364261 
+L 906.837806 156.085463 
+L 907.646495 182.167344 
+L 908.455184 163.122945 
+L 909.263874 159.766779 
+L 910.072563 147.02335 
+L 910.881252 177.987437 
+L 911.689941 185.69534 
+L 912.498631 199.118554 
+L 914.116009 151.204871 
+L 914.924699 147.168154 
+L 915.733388 162.568952 
+L 916.542077 128.435821 
+L 917.350767 168.858825 
+L 918.159456 134.068693 
+L 918.968145 144.846592 
+L 919.776834 154.018898 
+L 920.585524 134.705634 
+L 921.394213 165.91538 
+L 922.202902 154.744209 
+L 923.011592 173.176945 
+L 923.820281 146.897071 
+L 924.62897 132.201498 
+L 925.43766 140.735535 
+L 926.246349 167.801591 
+L 927.055038 151.425043 
+L 927.863728 204.854331 
+L 928.672417 159.797332 
+L 929.481106 157.953513 
+L 930.289795 179.398917 
+L 931.098485 139.747254 
+L 931.907174 132.701879 
+L 932.715863 117.110713 
+L 933.524553 128.898432 
+L 934.333242 137.103061 
+L 935.141931 170.691105 
+L 935.950621 161.914345 
+L 936.75931 168.979451 
+L 937.567999 148.349129 
+L 938.376689 177.842787 
+L 939.185378 156.808035 
+L 939.994067 166.828958 
+L 940.802756 148.975628 
+L 941.611446 134.235803 
+L 942.420135 146.106305 
+L 943.228824 155.098273 
+L 944.037514 159.3862 
+L 944.846203 174.511864 
+L 946.463582 155.58837 
+L 947.272271 144.42805 
+L 948.08096 169.542843 
+L 948.889649 157.285916 
+L 949.698339 153.470079 
+L 950.507028 147.191371 
+L 951.315717 174.177022 
+L 952.124407 161.645471 
+L 952.933096 170.780837 
+L 953.741785 147.376113 
+L 954.550475 149.180907 
+L 955.359164 178.042928 
+L 956.167853 141.944002 
+L 956.976543 153.585169 
+L 957.785232 152.780147 
+L 958.593921 163.139493 
+L 959.40261 153.150458 
+L 960.2113 188.110974 
+L 961.019989 163.930508 
+L 961.828678 170.06961 
+L 962.637368 156.138176 
+L 963.446057 151.972875 
+L 964.254746 148.447182 
+L 965.063436 167.100342 
+L 965.872125 168.504734 
+L 966.680814 168.552304 
+L 967.489503 164.502176 
+L 968.298193 154.088733 
+L 969.106882 183.76555 
+L 969.915571 164.687007 
+L 970.724261 161.146662 
+L 971.53295 139.618371 
+L 972.341639 155.592915 
+L 972.341639 155.592915 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_66">
+    <path d="M 568.805676 134.142009 
+L 569.614365 184.816176 
+L 570.423055 179.278554 
+L 571.231744 267.323702 
+L 573.657812 133.286421 
+L 574.466501 133.266296 
+L 575.27519 130.1429 
+L 576.08388 104.737459 
+L 576.892569 147.804643 
+L 577.701258 233.356909 
+L 578.509948 189.529192 
+L 579.318637 232.104191 
+L 580.127326 246.877555 
+L 580.936016 214.791072 
+L 581.744705 87.576287 
+L 582.553394 104.767814 
+L 583.362083 104.581934 
+L 584.170773 102.624796 
+L 584.979462 179.660479 
+L 585.788151 245.379882 
+L 586.596841 233.808889 
+L 587.40553 267.034283 
+L 589.022909 148.502565 
+L 589.831598 223.605018 
+L 591.448977 91.571391 
+L 592.257666 184.532144 
+L 593.066355 225.409835 
+L 593.875044 185.905843 
+L 594.683734 210.242349 
+L 595.492423 230.279748 
+L 596.301112 206.709138 
+L 597.109802 165.550773 
+L 597.918491 158.66468 
+L 598.72718 94.89071 
+L 599.53587 124.466975 
+L 600.344559 181.527944 
+L 601.153248 185.192675 
+L 601.961937 285.192974 
+L 602.770627 244.356281 
+L 604.388005 146.832117 
+L 605.196695 202.908652 
+L 606.005384 144.242273 
+L 606.814073 109.16357 
+L 607.622763 157.365531 
+L 608.431452 235.076468 
+L 609.240141 177.796153 
+L 610.048831 230.646017 
+L 610.85752 272.659118 
+L 611.666209 213.003455 
+L 612.474898 196.705292 
+L 613.283588 152.582152 
+L 614.092277 95.8549 
+L 615.709656 200.791783 
+L 616.518345 168.545132 
+L 617.327034 234.616543 
+L 618.135724 174.061887 
+L 618.944413 183.732692 
+L 619.753102 142.907687 
+L 620.561792 140.710241 
+L 621.370481 107.984233 
+L 622.17917 137.982789 
+L 622.987859 120.668361 
+L 623.796549 207.917633 
+L 624.605238 239.380057 
+L 625.413927 237.279172 
+L 626.222617 237.415542 
+L 627.031306 188.526869 
+L 627.839995 159.994553 
+L 628.648685 152.191045 
+L 629.457374 84.652641 
+L 630.266063 147.325295 
+L 631.074752 196.238106 
+L 631.883442 198.124214 
+L 632.692131 260.03322 
+L 633.50082 236.623935 
+L 634.30951 234.9285 
+L 635.926888 135.569262 
+L 636.735578 118.963213 
+L 637.544267 105.866585 
+L 638.352956 96.225306 
+L 639.161646 215.183657 
+L 640.779024 196.194619 
+L 641.587713 212.985461 
+L 642.396403 251.71202 
+L 644.013781 127.496026 
+L 644.822471 111.057011 
+L 645.63116 201.732168 
+L 646.439849 207.794103 
+L 647.248539 159.001331 
+L 648.057228 227.902351 
+L 648.865917 246.937987 
+L 649.674606 201.760649 
+L 650.483296 237.619741 
+L 651.291985 141.724566 
+L 652.100674 144.422278 
+L 652.909364 145.441225 
+L 653.718053 127.235688 
+L 654.526742 222.283793 
+L 655.335432 152.565324 
+L 656.144121 252.422633 
+L 656.95281 231.474562 
+L 657.7615 248.000505 
+L 658.570189 168.443542 
+L 659.378878 208.301977 
+L 660.187567 148.856737 
+L 660.996257 103.958427 
+L 661.804946 193.881162 
+L 662.613635 216.254499 
+L 663.422325 217.541749 
+L 664.231014 250.162277 
+L 665.039703 209.192082 
+L 665.848393 213.298327 
+L 666.657082 117.236826 
+L 668.274461 87.350701 
+L 669.08315 133.658718 
+L 669.891839 169.571834 
+L 670.700528 242.171035 
+L 671.509218 204.455743 
+L 672.317907 235.753322 
+L 673.126596 238.129097 
+L 673.935286 225.244423 
+L 674.743975 162.242336 
+L 675.552664 190.141771 
+L 676.361354 116.367932 
+L 677.170043 128.535571 
+L 677.978732 179.911081 
+L 678.787421 179.143752 
+L 679.596111 200.837532 
+L 680.4048 281.062767 
+L 681.213489 222.413715 
+L 682.022179 174.594006 
+L 682.830868 162.78885 
+L 683.639557 106.819445 
+L 684.448247 102.813435 
+L 685.256936 227.9149 
+L 686.065625 191.372755 
+L 686.874315 226.493266 
+L 687.683004 209.438686 
+L 688.491693 263.567878 
+L 689.300382 130.799789 
+L 690.109072 171.918662 
+L 690.917761 156.959072 
+L 691.72645 95.202551 
+L 692.53514 73.920231 
+L 693.343829 205.549055 
+L 694.152518 186.818622 
+L 694.961208 213.171413 
+L 695.769897 276.809501 
+L 696.578586 218.9724 
+L 697.387276 185.204377 
+L 699.004654 133.715294 
+L 699.813343 129.094892 
+L 701.430722 239.776114 
+L 702.239411 213.112353 
+L 703.048101 235.511943 
+L 703.85679 202.143907 
+L 704.665479 192.675291 
+L 705.474169 135.545766 
+L 707.091547 196.843586 
+L 707.900236 136.451968 
+L 708.708926 221.203239 
+L 709.517615 204.594297 
+L 710.326304 225.366676 
+L 711.134994 271.231565 
+L 711.943683 237.89231 
+L 712.752372 193.661978 
+L 713.561062 125.089379 
+L 714.369751 164.031377 
+L 715.17844 111.321951 
+L 715.98713 145.992159 
+L 716.795819 156.007296 
+L 717.604508 258.409005 
+L 718.413197 227.279964 
+L 719.221887 220.787418 
+L 720.030576 242.118704 
+L 720.839265 196.271186 
+L 721.647955 97.849956 
+L 722.456644 146.167324 
+L 723.265333 115.892957 
+L 724.074023 210.572773 
+L 724.882712 231.431926 
+L 725.691401 188.909447 
+L 726.500091 263.710323 
+L 727.30878 227.206537 
+L 728.117469 213.127868 
+L 728.926158 125.993425 
+L 729.734848 131.967639 
+L 730.543537 78.828361 
+L 731.352226 98.724864 
+L 732.160916 196.057501 
+L 732.969605 192.313136 
+L 733.778294 190.349276 
+L 734.586984 288.488622 
+L 735.395673 210.659559 
+L 736.204362 220.845146 
+L 737.013051 150.139247 
+L 737.821741 139.515492 
+L 738.63043 118.203369 
+L 739.439119 137.766442 
+L 740.247809 195.447932 
+L 741.056498 281.99526 
+L 741.865187 218.401327 
+L 743.482566 265.265182 
+L 744.291255 144.453576 
+L 745.099945 138.865626 
+L 745.908634 100.821683 
+L 746.717323 101.441594 
+L 747.526012 190.536049 
+L 748.334702 186.651764 
+L 749.143391 250.536212 
+L 749.95208 246.447235 
+L 750.76077 263.322611 
+L 751.569459 207.24171 
+L 753.186838 122.237435 
+L 753.995527 116.545534 
+L 754.804216 203.75524 
+L 755.612905 148.638827 
+L 756.421595 213.393114 
+L 757.230284 248.37285 
+L 758.038973 265.304198 
+L 758.847663 273.651664 
+L 759.656352 172.900043 
+L 760.465041 208.439791 
+L 761.273731 146.070042 
+L 762.08242 112.05741 
+L 762.891109 169.294862 
+L 763.699799 244.477628 
+L 764.508488 231.122395 
+L 765.317177 207.334201 
+L 766.125866 209.047414 
+L 766.934556 154.583017 
+L 767.743245 163.848554 
+L 768.551934 110.605355 
+L 769.360624 81.652628 
+L 770.169313 139.266909 
+L 771.786692 215.024308 
+L 772.595381 255.500108 
+L 773.40407 223.967298 
+L 774.21276 211.575163 
+L 775.021449 144.285963 
+L 775.830138 139.67344 
+L 776.638827 154.784124 
+L 777.447517 140.101145 
+L 778.256206 120.540322 
+L 779.064895 206.491614 
+L 779.873585 253.772035 
+L 780.682274 225.47367 
+L 781.490963 217.129308 
+L 782.299653 238.060679 
+L 783.108342 134.452129 
+L 784.72572 93.126483 
+L 785.53441 165.644815 
+L 786.343099 142.929324 
+L 787.151788 208.868354 
+L 787.960478 254.332745 
+L 788.769167 232.89151 
+L 789.577856 220.773499 
+L 790.386546 216.400601 
+L 791.195235 106.87904 
+L 792.003924 121.421488 
+L 792.812614 96.532444 
+L 793.621303 173.598307 
+L 794.429992 217.677971 
+L 795.238681 189.730213 
+L 796.047371 225.320396 
+L 796.85606 236.463736 
+L 797.664749 169.319776 
+L 798.473439 190.827126 
+L 799.282128 125.452216 
+L 800.090817 174.391448 
+L 800.899507 132.765078 
+L 801.708196 102.853687 
+L 802.516885 178.314127 
+L 803.325575 241.422451 
+L 804.134264 260.708315 
+L 804.942953 234.851011 
+L 805.751642 178.503008 
+L 806.560332 165.263814 
+L 807.369021 86.616811 
+L 808.17771 167.5441 
+L 808.9864 129.389696 
+L 809.795089 188.487548 
+L 811.412468 218.343647 
+L 812.221157 261.20459 
+L 813.029846 223.002039 
+L 813.838535 220.595801 
+L 814.647225 175.61848 
+L 815.455914 121.153924 
+L 816.264603 105.903068 
+L 817.073293 134.244005 
+L 817.881982 227.547814 
+L 818.690671 223.49425 
+L 819.499361 267.550971 
+L 820.30805 234.901127 
+L 821.116739 128.487385 
+L 821.925429 171.982771 
+L 822.734118 121.922818 
+L 823.542807 116.242864 
+L 824.351496 94.280926 
+L 825.160186 203.667906 
+L 825.968875 189.783855 
+L 826.777564 238.469236 
+L 827.586254 232.460695 
+L 828.394943 133.797864 
+L 829.203632 188.68079 
+L 830.012322 175.160535 
+L 830.821011 92.706417 
+L 831.6297 77.886432 
+L 832.43839 106.355726 
+L 833.247079 159.532756 
+L 834.055768 186.344311 
+L 834.864457 204.114939 
+L 835.673147 279.756633 
+L 836.481836 165.268949 
+L 837.290525 214.175413 
+L 838.099215 150.522151 
+L 838.907904 163.414196 
+L 839.716593 123.79473 
+L 840.525283 119.460908 
+L 841.333972 220.16759 
+L 842.142661 222.680107 
+L 842.95135 216.052212 
+L 843.76004 214.088866 
+L 844.568729 175.064429 
+L 845.377418 174.549354 
+L 846.186108 148.381017 
+L 846.994797 99.672225 
+L 847.803486 104.805518 
+L 848.612176 135.915464 
+L 850.229554 223.73887 
+L 851.038244 208.629301 
+L 851.846933 240.818276 
+L 852.655622 147.702488 
+L 853.464311 147.40416 
+L 854.273001 91.024994 
+L 855.08169 140.533552 
+L 855.890379 129.179388 
+L 856.699069 144.317304 
+L 857.507758 241.776732 
+L 858.316447 276.056078 
+L 859.125137 285.493192 
+L 859.933826 178.20372 
+L 860.742515 126.552251 
+L 861.551204 157.21871 
+L 862.359894 126.156421 
+L 863.168583 139.9622 
+L 863.977272 178.353255 
+L 865.594651 167.990388 
+L 866.40334 303.347614 
+L 867.21203 265.888244 
+L 868.020719 125.283663 
+L 868.829408 155.414373 
+L 869.638098 114.604168 
+L 870.446787 170.970188 
+L 871.255476 107.414612 
+L 872.064165 218.9711 
+L 872.872855 238.32976 
+L 873.681544 238.339513 
+L 874.490233 264.442812 
+L 875.298923 188.332179 
+L 876.107612 167.461142 
+L 876.916301 193.644549 
+L 877.724991 118.126526 
+L 878.53368 172.70715 
+L 879.342369 96.513586 
+L 880.151059 216.960727 
+L 880.959748 183.410558 
+L 881.768437 219.996098 
+L 882.577126 289.515152 
+L 883.385816 179.833441 
+L 884.194505 160.146645 
+L 885.003194 158.535022 
+L 885.811884 75.007611 
+L 886.620573 138.767977 
+L 887.429262 178.917735 
+L 888.237952 150.982379 
+L 889.046641 239.233936 
+L 889.85533 252.853587 
+L 890.664019 127.3491 
+L 891.472709 172.53395 
+L 892.281398 175.992015 
+L 893.090087 185.302655 
+L 893.898777 152.297484 
+L 894.707466 137.546567 
+L 895.516155 196.023225 
+L 896.324845 164.982031 
+L 897.133534 278.667134 
+L 897.942223 206.950515 
+L 898.750913 205.213308 
+L 899.559602 110.941038 
+L 900.368291 139.427575 
+L 901.17698 135.210521 
+L 901.98567 107.682607 
+L 902.794359 90.091426 
+L 903.603048 203.579021 
+L 904.411738 230.352781 
+L 905.220427 246.767886 
+L 906.029116 183.364261 
+L 906.837806 156.085463 
+L 907.646495 182.167344 
+L 908.455184 123.405031 
+L 909.263874 120.048866 
+L 910.072563 147.02335 
+L 910.881252 257.423263 
+L 911.689941 265.131166 
+L 912.498631 278.554381 
+L 913.30732 253.346656 
+L 914.116009 190.922784 
+L 914.924699 147.168154 
+L 915.733388 162.568952 
+L 916.542077 128.435821 
+L 917.350767 129.140912 
+L 918.159456 134.068693 
+L 918.968145 224.282418 
+L 919.776834 233.454724 
+L 920.585524 174.423547 
+L 921.394213 205.633293 
+L 922.202902 154.744209 
+L 923.011592 173.176945 
+L 923.820281 146.897071 
+L 924.62897 171.919411 
+L 925.43766 101.017622 
+L 926.246349 207.519505 
+L 927.055038 151.425043 
+L 927.863728 284.290157 
+L 929.481106 197.671426 
+L 930.289795 179.398917 
+L 931.098485 139.747254 
+L 931.907174 132.701879 
+L 932.715863 37.674886 
+L 933.524553 89.180519 
+L 934.333242 97.385148 
+L 935.141931 210.409018 
+L 935.950621 241.350171 
+L 936.75931 248.415277 
+L 937.567999 188.067042 
+L 938.376689 177.842787 
+L 939.185378 117.090122 
+L 939.994067 166.828958 
+L 940.802756 109.257715 
+L 941.611446 134.235803 
+L 942.420135 185.824218 
+L 943.228824 194.816186 
+L 944.037514 238.822026 
+L 944.846203 253.94769 
+L 945.654892 165.390236 
+L 946.463582 115.870457 
+L 947.272271 144.42805 
+L 948.08096 129.82493 
+L 948.889649 117.568003 
+L 949.698339 113.752166 
+L 951.315717 253.612848 
+L 952.124407 201.363384 
+L 952.933096 250.216663 
+L 953.741785 67.940287 
+L 954.550475 149.180907 
+L 955.359164 178.042928 
+L 956.167853 141.944002 
+L 956.976543 153.585169 
+L 957.785232 152.780147 
+L 958.593921 242.575319 
+L 959.40261 232.586284 
+L 960.2113 267.5468 
+L 961.019989 203.648421 
+L 961.828678 130.351697 
+L 962.637368 156.138176 
+L 963.446057 112.254962 
+L 964.254746 108.729269 
+L 965.063436 206.818255 
+L 965.872125 208.222647 
+L 966.680814 208.270217 
+L 967.489503 243.938002 
+L 969.106882 223.483463 
+L 969.915571 124.969094 
+L 970.724261 121.428749 
+L 971.53295 139.618371 
+L 972.341639 115.875002 
+L 972.341639 115.875002 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_67">
+    <path d="M 548.628878 157.639971 
+L 992.518437 157.639971 
+" clip-path="url(#p15fa0c3c59)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #000000; stroke-opacity: 0.3; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 548.628878 316.63125 
+L 548.628878 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 992.518437 316.63125 
+L 992.518437 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 548.628878 316.63125 
+L 992.518437 316.63125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 548.628878 24.39125 
+L 992.518437 24.39125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_37">
+    <!-- DO控制策略对比 -->
+    <g transform="translate(717.536626 18.39125) scale(0.14 -0.14)">
+     <defs>
+      <path id="MicrosoftYaHei-63a7" d="M 88 1978 
+Q 550 2091 975 2200 
+L 975 3647 
+L 119 3647 
+L 119 4097 
+L 975 4097 
+L 975 5309 
+L 1463 5309 
+L 1463 4097 
+L 2100 4097 
+L 2100 3647 
+L 1463 3647 
+L 1463 2328 
+Q 1788 2416 2088 2503 
+Q 2100 2216 2131 2016 
+Q 1784 1919 1463 1825 
+L 1463 -103 
+Q 1463 -766 869 -766 
+Q 663 -766 225 -753 
+Q 200 -497 144 -234 
+Q 513 -278 694 -278 
+Q 975 -278 975 16 
+L 975 1684 
+Q 534 1556 150 1441 
+L 88 1978 
+z
+M 2425 1884 
+L 5975 1884 
+L 5975 1447 
+L 4438 1447 
+L 4438 -109 
+L 6275 -109 
+L 6275 -572 
+L 2013 -572 
+L 2013 -109 
+L 3950 -109 
+L 3950 1447 
+L 2425 1447 
+L 2425 1884 
+z
+M 2331 4372 
+L 4125 4372 
+Q 3894 4738 3613 5103 
+L 4013 5359 
+Q 4363 4928 4606 4578 
+L 4297 4372 
+L 6100 4372 
+L 6100 3247 
+L 5613 3247 
+L 5613 3916 
+L 2819 3916 
+L 2819 3247 
+L 2331 3247 
+L 2331 4372 
+z
+M 4506 3166 
+L 4838 3491 
+Q 5669 2884 6244 2372 
+L 5894 1978 
+Q 5325 2541 4506 3166 
+z
+M 3919 3159 
+Q 3188 2503 2531 1984 
+L 2188 2359 
+Q 2950 2909 3563 3503 
+L 3919 3159 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-5236" d="M 1906 5266 
+L 2394 5266 
+L 2394 4309 
+L 3750 4309 
+L 3750 3872 
+L 2394 3872 
+L 2394 3034 
+L 4025 3034 
+L 4025 2597 
+L 2394 2597 
+L 2394 1897 
+L 3763 1897 
+L 3763 409 
+Q 3763 -266 3150 -272 
+Q 2956 -278 2631 -272 
+Q 2600 -72 2538 178 
+Q 2844 159 3038 159 
+Q 3300 159 3300 472 
+L 3300 1472 
+L 2394 1472 
+L 2394 -847 
+L 1906 -847 
+L 1906 1472 
+L 1044 1472 
+L 1044 -378 
+L 581 -378 
+L 581 1897 
+L 1906 1897 
+L 1906 2597 
+L 113 2597 
+L 113 3034 
+L 1906 3034 
+L 1906 3872 
+L 981 3872 
+Q 822 3513 619 3191 
+Q 413 3309 194 3428 
+Q 688 4172 881 5041 
+L 1344 4922 
+Q 1263 4603 1159 4309 
+L 1906 4309 
+L 1906 5266 
+z
+M 5469 5272 
+L 5969 5272 
+L 5969 122 
+Q 5969 -722 5225 -722 
+Q 4981 -722 4388 -716 
+Q 4350 -472 4288 -172 
+Q 4813 -222 5075 -222 
+Q 5469 -222 5469 222 
+L 5469 5272 
+z
+M 4750 822 
+L 4269 822 
+L 4269 4672 
+L 4750 4672 
+L 4750 822 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-7b56" d="M 6306 -128 
+Q 6094 -397 5969 -591 
+Q 4284 122 3438 1069 
+L 3438 -841 
+L 2975 -841 
+L 2975 1053 
+Q 1894 6 413 -666 
+Q 250 -447 88 -272 
+Q 1709 366 2975 1622 
+L 2975 2034 
+L 1269 2034 
+L 1269 828 
+L 813 828 
+L 813 2422 
+L 2975 2422 
+L 2975 2928 
+L 263 2928 
+L 263 3322 
+L 2975 3322 
+L 2975 3703 
+L 3438 3703 
+L 3438 3322 
+L 6156 3322 
+L 6156 2928 
+L 3438 2928 
+L 3438 2422 
+L 5706 2422 
+L 5706 1403 
+Q 5706 784 5069 784 
+Q 4813 784 4513 803 
+Q 4488 1047 4438 1272 
+Q 4763 1222 4950 1222 
+Q 5250 1222 5250 1516 
+L 5250 2034 
+L 3438 2034 
+L 3438 1625 
+Q 4619 372 6306 -128 
+z
+M 1294 5347 
+L 1831 5347 
+Q 1688 5041 1513 4759 
+L 3325 4759 
+L 3325 4372 
+L 1244 4372 
+Q 875 3878 388 3459 
+Q 263 3609 75 3797 
+Q 856 4428 1294 5347 
+z
+M 4006 5347 
+L 4513 5347 
+Q 4375 5031 4231 4759 
+L 6225 4759 
+L 6225 4372 
+L 4013 4372 
+Q 3778 3981 3525 3697 
+Q 3388 3797 3088 3934 
+Q 3663 4553 4006 5347 
+z
+M 4781 3416 
+Q 4644 3628 4263 4072 
+L 4588 4303 
+Q 4919 3991 5150 3697 
+L 4781 3416 
+z
+M 1988 3416 
+Q 1750 3728 1469 4053 
+L 1794 4284 
+Q 2094 3997 2356 3697 
+L 1988 3416 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-7565" d="M 413 4716 
+L 2600 4716 
+L 2600 -222 
+L 2188 -222 
+L 2188 97 
+L 825 97 
+L 825 -347 
+L 413 -347 
+L 413 4716 
+z
+M 2638 3378 
+Q 3269 4222 3719 5341 
+L 4169 5197 
+Q 4044 4913 3919 4653 
+L 5888 4653 
+L 5888 4234 
+Q 5453 3375 4819 2756 
+Q 5434 2328 6331 2109 
+Q 6194 1853 6094 1591 
+Q 5122 1919 4466 2450 
+Q 3797 1925 2906 1516 
+Q 2756 1772 2619 1947 
+Q 3463 2269 4125 2763 
+Q 3747 3159 3428 3734 
+Q 3200 3353 2969 3047 
+Q 2781 3266 2638 3378 
+z
+M 3200 1584 
+L 5756 1584 
+L 5756 -847 
+L 5294 -847 
+L 5294 -547 
+L 3663 -547 
+L 3663 -847 
+L 3200 -847 
+L 3200 1584 
+z
+M 5294 1147 
+L 3663 1147 
+L 3663 -109 
+L 5294 -109 
+L 5294 1147 
+z
+M 5363 4228 
+L 3703 4228 
+L 3666 4159 
+Q 4013 3475 4466 3041 
+Q 4963 3500 5363 4228 
+z
+M 825 516 
+L 1300 516 
+L 1300 2209 
+L 825 2209 
+L 825 516 
+z
+M 1713 516 
+L 2188 516 
+L 2188 2209 
+L 1713 2209 
+L 1713 516 
+z
+M 2188 4297 
+L 1713 4297 
+L 1713 2628 
+L 2188 2628 
+L 2188 4297 
+z
+M 825 2628 
+L 1300 2628 
+L 1300 4297 
+L 825 4297 
+L 825 2628 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-5bf9" d="M 694 3691 
+Q 1234 2909 1741 2166 
+Q 2113 3081 2213 4147 
+L 250 4147 
+L 250 4622 
+L 2725 4622 
+L 2725 4166 
+Q 2553 2809 2059 1700 
+Q 2569 953 3044 247 
+L 2594 -53 
+Q 2203 563 1803 1181 
+Q 1247 163 388 -622 
+Q 263 -428 81 -166 
+Q 975 638 1500 1647 
+Q 919 2538 319 3434 
+L 694 3691 
+z
+M 2975 3941 
+L 5056 3941 
+L 5056 5278 
+L 5563 5278 
+L 5563 3941 
+L 6325 3941 
+L 6325 3466 
+L 5563 3466 
+L 5563 191 
+Q 5563 -716 4669 -716 
+Q 4388 -716 3744 -709 
+Q 3713 -478 3644 -147 
+Q 4263 -197 4588 -197 
+Q 5056 -197 5056 278 
+L 5056 3466 
+L 2975 3466 
+L 2975 3941 
+z
+M 3088 2684 
+L 3494 2928 
+Q 4000 2184 4388 1484 
+L 3919 1216 
+Q 3550 1922 3088 2684 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-6bd4" d="M 3225 5316 
+L 3744 5316 
+L 3744 2672 
+Q 4959 3550 5744 4509 
+L 6188 4178 
+Q 5175 3063 3744 2056 
+L 3744 247 
+Q 3744 -166 4106 -166 
+L 5175 -166 
+Q 5588 -166 5650 203 
+Q 5725 678 5763 1247 
+Q 6025 1147 6300 1066 
+Q 6244 484 6150 22 
+Q 6019 -622 5319 -622 
+L 3944 -622 
+Q 3225 -622 3225 159 
+L 3225 5316 
+z
+M 1063 5153 
+L 1063 3278 
+L 2825 3278 
+L 2825 2809 
+L 1063 2809 
+L 1063 153 
+Q 1713 428 2763 928 
+Q 2763 634 2788 366 
+Q 1869 -3 1231 -328 
+Q 956 -472 725 -672 
+L 344 -184 
+Q 544 -34 544 272 
+L 544 5153 
+L 1063 5153 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MicrosoftYaHei-44"/>
+     <use xlink:href="#MicrosoftYaHei-4f" x="76.171875"/>
+     <use xlink:href="#MicrosoftYaHei-63a7" x="157.666016"/>
+     <use xlink:href="#MicrosoftYaHei-5236" x="257.666016"/>
+     <use xlink:href="#MicrosoftYaHei-7b56" x="357.666016"/>
+     <use xlink:href="#MicrosoftYaHei-7565" x="457.666016"/>
+     <use xlink:href="#MicrosoftYaHei-5bf9" x="557.666016"/>
+     <use xlink:href="#MicrosoftYaHei-6bd4" x="657.666016"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="patch_12">
+     <path d="M 555.628878 78.830312 
+L 646.752315 78.830312 
+Q 648.752315 78.830312 648.752315 76.830312 
+L 648.752315 31.39125 
+Q 648.752315 29.39125 646.752315 29.39125 
+L 555.628878 29.39125 
+Q 553.628878 29.39125 553.628878 31.39125 
+L 553.628878 76.830312 
+Q 553.628878 78.830312 555.628878 78.830312 
+z
+" style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="line2d_68">
+     <path d="M 557.628878 37.885 
+L 567.628878 37.885 
+L 577.628878 37.885 
+" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_38">
+     <!-- 固定DO(PID) -->
+     <g transform="translate(585.628878 41.385) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-56fa" d="M 469 4997 
+L 5938 4997 
+L 5938 -834 
+L 5469 -834 
+L 5469 -509 
+L 944 -509 
+L 944 -841 
+L 469 -841 
+L 469 4997 
+z
+M 5469 4541 
+L 944 4541 
+L 944 -53 
+L 5469 -53 
+L 5469 4541 
+z
+M 1869 2459 
+L 2963 2459 
+L 2963 3216 
+L 1313 3216 
+L 1313 3641 
+L 2963 3641 
+L 2963 4366 
+L 3425 4366 
+L 3425 3641 
+L 5081 3641 
+L 5081 3216 
+L 3425 3216 
+L 3425 2459 
+L 4531 2459 
+L 4531 434 
+L 4081 434 
+L 4081 691 
+L 2319 691 
+L 2319 434 
+L 1869 434 
+L 1869 2459 
+z
+M 4081 2047 
+L 2319 2047 
+L 2319 1103 
+L 4081 1103 
+L 4081 2047 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-5b9a" d="M 81 -384 
+Q 1119 509 1281 2241 
+L 1806 2159 
+Q 1731 1581 1578 1081 
+Q 2063 50 3081 -103 
+L 3081 2647 
+L 225 2647 
+L 225 3116 
+L 6163 3116 
+L 6163 2647 
+L 3600 2647 
+L 3600 1634 
+L 5775 1634 
+L 5775 1172 
+L 3600 1172 
+L 3600 -138 
+Q 4844 -169 6306 -116 
+Q 6200 -359 6125 -634 
+Q 4594 -653 3450 -616 
+Q 2041 -616 1378 528 
+Q 1022 -300 413 -872 
+Q 269 -628 81 -384 
+z
+M 450 4566 
+L 3116 4566 
+Q 2931 4834 2725 5091 
+L 3200 5347 
+Q 3444 5066 3731 4716 
+L 3450 4566 
+L 5981 4566 
+L 5981 3378 
+L 5488 3378 
+L 5488 4097 
+L 944 4097 
+L 944 3384 
+L 450 3384 
+L 450 4566 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-50" d="M 1250 1809 
+L 1250 0 
+L 625 0 
+L 625 4841 
+L 2000 4841 
+Q 2784 4841 3217 4462 
+Q 3650 4084 3650 3381 
+Q 3650 2669 3144 2226 
+Q 2638 1784 1878 1809 
+L 1250 1809 
+z
+M 1250 4291 
+L 1250 2359 
+L 1828 2359 
+Q 2400 2359 2697 2617 
+Q 2994 2875 2994 3356 
+Q 2994 4291 1888 4291 
+L 1250 4291 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-49" d="M 1250 4841 
+L 1250 0 
+L 625 0 
+L 625 4841 
+L 1250 4841 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-56fa"/>
+      <use xlink:href="#MicrosoftYaHei-5b9a" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-4f" x="276.171875"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="357.666016"/>
+      <use xlink:href="#MicrosoftYaHei-50" x="391.064453"/>
+      <use xlink:href="#MicrosoftYaHei-49" x="452.246094"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="481.640625"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="557.8125"/>
+     </g>
+    </g>
+    <g id="line2d_69">
+     <path d="M 557.628878 53.364687 
+L 567.628878 53.364687 
+L 577.628878 53.364687 
+" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_39">
+     <!-- DQN策略 -->
+     <g transform="translate(585.628878 56.864687) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-44"/>
+      <use xlink:href="#MicrosoftYaHei-51" x="76.171875"/>
+      <use xlink:href="#MicrosoftYaHei-4e" x="157.666016"/>
+      <use xlink:href="#MicrosoftYaHei-7b56" x="238.964844"/>
+      <use xlink:href="#MicrosoftYaHei-7565" x="338.964844"/>
+     </g>
+    </g>
+    <g id="line2d_70">
+     <path d="M 557.628878 68.844375 
+L 567.628878 68.844375 
+L 577.628878 68.844375 
+" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #000000; stroke-opacity: 0.3; stroke-width: 1.5"/>
+    </g>
+    <g id="text_40">
+     <!-- DO目标 -->
+     <g transform="translate(585.628878 72.344375) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-76ee" d="M 944 5016 
+L 5469 5016 
+L 5469 -772 
+L 4938 -772 
+L 4938 -303 
+L 1475 -303 
+L 1475 -772 
+L 944 -772 
+L 944 5016 
+z
+M 1475 1341 
+L 1475 159 
+L 4938 159 
+L 4938 1341 
+L 1475 1341 
+z
+M 1475 2947 
+L 1475 1778 
+L 4938 1778 
+L 4938 2947 
+L 1475 2947 
+z
+M 1475 4553 
+L 1475 3384 
+L 4938 3384 
+L 4938 4553 
+L 1475 4553 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6807" d="M 75 1409 
+Q 769 2478 1025 3647 
+L 119 3647 
+L 119 4072 
+L 1069 4072 
+L 1069 5297 
+L 1506 5297 
+L 1506 4072 
+L 2356 4072 
+L 2356 3647 
+L 1506 3647 
+L 1506 2541 
+L 1775 2822 
+Q 2175 2478 2481 2159 
+L 2150 1816 
+Q 1850 2156 1506 2503 
+L 1506 -797 
+L 1069 -797 
+L 1069 2588 
+Q 738 1513 281 859 
+Q 194 1128 75 1409 
+z
+M 2350 3097 
+L 6250 3097 
+L 6250 2659 
+L 4525 2659 
+L 4525 47 
+Q 4525 -734 3806 -734 
+Q 3469 -741 2975 -728 
+Q 2944 -503 2888 -209 
+Q 3319 -259 3675 -259 
+Q 4050 -259 4050 203 
+L 4050 2659 
+L 2350 2659 
+L 2350 3097 
+z
+M 2638 4928 
+L 5963 4928 
+L 5963 4491 
+L 2638 4491 
+L 2638 4928 
+z
+M 4938 1853 
+L 5381 2066 
+Q 5975 928 6369 72 
+L 5869 -147 
+Q 5463 822 4938 1853 
+z
+M 2931 2066 
+L 3400 1878 
+Q 2888 734 2381 -153 
+Q 2188 -41 1925 66 
+Q 2425 872 2931 2066 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-44"/>
+      <use xlink:href="#MicrosoftYaHei-4f" x="76.171875"/>
+      <use xlink:href="#MicrosoftYaHei-76ee" x="157.666016"/>
+      <use xlink:href="#MicrosoftYaHei-6807" x="257.666016"/>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_13">
+    <path d="M 50.598438 671.23125 
+L 494.487997 671.23125 
+L 494.487997 378.99125 
+L 50.598438 378.99125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_14">
+     <g id="line2d_71">
+      <path d="M 70.775236 671.23125 
+L 70.775236 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_72">
+      <g>
+       <use xlink:href="#mdfe835672f" x="70.775236" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <!-- 0 -->
+      <g transform="translate(67.843204 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_73">
+      <path d="M 151.644166 671.23125 
+L 151.644166 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_74">
+      <g>
+       <use xlink:href="#mdfe835672f" x="151.644166" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <!-- 100 -->
+      <g transform="translate(142.848072 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_75">
+      <path d="M 232.513097 671.23125 
+L 232.513097 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_76">
+      <g>
+       <use xlink:href="#mdfe835672f" x="232.513097" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <!-- 200 -->
+      <g transform="translate(223.717003 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_77">
+      <path d="M 313.382027 671.23125 
+L 313.382027 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_78">
+      <g>
+       <use xlink:href="#mdfe835672f" x="313.382027" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_44">
+      <!-- 300 -->
+      <g transform="translate(304.585934 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-33"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_79">
+      <path d="M 394.250958 671.23125 
+L 394.250958 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_80">
+      <g>
+       <use xlink:href="#mdfe835672f" x="394.250958" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <!-- 400 -->
+      <g transform="translate(385.454864 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-34"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_81">
+      <path d="M 475.119888 671.23125 
+L 475.119888 378.99125 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_82">
+      <g>
+       <use xlink:href="#mdfe835672f" x="475.119888" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <!-- 500 -->
+      <g transform="translate(466.323795 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-35"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_47">
+     <!-- 时间步 -->
+     <g transform="translate(257.543217 700.704687) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-65f6"/>
+      <use xlink:href="#MicrosoftYaHei-95f4" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-6b65" x="200"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_19">
+     <g id="line2d_83">
+      <path d="M 50.598438 668.801646 
+L 494.487997 668.801646 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_84">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="668.801646" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_48">
+      <!-- 0.35 -->
+      <g transform="translate(23.598438 672.798521) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-33" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_85">
+      <path d="M 50.598438 618.946936 
+L 494.487997 618.946936 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_86">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="618.946936" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_49">
+      <!-- 0.40 -->
+      <g transform="translate(23.598438 622.943811) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-34" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_87">
+      <path d="M 50.598438 569.092226 
+L 494.487997 569.092226 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_88">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="569.092226" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_50">
+      <!-- 0.45 -->
+      <g transform="translate(23.598438 573.089101) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-34" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_89">
+      <path d="M 50.598438 519.237516 
+L 494.487997 519.237516 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_90">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="519.237516" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_51">
+      <!-- 0.50 -->
+      <g transform="translate(23.598438 523.234391) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_91">
+      <path d="M 50.598438 469.382806 
+L 494.487997 469.382806 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_92">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="469.382806" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_52">
+      <!-- 0.55 -->
+      <g transform="translate(23.598438 473.379681) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-35" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_93">
+      <path d="M 50.598438 419.528097 
+L 494.487997 419.528097 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_94">
+      <g>
+       <use xlink:href="#m2412f84298" x="50.598438" y="419.528097" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_53">
+      <!-- 0.60 -->
+      <g transform="translate(23.598438 423.524972) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+       <use xlink:href="#MicrosoftYaHei-2e" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-36" x="82.714844"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="141.357422"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_54">
+     <!-- 能耗 (kWh/m3) -->
+     <g transform="translate(17.1125 560.57375) rotate(-90) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-80fd" d="M 950 -759 
+L 463 -759 
+L 463 2928 
+L 3000 2928 
+L 3000 -28 
+Q 3000 -703 2375 -703 
+Q 2100 -709 1669 -709 
+Q 1638 -516 1575 -234 
+Q 1969 -266 2206 -266 
+Q 2513 -266 2513 53 
+L 2513 572 
+L 950 572 
+L 950 -759 
+z
+M 3606 2253 
+L 4094 2253 
+L 4094 1222 
+Q 4981 1553 5950 2091 
+L 6231 1659 
+Q 5209 1122 4094 706 
+L 4094 166 
+Q 4094 -228 4400 -228 
+L 5319 -228 
+Q 5638 -228 5688 78 
+Q 5731 353 5763 897 
+Q 6000 803 6250 722 
+Q 6200 172 6144 -109 
+Q 6063 -659 5363 -659 
+L 4319 -659 
+Q 3606 -659 3606 72 
+L 3606 2253 
+z
+M 3619 5303 
+L 4106 5303 
+L 4106 4231 
+Q 4966 4572 5813 5053 
+L 6094 4622 
+Q 5119 4128 4106 3719 
+L 4106 3359 
+Q 4106 2941 4438 2941 
+L 5231 2941 
+Q 5625 2941 5675 3266 
+Q 5719 3534 5750 4047 
+Q 5988 3953 6238 3866 
+Q 6188 3366 6131 3053 
+Q 6038 2509 5288 2509 
+L 4375 2509 
+Q 3619 2509 3619 3259 
+L 3619 5303 
+z
+M 2463 4772 
+Q 3031 4034 3450 3353 
+Q 3213 3191 3019 3066 
+Q 2897 3281 2759 3506 
+Q 1231 3394 313 3303 
+L 113 3828 
+Q 388 3978 719 4391 
+Q 1063 4841 1394 5397 
+L 1888 5216 
+Q 1369 4466 794 3797 
+Q 1731 3856 2497 3919 
+Q 2300 4216 2075 4528 
+L 2463 4772 
+z
+M 950 947 
+L 2513 947 
+L 2513 1553 
+L 950 1553 
+L 950 947 
+z
+M 2513 2528 
+L 950 2528 
+L 950 1928 
+L 2513 1928 
+L 2513 2528 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-8017" d="M 2506 1622 
+L 3913 1753 
+L 3913 2878 
+L 2738 2772 
+L 2706 3197 
+L 3913 3303 
+L 3913 4459 
+Q 3381 4403 2794 4353 
+Q 2769 4584 2700 4809 
+Q 4225 4916 5706 5172 
+L 5819 4697 
+Q 5188 4603 4381 4509 
+L 4381 3347 
+L 5825 3478 
+L 5850 3053 
+L 4381 2916 
+L 4381 1797 
+L 6150 1966 
+L 6175 1541 
+L 4381 1366 
+L 4381 128 
+Q 4381 -241 4706 -241 
+L 5400 -241 
+Q 5688 -241 5750 147 
+Q 5813 566 5844 991 
+Q 6094 866 6319 791 
+Q 6250 291 6194 -28 
+Q 6094 -691 5456 -691 
+L 4588 -691 
+Q 3913 -691 3913 72 
+L 3913 1322 
+L 2538 1197 
+L 2506 1622 
+z
+M 88 191 
+Q 769 1072 1088 2022 
+L 138 2022 
+L 138 2422 
+L 1250 2422 
+L 1250 3028 
+L 363 3028 
+L 363 3428 
+L 1250 3428 
+L 1250 4016 
+L 231 4016 
+L 231 4416 
+L 1250 4416 
+L 1250 5303 
+L 1675 5303 
+L 1675 4416 
+L 2631 4416 
+L 2631 4016 
+L 1675 4016 
+L 1675 3428 
+L 2519 3428 
+L 2519 3028 
+L 1675 3028 
+L 1675 2422 
+L 2700 2422 
+L 2700 2022 
+L 1675 2022 
+L 1675 1334 
+L 1894 1547 
+Q 2381 1078 2806 622 
+L 2463 316 
+Q 2125 747 1675 1203 
+L 1675 -841 
+L 1250 -841 
+L 1250 1491 
+Q 869 434 281 -297 
+Q 188 -16 88 191 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-6b" d="M 3484 0 
+L 2650 0 
+L 1172 1666 
+L 1159 1666 
+L 1159 0 
+L 547 0 
+L 547 5116 
+L 1159 5116 
+L 1159 1872 
+L 1172 1872 
+L 2575 3456 
+L 3363 3456 
+L 1800 1794 
+L 3484 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-57" d="M 6431 4841 
+L 5075 0 
+L 4347 0 
+L 3372 3488 
+Q 3306 3725 3294 3988 
+L 3281 3988 
+Q 3263 3728 3194 3494 
+L 2209 0 
+L 1488 0 
+L 84 4841 
+L 775 4841 
+L 1763 1184 
+Q 1828 938 1841 688 
+L 1859 688 
+Q 1875 875 1963 1184 
+L 3009 4841 
+L 3625 4841 
+L 4625 1156 
+Q 4675 975 4706 694 
+L 4719 694 
+Q 4734 897 4809 1169 
+L 5759 4841 
+L 6431 4841 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-68" d="M 3466 0 
+L 2856 0 
+L 2856 1988 
+Q 2856 3031 2081 3031 
+Q 1684 3031 1421 2726 
+Q 1159 2422 1159 1959 
+L 1159 0 
+L 547 0 
+L 547 5116 
+L 1159 5116 
+L 1159 2888 
+L 1172 2888 
+Q 1569 3538 2300 3538 
+Q 3466 3538 3466 2128 
+L 3466 0 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-80fd"/>
+      <use xlink:href="#MicrosoftYaHei-8017" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-20" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="229.589844"/>
+      <use xlink:href="#MicrosoftYaHei-6b" x="262.988281"/>
+      <use xlink:href="#MicrosoftYaHei-57" x="317.431641"/>
+      <use xlink:href="#MicrosoftYaHei-68" x="419.189453"/>
+      <use xlink:href="#MicrosoftYaHei-2f" x="480.761719"/>
+      <use xlink:href="#MicrosoftYaHei-6d" x="523.486328"/>
+      <use xlink:href="#MicrosoftYaHei-33" x="617.1875"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="675.830078"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_95">
+    <path d="M 70.775236 516.322564 
+L 71.583925 533.787108 
+L 72.392614 544.181068 
+L 73.201304 586.32875 
+L 74.009993 544.519019 
+L 74.818682 566.684257 
+L 75.627372 529.821318 
+L 76.436061 525.546829 
+L 77.24475 547.054227 
+L 78.053439 535.105308 
+L 78.862129 528.687669 
+L 80.479507 556.207334 
+L 81.288197 563.857751 
+L 82.096886 575.602728 
+L 82.905575 563.388796 
+L 83.714265 524.462756 
+L 84.522954 537.544061 
+L 85.331643 523.075397 
+L 86.140332 529.326081 
+L 87.757711 568.148382 
+L 88.5664 568.69815 
+L 89.37509 595.194831 
+L 90.183779 580.083296 
+L 90.992468 559.845199 
+L 91.801158 569.259707 
+L 92.609847 545.503741 
+L 93.418536 526.583784 
+L 94.227226 545.288168 
+L 95.035915 555.915489 
+L 95.844604 568.4119 
+L 96.653293 586.826129 
+L 97.461983 569.166559 
+L 98.270672 576.839869 
+L 99.888051 553.440883 
+L 100.69674 528.8387 
+L 101.505429 541.110086 
+L 102.314119 549.470966 
+L 103.122808 571.733563 
+L 103.931497 601.842255 
+L 104.740186 580.762696 
+L 105.548876 573.177981 
+L 106.357565 558.441174 
+L 107.166254 570.284975 
+L 107.974944 535.653898 
+L 108.783633 539.82904 
+L 109.592322 549.843998 
+L 110.401012 572.858899 
+L 111.209701 566.524728 
+L 112.01839 565.55631 
+L 112.82708 598.191323 
+L 113.635769 586.536406 
+L 114.444458 538.067859 
+L 115.253147 541.648427 
+L 116.061837 505.547805 
+L 116.870526 537.947475 
+L 117.679215 535.676675 
+L 118.487905 563.577651 
+L 119.296594 565.270379 
+L 120.105283 533.583388 
+L 120.913973 551.272416 
+L 121.722662 541.438507 
+L 122.531351 521.617252 
+L 123.340041 515.16069 
+L 124.14873 506.023014 
+L 124.957419 534.7424 
+L 125.766108 555.616503 
+L 126.574798 554.085034 
+L 128.192176 560.601623 
+L 129.000866 540.03879 
+L 129.809555 546.935758 
+L 130.618244 535.65657 
+L 131.426934 521.239878 
+L 133.044312 533.277678 
+L 134.661691 583.349114 
+L 135.47038 571.057935 
+L 136.279069 564.873116 
+L 137.087759 513.369972 
+L 137.896448 519.839481 
+L 138.705137 537.735582 
+L 139.513827 521.119016 
+L 140.322516 523.504401 
+L 141.131205 561.624308 
+L 141.939895 568.87545 
+L 142.748584 571.241251 
+L 143.557273 582.408502 
+L 144.365962 579.908774 
+L 145.983341 527.624842 
+L 146.79203 537.845344 
+L 147.60072 558.515422 
+L 148.409409 559.93338 
+L 149.218098 575.311463 
+L 150.026788 568.962462 
+L 150.835477 578.983938 
+L 151.644166 581.538183 
+L 154.070234 543.46674 
+L 154.878923 548.310389 
+L 156.496302 570.074919 
+L 157.304991 562.260744 
+L 158.113681 588.309721 
+L 158.92237 569.757277 
+L 159.731059 585.645365 
+L 160.539749 570.228096 
+L 161.348438 562.504596 
+L 162.157127 545.819794 
+L 162.965816 537.043028 
+L 163.774506 550.366745 
+L 164.583195 567.198782 
+L 165.391884 591.224058 
+L 166.200574 579.307817 
+L 167.009263 581.137346 
+L 167.817952 577.287476 
+L 168.626642 562.818144 
+L 169.435331 518.93491 
+L 170.24402 499.147746 
+L 171.861399 551.156859 
+L 172.670088 550.918079 
+L 173.478777 565.097173 
+L 174.287467 568.194089 
+L 175.096156 561.708939 
+L 176.713535 553.82879 
+L 177.522224 528.160745 
+L 178.330913 523.327501 
+L 179.139603 535.07361 
+L 179.948292 529.071017 
+L 181.565671 554.550513 
+L 182.37436 589.372578 
+L 183.183049 578.039423 
+L 183.991738 555.024491 
+L 184.800428 547.02148 
+L 185.609117 525.547169 
+L 186.417806 508.244239 
+L 187.226496 531.592197 
+L 188.035185 545.004724 
+L 188.843874 547.717447 
+L 189.652564 571.662889 
+L 190.461253 575.193718 
+L 191.269942 563.342371 
+L 192.078631 563.688859 
+L 192.887321 539.112818 
+L 193.69601 509.616165 
+L 194.504699 460.013451 
+L 195.313389 553.108835 
+L 196.122078 554.157704 
+L 196.930767 581.60326 
+L 197.739457 601.186181 
+L 198.548146 583.478845 
+L 199.356835 549.405361 
+L 200.165525 553.382882 
+L 200.974214 525.704329 
+L 201.782903 554.054905 
+L 202.591592 546.751197 
+L 203.400282 568.989158 
+L 204.208971 584.982993 
+L 205.01766 566.991044 
+L 205.82635 575.263448 
+L 206.635039 560.836115 
+L 207.443728 541.08561 
+L 208.252418 552.736516 
+L 209.061107 545.118233 
+L 209.869796 531.74979 
+L 210.678485 561.36342 
+L 211.487175 568.059628 
+L 212.295864 518.832423 
+L 213.104553 599.642206 
+L 213.913243 571.150847 
+L 214.721932 576.836365 
+L 216.339311 542.948772 
+L 217.148 535.372391 
+L 217.956689 543.020819 
+L 218.765379 552.681597 
+L 219.574068 575.828048 
+L 220.382757 567.836842 
+L 221.191446 571.008236 
+L 222.000136 568.442848 
+L 222.808825 556.942413 
+L 223.617514 529.406476 
+L 224.426204 531.240323 
+L 225.234893 538.660347 
+L 226.043582 552.760221 
+L 226.852272 553.192733 
+L 227.660961 559.100082 
+L 228.46965 589.743982 
+L 229.27834 552.139594 
+L 230.087029 570.458009 
+L 230.895718 556.095422 
+L 232.513097 493.133811 
+L 233.321786 524.654801 
+L 234.130475 535.226055 
+L 234.939165 550.772304 
+L 235.747854 541.48214 
+L 236.556543 589.464392 
+L 237.365233 558.693691 
+L 238.173922 565.849208 
+L 239.7913 507.006581 
+L 240.59999 514.375241 
+L 241.408679 519.567778 
+L 242.217368 541.615087 
+L 243.026058 479.195543 
+L 243.834747 565.676776 
+L 244.643436 560.770996 
+L 245.452126 583.882496 
+L 246.260815 538.973442 
+L 247.069504 539.286414 
+L 247.878194 519.398877 
+L 248.686883 512.519828 
+L 249.495572 535.003466 
+L 250.304261 543.547515 
+L 251.112951 575.870086 
+L 251.92164 580.785845 
+L 252.730329 592.308075 
+L 253.539019 570.081215 
+L 254.347708 553.520936 
+L 255.156397 543.589232 
+L 255.965087 517.255618 
+L 256.773776 554.102425 
+L 257.582465 548.497586 
+L 258.391155 583.816478 
+L 259.199844 585.869704 
+L 260.008533 590.732291 
+L 260.817222 597.235364 
+L 261.625912 583.520908 
+L 262.434601 563.453169 
+L 263.24329 540.228792 
+L 264.05198 527.462827 
+L 264.860669 561.041081 
+L 265.669358 569.347394 
+L 266.478048 564.111691 
+L 267.286737 571.860764 
+L 268.095426 571.868017 
+L 268.904115 558.20771 
+L 269.712805 572.635979 
+L 270.521494 545.66039 
+L 271.330183 533.383686 
+L 272.138873 536.166631 
+L 272.947562 530.936374 
+L 273.756251 569.02656 
+L 274.564941 581.592803 
+L 275.37363 571.165225 
+L 276.182319 566.15404 
+L 276.991009 553.965186 
+L 277.799698 535.296569 
+L 278.608387 534.280768 
+L 279.417076 523.906887 
+L 281.034455 557.718672 
+L 282.651834 549.508798 
+L 283.460523 572.654127 
+L 284.269212 561.22217 
+L 285.077902 524.248134 
+L 285.886591 525.336673 
+L 286.69528 515.925866 
+L 287.50397 541.498867 
+L 288.312659 456.84908 
+L 289.121348 554.295916 
+L 289.930037 556.712959 
+L 290.738727 557.319936 
+L 291.547416 566.600781 
+L 292.356105 568.652892 
+L 293.164795 523.534746 
+L 293.973484 525.29525 
+L 294.782173 513.41486 
+L 295.590863 542.49302 
+L 296.399552 556.628505 
+L 297.208241 535.067598 
+L 298.01693 547.26036 
+L 298.82562 568.126296 
+L 299.634309 559.371029 
+L 300.442998 544.738089 
+L 301.251688 541.08658 
+L 302.060377 543.054788 
+L 302.869066 525.681967 
+L 303.677756 525.619512 
+L 304.486445 534.980957 
+L 305.295134 565.307228 
+L 306.103824 586.620742 
+L 306.912513 574.292495 
+L 307.721202 578.663234 
+L 308.529891 571.87446 
+L 309.338581 511.031355 
+L 310.14727 547.59297 
+L 310.955959 545.015433 
+L 311.764649 552.998065 
+L 313.382027 586.41085 
+L 314.190717 581.800427 
+L 314.999406 593.832064 
+L 315.808095 588.337158 
+L 316.616784 571.386144 
+L 317.425474 533.187524 
+L 318.234163 540.580676 
+L 319.042852 520.35366 
+L 319.851542 551.370288 
+L 320.660231 577.104301 
+L 321.46892 594.961479 
+L 322.27761 577.752918 
+L 323.086299 574.625146 
+L 323.894988 559.708447 
+L 324.703678 524.401632 
+L 325.512367 480.944977 
+L 326.321056 528.642323 
+L 327.129745 561.308613 
+L 327.938435 543.348706 
+L 328.747124 569.512106 
+L 329.555813 556.888823 
+L 330.364503 546.96112 
+L 331.173192 547.885972 
+L 331.981881 554.655544 
+L 332.790571 515.53875 
+L 333.59926 499.890505 
+L 334.407949 527.046383 
+L 335.216639 490.654804 
+L 336.025328 539.205303 
+L 336.834017 557.447652 
+L 337.642706 578.973355 
+L 339.260085 535.632104 
+L 340.068774 530.934458 
+L 340.877464 512.590245 
+L 341.686153 442.076251 
+L 342.494842 527.525064 
+L 343.303532 547.962762 
+L 344.112221 553.711434 
+L 344.92091 560.574453 
+L 345.729599 563.965756 
+L 346.538289 556.704809 
+L 347.346978 552.264361 
+L 348.155667 523.536884 
+L 348.964357 505.25653 
+L 349.773046 508.210713 
+L 350.581735 522.301704 
+L 351.390425 527.974793 
+L 352.199114 568.080863 
+L 353.007803 566.582426 
+L 353.816493 562.233067 
+L 354.625182 541.107037 
+L 355.433871 534.661809 
+L 356.24256 511.980272 
+L 357.05125 530.609196 
+L 357.859939 544.444916 
+L 358.668628 502.289618 
+L 359.477318 553.62392 
+L 360.286007 585.312045 
+L 361.094696 599.520968 
+L 361.903386 570.357343 
+L 362.712075 459.394963 
+L 363.520764 545.415146 
+L 364.329454 544.258154 
+L 365.138143 529.433972 
+L 365.946832 537.19286 
+L 366.755521 541.893527 
+L 367.564211 579.014944 
+L 368.3729 610.087092 
+L 369.181589 586.70366 
+L 369.990279 557.729161 
+L 370.798968 556.244622 
+L 371.607657 533.707159 
+L 372.416347 551.569541 
+L 373.225036 509.889341 
+L 374.033725 580.47427 
+L 374.842414 563.085485 
+L 375.651104 559.424602 
+L 376.459793 583.213308 
+L 377.268482 539.64358 
+L 378.077172 565.834358 
+L 378.885861 538.020628 
+L 379.69455 534.833857 
+L 380.50324 540.222212 
+L 381.311929 538.273996 
+L 382.120618 562.758136 
+L 382.929308 547.725375 
+L 383.737997 585.487685 
+L 384.546686 589.110453 
+L 385.355375 569.416209 
+L 386.164065 542.697588 
+L 386.972754 534.792285 
+L 387.781443 494.151538 
+L 388.590133 521.707366 
+L 389.398822 541.052864 
+L 390.207511 544.034337 
+L 391.016201 549.491313 
+L 391.82489 568.662525 
+L 392.633579 558.903773 
+L 393.442269 545.281961 
+L 394.250958 538.074982 
+L 395.059647 517.700141 
+L 395.868336 524.996903 
+L 396.677026 512.95814 
+L 397.485715 525.931745 
+L 398.294404 545.860696 
+L 399.103094 570.297203 
+L 399.911783 561.735668 
+L 400.720472 547.108049 
+L 401.529162 538.901643 
+L 402.337851 516.403201 
+L 403.14654 502.672528 
+L 403.955229 520.904944 
+L 404.763919 519.132677 
+L 405.572608 543.280318 
+L 406.381297 550.776887 
+L 407.189987 571.513301 
+L 407.998676 560.553014 
+L 408.807365 552.805558 
+L 409.616055 552.888431 
+L 410.424744 529.318683 
+L 411.233433 535.866602 
+L 412.042123 519.357126 
+L 412.850812 551.735485 
+L 413.659501 565.406666 
+L 414.46819 571.893311 
+L 415.27688 581.518794 
+L 416.085569 558.639878 
+L 416.894258 549.836125 
+L 417.702948 522.909303 
+L 418.511637 520.545779 
+L 419.320326 549.758031 
+L 420.129016 528.989274 
+L 420.937705 544.395924 
+L 421.746394 525.693548 
+L 422.555083 556.307451 
+L 423.363773 575.936895 
+L 424.981151 552.341655 
+L 425.789841 537.846578 
+L 426.59853 533.602542 
+L 427.407219 526.013817 
+L 428.215909 553.134163 
+L 429.024598 548.331524 
+L 429.833287 594.035348 
+L 430.641977 570.059219 
+L 431.450666 558.653948 
+L 432.259355 573.02234 
+L 433.068044 535.373284 
+L 433.876734 536.453152 
+L 434.685423 440.135408 
+L 435.494112 526.543262 
+L 436.302802 525.221639 
+L 437.111491 558.703272 
+L 437.92018 580.063928 
+L 438.72887 571.998101 
+L 439.537559 548.953532 
+L 440.346248 550.831345 
+L 441.154938 534.580228 
+L 441.963627 540.679849 
+L 442.772316 521.155238 
+L 443.581005 514.980066 
+L 444.389695 534.705629 
+L 445.198384 541.252505 
+L 446.007073 557.824804 
+L 446.815763 563.929792 
+L 448.433141 524.836081 
+L 449.241831 513.573199 
+L 450.05052 540.190658 
+L 450.859209 524.700516 
+L 451.667898 525.810777 
+L 452.476588 533.821893 
+L 453.285277 562.439702 
+L 454.093966 555.388807 
+L 454.902656 553.718746 
+L 455.711345 522.767016 
+L 456.520034 528.717109 
+L 457.328724 522.67814 
+L 458.137413 507.855666 
+L 458.946102 520.166909 
+L 459.754792 523.994063 
+L 460.563481 554.98458 
+L 461.37217 547.782818 
+L 462.180859 567.805601 
+L 462.989549 555.658628 
+L 463.798238 540.831304 
+L 464.606927 533.505875 
+L 465.415617 517.520906 
+L 466.224306 523.876917 
+L 467.032995 544.964715 
+L 467.841685 559.275715 
+L 468.650374 563.054634 
+L 469.459063 571.321865 
+L 470.267753 560.006284 
+L 471.076442 566.331037 
+L 471.885131 556.49056 
+L 472.69382 523.806587 
+L 473.50251 521.226904 
+L 474.311199 536.490299 
+L 474.311199 536.490299 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_96">
+    <path d="M 70.775236 516.322564 
+L 71.583925 557.717368 
+L 72.392614 568.111329 
+L 73.201304 634.189271 
+L 74.009993 568.44928 
+L 74.818682 566.684257 
+L 75.627372 529.821318 
+L 76.436061 525.546829 
+L 77.24475 523.123967 
+L 78.053439 511.175047 
+L 78.862129 528.687669 
+L 79.670818 589.570775 
+L 80.479507 580.137595 
+L 81.288197 611.718272 
+L 82.096886 623.46325 
+L 82.905575 587.319057 
+L 83.714265 500.532496 
+L 84.522954 513.613801 
+L 85.331643 499.145136 
+L 86.140332 505.39582 
+L 86.949022 572.244667 
+L 87.757711 616.008903 
+L 88.5664 616.558672 
+L 89.37509 643.055352 
+L 90.992468 559.845199 
+L 91.801158 593.189968 
+L 93.418536 502.653523 
+L 94.227226 569.218428 
+L 95.035915 603.776011 
+L 95.844604 592.342161 
+L 96.653293 610.75639 
+L 97.461983 617.027081 
+L 98.270672 600.77013 
+L 99.079361 565.876122 
+L 99.888051 553.440883 
+L 100.69674 504.908439 
+L 102.314119 573.401226 
+L 103.122808 595.663824 
+L 103.931497 649.702776 
+L 104.740186 628.623217 
+L 105.548876 597.108241 
+L 106.357565 558.441174 
+L 107.166254 594.215235 
+L 107.974944 535.653898 
+L 108.783633 515.898779 
+L 109.592322 549.843998 
+L 110.401012 620.71942 
+L 111.209701 590.454989 
+L 112.01839 613.416831 
+L 112.82708 646.051845 
+L 113.635769 610.466667 
+L 114.444458 561.998119 
+L 115.253147 541.648427 
+L 116.061837 505.547805 
+L 116.870526 537.947475 
+L 117.679215 559.606936 
+L 118.487905 563.577651 
+L 119.296594 613.1309 
+L 120.105283 533.583388 
+L 120.913973 575.202676 
+L 121.722662 541.438507 
+L 122.531351 521.617252 
+L 123.340041 491.230429 
+L 124.14873 506.023014 
+L 124.957419 510.812139 
+L 125.766108 579.546764 
+L 126.574798 601.945555 
+L 128.192176 608.462144 
+L 129.000866 563.969051 
+L 129.809555 546.935758 
+L 130.618244 535.65657 
+L 131.426934 497.309618 
+L 133.853001 583.271385 
+L 134.661691 631.209635 
+L 135.47038 618.918456 
+L 136.279069 612.733638 
+L 137.087759 537.300233 
+L 137.896448 519.839481 
+L 138.705137 513.805322 
+L 139.513827 497.188755 
+L 140.322516 499.57414 
+L 141.131205 585.554569 
+L 141.939895 592.805711 
+L 142.748584 595.171512 
+L 143.557273 606.338763 
+L 144.365962 627.769296 
+L 145.983341 527.624842 
+L 146.79203 513.915083 
+L 147.60072 582.445683 
+L 148.409409 583.86364 
+L 149.218098 575.311463 
+L 150.026788 616.822983 
+L 150.835477 626.84446 
+L 151.644166 605.468444 
+L 152.452856 616.740584 
+L 153.261545 557.418176 
+L 154.070234 543.46674 
+L 154.878923 548.310389 
+L 155.687613 536.06061 
+L 156.496302 594.00518 
+L 157.304991 562.260744 
+L 158.113681 636.170242 
+L 158.92237 617.617799 
+L 159.731059 633.505886 
+L 160.539749 570.228096 
+L 161.348438 586.434857 
+L 162.157127 545.819794 
+L 162.965816 513.112768 
+L 163.774506 574.297006 
+L 164.583195 591.129042 
+L 165.391884 615.154318 
+L 166.200574 627.168338 
+L 167.009263 605.067607 
+L 167.817952 601.217736 
+L 168.626642 538.887883 
+L 170.24402 499.147746 
+L 171.861399 551.156859 
+L 172.670088 598.7786 
+L 173.478777 589.027433 
+L 174.287467 616.05461 
+L 175.096156 609.56946 
+L 175.904845 605.375572 
+L 176.713535 553.82879 
+L 177.522224 552.091006 
+L 178.330913 499.397241 
+L 179.139603 511.143349 
+L 179.948292 553.001278 
+L 181.565671 578.480774 
+L 182.37436 637.2331 
+L 183.183049 601.969684 
+L 183.991738 555.024491 
+L 184.800428 547.02148 
+L 185.609117 501.616908 
+L 186.417806 484.313978 
+L 187.226496 579.452719 
+L 188.035185 568.934985 
+L 188.843874 595.577968 
+L 189.652564 595.593149 
+L 190.461253 623.054239 
+L 191.269942 539.412111 
+L 192.078631 563.688859 
+L 192.887321 539.112818 
+L 193.69601 485.685905 
+L 194.504699 412.152929 
+L 195.313389 577.039096 
+L 196.122078 578.087964 
+L 196.930767 605.533521 
+L 197.739457 649.046703 
+L 198.548146 607.409106 
+L 199.356835 573.335622 
+L 200.165525 553.382882 
+L 200.974214 525.704329 
+L 201.782903 530.124644 
+L 202.591592 570.681458 
+L 203.400282 616.84968 
+L 204.208971 608.913254 
+L 205.01766 614.851565 
+L 206.635039 584.766376 
+L 207.443728 541.08561 
+L 208.252418 552.736516 
+L 209.061107 569.048494 
+L 209.869796 531.74979 
+L 210.678485 585.29368 
+L 211.487175 591.989889 
+L 212.295864 566.692944 
+L 213.104553 647.502728 
+L 213.913243 619.011368 
+L 214.721932 600.766625 
+L 215.530621 535.588369 
+L 216.339311 542.948772 
+L 217.148 511.442131 
+L 217.956689 543.020819 
+L 218.765379 552.681597 
+L 219.574068 623.68857 
+L 220.382757 615.697364 
+L 221.191446 594.938497 
+L 222.000136 616.30337 
+L 222.808825 580.872674 
+L 223.617514 505.476216 
+L 224.426204 531.240323 
+L 225.234893 514.730086 
+L 226.043582 576.690481 
+L 226.852272 601.053254 
+L 227.660961 583.030343 
+L 228.46965 637.604503 
+L 229.27834 600.000115 
+L 230.087029 594.38827 
+L 230.895718 532.165161 
+L 231.704407 523.439692 
+L 232.513097 469.203551 
+L 233.321786 500.72454 
+L 234.130475 559.156316 
+L 234.939165 574.702565 
+L 235.747854 565.412401 
+L 236.556543 637.324914 
+L 237.365233 582.623952 
+L 238.173922 589.779469 
+L 238.982611 534.471329 
+L 239.7913 507.006581 
+L 240.59999 490.44498 
+L 241.408679 519.567778 
+L 242.217368 565.545347 
+L 243.026058 527.056064 
+L 243.834747 589.607037 
+L 244.643436 608.631517 
+L 245.452126 631.743017 
+L 246.260815 538.973442 
+L 247.069504 539.286414 
+L 247.878194 495.468616 
+L 248.686883 488.589568 
+L 249.495572 558.933726 
+L 250.304261 567.477776 
+L 251.112951 623.730608 
+L 251.92164 628.646366 
+L 252.730329 640.168596 
+L 254.347708 553.520936 
+L 255.156397 519.658972 
+L 255.965087 517.255618 
+L 256.773776 578.032686 
+L 257.582465 548.497586 
+L 258.391155 607.746739 
+L 259.199844 633.730226 
+L 260.008533 638.592813 
+L 260.817222 645.095885 
+L 261.625912 583.520908 
+L 262.434601 587.38343 
+L 263.24329 540.228792 
+L 264.05198 503.532566 
+L 265.669358 617.207915 
+L 266.478048 611.972212 
+L 267.286737 595.791025 
+L 268.095426 595.798277 
+L 268.904115 558.20771 
+L 269.712805 572.635979 
+L 270.521494 521.730129 
+L 271.330183 485.523164 
+L 272.138873 536.166631 
+L 272.947562 554.866635 
+L 274.564941 629.453324 
+L 275.37363 619.025747 
+L 276.182319 590.084301 
+L 276.991009 553.965186 
+L 277.799698 535.296569 
+L 278.608387 534.280768 
+L 279.417076 523.906887 
+L 280.225766 516.396833 
+L 281.034455 581.648933 
+L 281.843144 601.451261 
+L 282.651834 597.369319 
+L 283.460523 596.584388 
+L 284.269212 609.082691 
+L 285.077902 524.248134 
+L 285.886591 501.406412 
+L 286.69528 491.995606 
+L 287.50397 541.498867 
+L 288.312659 456.84908 
+L 289.121348 578.226177 
+L 289.930037 604.57348 
+L 290.738727 605.180458 
+L 291.547416 590.531041 
+L 292.356105 592.583152 
+L 293.164795 499.604486 
+L 293.973484 501.364989 
+L 294.782173 489.4846 
+L 295.590863 542.49302 
+L 296.399552 580.558766 
+L 297.208241 558.997859 
+L 298.01693 595.120881 
+L 298.82562 615.986817 
+L 299.634309 559.371029 
+L 300.442998 568.66835 
+L 301.251688 517.156319 
+L 302.060377 543.054788 
+L 302.869066 525.681967 
+L 303.677756 501.689252 
+L 305.295134 613.16775 
+L 306.103824 634.481264 
+L 306.912513 622.153016 
+L 307.721202 578.663234 
+L 308.529891 571.87446 
+L 309.338581 487.101095 
+L 310.14727 547.59297 
+L 310.955959 521.085172 
+L 311.764649 576.928325 
+L 313.382027 610.34111 
+L 314.190717 629.660948 
+L 314.999406 617.762324 
+L 315.808095 612.267419 
+L 316.616784 571.386144 
+L 317.425474 509.257264 
+L 318.234163 516.650415 
+L 319.042852 520.35366 
+L 319.851542 599.23081 
+L 320.660231 601.034562 
+L 321.46892 642.822001 
+L 322.27761 625.613439 
+L 323.086299 550.694885 
+L 323.894988 559.708447 
+L 324.703678 524.401632 
+L 325.512367 457.014716 
+L 326.321056 504.712063 
+L 327.129745 585.238874 
+L 327.938435 567.278967 
+L 328.747124 617.372628 
+L 329.555813 604.749345 
+L 330.364503 546.96112 
+L 331.173192 571.816232 
+L 331.981881 554.655544 
+L 332.790571 491.60849 
+L 333.59926 475.960244 
+L 334.407949 503.116122 
+L 335.216639 490.654804 
+L 336.025328 563.135564 
+L 336.834017 581.377913 
+L 337.642706 626.833876 
+L 338.451396 556.891785 
+L 339.260085 559.562365 
+L 340.068774 530.934458 
+L 340.877464 512.590245 
+L 341.686153 418.14599 
+L 342.494842 503.594803 
+L 343.303532 571.893023 
+L 344.112221 577.641695 
+L 344.92091 584.504713 
+L 345.729599 587.896017 
+L 346.538289 556.704809 
+L 347.346978 552.264361 
+L 348.155667 523.536884 
+L 348.964357 481.32627 
+L 349.773046 484.280452 
+L 350.581735 522.301704 
+L 351.390425 551.905054 
+L 352.199114 592.011123 
+L 353.007803 590.512686 
+L 353.816493 610.093588 
+L 354.625182 541.107037 
+L 355.433871 534.661809 
+L 356.24256 488.050011 
+L 357.05125 530.609196 
+L 357.859939 520.514655 
+L 358.668628 502.289618 
+L 359.477318 601.484442 
+L 360.286007 633.172567 
+L 361.094696 647.38149 
+L 361.903386 570.357343 
+L 362.712075 435.464702 
+L 363.520764 545.415146 
+L 364.329454 520.327893 
+L 365.138143 529.433972 
+L 365.946832 561.12312 
+L 366.755521 565.823787 
+L 367.564211 579.014944 
+L 368.3729 657.947614 
+L 369.181589 634.564181 
+L 369.990279 533.7989 
+L 370.798968 556.244622 
+L 371.607657 509.776899 
+L 372.416347 551.569541 
+L 373.225036 509.889341 
+L 374.033725 604.404531 
+L 374.842414 610.946006 
+L 375.651104 607.285123 
+L 376.459793 631.073829 
+L 377.268482 563.57384 
+L 378.077172 565.834358 
+L 378.885861 561.950888 
+L 379.69455 510.903597 
+L 380.50324 540.222212 
+L 381.311929 514.343736 
+L 382.120618 586.688397 
+L 382.929308 571.655636 
+L 383.737997 609.417946 
+L 384.546686 636.970975 
+L 385.355375 569.416209 
+L 386.164065 542.697588 
+L 386.972754 534.792285 
+L 387.781443 470.221278 
+L 388.590133 521.707366 
+L 389.398822 564.983124 
+L 390.207511 544.034337 
+L 391.016201 597.351834 
+L 391.82489 616.523046 
+L 392.633579 534.973513 
+L 393.442269 545.281961 
+L 394.250958 538.074982 
+L 395.059647 541.630401 
+L 395.868336 524.996903 
+L 396.677026 512.95814 
+L 397.485715 549.862006 
+L 398.294404 545.860696 
+L 399.103094 618.157724 
+L 399.911783 585.665929 
+L 400.720472 571.03831 
+L 401.529162 514.971382 
+L 402.337851 516.403201 
+L 403.14654 502.672528 
+L 403.955229 496.974683 
+L 404.763919 495.202416 
+L 405.572608 567.210578 
+L 406.381297 598.637408 
+L 407.189987 619.373823 
+L 407.998676 560.553014 
+L 408.807365 552.805558 
+L 409.616055 552.888431 
+L 410.424744 505.388422 
+L 412.042123 519.357126 
+L 412.850812 599.596006 
+L 413.659501 613.267187 
+L 414.46819 619.753832 
+L 415.27688 629.379315 
+L 416.085569 582.570139 
+L 416.894258 549.836125 
+L 417.702948 522.909303 
+L 418.511637 520.545779 
+L 419.320326 525.827771 
+L 420.129016 528.989274 
+L 420.937705 592.256445 
+L 421.746394 573.554069 
+L 422.555083 580.237712 
+L 423.363773 599.867156 
+L 424.172462 564.355951 
+L 424.981151 552.341655 
+L 425.789841 537.846578 
+L 426.59853 557.532802 
+L 427.407219 502.083556 
+L 428.215909 577.064424 
+L 429.024598 548.331524 
+L 429.833287 641.895869 
+L 430.641977 617.91974 
+L 431.450666 582.584208 
+L 432.259355 573.02234 
+L 433.068044 535.373284 
+L 433.876734 536.453152 
+L 434.685423 392.274886 
+L 435.494112 502.613001 
+L 436.302802 501.291378 
+L 437.111491 582.633533 
+L 437.92018 627.924449 
+L 438.72887 619.858622 
+L 439.537559 572.883793 
+L 440.346248 550.831345 
+L 441.154938 510.649967 
+L 441.963627 540.679849 
+L 442.772316 497.224977 
+L 443.581005 514.980066 
+L 444.389695 558.635889 
+L 445.198384 565.182766 
+L 446.007073 605.685325 
+L 446.815763 611.790314 
+L 447.624452 545.401071 
+L 448.433141 500.90582 
+L 449.241831 513.573199 
+L 450.05052 516.260398 
+L 450.859209 500.770255 
+L 451.667898 501.880516 
+L 453.285277 610.300223 
+L 454.093966 579.319068 
+L 454.902656 601.579267 
+L 455.711345 474.906495 
+L 456.520034 528.717109 
+L 457.328724 522.67814 
+L 458.137413 507.855666 
+L 458.946102 520.166909 
+L 459.754792 523.994063 
+L 460.563481 602.845101 
+L 461.37217 595.64334 
+L 462.180859 615.666122 
+L 462.989549 579.588889 
+L 463.798238 516.901043 
+L 464.606927 533.505875 
+L 465.415617 493.590645 
+L 466.224306 499.946656 
+L 467.032995 568.894976 
+L 467.841685 583.205975 
+L 468.650374 586.984895 
+L 469.459063 619.182386 
+L 470.267753 607.866806 
+L 471.076442 590.261297 
+L 471.885131 532.5603 
+L 472.69382 499.876327 
+L 473.50251 521.226904 
+L 474.311199 512.560038 
+L 474.311199 512.560038 
+" clip-path="url(#p5414607faf)" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 50.598438 671.23125 
+L 50.598438 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 494.487997 671.23125 
+L 494.487997 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 50.598438 671.23125 
+L 494.487997 671.23125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 50.598438 378.99125 
+L 494.487997 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_55">
+    <!-- 能耗对比 (DQN节省2.6%) -->
+    <g transform="translate(190.943999 372.99125) scale(0.14 -0.14)">
+     <defs>
+      <path id="MicrosoftYaHei-8282" d="M 438 2928 
+L 5600 2928 
+Q 5538 1622 5475 922 
+Q 5406 3 4400 3 
+Q 3806 3 3425 41 
+Q 3388 341 3325 584 
+Q 3869 497 4338 497 
+Q 4944 497 4981 1084 
+Q 5038 1553 5075 2472 
+L 2569 2472 
+L 2569 -834 
+L 2050 -834 
+L 2050 2472 
+L 438 2472 
+L 438 2928 
+z
+M 125 4478 
+L 1856 4478 
+L 1856 5303 
+L 2356 5303 
+L 2356 4478 
+L 4031 4478 
+L 4031 5303 
+L 4531 5303 
+L 4531 4478 
+L 6263 4478 
+L 6263 4022 
+L 4531 4022 
+L 4531 3322 
+L 4031 3322 
+L 4031 4022 
+L 2356 4022 
+L 2356 3328 
+L 1856 3328 
+L 1856 4022 
+L 125 4022 
+L 125 4478 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-7701" d="M 106 2684 
+Q 3094 3278 4838 3978 
+L 5088 3559 
+Q 3838 3091 1928 2628 
+L 5588 2628 
+L 5588 -791 
+L 5125 -791 
+L 5125 -516 
+L 1613 -516 
+L 1613 -803 
+L 1150 -803 
+L 1150 2444 
+Q 728 2350 275 2253 
+Q 206 2459 106 2684 
+z
+M 1613 -91 
+L 5125 -91 
+L 5125 403 
+L 1613 403 
+L 1613 -91 
+z
+M 5125 2203 
+L 1613 2203 
+L 1613 1716 
+L 5125 1716 
+L 5125 2203 
+z
+M 1613 816 
+L 5125 816 
+L 5125 1303 
+L 1613 1303 
+L 1613 816 
+z
+M 2031 4934 
+L 2375 4566 
+Q 1481 3866 563 3247 
+Q 425 3441 269 3653 
+Q 1238 4272 2031 4934 
+z
+M 4206 4572 
+L 4463 4941 
+Q 5394 4434 6306 3866 
+L 6006 3428 
+Q 5175 4009 4206 4572 
+z
+M 2956 5303 
+L 3431 5303 
+L 3431 3591 
+L 2956 3591 
+L 2956 5303 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-25" d="M 272 3619 
+Q 272 4213 589 4563 
+Q 906 4913 1444 4913 
+Q 1959 4913 2248 4591 
+Q 2538 4269 2538 3694 
+Q 2538 3122 2219 2765 
+Q 1900 2409 1372 2409 
+Q 872 2409 572 2740 
+Q 272 3072 272 3619 
+z
+M 753 3650 
+Q 753 3247 928 3028 
+Q 1103 2809 1406 2809 
+Q 1719 2809 1889 3036 
+Q 2059 3263 2059 3675 
+Q 2059 4078 1892 4298 
+Q 1725 4519 1422 4519 
+Q 1113 4519 933 4289 
+Q 753 4059 753 3650 
+z
+M 4647 4841 
+L 1538 -31 
+L 1016 -31 
+L 4125 4841 
+L 4647 4841 
+z
+M 3172 1134 
+Q 3172 1728 3489 2083 
+Q 3806 2438 4341 2438 
+Q 4853 2438 5143 2114 
+Q 5434 1791 5434 1203 
+Q 5434 634 5112 279 
+Q 4791 -75 4272 -75 
+Q 3769 -75 3470 261 
+Q 3172 597 3172 1134 
+z
+M 3650 1163 
+Q 3650 769 3825 548 
+Q 4000 328 4303 328 
+Q 4616 328 4786 556 
+Q 4956 784 4956 1194 
+Q 4956 1600 4786 1815 
+Q 4616 2031 4319 2031 
+Q 4000 2031 3825 1801 
+Q 3650 1572 3650 1163 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MicrosoftYaHei-80fd"/>
+     <use xlink:href="#MicrosoftYaHei-8017" x="100"/>
+     <use xlink:href="#MicrosoftYaHei-5bf9" x="200"/>
+     <use xlink:href="#MicrosoftYaHei-6bd4" x="300"/>
+     <use xlink:href="#MicrosoftYaHei-20" x="400"/>
+     <use xlink:href="#MicrosoftYaHei-28" x="429.589844"/>
+     <use xlink:href="#MicrosoftYaHei-44" x="462.988281"/>
+     <use xlink:href="#MicrosoftYaHei-51" x="539.160156"/>
+     <use xlink:href="#MicrosoftYaHei-4e" x="620.654297"/>
+     <use xlink:href="#MicrosoftYaHei-8282" x="701.953125"/>
+     <use xlink:href="#MicrosoftYaHei-7701" x="801.953125"/>
+     <use xlink:href="#MicrosoftYaHei-32" x="901.953125"/>
+     <use xlink:href="#MicrosoftYaHei-2e" x="960.595703"/>
+     <use xlink:href="#MicrosoftYaHei-36" x="984.667969"/>
+     <use xlink:href="#MicrosoftYaHei-25" x="1043.310547"/>
+     <use xlink:href="#MicrosoftYaHei-29" x="1132.275391"/>
+    </g>
+   </g>
+   <g id="legend_2">
+    <g id="patch_18">
+     <path d="M 57.598438 417.950625 
+L 148.721875 417.950625 
+Q 150.721875 417.950625 150.721875 415.950625 
+L 150.721875 385.99125 
+Q 150.721875 383.99125 148.721875 383.99125 
+L 57.598438 383.99125 
+Q 55.598438 383.99125 55.598438 385.99125 
+L 55.598438 415.950625 
+Q 55.598438 417.950625 57.598438 417.950625 
+z
+" style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="line2d_97">
+     <path d="M 59.598438 392.485 
+L 69.598438 392.485 
+L 79.598438 392.485 
+" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_56">
+     <!-- 固定DO(PID) -->
+     <g transform="translate(87.598438 395.985) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-56fa"/>
+      <use xlink:href="#MicrosoftYaHei-5b9a" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-4f" x="276.171875"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="357.666016"/>
+      <use xlink:href="#MicrosoftYaHei-50" x="391.064453"/>
+      <use xlink:href="#MicrosoftYaHei-49" x="452.246094"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="481.640625"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="557.8125"/>
+     </g>
+    </g>
+    <g id="line2d_98">
+     <path d="M 59.598438 407.964687 
+L 69.598438 407.964687 
+L 79.598438 407.964687 
+" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_57">
+     <!-- DQN策略 -->
+     <g transform="translate(87.598438 411.464687) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-44"/>
+      <use xlink:href="#MicrosoftYaHei-51" x="76.171875"/>
+      <use xlink:href="#MicrosoftYaHei-4e" x="157.666016"/>
+      <use xlink:href="#MicrosoftYaHei-7b56" x="238.964844"/>
+      <use xlink:href="#MicrosoftYaHei-7565" x="338.964844"/>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_19">
+    <path d="M 548.628878 671.23125 
+L 992.518437 671.23125 
+L 992.518437 378.99125 
+L 548.628878 378.99125 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_7">
+    <g id="xtick_20">
+     <g id="line2d_99">
+      <path d="M 568.805676 671.23125 
+L 568.805676 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_100">
+      <g>
+       <use xlink:href="#mdfe835672f" x="568.805676" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <!-- 0 -->
+      <g transform="translate(565.873645 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-30"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_21">
+     <g id="line2d_101">
+      <path d="M 649.674606 671.23125 
+L 649.674606 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_102">
+      <g>
+       <use xlink:href="#mdfe835672f" x="649.674606" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <!-- 100 -->
+      <g transform="translate(640.878513 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_103">
+      <path d="M 730.543537 671.23125 
+L 730.543537 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_104">
+      <g>
+       <use xlink:href="#mdfe835672f" x="730.543537" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <!-- 200 -->
+      <g transform="translate(721.747443 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_105">
+      <path d="M 811.412468 671.23125 
+L 811.412468 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_106">
+      <g>
+       <use xlink:href="#mdfe835672f" x="811.412468" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_61">
+      <!-- 300 -->
+      <g transform="translate(802.616374 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-33"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_107">
+      <path d="M 892.281398 671.23125 
+L 892.281398 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_108">
+      <g>
+       <use xlink:href="#mdfe835672f" x="892.281398" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_62">
+      <!-- 400 -->
+      <g transform="translate(883.485304 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-34"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_25">
+     <g id="line2d_109">
+      <path d="M 973.150329 671.23125 
+L 973.150329 378.99125 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_110">
+      <g>
+       <use xlink:href="#mdfe835672f" x="973.150329" y="671.23125" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_63">
+      <!-- 500 -->
+      <g transform="translate(964.354235 686.225) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-35"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="58.642578"/>
+       <use xlink:href="#MicrosoftYaHei-30" x="117.285156"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_64">
+     <!-- 时间步 -->
+     <g transform="translate(755.573658 700.704687) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-65f6"/>
+      <use xlink:href="#MicrosoftYaHei-95f4" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-6b65" x="200"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_25">
+     <g id="line2d_111">
+      <path d="M 548.628878 663.875254 
+L 992.518437 663.875254 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_112">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="663.875254" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_65">
+      <!-- 1 -->
+      <g transform="translate(535.764815 667.872129) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-31"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_113">
+      <path d="M 548.628878 623.05343 
+L 992.518437 623.05343 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_114">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="623.05343" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_66">
+      <!-- 2 -->
+      <g transform="translate(535.764815 627.050305) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-32"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_115">
+      <path d="M 548.628878 582.231605 
+L 992.518437 582.231605 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_116">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="582.231605" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_67">
+      <!-- 3 -->
+      <g transform="translate(535.764815 586.22848) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-33"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_117">
+      <path d="M 548.628878 541.409781 
+L 992.518437 541.409781 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_118">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="541.409781" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_68">
+      <!-- 4 -->
+      <g transform="translate(535.764815 545.406656) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-34"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_119">
+      <path d="M 548.628878 500.587957 
+L 992.518437 500.587957 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_120">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="500.587957" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_69">
+      <!-- 5 -->
+      <g transform="translate(535.764815 504.584832) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-35"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_121">
+      <path d="M 548.628878 459.766132 
+L 992.518437 459.766132 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_122">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="459.766132" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_70">
+      <!-- 6 -->
+      <g transform="translate(535.764815 463.763007) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-36"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_123">
+      <path d="M 548.628878 418.944308 
+L 992.518437 418.944308 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_124">
+      <g>
+       <use xlink:href="#m2412f84298" x="548.628878" y="418.944308" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_71">
+      <!-- 7 -->
+      <g transform="translate(535.764815 422.941183) scale(0.1 -0.1)">
+       <use xlink:href="#MicrosoftYaHei-37"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_72">
+     <!-- NH4-N (mg/L) -->
+     <g transform="translate(529.221065 559.608906) rotate(-90) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-48" d="M 4325 0 
+L 3700 0 
+L 3700 2181 
+L 1250 2181 
+L 1250 0 
+L 625 0 
+L 625 4841 
+L 1250 4841 
+L 1250 2738 
+L 3700 2738 
+L 3700 4841 
+L 4325 4841 
+L 4325 0 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-4e"/>
+      <use xlink:href="#MicrosoftYaHei-48" x="81.298828"/>
+      <use xlink:href="#MicrosoftYaHei-34" x="158.642578"/>
+      <use xlink:href="#MicrosoftYaHei-2d" x="217.285156"/>
+      <use xlink:href="#MicrosoftYaHei-4e" x="260.546875"/>
+      <use xlink:href="#MicrosoftYaHei-20" x="341.845703"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="371.435547"/>
+      <use xlink:href="#MicrosoftYaHei-6d" x="404.833984"/>
+      <use xlink:href="#MicrosoftYaHei-67" x="498.535156"/>
+      <use xlink:href="#MicrosoftYaHei-2f" x="562.5"/>
+      <use xlink:href="#MicrosoftYaHei-4c" x="605.224609"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="656.542969"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_125">
+    <path d="M 568.805676 586.493167 
+L 569.614365 594.766909 
+L 570.423055 623.625676 
+L 571.231744 626.670075 
+L 572.040433 594.869267 
+L 572.849122 612.398311 
+L 573.657812 595.624745 
+L 574.466501 551.410454 
+L 575.27519 582.099312 
+L 576.08388 558.987042 
+L 576.892569 588.293275 
+L 577.701258 623.908559 
+L 578.509948 646.164152 
+L 579.318637 622.55177 
+L 580.127326 613.873018 
+L 580.936016 568.842375 
+L 581.744705 572.042928 
+L 582.553394 564.254706 
+L 583.362083 563.79158 
+L 584.170773 567.117802 
+L 584.979462 579.087407 
+L 585.788151 609.64232 
+L 586.596841 630.940664 
+L 587.40553 614.36512 
+L 588.214219 595.129643 
+L 589.022909 570.70844 
+L 589.831598 556.177055 
+L 590.640287 547.43823 
+L 591.448977 564.486722 
+L 592.257666 592.144457 
+L 593.066355 624.854814 
+L 593.875044 601.22615 
+L 594.683734 647.763174 
+L 595.492423 633.290235 
+L 596.301112 602.655394 
+L 597.109802 551.520558 
+L 597.918491 530.425786 
+L 598.72718 583.064807 
+L 599.53587 584.78911 
+L 600.344559 578.258664 
+L 601.153248 616.435793 
+L 601.961937 643.846537 
+L 602.770627 634.938057 
+L 603.579316 623.326165 
+L 604.388005 563.3063 
+L 605.196695 573.982464 
+L 606.005384 567.506857 
+L 606.814073 585.442446 
+L 607.622763 593.286774 
+L 608.431452 617.987714 
+L 609.240141 619.994685 
+L 610.048831 644.261219 
+L 610.85752 626.846709 
+L 611.666209 603.883571 
+L 612.474898 571.559331 
+L 613.283588 567.790338 
+L 614.900966 576.160988 
+L 615.709656 587.41337 
+L 616.518345 636.323354 
+L 617.327034 620.86373 
+L 618.135724 526.735855 
+L 618.944413 600.785806 
+L 620.561792 573.605768 
+L 621.370481 555.141383 
+L 622.17917 571.747279 
+L 622.987859 562.930493 
+L 624.605238 621.140089 
+L 625.413927 626.829487 
+L 626.222617 616.872315 
+L 627.031306 604.033873 
+L 627.839995 599.281384 
+L 628.648685 582.298734 
+L 629.457374 551.921106 
+L 630.266063 543.985969 
+L 631.074752 606.865459 
+L 631.883442 595.385628 
+L 632.692131 644.676469 
+L 633.50082 615.971557 
+L 634.30951 613.360918 
+L 635.118199 485.231408 
+L 635.926888 555.438055 
+L 636.735578 548.463824 
+L 637.544267 544.660014 
+L 638.352956 574.448652 
+L 639.161646 590.637928 
+L 639.970335 613.753341 
+L 640.779024 613.034314 
+L 641.587713 622.977406 
+L 642.396403 603.579922 
+L 643.205092 568.732017 
+L 644.013781 557.665143 
+L 644.822471 558.134596 
+L 645.63116 586.88314 
+L 646.439849 556.543321 
+L 647.248539 597.984178 
+L 648.057228 610.187134 
+L 648.865917 619.101248 
+L 649.674606 595.140579 
+L 650.483296 587.816235 
+L 651.291985 558.260677 
+L 652.100674 578.512834 
+L 652.909364 566.319055 
+L 653.718053 568.995815 
+L 654.526742 577.381783 
+L 655.335432 621.73052 
+L 656.144121 613.87023 
+L 656.95281 644.332737 
+L 657.7615 591.447207 
+L 658.570189 589.44146 
+L 659.378878 563.522085 
+L 660.187567 559.713847 
+L 660.996257 546.067135 
+L 661.804946 549.482655 
+L 662.613635 612.424327 
+L 663.422325 625.684577 
+L 664.231014 599.505577 
+L 665.039703 634.104829 
+L 665.848393 590.932868 
+L 666.657082 567.535514 
+L 667.465771 538.922967 
+L 668.274461 559.113688 
+L 669.08315 550.033096 
+L 669.891839 596.407641 
+L 670.700528 589.964939 
+L 671.509218 628.308774 
+L 672.317907 638.49461 
+L 673.126596 615.024356 
+L 673.935286 583.35922 
+L 674.743975 560.348232 
+L 675.552664 568.680247 
+L 676.361354 555.71287 
+L 677.170043 568.474527 
+L 677.978732 602.16964 
+L 678.787421 618.522985 
+L 679.596111 629.831263 
+L 680.4048 631.994245 
+L 681.213489 615.576145 
+L 682.022179 576.368781 
+L 682.830868 547.719528 
+L 683.639557 572.459366 
+L 684.448247 578.668403 
+L 685.256936 580.299368 
+L 686.065625 586.696028 
+L 686.874315 610.493773 
+L 687.683004 610.864688 
+L 688.491693 609.059295 
+L 689.300382 606.741471 
+L 690.109072 581.477648 
+L 690.917761 566.106718 
+L 691.72645 561.687389 
+L 692.53514 392.274886 
+L 693.343829 590.63526 
+L 694.152518 589.222041 
+L 694.961208 620.571646 
+L 695.769897 609.359393 
+L 696.578586 600.34254 
+L 697.387276 604.437726 
+L 698.195965 558.70761 
+L 699.004654 543.554043 
+L 699.813343 574.378648 
+L 700.622033 591.878848 
+L 701.430722 612.129958 
+L 702.239411 611.413331 
+L 703.048101 656.358199 
+L 703.85679 639.140039 
+L 704.665479 612.574515 
+L 705.474169 581.076983 
+L 706.282858 563.211169 
+L 707.091547 563.502926 
+L 707.900236 554.131062 
+L 708.708926 592.964774 
+L 709.517615 640.525396 
+L 710.326304 569.050878 
+L 711.134994 626.116565 
+L 711.943683 604.714651 
+L 712.752372 570.0657 
+L 713.561062 553.818452 
+L 714.369751 543.829352 
+L 715.17844 550.17944 
+L 715.98713 592.911228 
+L 716.795819 560.311441 
+L 717.604508 637.809713 
+L 718.413197 627.055255 
+L 719.221887 597.965949 
+L 720.030576 589.251297 
+L 720.839265 536.740657 
+L 721.647955 546.43641 
+L 722.456644 548.07342 
+L 723.265333 538.675092 
+L 724.074023 559.863779 
+L 724.882712 588.857745 
+L 725.691401 622.384748 
+L 726.500091 620.478073 
+L 727.30878 616.656326 
+L 728.117469 546.778689 
+L 728.926158 568.898353 
+L 729.734848 551.990763 
+L 730.543537 571.366586 
+L 731.352226 532.047759 
+L 732.160916 575.607276 
+L 732.969605 594.954431 
+L 733.778294 620.542704 
+L 734.586984 625.469142 
+L 735.395673 586.524887 
+L 736.204362 562.474001 
+L 737.013051 543.914283 
+L 737.821741 550.928031 
+L 738.63043 563.047983 
+L 739.439119 573.025987 
+L 740.247809 593.366194 
+L 741.056498 571.409825 
+L 741.865187 657.947614 
+L 742.673877 621.903865 
+L 743.482566 599.088367 
+L 744.291255 597.155842 
+L 745.099945 559.158515 
+L 745.908634 542.284139 
+L 746.717323 559.091427 
+L 747.526012 600.756685 
+L 748.334702 618.313755 
+L 749.143391 620.204486 
+L 749.95208 610.48913 
+L 750.76077 643.904754 
+L 751.569459 565.931361 
+L 752.378148 572.959402 
+L 753.186838 544.66102 
+L 753.995527 552.175238 
+L 754.804216 578.213662 
+L 755.612905 614.956532 
+L 756.421595 613.378435 
+L 757.230284 629.188225 
+L 758.038973 618.418705 
+L 760.465041 532.75732 
+L 761.273731 576.03176 
+L 762.08242 548.03441 
+L 762.891109 585.377968 
+L 763.699799 598.483276 
+L 764.508488 618.585686 
+L 765.317177 643.447016 
+L 766.125866 622.941088 
+L 766.934556 569.786507 
+L 767.743245 576.328869 
+L 768.551934 551.182227 
+L 770.169313 584.789942 
+L 770.978002 595.967077 
+L 771.786692 629.151284 
+L 772.595381 621.738318 
+L 773.40407 632.027179 
+L 774.21276 637.375019 
+L 775.021449 589.166411 
+L 775.830138 549.513811 
+L 776.638827 537.722085 
+L 777.447517 567.249104 
+L 778.256206 576.032163 
+L 779.873585 610.7413 
+L 780.682274 621.598453 
+L 781.490963 614.521439 
+L 782.299653 583.054781 
+L 783.108342 570.112041 
+L 783.917031 547.595123 
+L 784.72572 571.613673 
+L 785.53441 548.712328 
+L 786.343099 510.083759 
+L 787.151788 607.632485 
+L 787.960478 632.796205 
+L 788.769167 615.182993 
+L 789.577856 602.552142 
+L 790.386546 575.263104 
+L 791.195235 561.945885 
+L 792.003924 516.369892 
+L 792.812614 559.293761 
+L 793.621303 555.462439 
+L 794.429992 581.13884 
+L 795.238681 598.676932 
+L 796.047371 613.375442 
+L 796.85606 609.324137 
+L 797.664749 597.118945 
+L 798.473439 555.936386 
+L 799.282128 521.540554 
+L 800.090817 571.554039 
+L 800.899507 559.139183 
+L 801.708196 564.593198 
+L 802.516885 614.252323 
+L 803.325575 626.85181 
+L 804.134264 612.634291 
+L 804.942953 607.721586 
+L 805.751642 600.29461 
+L 807.369021 539.974924 
+L 808.17771 547.497383 
+L 808.9864 566.21808 
+L 809.795089 580.781221 
+L 810.603778 617.335454 
+L 811.412468 638.984022 
+L 812.221157 641.849068 
+L 813.029846 577.764089 
+L 813.838535 574.434047 
+L 814.647225 545.879414 
+L 815.455914 547.334064 
+L 816.264603 558.941445 
+L 817.073293 600.826633 
+L 817.881982 575.463364 
+L 818.690671 635.948174 
+L 819.499361 623.215529 
+L 820.30805 627.941952 
+L 821.116739 596.09682 
+L 821.925429 599.032747 
+L 822.734118 573.446095 
+L 823.542807 441.58801 
+L 824.351496 529.089731 
+L 825.160186 585.286406 
+L 825.968875 599.686244 
+L 826.777564 640.625396 
+L 827.586254 600.655146 
+L 828.394943 596.029425 
+L 829.203632 600.44438 
+L 830.012322 569.340484 
+L 830.821011 529.246663 
+L 831.6297 533.143267 
+L 832.43839 582.66453 
+L 833.247079 539.857886 
+L 834.055768 629.171917 
+L 834.864457 626.322192 
+L 835.673147 636.58129 
+L 836.481836 613.19679 
+L 837.290525 596.5198 
+L 838.099215 536.494528 
+L 838.907904 532.660305 
+L 839.716593 492.338129 
+L 840.525283 578.314673 
+L 841.333972 576.803454 
+L 842.142661 618.212713 
+L 842.95135 628.840993 
+L 843.76004 599.695709 
+L 844.568729 588.691998 
+L 845.377418 526.741113 
+L 846.186108 535.073404 
+L 846.994797 560.287012 
+L 847.803486 550.617462 
+L 848.612176 563.506674 
+L 849.420865 590.293156 
+L 850.229554 636.996803 
+L 851.038244 619.629683 
+L 851.846933 617.421039 
+L 852.655622 583.29711 
+L 853.464311 536.988151 
+L 854.273001 547.906982 
+L 855.08169 533.863523 
+L 855.890379 570.006734 
+L 856.699069 587.421989 
+L 857.507758 576.024148 
+L 858.316447 625.70826 
+L 859.125137 611.673969 
+L 859.933826 581.348183 
+L 860.742515 500.68157 
+L 861.551204 536.667831 
+L 862.359894 530.314087 
+L 863.168583 570.502505 
+L 863.977272 602.436792 
+L 864.785962 615.08182 
+L 865.594651 619.973317 
+L 866.40334 615.900257 
+L 867.21203 611.220409 
+L 868.020719 590.715637 
+L 868.829408 554.296664 
+L 869.638098 539.195372 
+L 870.446787 554.895956 
+L 871.255476 574.465656 
+L 872.064165 603.372729 
+L 872.872855 626.77895 
+L 873.681544 607.176978 
+L 874.490233 625.878391 
+L 875.298923 593.263069 
+L 876.107612 585.047924 
+L 876.916301 549.177237 
+L 877.724991 532.022858 
+L 880.151059 606.072389 
+L 880.959748 589.343092 
+L 881.768437 634.648227 
+L 882.577126 621.079424 
+L 883.385816 593.650633 
+L 884.194505 570.403559 
+L 885.003194 556.458903 
+L 885.811884 511.47933 
+L 886.620573 576.506474 
+L 887.429262 572.208248 
+L 888.237952 591.872747 
+L 889.046641 633.902583 
+L 889.85533 604.508557 
+L 890.664019 598.696873 
+L 891.472709 545.310412 
+L 892.281398 548.914916 
+L 893.090087 547.023931 
+L 893.898777 560.634834 
+L 894.707466 559.992633 
+L 895.516155 609.385123 
+L 896.324845 628.498419 
+L 897.133534 595.702265 
+L 897.942223 613.416378 
+L 898.750913 595.352711 
+L 899.559602 539.755385 
+L 900.368291 554.52713 
+L 901.98567 542.295225 
+L 903.603048 599.736682 
+L 904.411738 618.684781 
+L 906.029116 605.071092 
+L 906.837806 558.959562 
+L 907.646495 571.090907 
+L 908.455184 590.649414 
+L 909.263874 562.770908 
+L 910.072563 556.063736 
+L 910.881252 586.724635 
+L 911.689941 596.389216 
+L 912.498631 604.351241 
+L 913.30732 630.60044 
+L 914.116009 614.683767 
+L 914.924699 549.392859 
+L 915.733388 518.664789 
+L 916.542077 556.64471 
+L 917.350767 577.508046 
+L 918.159456 579.916215 
+L 918.968145 585.840564 
+L 919.776834 547.819148 
+L 920.585524 615.496137 
+L 921.394213 602.926981 
+L 922.202902 593.596291 
+L 923.011592 570.724913 
+L 923.820281 526.889871 
+L 924.62897 560.666591 
+L 925.43766 565.923354 
+L 926.246349 589.036638 
+L 927.055038 616.118282 
+L 927.863728 600.32497 
+L 928.672417 621.442221 
+L 929.481106 609.17405 
+L 930.289795 593.184371 
+L 931.098485 534.46254 
+L 931.907174 557.027928 
+L 932.715863 448.523122 
+L 933.524553 564.163588 
+L 934.333242 584.251785 
+L 935.141931 612.251858 
+L 935.950621 628.009247 
+L 936.75931 589.59468 
+L 937.567999 595.349376 
+L 938.376689 534.21964 
+L 939.185378 584.084395 
+L 939.994067 534.434082 
+L 940.802756 574.190786 
+L 941.611446 565.621088 
+L 942.420135 587.448328 
+L 943.228824 642.804405 
+L 944.037514 615.87031 
+L 944.846203 625.378366 
+L 945.654892 561.44463 
+L 946.463582 573.345853 
+L 947.272271 523.717214 
+L 948.08096 543.953072 
+L 948.889649 593.462678 
+L 949.698339 587.400215 
+L 950.507028 638.359206 
+L 951.315717 596.824738 
+L 952.124407 608.364587 
+L 952.933096 598.869406 
+L 954.550475 540.73095 
+L 955.359164 552.245685 
+L 956.167853 543.602243 
+L 956.976543 602.810754 
+L 957.785232 582.006501 
+L 958.593921 612.285514 
+L 959.40261 612.403966 
+L 960.2113 616.244891 
+L 961.019989 559.556166 
+L 961.828678 559.115795 
+L 962.637368 559.793772 
+L 963.446057 542.35833 
+L 964.254746 571.173066 
+L 965.063436 584.194253 
+L 965.872125 590.043631 
+L 966.680814 639.914911 
+L 967.489503 592.720065 
+L 968.298193 612.434512 
+L 969.106882 576.102667 
+L 969.915571 581.801785 
+L 970.724261 543.075303 
+L 971.53295 554.960107 
+L 972.341639 569.315662 
+L 972.341639 569.315662 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_126">
+    <path d="M 568.805676 586.493167 
+L 569.614365 592.626966 
+L 570.423055 622.02281 
+L 571.231744 621.624494 
+L 572.040433 591.887288 
+L 572.849122 612.398311 
+L 573.657812 595.624745 
+L 574.466501 551.410454 
+L 575.27519 584.287375 
+L 576.08388 561.106934 
+L 576.892569 588.293275 
+L 577.701258 619.789703 
+L 578.509948 645.00929 
+L 579.318637 618.413284 
+L 580.127326 608.973876 
+L 580.936016 565.57455 
+L 581.744705 573.801337 
+L 582.553394 566.363068 
+L 583.362083 565.864969 
+L 584.170773 569.098508 
+L 584.979462 576.728488 
+L 585.788151 604.650762 
+L 586.596841 627.22896 
+L 589.831598 552.331544 
+L 590.640287 547.43823 
+L 591.448977 566.343348 
+L 592.257666 589.903237 
+L 593.066355 621.086659 
+L 593.875044 599.194993 
+L 594.683734 646.403186 
+L 595.492423 629.804557 
+L 596.301112 600.311632 
+L 597.109802 551.520558 
+L 597.918491 530.425786 
+L 598.72718 584.722062 
+L 599.53587 584.78911 
+L 600.344559 575.879012 
+L 601.153248 614.695595 
+L 601.961937 639.50752 
+L 603.579316 621.584781 
+L 604.388005 563.3063 
+L 605.196695 570.964208 
+L 606.005384 567.506857 
+L 606.814073 587.207932 
+L 607.622763 593.286774 
+L 608.431452 613.657787 
+L 609.240141 618.416538 
+L 610.048831 641.271593 
+L 611.666209 601.38796 
+L 612.474898 568.627233 
+L 613.283588 567.790338 
+L 614.900966 576.160988 
+L 615.709656 584.866392 
+L 616.518345 636.323354 
+L 617.327034 616.725392 
+L 618.135724 526.735855 
+L 618.944413 598.730914 
+L 619.753102 587.892639 
+L 621.370481 557.445988 
+L 622.17917 571.747279 
+L 622.987859 565.183645 
+L 624.605238 616.872056 
+L 625.413927 622.964856 
+L 627.031306 601.961143 
+L 627.839995 599.281384 
+L 628.648685 582.298734 
+L 629.457374 553.829511 
+L 630.266063 543.985969 
+L 631.074752 604.767842 
+L 631.883442 593.074991 
+L 632.692131 641.236566 
+L 633.50082 611.76571 
+L 634.30951 608.70127 
+L 635.118199 481.070613 
+L 635.926888 555.438055 
+L 637.544267 547.02422 
+L 638.352956 576.164763 
+L 639.161646 587.774488 
+L 639.970335 611.629776 
+L 640.779024 611.109375 
+L 641.587713 621.00891 
+L 642.396403 597.906852 
+L 643.205092 565.99632 
+L 644.013781 557.665143 
+L 644.822471 560.378387 
+L 645.63116 584.253379 
+L 646.439849 553.140006 
+L 647.248539 597.984178 
+L 648.865917 614.503209 
+L 649.674606 592.699689 
+L 650.483296 582.075055 
+L 651.291985 558.260677 
+L 652.100674 578.512834 
+L 652.909364 566.319055 
+L 653.718053 571.260872 
+L 654.526742 574.094103 
+L 655.335432 621.73052 
+L 656.144121 608.985383 
+L 656.95281 641.547567 
+L 657.7615 585.379228 
+L 658.570189 589.44146 
+L 659.378878 560.296256 
+L 660.187567 559.713847 
+L 660.996257 548.30976 
+L 661.804946 546.500624 
+L 662.613635 610.196356 
+L 663.422325 623.671144 
+L 664.231014 594.064047 
+L 665.039703 632.456269 
+L 665.848393 588.253049 
+L 666.657082 569.62512 
+L 667.465771 538.922967 
+L 668.274461 559.113688 
+L 669.08315 550.033096 
+L 669.891839 596.407641 
+L 670.700528 584.040448 
+L 671.509218 626.615615 
+L 672.317907 635.192998 
+L 673.126596 610.475327 
+L 673.935286 577.881843 
+L 674.743975 560.348232 
+L 675.552664 565.862048 
+L 676.361354 558.02886 
+L 677.170043 570.756 
+L 677.978732 600.261774 
+L 678.787421 616.947279 
+L 679.596111 628.240016 
+L 680.4048 627.205502 
+L 681.213489 613.361332 
+L 682.022179 576.368781 
+L 682.830868 547.719528 
+L 683.639557 574.372531 
+L 684.448247 580.421412 
+L 685.256936 574.463917 
+L 686.065625 584.349232 
+L 686.874315 606.167826 
+L 687.683004 608.676335 
+L 688.491693 603.186215 
+L 689.300382 608.445146 
+L 690.109072 581.477648 
+L 690.917761 566.106718 
+L 691.72645 563.582598 
+L 692.53514 400.461921 
+L 693.343829 588.150182 
+L 694.152518 586.94771 
+L 694.961208 618.580897 
+L 695.769897 603.366017 
+L 696.578586 597.849434 
+L 697.387276 602.439359 
+L 698.195965 558.70761 
+L 699.004654 543.554043 
+L 699.813343 576.576146 
+L 700.622033 589.742005 
+L 701.430722 607.410021 
+L 702.239411 609.163093 
+L 703.048101 653.975644 
+L 703.85679 637.689718 
+L 705.474169 581.076983 
+L 706.282858 563.211169 
+L 707.091547 560.523785 
+L 707.900236 554.131062 
+L 708.708926 590.143124 
+L 709.517615 639.166776 
+L 710.326304 563.029354 
+L 711.134994 621.168891 
+L 711.943683 599.570761 
+L 712.752372 567.441162 
+L 714.369751 543.829352 
+L 715.17844 552.533125 
+L 715.98713 592.911228 
+L 716.795819 560.311441 
+L 717.604508 633.913147 
+L 718.413197 623.384239 
+L 719.221887 595.364034 
+L 720.030576 583.210262 
+L 720.839265 533.424162 
+L 721.647955 548.606496 
+L 722.456644 548.07342 
+L 723.265333 541.009818 
+L 724.074023 556.683851 
+L 724.882712 583.34809 
+L 725.691401 620.714053 
+L 726.500091 615.44688 
+L 727.30878 612.700813 
+L 728.117469 543.253008 
+L 728.926158 571.130817 
+L 729.734848 551.990763 
+L 730.543537 572.977933 
+L 731.352226 534.390349 
+L 732.160916 573.01084 
+L 732.969605 592.738823 
+L 733.778294 618.890661 
+L 734.586984 619.889446 
+L 735.395673 583.821278 
+L 736.204362 558.98777 
+L 737.013051 543.914283 
+L 737.821741 550.928031 
+L 738.63043 565.237037 
+L 739.439119 573.025987 
+L 740.247809 591.056031 
+L 741.056498 562.325581 
+L 741.865187 656.791556 
+L 742.673877 617.764629 
+L 743.482566 592.775149 
+L 744.291255 597.155842 
+L 745.099945 559.158515 
+L 745.908634 544.452206 
+L 746.717323 561.050475 
+L 747.526012 598.731623 
+L 748.334702 616.619076 
+L 749.143391 615.692684 
+L 749.95208 605.70501 
+L 750.76077 640.400036 
+L 751.569459 562.799956 
+L 752.378148 572.959402 
+L 753.186838 547.156528 
+L 753.995527 552.175238 
+L 754.804216 575.467377 
+L 755.612905 614.956532 
+L 756.421595 611.13601 
+L 757.230284 625.352853 
+L 758.038973 613.169607 
+L 758.847663 583.153251 
+L 759.656352 561.545594 
+L 760.465041 528.988383 
+L 761.273731 576.03176 
+L 762.08242 550.271563 
+L 762.891109 585.377968 
+L 763.699799 592.994534 
+L 764.508488 614.755406 
+L 765.317177 642.034398 
+L 766.125866 621.081866 
+L 766.934556 569.786507 
+L 767.743245 576.328869 
+L 768.551934 553.453103 
+L 769.360624 571.853685 
+L 770.169313 584.789942 
+L 770.978002 593.968304 
+L 771.786692 627.303511 
+L 772.595381 617.207956 
+L 773.40407 628.897953 
+L 774.21276 635.840205 
+L 775.021449 589.166411 
+L 775.830138 549.513811 
+L 776.638827 537.722085 
+L 777.447517 567.249104 
+L 778.256206 578.064328 
+L 780.682274 618.04834 
+L 781.490963 612.381235 
+L 782.299653 577.177729 
+L 783.108342 570.112041 
+L 783.917031 549.859475 
+L 784.72572 573.294934 
+L 785.53441 548.712328 
+L 786.343099 510.083759 
+L 787.151788 605.366361 
+L 787.960478 628.825613 
+L 788.769167 611.002535 
+L 789.577856 600.075687 
+L 790.386546 572.142851 
+L 791.195235 563.961126 
+L 792.003924 519.303751 
+L 792.812614 561.197411 
+L 793.621303 555.462439 
+L 794.429992 578.330009 
+L 795.238681 596.607805 
+L 796.047371 609.290988 
+L 796.85606 604.705815 
+L 797.664749 597.118945 
+L 798.473439 552.966841 
+L 799.282128 524.52791 
+L 800.090817 571.554039 
+L 800.899507 559.139183 
+L 801.708196 566.461459 
+L 802.516885 612.666474 
+L 803.325575 622.98638 
+L 804.134264 607.595399 
+L 804.942953 603.180009 
+L 805.751642 600.29461 
+L 806.560332 568.293841 
+L 807.369021 541.910626 
+L 808.17771 547.497383 
+L 808.9864 568.448214 
+L 809.795089 578.278803 
+L 810.603778 615.53092 
+L 811.412468 637.494796 
+L 812.221157 638.28663 
+L 813.029846 574.608647 
+L 813.838535 571.187111 
+L 814.647225 545.879414 
+L 815.455914 549.770838 
+L 816.264603 560.870077 
+L 817.073293 600.826633 
+L 817.881982 569.558439 
+L 818.690671 634.207442 
+L 819.499361 618.487235 
+L 820.30805 624.106468 
+L 821.116739 597.913961 
+L 821.925429 599.032747 
+L 822.734118 573.446095 
+L 823.542807 445.459884 
+L 824.351496 531.267231 
+L 825.160186 582.71801 
+L 825.968875 597.688181 
+L 826.777564 637.524075 
+L 827.586254 595.839036 
+L 828.394943 596.029425 
+L 829.203632 598.510185 
+L 830.012322 569.340484 
+L 830.821011 531.509873 
+L 831.6297 534.980586 
+L 832.43839 584.357637 
+L 833.247079 539.857886 
+L 834.055768 627.690349 
+L 834.864457 624.695542 
+L 835.673147 632.337153 
+L 837.290525 594.015361 
+L 838.099215 536.494528 
+L 838.907904 532.660305 
+L 839.716593 495.654801 
+L 840.525283 580.215428 
+L 841.333972 573.713534 
+L 842.142661 616.209047 
+L 842.95135 627.062982 
+L 843.76004 597.295454 
+L 844.568729 588.691998 
+L 845.377418 526.741113 
+L 846.186108 535.073404 
+L 846.994797 562.205168 
+L 847.803486 552.742681 
+L 848.612176 563.506674 
+L 849.420865 588.241724 
+L 850.229554 635.348805 
+L 851.038244 617.779469 
+L 851.846933 613.281052 
+L 852.655622 583.29711 
+L 853.464311 536.988151 
+L 854.273001 549.842782 
+L 855.08169 533.863523 
+L 855.890379 572.186143 
+L 856.699069 587.421989 
+L 857.507758 570.189248 
+L 858.316447 620.662003 
+L 859.125137 605.307409 
+L 859.933826 581.348183 
+L 860.742515 503.938956 
+L 861.551204 536.667831 
+L 862.359894 533.06312 
+L 863.168583 570.502505 
+L 863.977272 600.606457 
+L 864.785962 613.570209 
+L 865.594651 619.973317 
+L 866.40334 609.232596 
+L 867.21203 605.824327 
+L 868.020719 592.532918 
+L 868.829408 554.296664 
+L 869.638098 541.677154 
+L 870.446787 554.895956 
+L 871.255476 574.465656 
+L 872.064165 601.086438 
+L 872.872855 623.077144 
+L 873.681544 602.664217 
+L 874.490233 621.293815 
+L 875.298923 591.082818 
+L 876.107612 585.047924 
+L 876.916301 546.120509 
+L 877.724991 534.473761 
+L 878.53368 557.811831 
+L 879.342369 587.287362 
+L 880.151059 603.745625 
+L 880.959748 587.406802 
+L 881.768437 632.92396 
+L 882.577126 615.410502 
+L 884.194505 570.403559 
+L 885.003194 556.458903 
+L 885.811884 513.486692 
+L 886.620573 576.506474 
+L 887.429262 569.858694 
+L 888.237952 591.872747 
+L 889.046641 630.480553 
+L 889.85533 599.045714 
+L 890.664019 600.348789 
+L 891.472709 545.310412 
+L 892.281398 548.914916 
+L 893.090087 544.015276 
+L 893.898777 560.634834 
+L 894.707466 559.992633 
+L 895.516155 607.523743 
+L 896.324845 628.498419 
+L 897.133534 589.131555 
+L 897.942223 611.454665 
+L 898.750913 593.036999 
+L 899.559602 542.019883 
+L 900.368291 554.52713 
+L 901.17698 548.369722 
+L 901.98567 544.461301 
+L 902.794359 574.704403 
+L 903.603048 597.645146 
+L 904.411738 614.850338 
+L 905.220427 606.981399 
+L 906.029116 605.071092 
+L 906.837806 558.959562 
+L 907.646495 571.090907 
+L 908.455184 592.45052 
+L 909.263874 564.896478 
+L 910.072563 556.063736 
+L 910.881252 580.497811 
+L 912.498631 597.983034 
+L 913.30732 626.739365 
+L 914.116009 612.976228 
+L 914.924699 549.392859 
+L 915.733388 518.664789 
+L 916.542077 556.64471 
+L 917.350767 579.469841 
+L 918.159456 579.916215 
+L 918.968145 580.628682 
+L 919.776834 540.770192 
+L 920.585524 613.99884 
+L 921.394213 600.796449 
+L 922.202902 593.596291 
+L 923.011592 570.724913 
+L 923.820281 526.889871 
+L 924.62897 558.232752 
+L 925.43766 567.745411 
+L 926.246349 586.53538 
+L 927.055038 616.118282 
+L 927.863728 593.667303 
+L 928.672417 617.675305 
+L 929.481106 607.124523 
+L 930.289795 593.184371 
+L 931.098485 534.46254 
+L 931.907174 557.027928 
+L 932.715863 453.432268 
+L 933.524553 565.85081 
+L 934.333242 585.784045 
+L 935.141931 610.256124 
+L 935.950621 624.270354 
+L 936.75931 583.913913 
+L 937.567999 593.357797 
+L 938.376689 534.21964 
+L 939.185378 585.860623 
+L 939.994067 534.434082 
+L 940.802756 576.008076 
+L 941.611446 565.621088 
+L 942.420135 585.255794 
+L 943.228824 641.595312 
+L 944.037514 611.778983 
+L 944.846203 621.185162 
+L 945.654892 561.44463 
+L 946.463582 575.333933 
+L 947.272271 523.717214 
+L 948.08096 546.534297 
+L 948.889649 595.148463 
+L 949.698339 589.120098 
+L 950.507028 637.1229 
+L 951.315717 591.399532 
+L 952.124407 606.412693 
+L 952.933096 593.495414 
+L 953.741785 571.174513 
+L 954.550475 540.73095 
+L 955.359164 552.245685 
+L 956.167853 543.602243 
+L 956.976543 602.810754 
+L 957.785232 582.006501 
+L 958.593921 607.942458 
+L 959.40261 608.329006 
+L 960.2113 611.039682 
+L 961.019989 556.545578 
+L 961.828678 561.504694 
+L 962.637368 559.793772 
+L 963.446057 544.635079 
+L 964.254746 572.98341 
+L 965.063436 581.684619 
+L 965.872125 587.643288 
+L 966.680814 638.506419 
+L 967.489503 587.173391 
+L 968.298193 608.281244 
+L 969.106882 573.091633 
+L 969.915571 583.769866 
+L 970.724261 545.435041 
+L 971.53295 554.960107 
+L 972.341639 571.325326 
+L 972.341639 571.325326 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_127">
+    <path d="M 548.628878 500.587957 
+L 992.518437 500.587957 
+" clip-path="url(#pc099de2f57)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #000000; stroke-opacity: 0.3; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 548.628878 671.23125 
+L 548.628878 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 992.518437 671.23125 
+L 992.518437 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 548.628878 671.23125 
+L 992.518437 671.23125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 548.628878 378.99125 
+L 992.518437 378.99125 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_73">
+    <!-- 出水NH4-N对比 -->
+    <g transform="translate(718.644595 372.99125) scale(0.14 -0.14)">
+     <defs>
+      <path id="MicrosoftYaHei-51fa" d="M 5100 2172 
+L 5100 2403 
+L 3456 2403 
+L 3456 -47 
+L 5288 -47 
+L 5288 1734 
+L 5813 1734 
+L 5813 -747 
+L 5288 -747 
+L 5288 -522 
+L 588 -522 
+L 588 1734 
+L 1119 1734 
+L 1119 -47 
+L 2913 -47 
+L 2913 2403 
+L 756 2403 
+L 756 4647 
+L 1288 4647 
+L 1288 2878 
+L 2913 2878 
+L 2913 5222 
+L 3456 5222 
+L 3456 2878 
+L 5100 2878 
+L 5100 4647 
+L 5631 4647 
+L 5631 2172 
+L 5100 2172 
+z
+" transform="scale(0.015625)"/>
+      <path id="MicrosoftYaHei-6c34" d="M 2925 5297 
+L 3431 5297 
+L 3431 4294 
+Q 3700 3563 4047 2934 
+Q 4738 3509 5425 4309 
+L 5844 3934 
+Q 5113 3169 4300 2506 
+Q 5125 1200 6319 384 
+Q 6056 122 5894 -84 
+Q 4250 1209 3431 3119 
+L 3431 197 
+Q 3431 -734 2538 -734 
+Q 2263 -734 1725 -728 
+Q 1694 -497 1625 -166 
+Q 2125 -216 2438 -216 
+Q 2925 -216 2925 253 
+L 2925 5297 
+z
+M 256 3297 
+L 256 3772 
+L 2413 3772 
+L 2413 3316 
+Q 1881 1266 475 -197 
+Q 263 47 94 184 
+Q 1506 1672 1913 3297 
+L 256 3297 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MicrosoftYaHei-51fa"/>
+     <use xlink:href="#MicrosoftYaHei-6c34" x="100"/>
+     <use xlink:href="#MicrosoftYaHei-4e" x="200"/>
+     <use xlink:href="#MicrosoftYaHei-48" x="281.298828"/>
+     <use xlink:href="#MicrosoftYaHei-34" x="358.642578"/>
+     <use xlink:href="#MicrosoftYaHei-2d" x="417.285156"/>
+     <use xlink:href="#MicrosoftYaHei-4e" x="460.546875"/>
+     <use xlink:href="#MicrosoftYaHei-5bf9" x="541.845703"/>
+     <use xlink:href="#MicrosoftYaHei-6bd4" x="641.845703"/>
+    </g>
+   </g>
+   <g id="legend_3">
+    <g id="patch_24">
+     <path d="M 894.395 433.430312 
+L 985.518437 433.430312 
+Q 987.518437 433.430312 987.518437 431.430312 
+L 987.518437 385.99125 
+Q 987.518437 383.99125 985.518437 383.99125 
+L 894.395 383.99125 
+Q 892.395 383.99125 892.395 385.99125 
+L 892.395 431.430312 
+Q 892.395 433.430312 894.395 433.430312 
+z
+" style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="line2d_128">
+     <path d="M 896.395 392.485 
+L 906.395 392.485 
+L 916.395 392.485 
+" style="fill: none; stroke: #0000ff; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_74">
+     <!-- 固定DO(PID) -->
+     <g transform="translate(924.395 395.985) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-56fa"/>
+      <use xlink:href="#MicrosoftYaHei-5b9a" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-4f" x="276.171875"/>
+      <use xlink:href="#MicrosoftYaHei-28" x="357.666016"/>
+      <use xlink:href="#MicrosoftYaHei-50" x="391.064453"/>
+      <use xlink:href="#MicrosoftYaHei-49" x="452.246094"/>
+      <use xlink:href="#MicrosoftYaHei-44" x="481.640625"/>
+      <use xlink:href="#MicrosoftYaHei-29" x="557.8125"/>
+     </g>
+    </g>
+    <g id="line2d_129">
+     <path d="M 896.395 407.964687 
+L 906.395 407.964687 
+L 916.395 407.964687 
+" style="fill: none; stroke: #ff0000; stroke-opacity: 0.6; stroke-width: 1.5; stroke-linecap: square"/>
+    </g>
+    <g id="text_75">
+     <!-- DQN策略 -->
+     <g transform="translate(924.395 411.464687) scale(0.1 -0.1)">
+      <use xlink:href="#MicrosoftYaHei-44"/>
+      <use xlink:href="#MicrosoftYaHei-51" x="76.171875"/>
+      <use xlink:href="#MicrosoftYaHei-4e" x="157.666016"/>
+      <use xlink:href="#MicrosoftYaHei-7b56" x="238.964844"/>
+      <use xlink:href="#MicrosoftYaHei-7565" x="338.964844"/>
+     </g>
+    </g>
+    <g id="line2d_130">
+     <path d="M 896.395 423.444375 
+L 906.395 423.444375 
+L 916.395 423.444375 
+" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #000000; stroke-opacity: 0.3; stroke-width: 1.5"/>
+    </g>
+    <g id="text_76">
+     <!-- 排放标准 -->
+     <g transform="translate(924.395 426.944375) scale(0.1 -0.1)">
+      <defs>
+       <path id="MicrosoftYaHei-6392" d="M 4375 5309 
+L 4863 5309 
+L 4863 4159 
+L 6188 4159 
+L 6188 3684 
+L 4863 3684 
+L 4863 2609 
+L 6038 2609 
+L 6038 2134 
+L 4863 2134 
+L 4863 1047 
+L 6294 1047 
+L 6294 572 
+L 4863 572 
+L 4863 -841 
+L 4375 -841 
+L 4375 5309 
+z
+M 1844 1047 
+L 3138 1047 
+L 3138 2134 
+L 2150 2134 
+L 2150 2609 
+L 3138 2609 
+L 3138 3684 
+L 2163 3684 
+L 2163 4159 
+L 3138 4159 
+L 3138 5309 
+L 3625 5309 
+L 3625 -841 
+L 3138 -841 
+L 3138 572 
+L 1844 572 
+L 1844 1047 
+z
+M 131 4166 
+L 875 4166 
+L 875 5316 
+L 1350 5316 
+L 1350 4166 
+L 1969 4166 
+L 1969 3728 
+L 1350 3728 
+L 1350 2563 
+Q 1650 2716 1938 2872 
+Q 1956 2603 1988 2372 
+Q 1681 2216 1350 2044 
+L 1350 -134 
+Q 1350 -772 669 -778 
+Q 481 -784 156 -778 
+Q 131 -528 75 -259 
+Q 419 -284 613 -284 
+Q 875 -284 875 3 
+L 875 1797 
+Q 525 1616 150 1416 
+L 88 1966 
+Q 491 2144 875 2328 
+L 875 3728 
+L 131 3728 
+L 131 4166 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-653e" d="M 3956 5359 
+L 4456 5272 
+Q 4322 4681 4106 4128 
+L 6281 4128 
+L 6281 3666 
+L 5759 3666 
+Q 5638 1816 4884 725 
+Q 5447 25 6338 -353 
+Q 6131 -628 5994 -847 
+Q 5153 -394 4559 322 
+Q 3947 -356 3094 -903 
+Q 2950 -722 2738 -509 
+Q 3669 56 4259 731 
+Q 3713 1625 3563 2988 
+Q 3378 2669 3163 2366 
+Q 3031 2553 2850 2766 
+Q 3663 3884 3956 5359 
+z
+M 156 4184 
+L 3169 4184 
+L 3169 3722 
+L 1400 3722 
+Q 1394 3166 1378 2703 
+L 2813 2703 
+Q 2750 1166 2694 241 
+Q 2638 -584 1981 -616 
+Q 1600 -622 1263 -609 
+Q 1225 -378 1156 -84 
+Q 1569 -128 1794 -128 
+Q 2175 -128 2206 347 
+Q 2269 1078 2306 2241 
+L 1359 2241 
+Q 1338 216 369 -853 
+Q 225 -641 38 -416 
+Q 625 247 750 1003 
+Q 909 1713 906 3722 
+L 156 3722 
+L 156 4184 
+z
+M 5263 3666 
+L 3934 3666 
+Q 4034 2134 4584 1166 
+Q 5188 2131 5263 3666 
+z
+M 1206 5141 
+L 1631 5366 
+Q 1900 4966 2144 4503 
+L 1706 4272 
+Q 1456 4753 1206 5141 
+z
+" transform="scale(0.015625)"/>
+       <path id="MicrosoftYaHei-51c6" d="M 1413 2766 
+Q 2313 3866 2869 5334 
+L 3331 5172 
+Q 3128 4694 2906 4253 
+L 6194 4253 
+L 6194 3822 
+L 4675 3822 
+L 4675 2891 
+L 6025 2891 
+L 6025 2459 
+L 4675 2459 
+L 4675 1528 
+L 6038 1528 
+L 6038 1097 
+L 4675 1097 
+L 4675 78 
+L 6275 78 
+L 6275 -341 
+L 2769 -341 
+L 2769 -841 
+L 2281 -841 
+L 2281 3131 
+Q 2034 2738 1769 2384 
+Q 1631 2578 1413 2766 
+z
+M 2769 78 
+L 4188 78 
+L 4188 1097 
+L 2769 1097 
+L 2769 78 
+z
+M 1081 2422 
+Q 1325 2291 1556 2209 
+Q 1113 916 681 -372 
+L 169 -141 
+Q 650 1003 1081 2422 
+z
+M 2769 1528 
+L 4188 1528 
+L 4188 2459 
+L 2769 2459 
+L 2769 1528 
+z
+M 2769 2891 
+L 4188 2891 
+L 4188 3822 
+L 2769 3822 
+L 2769 2891 
+z
+M 531 4991 
+Q 1050 4384 1581 3709 
+Q 1538 3678 1150 3341 
+Q 681 3997 138 4672 
+L 531 4991 
+z
+M 3919 5116 
+L 4325 5372 
+Q 4569 5072 4881 4622 
+L 4450 4334 
+Q 4156 4784 3919 5116 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MicrosoftYaHei-6392"/>
+      <use xlink:href="#MicrosoftYaHei-653e" x="100"/>
+      <use xlink:href="#MicrosoftYaHei-6807" x="200"/>
+      <use xlink:href="#MicrosoftYaHei-51c6" x="300"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p09f0b4a0f7">
+   <rect x="50.598438" y="24.39125" width="443.88956" height="292.24"/>
+  </clipPath>
+  <clipPath id="p15fa0c3c59">
+   <rect x="548.628878" y="24.39125" width="443.88956" height="292.24"/>
+  </clipPath>
+  <clipPath id="p5414607faf">
+   <rect x="50.598438" y="378.99125" width="443.88956" height="292.24"/>
+  </clipPath>
+  <clipPath id="pc099de2f57">
+   <rect x="548.628878" y="378.99125" width="443.88956" height="292.24"/>
+  </clipPath>
+ </defs>
+</svg>

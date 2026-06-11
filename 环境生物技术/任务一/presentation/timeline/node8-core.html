@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>核心问题与全链条分析 — 纤维素乙醇投资评估</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link active" data-section="timeline" href="index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="../simulation/index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">时间线</a> <span class="sep">&gt;</span> <span class="current">核心问题与全链条分析</span>
+  </div>
+
+  <main class="detail-page">
+    <section class="detail-hero fade-in">
+      <span class="year-badge">2026</span>
+      <h1>核心问题与全链条分析</h1>
+    </section>
+
+    <section class="detail-content fade-in">
+      <!-- 核心问题 -->
+      <h2>为何"技术可行"却"商业失败"？</h2>
+      <p>
+        这是纤维素乙醇产业化中最令人困惑的悖论：每一个技术环节在实验室中都已经"可行"——
+        预处理可以高效破坏木质素屏障、酶解可以获得高糖化率、工程酵母可以共发酵五碳六碳糖——
+        但当这些环节组合成完整的生产链条时，整体效率却急剧下降。
+      </p>
+
+      <!-- 木桶效应图 -->
+      <div class="chart-container fade-in">
+        <h3>全链条"木桶效应"——酶解是最短板</h3>
+        <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="木桶效应图">
+          <!-- 五个板块（桶板） -->
+          <!-- 原料 - 较高 -->
+          <rect x="60" y="40" width="72" height="200" rx="4" fill="#4fc3f7" opacity="0.75"/>
+          <text x="96" y="150" text-anchor="middle" fill="var(--bg-primary)" font-size="12" font-weight="600">原料</text>
+          <text x="96" y="170" text-anchor="middle" fill="var(--bg-primary)" font-size="10">供应</text>
+          <text x="96" y="30" text-anchor="middle" fill="var(--text-muted)" font-size="10">85%</text>
+
+          <!-- 预处理 - 中高 -->
+          <rect x="142" y="70" width="72" height="170" rx="4" fill="#81c784" opacity="0.75"/>
+          <text x="178" y="160" text-anchor="middle" fill="var(--bg-primary)" font-size="12" font-weight="600">预处理</text>
+          <text x="178" y="180" text-anchor="middle" fill="var(--bg-primary)" font-size="10">EA/ELLA</text>
+          <text x="178" y="60" text-anchor="middle" fill="var(--text-muted)" font-size="10">75%</text>
+
+          <!-- 酶解 - 最短板，用红色标注 -->
+          <rect x="224" y="160" width="72" height="80" rx="4" fill="#ef5350" opacity="0.85"/>
+          <text x="260" y="200" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">酶解</text>
+          <text x="260" y="220" text-anchor="middle" fill="#fff" font-size="10">成本黑洞</text>
+          <text x="260" y="150" text-anchor="middle" fill="#ef5350" font-size="11" font-weight="700">40%</text>
+          <!-- 标注箭头 -->
+          <text x="250" y="40" fill="#ef5350" font-size="12" font-weight="600"> 最短板!</text>
+
+          <!-- 发酵 - 中等 -->
+          <rect x="306" y="100" width="72" height="140" rx="4" fill="#ffb74d" opacity="0.75"/>
+          <text x="342" y="170" text-anchor="middle" fill="var(--bg-primary)" font-size="12" font-weight="600">发酵</text>
+          <text x="342" y="190" text-anchor="middle" fill="var(--bg-primary)" font-size="10">共发酵</text>
+          <text x="342" y="90" text-anchor="middle" fill="var(--text-muted)" font-size="10">65%</text>
+
+          <!-- 蒸馏 - 较高 -->
+          <rect x="388" y="55" width="72" height="185" rx="4" fill="#4fc3f7" opacity="0.75"/>
+          <text x="424" y="150" text-anchor="middle" fill="var(--bg-primary)" font-size="12" font-weight="600">蒸馏</text>
+          <text x="424" y="170" text-anchor="middle" fill="var(--bg-primary)" font-size="10">精馏</text>
+          <text x="424" y="45" text-anchor="middle" fill="var(--text-muted)" font-size="10">80%</text>
+
+          <!-- 水平线 - 系统整体水平 -->
+          <line x1="40" y1="240" x2="475" y2="240" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="5"/>
+          <text x="480" y="244" fill="var(--text-muted)" font-size="10">整体</text>
+
+          <!-- 底部说明 -->
+          <text x="260" y="275" text-anchor="middle" fill="var(--text-secondary)" font-size="12">
+            系统整体水平由最短板（酶解）决定，而非最优环节
+          </text>
+        </svg>
+      </div>
+
+      <p>
+        上图直观展示了纤维素乙醇的"木桶效应"：虽然蒸馏、原料供应等环节已较为成熟，
+        但<strong>酶解环节</strong>作为最短板，决定了整个系统的上限。更关键的是，
+        各环节之间存在复杂的<strong>耦合效应</strong>——预处理的微小不足会被酶解放大，
+        酶解的低效又导致发酵底物不足，最终产出大幅缩水。
+      </p>
+
+      <!-- 核心洞察 -->
+      <div class="highlight-box fade-in">
+        <h3>核心洞察</h3>
+        <p>
+          纤维素乙醇产业化的根本困境<strong>不是因为"技术不行"，而是"系统集成不行"</strong>。
+          半个世纪以来，学术界习惯于在孤立条件下优化单个环节的指标（糖化率、发酵产率等），
+          却忽视了全链条视角下各环节间的耦合与制约。
+        </p>
+        <p>
+          对于投资者而言，这意味着：不能仅凭某个环节的"突破性进展"就做出投资决策，
+          必须要求<strong>全链条技术经济分析</strong>的完整证据链。
+        </p>
+      </div>
+
+      <!-- 过渡到角色模拟 -->
+      <h2>接下来...</h2>
+      <p>
+        在了解了纤维素乙醇的技术演进和核心困境之后，我们将进入更具挑战性的环节——
+        以风险投资人的视角，对纤维素乙醇产业化进行穿透性拷问。
+        这不是学术论文的延伸，而是一场关于"投还是不投"的真实决策模拟。
+      </p>
+
+      <div style="text-align: center; margin-top: 2rem;" class="fade-in">
+        <a href="../simulation/index.html" class="btn btn-solid" style="font-size: 1.1rem; padding: 0.85rem 2.5rem;">
+          进入角色模拟 &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-nav">
+    <a href="node7-computer.html" class="btn btn-outline">&larr; 上一节</a>
+    <a href="index.html" class="btn btn-outline">返回时间线</a>
+    <a href="../simulation/index.html" class="btn btn-solid">进入角色模拟 &rarr;</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

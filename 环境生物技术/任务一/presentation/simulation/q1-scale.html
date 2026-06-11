@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿透问题一：预处理放大效应 - 纤维素乙醇交互演示</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/simulation.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <span class="nav-brand"><strong>1120233042</strong> 李文煜</span>
+    <div class="nav-links">
+      <a class="nav-link" data-section="home" href="../index.html">封面</a>
+      <a class="nav-link" data-section="timeline" href="../timeline/index.html">时间线</a>
+      <a class="nav-link" data-section="simulation" href="index.html">角色模拟</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <div class="breadcrumb">
+      <a href="index.html">角色模拟</a> &gt; <span class="current">穿透问题一</span>
+    </div>
+
+    <section class="question-progress fade-in">
+      <div class="progress-dots">
+        <span class="dot active" id="qdot-0"></span>
+        <span class="dot" id="qdot-1"></span>
+        <span class="dot" id="qdot-2"></span>
+        <span class="dot" id="qdot-3"></span>
+        <span class="dot" id="qdot-4"></span>
+      </div>
+      <p class="progress-label">问题 1 / 5</p>
+    </section>
+
+    <h2 class="fade-in">穿透问题一：预处理放大效应</h2>
+
+    <div class="flip-card fade-in" data-question="0">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>从10吨/天到1500吨/天，预处理均匀性如何保证？</h3>
+          <p>公司展示的优美数据来自10吨/天中试装置。然而，历史告诉我们：Abengoa在Hugoton工厂和DuPont在Nevada工厂均因预处理放大问题导致商业化失败。从实验室到工业化规模的放大效应，是纤维素乙醇产业最致命的陷阱之一。</p>
+          <span class="flip-hint">[ 点击翻转查看失败模式 ]</span>
+        </div>
+        <div class="flip-card-back">
+          <h3>失败模式：链式崩溃</h3>
+          <p>预处理效果下降10-15% → 纤维素可及性降低 → 糖产率连锁下降 → 发酵液中乙醇浓度低于4% → 蒸馏能耗急剧上升 → MESP从$1.80飙升至$3.00以上。这不是简单的线性恶化，而是一环扣一环的链式崩溃。</p>
+          <span class="ref-tag">文献: Bali 2019 [6], NREL [13][14]</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-nav">
+    <a href="index.html">← 上一页</a>
+    <a href="index.html">返回目录</a>
+    <a href="q2-enzyme.html">下一页 →</a>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/flip-card.js"></script>
+  <script src="../js/counter.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>
