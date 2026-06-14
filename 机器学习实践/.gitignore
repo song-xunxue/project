@@ -1,3 +1,6 @@
+# 通用忽略规则（Python 编译产物 / IDE / OS / 密钥 / 模型文件等）见全局 ~/.gitignore_global
+# 本文件保留子目录自包含的忽略规则（便于脱离全局配置独立 clone）
+
 # IDE
 .idea/
 .vscode/
