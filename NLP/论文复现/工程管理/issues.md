@@ -91,7 +91,7 @@
 - **验收标准**：每个（模型 × 数据集 × shot）配置有四种内容无关输入选择的准确率对比；汇总表可并入最终报告。
 - **状态**：done（2026-11-16 03:16–03:17，论文 Table 3 设置执行完毕：sst2:1 + agnews:0 × 4 模型 × 5 seeds = 40 run，exit 0，两道防线全过）
 - **产出物**：`results/cf_ablation/`（含 cf_ablation_summary.csv 50 行）、`results/logs/I10_cf_ablation.log`、聚合表见脚本输出归档
-- **备注**：论文结论"内容无关输入的选择影响结果，且存在多种好选择"复现成立：xl AGNews 0-shot 空串 0.5733 vs 三输入平均 0.5200（差 5.3pp）；四值互异性 8 组中 4 组互异、4 组全同（全同组均为坍缩机制：argmax 对 p_cf 不敏感，如实解释）。**口径（R01b B4）**：缺失计数为类粒度，与历史词粒度不可混比。
+- **备注**：论文结论"内容无关输入的选择影响结果，且存在多种好选择"复现成立：xl AGNews 0-shot 空串 0.5733 vs 三输入平均 0.5200（差 5.3pp）；四值互异性按 5-seed 均值口径 8 组中 6 组互异、2 组全同（medium-agnews 与 large-sst2，均为坍缩机制：argmax 对 p_cf 不敏感，如实解释；2026-11-17 对抗复核更正）。**口径（R01b B4）**：缺失计数为类粒度，与历史词粒度不可混比。
 
 ### I11 汇总与图
 
@@ -105,6 +105,6 @@
 
 - **描述**：report（4-6 页）+ slides（7 页）+ README 终稿 + contributions.md + 打包自检（NLP2026_Gxx_Pxx.zip），对齐提交规范最终包清单。
 - **验收标准**：包内清单齐全（report/slides/README/code+configs/results/data/contributions）；README 含环境版本、数据取得、命令、预计耗时、逐条结果入口；自检通过。
-- **状态**：pending（待用户提供组号 G、论文号 P 与四人分工）
-- **产出物**：提交包目录（待定）
-- **备注**：截止 2026-11-22 24:00 延河课堂提交，汇报 11-24 或 12-01。
+- **状态**：done（2026-11-17，组号 G17 / 论文号 P33，分工栏按要求留白待组内填写）
+- **产出物**：`report.pdf`（正文 6 页：定位/差异/结果/消融/案例/结论，第 6 页同页含参考文献与附录 A，符合 4–6 页规范）+ `report.tex` 源 + `slides.pptx`/`slides.pdf`（7 页 16:9，标题 30pt/正文 20pt/表 18pt 达标）+ `README.md`（项目总说明）+ `contributions.md` + `NLP2026_G17_P33.zip`（606 条目 15.6MB，自检：无重复、CRC 全过、无权重/缓存）+ `材料/最终材料.zip`（60 条目 1.9MB）+ 打包脚本 `scripts/package_submission.py`
+- **备注**：全工程以独立项目呈现并分 5 次提交推送双平台（Gitee li_fjyr/project + GitHub song-xunxue/project，d68257a..9998645）；zip 经 .gitattributes 取反走普通二进制（Gitee 免费版无 LFS）；数据说明升格 `code/data/README.md`（SHA256 复核 8/8 一致）；`data/数据来源.md`、`复现计划.md` 已合并/删除。报告数字另经多代理对抗复核。

@@ -156,7 +156,7 @@ def main():
                     all_records.append(rec)
                     print(f"    （{time.time() - t0:.1f}s）")
         # 模型循环末尾释放显存：_RUNNER_CACHE 永不清理，四模型同进程时权重累积
-        # （0.52+1.45+3.10GB 后再加载 xl 的 6.13GB 必 OOM）——须先 del 局部引用再清缓存
+        # （约 0.52+1.45+3.10 GiB 后再加载 xl 约 6.0 GiB 必 OOM）——须先 del 局部引用再清缓存
         del runner
         _RUNNER_CACHE.clear()
         if torch.cuda.is_available():

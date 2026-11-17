@@ -215,7 +215,7 @@ function card(slide, opts) {
   s.addText([
     { text: "Table 3 结论复现成立", options: { fontSize: 21, bold: true, color: C.deep, breakLine: true } },
     { text: "选择有实质影响：XL AGNews 0-shot 空串 0.5733 vs 三者平均 0.5200（5.3pp）", options: { bullet: true, breakLine: true } },
-    { text: "单输入普遍不劣于三者平均 —— 存在多种好选择", options: { bullet: true, breakLine: true } },
+    { text: "单输入与三者平均互有胜负（24 组对比 8 优 / 6 平 / 10 劣）—— 存在多种好选择", options: { bullet: true, breakLine: true } },
     { text: "四值全同的组 = 校准坍缩：argmax 对 p_cf 不敏感", options: { bullet: true } },
   ], { x: 0.8, y: 4.86, w: 6.95, h: 1.95, fontFace: FONT, fontSize: 20, color: "1F2A36",
       margin: 0, paraSpaceAfter: 8, valign: "top" });
@@ -227,7 +227,7 @@ function card(slide, opts) {
   card(s, { x: 8.2, y: 4.2, w: 4.58, h: 2.72, fill: { color: C.redTint } });
   s.addText([
     { text: "案例 · 破坏（TREC 1-shot）", options: { fontSize: 20, bold: true, color: C.red, breakLine: true } },
-    { text: "基线六类近均匀，LOC 0.214 微弱正确；ABBR 的 1/p_cf 极大 → 分数 271 : 1 坍缩翻错 —— TREC 全规模负收益的机制", options: { fontSize: 20, color: "1F2A36" } },
+    { text: "基线六类近均匀，LOC 0.214 微弱正确；ABBR 的 1/p_cf 极大 → 分数 271 一骑绝尘（次高仅 20.9）坍缩翻错 —— TREC 全规模负收益的机制", options: { fontSize: 20, color: "1F2A36" } },
   ], { x: 8.42, y: 4.35, w: 4.14, h: 2.45, fontFace: FONT, margin: 0, paraSpaceAfter: 6 });
   s.addText("24 例明细：results/案例分析_全量.md（翻转 48802 = 修复 14688 + 破坏 16089 + 双向翻错 18025）",
     { x: 0.55, y: 7.02, w: 12.2, h: 0.36, fontFace: FONT, fontSize: 14, color: C.gray, margin: 0 });
@@ -264,7 +264,7 @@ function card(slide, opts) {
     { text: "AI 辅助：Claude Code 工程执行；方案与判读本组完成", options: { bullet: true } },
   ], { x: 8.74, y: 1.45, w: 3.85, h: 4.8, fontFace: FONT, fontSize: 20, color: "F2F7FB",
       margin: 0, paraSpaceAfter: 10, valign: "top" });
-  s.addText("提交包 NLP2026_G17_P33.zip · report.pdf（正文 5 页）· 逐条结果入口见 results/",
+  s.addText("提交包 NLP2026_G17_P33.zip · report.pdf（正文 6 页）· 逐条结果入口见 results/",
     { x: 0.55, y: 6.85, w: 12.2, h: 0.4, fontFace: FONT, fontSize: 16, color: C.iceOnDark,
       align: "center", margin: 0 });
   s.addNotes("收尾：两正一机制 + 两处不一致如实报告；右侧强调证据链与 AI 声明（评分点：错误分析与结论、交付）。");

@@ -86,7 +86,8 @@ AI 辅助 & --- & 工程实现与批量执行使用 Claude Code 辅助（详见�
 \times 5\ (\text{seeds}) = 240$ 个 run，fp32 推理，无一失败；环境为 Python 3.11 +
 torch 2.14.1+cu126 + transformers 5.22.1，单卡 RTX 4060 Laptop 8GB。
 批处理大小按（模型 $\times$ 数据集）显存探针核定（表~\ref{tab:bs}）；
-gpt2-xl fp32 权重 6.1GB 超出物理显存的部分由 Windows WDDM 共享内存溢出兜底，
+gpt2-xl fp32 权重约 6.0 GiB（文件 6.43 GB），推理峰值预留最高 8.16 GB，超出
+8GB 物理显存的部分由 Windows WDDM 共享内存溢出兜底，
 实测 bs=2 反而最快（溢出页少），全程无 OOM 崩溃。全网格总耗时 1 小时 40 分
 （gpt2 6.6 min / medium 13.5 min / large 27.2 min / xl 52.5 min）。
 
@@ -144,12 +145,14 @@ GPT-2 XL 在 TREC 全部 shot 校准均大幅正收益（如 0-shot 24.0$\righta
 跨集合方差（如 AGNews 1-shot 8.4$\rightarrow$5.7）。本组 36 个 few-shot 配置中，
 校准仅 10 个降方差、26 个升方差，$\mathrm{std}(\text{校准})/\mathrm{std}(\text{基线})$
 中位数为 1.33（如 gpt2 AGNews 1-shot：$\pm 0.020 \rightarrow \pm 0.140$）。
-方差（图~\ref{fig:fullgrid} 误差棒）在 1-shot 处最大，源于先验坍缩方向随训练样例集合变化。
+方差（图~\ref{fig:fullgrid} 误差棒）随 shot 数不降反升（校准 std 的 12 面板均值
+1/4/8-shot 为 0.074/0.083/0.093），其中仅 AGNews 各面板在 1-shot 出现最大方差——
+源于先验坍缩方向随训练样例集合变化。
 
 \begin{figure}[p]\centering
 \includegraphics[width=0.88\textwidth]{材料/figures/fig3_fullgrid_acc.pdf}
 \caption{全网格准确率（均值$\pm$标准差，5 个训练样例集合）随 shot 数变化：基线 vs 校准，
-虚线为随机水平。每个面板 25 个 run（5 shots 配置 $\times$ 5 seeds），共 240 run。}
+虚线为随机水平。每个面板 20 个 run（4 shots 配置 $\times$ 5 seeds），共 240 run。}
 \label{fig:fullgrid}
 \end{figure}
 
@@ -183,8 +186,9 @@ $p_{\mathrm{cf}}$ 并重算校准准确率（每个 run 的逐样本概率复用
 \end{table}
 
 \textbf{复现结论：内容无关输入的选择实质性影响结果，且存在多种好选择}（论文 Table 3 的结论）。
-最显著处：XL AGNews 0-shot 空串 0.5733 vs 三者平均 0.5200（差 5.3pp），且单输入普遍不劣于
-三者平均；8 组配置中 4 组四值互异。四值完全相同的组（如 medium AGNews 0-shot）均为
+最显著处：XL AGNews 0-shot 空串 0.5733 vs 三者平均 0.5200（差 5.3pp）；单输入与三者平均
+互有胜负（24 组对比中 8 优 / 6 平 / 10 劣）。8 组配置中 6 组四值互异（2 组完全相同）。
+四值完全相同的组（medium AGNews 0-shot 与 large SST-2 1-shot）均为
 \textbf{坍缩机制}：校准后全部样本坍缩到同一类，$\arg\max$ 对 $p_{\mathrm{cf}}$ 不敏感——
 这本身即"校准可能失效"的边界证据。gpt2 全部 12 个配置的消融也已完成（复用同一管线），
 TREC 8-shot 上三者平均 0.0333 vs [MASK] 0.2400，选择差异高达 20.7pp。
