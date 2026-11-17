@@ -1,0 +1,39 @@
+\documentclass[border=2mm]{standalone}
+\usepackage{ctex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\definecolor{primary}{HTML}{79C4FE}
+\definecolor{accent}{HTML}{0B6FB8}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=3 by 1, horizontal sep=1.45cm},
+  width=5.5cm, height=5.6cm,
+  ybar, /tikz/bar width=9pt,
+  ymin=0, ymax=85,
+  ylabel={准确率 (\%)}, ylabel style={font=\small},
+  xlabel={shot 数}, xlabel style={font=\small},
+  symbolic x coords={0,1,4,8}, xtick=data,
+  tick label style={font=\small},
+  title style={font=\small\bfseries},
+  enlarge x limits=0.18,
+]
+\nextgroupplot[title={SST-2（二类）}, legend pos=north east, legend style={font=\scriptsize}]
+\addplot[fill=primary, draw=accent!80] coordinates {(0,72.67) (1,48.33) (4,49.33) (8,49.67)};
+\addlegendentry{基线}
+\addplot[fill=accent, draw=accent!80] coordinates {(0,60.67) (1,50.67) (4,50.00) (8,49.33)};
+\addlegendentry{校准}
+\addplot[dashed, thick, red!70!black, sharp plot, update limits=false] coordinates {(0,50.0) (8,50.0)};
+\addlegendentry{随机水平}
+\nextgroupplot[title={AGNews（四类）}]
+\addplot[fill=primary, draw=accent!80] coordinates {(0,59.00) (1,23.67) (4,24.33) (8,24.33)};
+\addplot[fill=accent, draw=accent!80] coordinates {(0,54.00) (1,52.33) (4,25.00) (8,24.67)};
+\addplot[dashed, thick, red!70!black, sharp plot, update limits=false] coordinates {(0,25.0) (8,25.0)};
+\nextgroupplot[title={TREC（六类）}]
+\addplot[fill=primary, draw=accent!80] coordinates {(0,26.00) (1,34.00) (4,19.00) (8,33.33)};
+\addplot[fill=accent, draw=accent!80] coordinates {(0,11.67) (1,12.67) (4,23.33) (8,3.33)};
+\addplot[dashed, thick, red!70!black, sharp plot, update limits=false] coordinates {(0,16.67) (8,16.67)};
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

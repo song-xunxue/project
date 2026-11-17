@@ -1,0 +1,42 @@
+\documentclass[border=2mm]{standalone}
+\usepackage{ctex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\definecolor{c1}{HTML}{79C4FE}
+\definecolor{c2}{HTML}{3D9AE2}
+\definecolor{c3}{HTML}{0B6FB8}
+\definecolor{c4}{HTML}{0A4C85}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 1, horizontal sep=1.6cm},
+  width=8.6cm, height=6.2cm,
+  ybar, /tikz/bar width=7pt,
+  ymin=0, ymax=85,
+  symbolic x coords={G2,G2M,G2L,G2XL}, xtick=data,
+  xticklabels={GPT-2, Medium, Large, XL},
+  xlabel={模型}, xlabel style={font=\small},
+  ylabel={校准准确率 (\%)}, ylabel style={font=\small},
+  tick label style={font=\scriptsize},
+  title style={font=\small\bfseries},
+  enlarge x limits=0.15,
+  legend style={font=\scriptsize, at={(0.5,-0.22)}, anchor=north, legend columns=4},
+]
+\nextgroupplot[title={SST-2 1-shot}, legend pos=north west]
+\addplot[fill=c1, draw=c4!80] coordinates {(G2,51.33) (G2M,53.93) (G2L,49.60) (G2XL,50.60) };
+\addlegendentry{三输入平均}
+\addplot[fill=c2, draw=c4!80] coordinates {(G2,50.93) (G2M,53.40) (G2L,49.60) (G2XL,49.60) };
+\addlegendentry{N/A}
+\addplot[fill=c3, draw=c4!80] coordinates {(G2,48.87) (G2M,49.60) (G2L,49.60) (G2XL,50.87) };
+\addlegendentry{[MASK]}
+\addplot[fill=c4, draw=c4!80] coordinates {(G2,49.47) (G2M,54.00) (G2L,49.60) (G2XL,54.80) };
+\addlegendentry{空串}
+\nextgroupplot[title={AGNews 0-shot}]
+\addplot[fill=c1, draw=c4!80] coordinates {(G2,54.00) (G2M,53.33) (G2L,53.33) (G2XL,52.00) };
+\addplot[fill=c2, draw=c4!80] coordinates {(G2,53.33) (G2M,53.33) (G2L,51.33) (G2XL,52.33) };
+\addplot[fill=c3, draw=c4!80] coordinates {(G2,55.33) (G2M,53.33) (G2L,50.33) (G2XL,55.33) };
+\addplot[fill=c4, draw=c4!80] coordinates {(G2,55.67) (G2M,53.33) (G2L,52.33) (G2XL,57.33) };
+\end{groupplot}
+\end{tikzpicture}
+\end{document}
