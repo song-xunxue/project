@@ -1,0 +1,34 @@
+{
+ "expr_name": "sst2_gpt2-xl_1shot_sub300_seed0",
+ "model": "gpt2-xl",
+ "dataset": "sst2",
+ "shots": 1,
+ "seed": 0,
+ "p_cf_full": [
+  0.13829775652121293,
+  0.861702243478787
+ ],
+ "acc_diag_full": 0.49333333333333335,
+ "acc_ident_full": 0.49333333333333335,
+ "roundtrip_diff": 0.0,
+ "p_cf_N/A": [
+  0.21751439480207543,
+  0.7824856051979246
+ ],
+ "acc_diag_N/A": 0.49333333333333335,
+ "acc_ident_N/A": 0.49333333333333335,
+ "p_cf_empty": [
+  0.11643925869865498,
+  0.883560741301345
+ ],
+ "acc_diag_empty": 0.49333333333333335,
+ "acc_ident_empty": 0.49333333333333335,
+ "p_cf_[MASK]": [
+  0.0873898923723192,
+  0.9126101076276807
+ ],
+ "acc_diag_[MASK]": 0.49333333333333335,
+ "acc_ident_[MASK]": 0.49333333333333335,
+ "four_diag_distinct": false,
+ "inline_verify_diff": 0.0
+}

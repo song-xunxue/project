@@ -1,0 +1,46 @@
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:   4%|▍         | 26/580 [00:00<00:03, 177.62it/s]Loading weights:   8%|▊         | 44/580 [00:00<00:04, 121.72it/s]Loading weights:  10%|▉         | 57/580 [00:00<00:04, 112.22it/s]Loading weights:  14%|█▍        | 83/580 [00:00<00:03, 152.15it/s]Loading weights:  17%|█▋        | 100/580 [00:01<00:06, 74.94it/s]Loading weights:  19%|█▉        | 112/580 [00:01<00:05, 81.51it/s]Loading weights:  24%|██▍       | 141/580 [00:01<00:03, 119.68it/s]Loading weights:  27%|██▋       | 158/580 [00:01<00:03, 117.19it/s]Loading weights:  30%|██▉       | 173/580 [00:01<00:04, 85.65it/s] Loading weights:  32%|███▏      | 185/580 [00:01<00:04, 82.32it/s]Loading weights:  34%|███▍      | 196/580 [00:02<00:04, 82.41it/s]Loading weights:  36%|███▌      | 208/580 [00:02<00:04, 89.30it/s]Loading weights:  38%|███▊      | 219/580 [00:02<00:05, 70.81it/s]Loading weights:  40%|████      | 233/580 [00:02<00:04, 78.49it/s]Loading weights:  42%|████▏     | 243/580 [00:02<00:04, 70.00it/s]Loading weights:  45%|████▌     | 261/580 [00:02<00:03, 86.10it/s]Loading weights:  48%|████▊     | 278/580 [00:02<00:02, 103.15it/s]Loading weights:  50%|█████     | 290/580 [00:03<00:03, 75.45it/s] Loading weights:  52%|█████▏    | 300/580 [00:03<00:06, 41.04it/s]Loading weights:  53%|█████▎    | 308/580 [00:04<00:08, 33.97it/s]Loading weights:  54%|█████▍    | 314/580 [00:04<00:08, 32.43it/s]Loading weights:  55%|█████▌    | 319/580 [00:04<00:09, 28.40it/s]Loading weights:  56%|█████▋    | 327/580 [00:04<00:07, 32.61it/s]Loading weights:  57%|█████▋    | 332/580 [00:05<00:07, 31.32it/s]Loading weights:  58%|█████▊    | 336/580 [00:05<00:13, 17.51it/s]Loading weights:  58%|█████▊    | 339/580 [00:06<00:21, 11.15it/s]Loading weights:  59%|█████▉    | 342/580 [00:06<00:18, 12.65it/s]Loading weights:  59%|█████▉    | 345/580 [00:07<00:25,  9.20it/s]Loading weights: 100%|██████████| 580/580 [00:07<00:00, 80.07it/s]
+[sst2_gpt2-xl_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed0] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed1] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed2] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed3] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed4] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed0] 基线 0.5233 | 校准 0.4933 | p_cf [0.1383, 0.8617] | 22s
+[sst2_gpt2-xl_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed1] 基线 0.5567 | 校准 0.4933 | p_cf [0.1273, 0.8727] | 16s
+[sst2_gpt2-xl_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed2] 基线 0.5100 | 校准 0.4933 | p_cf [0.1242, 0.8758] | 19s
+[sst2_gpt2-xl_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed3] 基线 0.5367 | 校准 0.4933 | p_cf [0.1545, 0.8455] | 21s
+[sst2_gpt2-xl_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed4] 基线 0.8600 | 校准 0.5567 | p_cf [0.5679, 0.4321] | 21s
+[sst2_gpt2-xl_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed0] 基线 0.7700 | 校准 0.8300 | p_cf [0.4127, 0.5873] | 48s
+[sst2_gpt2-xl_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed1] 基线 0.8533 | 校准 0.8867 | p_cf [0.4434, 0.5566] | 38s
+[sst2_gpt2-xl_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.196, 0.804] | 38s
+[sst2_gpt2-xl_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed3] 基线 0.6367 | 校准 0.6000 | p_cf [0.3324, 0.6676] | 48s
+[sst2_gpt2-xl_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed4] 基线 0.5467 | 校准 0.8967 | p_cf [0.4201, 0.5799] | 36s
+[sst2_gpt2-xl_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed0] 基线 0.5233 | 校准 0.5100 | p_cf [0.317, 0.683] | 65s
+[sst2_gpt2-xl_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed1] 基线 0.7233 | 校准 0.9000 | p_cf [0.444, 0.556] | 64s
+[sst2_gpt2-xl_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.1867, 0.8133] | 73s
+[sst2_gpt2-xl_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed3] 基线 0.5833 | 校准 0.8767 | p_cf [0.3669, 0.6331] | 71s
+[sst2_gpt2-xl_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed4] 基线 0.5233 | 校准 0.4933 | p_cf [0.2575, 0.7425] | 60s

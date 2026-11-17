@@ -1,0 +1,33 @@
+{
+ "expr_name": "sst2_gpt2-medium_1shot_sub300_seed3",
+ "model": "gpt2-medium",
+ "dataset": "sst2",
+ "shots": 1,
+ "seed": 3,
+ "p_cf_full": [
+  0.517242971356029,
+  0.4827570286439708
+ ],
+ "acc_diag_full": 0.71,
+ "acc_ident_full": 0.71,
+ "roundtrip_diff": 0.0,
+ "p_cf_N/A": [
+  0.8134540037497371,
+  0.18654599625026294
+ ],
+ "acc_diag_N/A": 0.5066666666666667,
+ "acc_ident_N/A": 0.5066666666666667,
+ "p_cf_empty": [
+  0.5176108615925669,
+  0.48238913840743314
+ ],
+ "acc_diag_empty": 0.7133333333333334,
+ "acc_ident_empty": 0.7133333333333334,
+ "p_cf_[MASK]": [
+  0.1703629064179421,
+  0.8296370935820578
+ ],
+ "acc_diag_[MASK]": 0.49333333333333335,
+ "acc_ident_[MASK]": 0.49333333333333335,
+ "four_diag_distinct": true
+}

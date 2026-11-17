@@ -1,0 +1,633 @@
+===== gpt2 x sst2 (bs=16) 第 1 次尝试 开始 2026-11-16 01:35:51 =====
+跳过（已存在，配置一致）: sst2_gpt2_0shot_sub300_seed0
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  51%|█████     | 75/148 [00:00<00:00, 735.19it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 708.15it/s]
+[sst2_gpt2_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 319/600 处，回声模式补全中
+[sst2_gpt2_0shot_sub300_seed1] 基线 0.7267 | 校准 0.6067 | p_cf [0.422, 0.578] | 2s
+[sst2_gpt2_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 319/600 处，回声模式补全中
+[sst2_gpt2_0shot_sub300_seed2] 基线 0.7267 | 校准 0.6067 | p_cf [0.422, 0.578] | 2s
+[sst2_gpt2_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 319/600 处，回声模式补全中
+[sst2_gpt2_0shot_sub300_seed3] 基线 0.7267 | 校准 0.6067 | p_cf [0.422, 0.578] | 2s
+[sst2_gpt2_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 319/600 处，回声模式补全中
+[sst2_gpt2_0shot_sub300_seed4] 基线 0.7267 | 校准 0.6067 | p_cf [0.422, 0.578] | 2s
+跳过（已存在，配置一致）: sst2_gpt2_1shot_sub300_seed0
+[sst2_gpt2_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2_1shot_sub300_seed1] 基线 0.5233 | 校准 0.4933 | p_cf [0.3889, 0.6111] | 1s
+[sst2_gpt2_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2_1shot_sub300_seed2] 基线 0.4933 | 校准 0.5033 | p_cf [0.5469, 0.4531] | 2s
+[sst2_gpt2_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2_1shot_sub300_seed3] 基线 0.5200 | 校准 0.5567 | p_cf [0.556, 0.444] | 2s
+[sst2_gpt2_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2_1shot_sub300_seed4] 基线 0.5000 | 校准 0.5067 | p_cf [0.648, 0.352] | 2s
+跳过（已存在，配置一致）: sst2_gpt2_4shot_sub300_seed0
+[sst2_gpt2_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2_4shot_sub300_seed1] 基线 0.4933 | 校准 0.5067 | p_cf [0.571, 0.429] | 4s
+[sst2_gpt2_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2_4shot_sub300_seed2] 基线 0.4933 | 校准 0.5533 | p_cf [0.5635, 0.4365] | 5s
+[sst2_gpt2_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2_4shot_sub300_seed3] 基线 0.4933 | 校准 0.4933 | p_cf [0.5683, 0.4317] | 7s
+[sst2_gpt2_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2_4shot_sub300_seed4] 基线 0.4933 | 校准 0.5133 | p_cf [0.6121, 0.3879] | 8s
+跳过（已存在，配置一致）: sst2_gpt2_8shot_sub300_seed0
+[sst2_gpt2_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2_8shot_sub300_seed1] 基线 0.4933 | 校准 0.6033 | p_cf [0.6337, 0.3663] | 11s
+[sst2_gpt2_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2_8shot_sub300_seed2] 基线 0.4933 | 校准 0.5067 | p_cf [0.5714, 0.4286] | 12s
+[sst2_gpt2_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2_8shot_sub300_seed3] 基线 0.6133 | 校准 0.5067 | p_cf [0.4627, 0.5373] | 8s
+[sst2_gpt2_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2_8shot_sub300_seed4] 基线 0.4933 | 校准 0.5067 | p_cf [0.5768, 0.4232] | 22s
+===== gpt2 x sst2 第 1 次尝试 EXIT=0 2026-11-16 01:37:38 =====
+===== gpt2 x agnews (bs=16) 第 1 次尝试 开始 2026-11-16 01:37:38 =====
+跳过（已存在，配置一致）: agnews_gpt2_0shot_sub300_seed0
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  52%|█████▏    | 77/148 [00:00<00:00, 747.52it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 468.35it/s]
+[agnews_gpt2_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed1] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed2] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed3] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed4] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+跳过（已存在，配置一致）: agnews_gpt2_1shot_sub300_seed0
+[agnews_gpt2_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 513/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed1] 基线 0.2667 | 校准 0.5300 | p_cf [0.0278, 0.0011, 0.0543, 0.9168] | 11s
+[agnews_gpt2_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 26/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed2] 基线 0.2400 | 校准 0.2467 | p_cf [0.0187, 0.7345, 0.2125, 0.0343] | 4s
+[agnews_gpt2_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 12/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed3] 基线 0.2467 | 校准 0.2533 | p_cf [0.0118, 0.1148, 0.2401, 0.6332] | 4s
+[agnews_gpt2_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 249/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed4] 基线 0.2833 | 校准 0.3467 | p_cf [0.8034, 0.1011, 0.0863, 0.0092] | 10s
+跳过（已存在，配置一致）: agnews_gpt2_4shot_sub300_seed0
+[agnews_gpt2_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[agnews_gpt2_4shot_sub300_seed1] 基线 0.2433 | 校准 0.2467 | p_cf [0.4181, 0.0151, 0.1589, 0.4078] | 12s
+[agnews_gpt2_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[agnews_gpt2_4shot_sub300_seed2] 基线 0.2433 | 校准 0.2433 | p_cf [0.2524, 0.2079, 0.3306, 0.2091] | 11s
+[agnews_gpt2_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 17/1200 处，回声模式补全中
+[agnews_gpt2_4shot_sub300_seed3] 基线 0.2467 | 校准 0.2867 | p_cf [0.2233, 0.1059, 0.5914, 0.0794] | 10s
+[agnews_gpt2_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[W1116 01:39:46.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1486880768 bytes (free: 0, total: 8585216000).
+缺失标签概率 3/1200 处，回声模式补全中
+[agnews_gpt2_4shot_sub300_seed4] 基线 0.2500 | 校准 0.2467 | p_cf [0.2715, 0.4108, 0.2828, 0.035] | 15s
+跳过（已存在，配置一致）: agnews_gpt2_8shot_sub300_seed0
+[agnews_gpt2_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[agnews_gpt2_8shot_sub300_seed1] 基线 0.2433 | 校准 0.2500 | p_cf [0.2902, 0.1483, 0.2124, 0.3492] | 14s
+[agnews_gpt2_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[W1116 01:40:23.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2153775104 bytes (free: 0, total: 8585216000).
+[agnews_gpt2_8shot_sub300_seed2] 基线 0.2433 | 校准 0.2433 | p_cf [0.4765, 0.19, 0.2401, 0.0934] | 16s
+[agnews_gpt2_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[agnews_gpt2_8shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.234, 0.4046, 0.2419, 0.1195] | 16s
+[agnews_gpt2_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+缺失标签概率 108/1200 处，回声模式补全中
+[agnews_gpt2_8shot_sub300_seed4] 基线 0.4533 | 校准 0.4200 | p_cf [0.3589, 0.1954, 0.4165, 0.0292] | 37s
+===== gpt2 x agnews 第 1 次尝试 EXIT=0 2026-11-16 01:41:22 =====
+===== gpt2 x trec (bs=16) 第 1 次尝试 开始 2026-11-16 01:41:22 =====
+跳过（已存在，配置一致）: trec_gpt2_0shot_sub300_seed0
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  48%|████▊     | 71/148 [00:00<00:00, 705.02it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 780.16it/s]
+[trec_gpt2_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 565/1800 处，回声模式补全中
+[trec_gpt2_0shot_sub300_seed1] 基线 0.2600 | 校准 0.1167 | p_cf [0.7713, 0.0309, 0.0236, 0.1303, 0.0243, 0.0196] | 3s
+[trec_gpt2_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 565/1800 处，回声模式补全中
+[trec_gpt2_0shot_sub300_seed2] 基线 0.2600 | 校准 0.1167 | p_cf [0.7713, 0.0309, 0.0236, 0.1303, 0.0243, 0.0196] | 3s
+[trec_gpt2_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 565/1800 处，回声模式补全中
+[trec_gpt2_0shot_sub300_seed3] 基线 0.2600 | 校准 0.1167 | p_cf [0.7713, 0.0309, 0.0236, 0.1303, 0.0243, 0.0196] | 3s
+[trec_gpt2_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 565/1800 处，回声模式补全中
+[trec_gpt2_0shot_sub300_seed4] 基线 0.2600 | 校准 0.1167 | p_cf [0.7713, 0.0309, 0.0236, 0.1303, 0.0243, 0.0196] | 3s
+跳过（已存在，配置一致）: trec_gpt2_1shot_sub300_seed0
+[trec_gpt2_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 32/1800 处，回声模式补全中
+[trec_gpt2_1shot_sub300_seed1] 基线 0.2433 | 校准 0.2333 | p_cf [0.0221, 0.2689, 0.1564, 0.1527, 0.3024, 0.0975] | 2s
+[trec_gpt2_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2_1shot_sub300_seed2] 基线 0.1533 | 校准 0.2333 | p_cf [0.0082, 0.5826, 0.1305, 0.1938, 0.061, 0.0239] | 1s
+[trec_gpt2_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 159/1800 处，回声模式补全中
+[trec_gpt2_1shot_sub300_seed3] 基线 0.3200 | 校准 0.1200 | p_cf [0.0257, 0.5717, 0.2053, 0.1213, 0.0632, 0.0129] | 2s
+[trec_gpt2_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 89/1800 处，回声模式补全中
+[trec_gpt2_1shot_sub300_seed4] 基线 0.3333 | 校准 0.0867 | p_cf [0.0319, 0.544, 0.1621, 0.1622, 0.0823, 0.0176] | 2s
+跳过（已存在，配置一致）: trec_gpt2_4shot_sub300_seed0
+[trec_gpt2_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 25/1800 处，回声模式补全中
+[trec_gpt2_4shot_sub300_seed1] 基线 0.3067 | 校准 0.2633 | p_cf [0.0403, 0.4968, 0.0499, 0.322, 0.0379, 0.053] | 3s
+[trec_gpt2_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 8/1800 处，回声模式补全中
+[trec_gpt2_4shot_sub300_seed2] 基线 0.2600 | 校准 0.0400 | p_cf [0.0412, 0.5893, 0.0907, 0.0622, 0.195, 0.0215] | 3s
+[trec_gpt2_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2_4shot_sub300_seed3] 基线 0.1900 | 校准 0.2333 | p_cf [0.0276, 0.5737, 0.0462, 0.2173, 0.0923, 0.0429] | 2s
+[trec_gpt2_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 6/1800 处，回声模式补全中
+[trec_gpt2_4shot_sub300_seed4] 基线 0.3900 | 校准 0.0267 | p_cf [0.1597, 0.1831, 0.0624, 0.0328, 0.5426, 0.0194] | 3s
+跳过（已存在，配置一致）: trec_gpt2_8shot_sub300_seed0
+[trec_gpt2_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+缺失标签概率 56/1800 处，回声模式补全中
+[trec_gpt2_8shot_sub300_seed1] 基线 0.3333 | 校准 0.0633 | p_cf [0.0632, 0.5582, 0.1546, 0.186, 0.0301, 0.0079] | 6s
+[trec_gpt2_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+缺失标签概率 5/1800 处，回声模式补全中
+[trec_gpt2_8shot_sub300_seed2] 基线 0.3200 | 校准 0.2400 | p_cf [0.0515, 0.4368, 0.1156, 0.127, 0.2152, 0.0539] | 6s
+[trec_gpt2_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2_8shot_sub300_seed3] 基线 0.4233 | 校准 0.0267 | p_cf [0.0389, 0.2922, 0.1885, 0.3159, 0.1307, 0.0338] | 6s
+[trec_gpt2_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2_8shot_sub300_seed4] 基线 0.2333 | 校准 0.0267 | p_cf [0.0899, 0.3317, 0.0435, 0.1734, 0.3447, 0.0169] | 5s
+===== gpt2 x trec 第 1 次尝试 EXIT=0 2026-11-16 01:42:26 =====
+===== 批次 gpt2 结束 FAILED=0 2026-11-16 01:42:26 =====
+===== gpt2-medium x sst2 (bs=16) 第 1 次尝试 开始 2026-11-16 01:42:27 =====
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:  10%|▉         | 28/292 [00:00<00:00, 264.77it/s]Loading weights:  25%|██▌       | 74/292 [00:00<00:00, 368.77it/s]Loading weights:  38%|███▊      | 111/292 [00:00<00:00, 216.21it/s]Loading weights:  47%|████▋     | 138/292 [00:00<00:00, 218.26it/s]Loading weights:  83%|████████▎ | 243/292 [00:00<00:00, 432.46it/s]Loading weights: 100%|██████████| 292/292 [00:01<00:00, 272.52it/s]
+[sst2_gpt2-medium_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 436/600 处，回声模式补全中
+[sst2_gpt2-medium_0shot_sub300_seed0] 基线 0.5933 | 校准 0.7667 | p_cf [0.24, 0.76] | 6s
+[sst2_gpt2-medium_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 436/600 处，回声模式补全中
+[sst2_gpt2-medium_0shot_sub300_seed1] 基线 0.5933 | 校准 0.7667 | p_cf [0.24, 0.76] | 6s
+[sst2_gpt2-medium_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 436/600 处，回声模式补全中
+[sst2_gpt2-medium_0shot_sub300_seed2] 基线 0.5933 | 校准 0.7667 | p_cf [0.24, 0.76] | 6s
+[sst2_gpt2-medium_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 436/600 处，回声模式补全中
+[sst2_gpt2-medium_0shot_sub300_seed3] 基线 0.5933 | 校准 0.7667 | p_cf [0.24, 0.76] | 6s
+[sst2_gpt2-medium_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 436/600 处，回声模式补全中
+[sst2_gpt2-medium_0shot_sub300_seed4] 基线 0.5933 | 校准 0.7667 | p_cf [0.24, 0.76] | 6s
+[sst2_gpt2-medium_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2-medium_1shot_sub300_seed0] 基线 0.5033 | 校准 0.4933 | p_cf [0.4311, 0.5689] | 5s
+[sst2_gpt2-medium_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2-medium_1shot_sub300_seed1] 基线 0.5800 | 校准 0.4933 | p_cf [0.2683, 0.7317] | 4s
+[sst2_gpt2-medium_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2-medium_1shot_sub300_seed2] 基线 0.7067 | 校准 0.4933 | p_cf [0.436, 0.564] | 4s
+[sst2_gpt2-medium_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2-medium_1shot_sub300_seed3] 基线 0.5967 | 校准 0.7100 | p_cf [0.5172, 0.4828] | 5s
+[sst2_gpt2-medium_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2-medium_1shot_sub300_seed4] 基线 0.5067 | 校准 0.5067 | p_cf [0.5789, 0.4211] | 5s
+[sst2_gpt2-medium_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2-medium_4shot_sub300_seed0] 基线 0.4967 | 校准 0.4933 | p_cf [0.4706, 0.5294] | 11s
+[sst2_gpt2-medium_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2-medium_4shot_sub300_seed1] 基线 0.8233 | 校准 0.7233 | p_cf [0.5271, 0.4729] | 9s
+[sst2_gpt2-medium_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2-medium_4shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.3394, 0.6606] | 9s
+[sst2_gpt2-medium_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2-medium_4shot_sub300_seed3] 基线 0.5600 | 校准 0.4933 | p_cf [0.3727, 0.6273] | 11s
+[sst2_gpt2-medium_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2-medium_4shot_sub300_seed4] 基线 0.5000 | 校准 0.5633 | p_cf [0.554, 0.446] | 8s
+[sst2_gpt2-medium_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2-medium_8shot_sub300_seed0] 基线 0.5667 | 校准 0.5000 | p_cf [0.3808, 0.6192] | 17s
+[sst2_gpt2-medium_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2-medium_8shot_sub300_seed1] 基线 0.8300 | 校准 0.5067 | p_cf [0.5979, 0.4021] | 16s
+[sst2_gpt2-medium_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2-medium_8shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.2701, 0.7299] | 17s
+[sst2_gpt2-medium_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2-medium_8shot_sub300_seed3] 基线 0.5100 | 校准 0.4933 | p_cf [0.2347, 0.7653] | 17s
+[sst2_gpt2-medium_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2-medium_8shot_sub300_seed4] 基线 0.5067 | 校准 0.4933 | p_cf [0.392, 0.608] | 19s
+===== gpt2-medium x sst2 第 1 次尝试 EXIT=0 2026-11-16 01:45:47 =====
+===== gpt2-medium x agnews (bs=8) 第 1 次尝试 开始 2026-11-16 01:45:47 =====
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:   8%|▊         | 22/292 [00:00<00:01, 211.55it/s]Loading weights:  16%|█▋        | 48/292 [00:00<00:01, 227.70it/s]Loading weights:  24%|██▍       | 71/292 [00:00<00:01, 130.83it/s]Loading weights:  38%|███▊      | 111/292 [00:00<00:00, 197.84it/s]Loading weights:  47%|████▋     | 137/292 [00:00<00:00, 155.34it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 347.06it/s]
+[agnews_gpt2-medium_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 8
+缺失标签概率 701/1200 处，回声模式补全中
+[agnews_gpt2-medium_0shot_sub300_seed0] 基线 0.3033 | 校准 0.5333 | p_cf [0.8451, 0.0858, 0.038, 0.0311] | 19s
+[agnews_gpt2-medium_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 8
+缺失标签概率 701/1200 处，回声模式补全中
+[agnews_gpt2-medium_0shot_sub300_seed1] 基线 0.3033 | 校准 0.5333 | p_cf [0.8451, 0.0858, 0.038, 0.0311] | 19s
+[agnews_gpt2-medium_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 8
+缺失标签概率 701/1200 处，回声模式补全中
+[agnews_gpt2-medium_0shot_sub300_seed2] 基线 0.3033 | 校准 0.5333 | p_cf [0.8451, 0.0858, 0.038, 0.0311] | 19s
+[agnews_gpt2-medium_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 8
+缺失标签概率 701/1200 处，回声模式补全中
+[agnews_gpt2-medium_0shot_sub300_seed3] 基线 0.3033 | 校准 0.5333 | p_cf [0.8451, 0.0858, 0.038, 0.0311] | 19s
+[agnews_gpt2-medium_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 8
+缺失标签概率 701/1200 处，回声模式补全中
+[agnews_gpt2-medium_0shot_sub300_seed4] 基线 0.3033 | 校准 0.5333 | p_cf [0.8451, 0.0858, 0.038, 0.0311] | 19s
+[agnews_gpt2-medium_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 8
+缺失标签概率 212/1200 处，回声模式补全中
+[agnews_gpt2-medium_1shot_sub300_seed0] 基线 0.2900 | 校准 0.4433 | p_cf [0.087, 0.0323, 0.2144, 0.6662] | 14s
+[agnews_gpt2-medium_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 8
+缺失标签概率 317/1200 处，回声模式补全中
+[agnews_gpt2-medium_1shot_sub300_seed1] 基线 0.3067 | 校准 0.5300 | p_cf [0.0356, 0.0041, 0.1183, 0.842] | 18s
+[agnews_gpt2-medium_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 8
+缺失标签概率 28/1200 处，回声模式补全中
+[agnews_gpt2-medium_1shot_sub300_seed2] 基线 0.3000 | 校准 0.2333 | p_cf [0.114, 0.2648, 0.5635, 0.0576] | 9s
+[agnews_gpt2-medium_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 8
+缺失标签概率 55/1200 处，回声模式补全中
+[agnews_gpt2-medium_1shot_sub300_seed3] 基线 0.2933 | 校准 0.2467 | p_cf [0.1231, 0.2224, 0.5342, 0.1203] | 11s
+[agnews_gpt2-medium_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 8
+缺失标签概率 66/1200 处，回声模式补全中
+[agnews_gpt2-medium_1shot_sub300_seed4] 基线 0.2600 | 校准 0.3033 | p_cf [0.4263, 0.292, 0.2615, 0.0202] | 12s
+[agnews_gpt2-medium_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 8
+缺失标签概率 3/1200 处，回声模式补全中
+[agnews_gpt2-medium_4shot_sub300_seed0] 基线 0.2433 | 校准 0.2567 | p_cf [0.5599, 0.0308, 0.0911, 0.3181] | 19s
+[agnews_gpt2-medium_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 8
+缺失标签概率 8/1200 处，回声模式补全中
+[agnews_gpt2-medium_4shot_sub300_seed1] 基线 0.2433 | 校准 0.2667 | p_cf [0.2095, 0.0112, 0.2056, 0.5737] | 22s
+[agnews_gpt2-medium_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 8
+缺失标签概率 8/1200 处，回声模式补全中
+[agnews_gpt2-medium_4shot_sub300_seed2] 基线 0.2433 | 校准 0.2467 | p_cf [0.0843, 0.0601, 0.2252, 0.6305] | 22s
+[agnews_gpt2-medium_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 8
+[agnews_gpt2-medium_4shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.3858, 0.0862, 0.4956, 0.0324] | 20s
+[agnews_gpt2-medium_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 8
+缺失标签概率 4/1200 处，回声模式补全中
+[agnews_gpt2-medium_4shot_sub300_seed4] 基线 0.2567 | 校准 0.2500 | p_cf [0.2961, 0.2176, 0.4615, 0.0248] | 31s
+[agnews_gpt2-medium_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 8
+缺失标签概率 12/1200 处，回声模式补全中
+[agnews_gpt2-medium_8shot_sub300_seed0] 基线 0.2433 | 校准 0.2467 | p_cf [0.4698, 0.0179, 0.2532, 0.2591] | 37s
+[agnews_gpt2-medium_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 8
+[agnews_gpt2-medium_8shot_sub300_seed1] 基线 0.2433 | 校准 0.3767 | p_cf [0.1448, 0.2295, 0.2869, 0.3388] | 34s
+[agnews_gpt2-medium_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 8
+[agnews_gpt2-medium_8shot_sub300_seed2] 基线 0.2433 | 校准 0.2500 | p_cf [0.5653, 0.0922, 0.1964, 0.1461] | 33s
+[agnews_gpt2-medium_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 8
+[agnews_gpt2-medium_8shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.3899, 0.1589, 0.3375, 0.1137] | 37s
+[agnews_gpt2-medium_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 8
+[W1116 01:53:31.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1163919360 bytes (free: 0, total: 8585216000).
+[agnews_gpt2-medium_8shot_sub300_seed4] 基线 0.2433 | 校准 0.2433 | p_cf [0.1645, 0.1535, 0.66, 0.022] | 38s
+===== gpt2-medium x agnews 第 1 次尝试 EXIT=0 2026-11-16 01:53:40 =====
+===== gpt2-medium x trec (bs=16) 第 1 次尝试 开始 2026-11-16 01:53:40 =====
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:   5%|▌         | 16/292 [00:00<00:01, 150.99it/s]Loading weights:  18%|█▊        | 54/292 [00:00<00:00, 282.46it/s]Loading weights:  34%|███▎      | 98/292 [00:00<00:00, 338.22it/s]Loading weights:  45%|████▌     | 132/292 [00:00<00:00, 288.34it/s]Loading weights:  55%|█████▌    | 162/292 [00:00<00:00, 284.82it/s]Loading weights:  65%|██████▌   | 191/292 [00:00<00:00, 254.69it/s]Loading weights:  75%|███████▍  | 218/292 [00:00<00:00, 211.21it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 326.84it/s]
+[trec_gpt2-medium_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_0shot_sub300_seed0] 基线 0.2733 | 校准 0.0267 | p_cf [0.5676, 0.2809, 0.0988, 0.0299, 0.0138, 0.0089] | 3s
+[trec_gpt2-medium_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_0shot_sub300_seed1] 基线 0.2733 | 校准 0.0267 | p_cf [0.5676, 0.2809, 0.0988, 0.0299, 0.0138, 0.0089] | 3s
+[trec_gpt2-medium_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_0shot_sub300_seed2] 基线 0.2733 | 校准 0.0267 | p_cf [0.5676, 0.2809, 0.0988, 0.0299, 0.0138, 0.0089] | 3s
+[trec_gpt2-medium_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_0shot_sub300_seed3] 基线 0.2733 | 校准 0.0267 | p_cf [0.5676, 0.2809, 0.0988, 0.0299, 0.0138, 0.0089] | 3s
+[trec_gpt2-medium_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_0shot_sub300_seed4] 基线 0.2733 | 校准 0.0267 | p_cf [0.5676, 0.2809, 0.0988, 0.0299, 0.0138, 0.0089] | 3s
+[trec_gpt2-medium_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 55/1800 处，回声模式补全中
+[trec_gpt2-medium_1shot_sub300_seed0] 基线 0.2933 | 校准 0.0300 | p_cf [0.0321, 0.7829, 0.1362, 0.0247, 0.0222, 0.0018] | 4s
+[trec_gpt2-medium_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 87/1800 处，回声模式补全中
+[trec_gpt2-medium_1shot_sub300_seed1] 基线 0.3567 | 校准 0.0667 | p_cf [0.0339, 0.6669, 0.1403, 0.0452, 0.0991, 0.0146] | 5s
+[trec_gpt2-medium_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 35/1800 处，回声模式补全中
+[trec_gpt2-medium_1shot_sub300_seed2] 基线 0.2467 | 校准 0.0267 | p_cf [0.0244, 0.2107, 0.6488, 0.0412, 0.0669, 0.0079] | 4s
+[trec_gpt2-medium_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 54/1800 处，回声模式补全中
+[trec_gpt2-medium_1shot_sub300_seed3] 基线 0.2633 | 校准 0.1033 | p_cf [0.0093, 0.7708, 0.1946, 0.0136, 0.011, 0.0007] | 4s
+[trec_gpt2-medium_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 48/1800 处，回声模式补全中
+[trec_gpt2-medium_1shot_sub300_seed4] 基线 0.2400 | 校准 0.0900 | p_cf [0.0128, 0.8164, 0.1323, 0.0137, 0.0241, 0.0008] | 4s
+[trec_gpt2-medium_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2-medium_4shot_sub300_seed0] 基线 0.1733 | 校准 0.3100 | p_cf [0.0408, 0.4788, 0.176, 0.0373, 0.1411, 0.126] | 7s
+[trec_gpt2-medium_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-medium_4shot_sub300_seed1] 基线 0.2100 | 校准 0.2333 | p_cf [0.0506, 0.2513, 0.3703, 0.0849, 0.1691, 0.0739] | 6s
+[trec_gpt2-medium_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2-medium_4shot_sub300_seed2] 基线 0.2800 | 校准 0.0400 | p_cf [0.0771, 0.5063, 0.2959, 0.0368, 0.0474, 0.0364] | 8s
+[trec_gpt2-medium_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[trec_gpt2-medium_4shot_sub300_seed3] 基线 0.2667 | 校准 0.2333 | p_cf [0.0237, 0.1675, 0.4174, 0.0292, 0.2003, 0.1619] | 6s
+[trec_gpt2-medium_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[trec_gpt2-medium_4shot_sub300_seed4] 基线 0.4000 | 校准 0.0267 | p_cf [0.2071, 0.25, 0.3032, 0.0191, 0.2081, 0.0125] | 7s
+[trec_gpt2-medium_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2-medium_8shot_sub300_seed0] 基线 0.2733 | 校准 0.0267 | p_cf [0.0746, 0.4701, 0.2151, 0.0745, 0.1265, 0.0391] | 11s
+[trec_gpt2-medium_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2-medium_8shot_sub300_seed1] 基线 0.2367 | 校准 0.0267 | p_cf [0.1302, 0.3882, 0.3341, 0.0495, 0.0723, 0.0256] | 11s
+[trec_gpt2-medium_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2-medium_8shot_sub300_seed2] 基线 0.3967 | 校准 0.1167 | p_cf [0.0849, 0.2216, 0.2368, 0.1014, 0.2747, 0.0806] | 12s
+[trec_gpt2-medium_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2-medium_8shot_sub300_seed3] 基线 0.2500 | 校准 0.2333 | p_cf [0.0152, 0.3101, 0.3086, 0.1552, 0.1754, 0.0355] | 10s
+[trec_gpt2-medium_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[trec_gpt2-medium_8shot_sub300_seed4] 基线 0.2233 | 校准 0.0267 | p_cf [0.1635, 0.4279, 0.1142, 0.1245, 0.1339, 0.0359] | 10s
+===== gpt2-medium x trec 第 1 次尝试 EXIT=0 2026-11-16 01:55:57 =====
+===== 批次 gpt2-medium 结束 FAILED=0 2026-11-16 01:55:57 =====
+===== gpt2-large x sst2 (bs=12) 第 1 次尝试 开始 2026-11-16 01:55:57 =====
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/436 [00:00<00:07, 57.03it/s]Loading weights:   6%|▌         | 26/436 [00:00<00:04, 89.39it/s]Loading weights:  17%|█▋        | 74/436 [00:00<00:02, 157.35it/s]Loading weights:  21%|██        | 92/436 [00:00<00:02, 161.40it/s]Loading weights:  25%|██▍       | 108/436 [00:00<00:02, 149.74it/s]Loading weights:  28%|██▊       | 123/436 [00:01<00:02, 110.97it/s]Loading weights:  31%|███       | 135/436 [00:01<00:03, 94.80it/s] Loading weights:  35%|███▍      | 151/436 [00:01<00:02, 102.15it/s]Loading weights:  44%|████▍     | 191/436 [00:01<00:01, 127.19it/s]Loading weights:  47%|████▋     | 204/436 [00:01<00:02, 94.37it/s] Loading weights:  51%|█████     | 221/436 [00:02<00:02, 86.65it/s]Loading weights:  53%|█████▎    | 231/436 [00:02<00:02, 74.71it/s]Loading weights:  55%|█████▍    | 239/436 [00:02<00:02, 69.77it/s]Loading weights:  57%|█████▋    | 247/436 [00:02<00:02, 63.46it/s]Loading weights:  58%|█████▊    | 254/436 [00:02<00:03, 48.40it/s]Loading weights: 100%|██████████| 436/436 [00:02<00:00, 149.69it/s]
+[sst2_gpt2-large_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 391/600 处，回声模式补全中
+[sst2_gpt2-large_0shot_sub300_seed0] 基线 0.7167 | 校准 0.8500 | p_cf [0.1796, 0.8204] | 12s
+[sst2_gpt2-large_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 391/600 处，回声模式补全中
+[sst2_gpt2-large_0shot_sub300_seed1] 基线 0.7167 | 校准 0.8500 | p_cf [0.1796, 0.8204] | 11s
+[sst2_gpt2-large_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 391/600 处，回声模式补全中
+[sst2_gpt2-large_0shot_sub300_seed2] 基线 0.7167 | 校准 0.8500 | p_cf [0.1796, 0.8204] | 11s
+[sst2_gpt2-large_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 391/600 处，回声模式补全中
+[sst2_gpt2-large_0shot_sub300_seed3] 基线 0.7167 | 校准 0.8500 | p_cf [0.1796, 0.8204] | 11s
+[sst2_gpt2-large_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 391/600 处，回声模式补全中
+[sst2_gpt2-large_0shot_sub300_seed4] 基线 0.7167 | 校准 0.8500 | p_cf [0.1796, 0.8204] | 11s
+[sst2_gpt2-large_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[sst2_gpt2-large_1shot_sub300_seed0] 基线 0.5067 | 校准 0.4933 | p_cf [0.2375, 0.7625] | 10s
+[sst2_gpt2-large_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[sst2_gpt2-large_1shot_sub300_seed1] 基线 0.5133 | 校准 0.4933 | p_cf [0.1216, 0.8784] | 7s
+[sst2_gpt2-large_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[sst2_gpt2-large_1shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.1252, 0.8748] | 9s
+[sst2_gpt2-large_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[sst2_gpt2-large_1shot_sub300_seed3] 基线 0.5067 | 校准 0.4933 | p_cf [0.1244, 0.8756] | 9s
+[sst2_gpt2-large_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[sst2_gpt2-large_1shot_sub300_seed4] 基线 0.7900 | 校准 0.5067 | p_cf [0.8105, 0.1895] | 9s
+[sst2_gpt2-large_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[sst2_gpt2-large_4shot_sub300_seed0] 基线 0.5433 | 校准 0.7733 | p_cf [0.3624, 0.6376] | 23s
+[sst2_gpt2-large_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[sst2_gpt2-large_4shot_sub300_seed1] 基线 0.4967 | 校准 0.5067 | p_cf [0.8109, 0.1891] | 18s
+[sst2_gpt2-large_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[sst2_gpt2-large_4shot_sub300_seed2] 基线 0.5633 | 校准 0.8933 | p_cf [0.4179, 0.5821] | 18s
+[sst2_gpt2-large_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[sst2_gpt2-large_4shot_sub300_seed3] 基线 0.5433 | 校准 0.4933 | p_cf [0.3094, 0.6906] | 22s
+[sst2_gpt2-large_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[sst2_gpt2-large_4shot_sub300_seed4] 基线 0.5167 | 校准 0.6700 | p_cf [0.4538, 0.5462] | 16s
+[sst2_gpt2-large_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[sst2_gpt2-large_8shot_sub300_seed0] 基线 0.8433 | 校准 0.8267 | p_cf [0.4242, 0.5758] | 33s
+[sst2_gpt2-large_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[sst2_gpt2-large_8shot_sub300_seed1] 基线 0.5167 | 校准 0.5067 | p_cf [0.833, 0.167] | 33s
+[sst2_gpt2-large_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[sst2_gpt2-large_8shot_sub300_seed2] 基线 0.8933 | 校准 0.8700 | p_cf [0.5055, 0.4945] | 35s
+[sst2_gpt2-large_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[sst2_gpt2-large_8shot_sub300_seed3] 基线 0.5067 | 校准 0.4933 | p_cf [0.1675, 0.8325] | 35s
+[sst2_gpt2-large_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[sst2_gpt2-large_8shot_sub300_seed4] 基线 0.8333 | 校准 0.8800 | p_cf [0.4708, 0.5292] | 35s
+===== gpt2-large x sst2 第 1 次尝试 EXIT=0 2026-11-16 02:02:23 =====
+===== gpt2-large x agnews (bs=4) 第 1 次尝试 开始 2026-11-16 02:02:23 =====
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 53/436 [00:00<00:01, 375.98it/s]Loading weights:  21%|██        | 92/436 [00:00<00:00, 367.04it/s]Loading weights:  30%|██▉       | 129/436 [00:00<00:01, 207.65it/s]Loading weights:  36%|███▌      | 155/436 [00:00<00:01, 194.61it/s]Loading weights:  41%|████▏     | 180/436 [00:00<00:01, 176.34it/s]Loading weights:  50%|████▉     | 217/436 [00:00<00:01, 216.74it/s]Loading weights:  56%|█████▌    | 242/436 [00:01<00:01, 189.32it/s]Loading weights:  61%|██████    | 264/436 [00:01<00:00, 189.56it/s]Loading weights:  67%|██████▋   | 293/436 [00:01<00:00, 169.53it/s]Loading weights: 100%|██████████| 436/436 [00:01<00:00, 292.40it/s]
+[agnews_gpt2-large_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 4
+缺失标签概率 848/1200 处，回声模式补全中
+[agnews_gpt2-large_0shot_sub300_seed0] 基线 0.3667 | 校准 0.5333 | p_cf [0.5757, 0.1954, 0.1579, 0.071] | 45s
+[agnews_gpt2-large_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 4
+缺失标签概率 848/1200 处，回声模式补全中
+[agnews_gpt2-large_0shot_sub300_seed1] 基线 0.3667 | 校准 0.5333 | p_cf [0.5757, 0.1954, 0.1579, 0.071] | 45s
+[agnews_gpt2-large_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 4
+缺失标签概率 848/1200 处，回声模式补全中
+[agnews_gpt2-large_0shot_sub300_seed2] 基线 0.3667 | 校准 0.5333 | p_cf [0.5757, 0.1954, 0.1579, 0.071] | 45s
+[agnews_gpt2-large_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 4
+缺失标签概率 848/1200 处，回声模式补全中
+[agnews_gpt2-large_0shot_sub300_seed3] 基线 0.3667 | 校准 0.5333 | p_cf [0.5757, 0.1954, 0.1579, 0.071] | 45s
+[agnews_gpt2-large_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 4
+缺失标签概率 848/1200 处，回声模式补全中
+[agnews_gpt2-large_0shot_sub300_seed4] 基线 0.3667 | 校准 0.5333 | p_cf [0.5757, 0.1954, 0.1579, 0.071] | 45s
+[agnews_gpt2-large_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 4
+缺失标签概率 309/1200 处，回声模式补全中
+[agnews_gpt2-large_1shot_sub300_seed0] 基线 0.2467 | 校准 0.6167 | p_cf [0.0164, 0.0096, 0.0912, 0.8827] | 33s
+[agnews_gpt2-large_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 4
+缺失标签概率 292/1200 处，回声模式补全中
+[agnews_gpt2-large_1shot_sub300_seed1] 基线 0.2567 | 校准 0.5767 | p_cf [0.0139, 0.0052, 0.1631, 0.8178] | 33s
+[agnews_gpt2-large_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 4
+缺失标签概率 8/1200 处，回声模式补全中
+[agnews_gpt2-large_1shot_sub300_seed2] 基线 0.2500 | 校准 0.4400 | p_cf [0.0428, 0.2422, 0.6285, 0.0866] | 17s
+[agnews_gpt2-large_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 4
+缺失标签概率 58/1200 处，回声模式补全中
+[agnews_gpt2-large_1shot_sub300_seed3] 基线 0.2533 | 校准 0.2900 | p_cf [0.0126, 0.0558, 0.6794, 0.2522] | 19s
+[agnews_gpt2-large_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 4
+缺失标签概率 13/1200 处，回声模式补全中
+[agnews_gpt2-large_1shot_sub300_seed4] 基线 0.2533 | 校准 0.2700 | p_cf [0.8441, 0.063, 0.08, 0.0129] | 19s
+[agnews_gpt2-large_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 4
+缺失标签概率 181/1200 处，回声模式补全中
+[agnews_gpt2-large_4shot_sub300_seed0] 基线 0.2433 | 校准 0.4567 | p_cf [0.1575, 0.0014, 0.0203, 0.8208] | 55s
+[agnews_gpt2-large_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 4
+缺失标签概率 65/1200 处，回声模式补全中
+[agnews_gpt2-large_4shot_sub300_seed1] 基线 0.2433 | 校准 0.2633 | p_cf [0.105, 0.0027, 0.3278, 0.5645] | 46s
+[agnews_gpt2-large_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 4
+缺失标签概率 18/1200 处，回声模式补全中
+[agnews_gpt2-large_4shot_sub300_seed2] 基线 0.2433 | 校准 0.2567 | p_cf [0.0253, 0.1416, 0.3225, 0.5106] | 38s
+[agnews_gpt2-large_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 4
+[agnews_gpt2-large_4shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.1741, 0.0174, 0.7916, 0.0168] | 35s
+[agnews_gpt2-large_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 4
+缺失标签概率 2/1200 处，回声模式补全中
+[agnews_gpt2-large_4shot_sub300_seed4] 基线 0.2567 | 校准 0.2500 | p_cf [0.4282, 0.1688, 0.3933, 0.0096] | 49s
+[agnews_gpt2-large_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 4
+缺失标签概率 107/1200 处，回声模式补全中
+[agnews_gpt2-large_8shot_sub300_seed0] 基线 0.2433 | 校准 0.3933 | p_cf [0.3778, 0.0025, 0.2375, 0.3822] | 97s
+[agnews_gpt2-large_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 4
+[agnews_gpt2-large_8shot_sub300_seed1] 基线 0.2433 | 校准 0.2467 | p_cf [0.1017, 0.1612, 0.3135, 0.4237] | 69s
+[agnews_gpt2-large_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 4
+[agnews_gpt2-large_8shot_sub300_seed2] 基线 0.2433 | 校准 0.2433 | p_cf [0.5228, 0.1521, 0.1731, 0.152] | 72s
+[agnews_gpt2-large_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 4
+[agnews_gpt2-large_8shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.434, 0.1161, 0.3929, 0.057] | 79s
+[agnews_gpt2-large_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 4
+缺失标签概率 1/1200 处，回声模式补全中
+[agnews_gpt2-large_8shot_sub300_seed4] 基线 0.3267 | 校准 0.2467 | p_cf [0.1511, 0.1147, 0.7254, 0.0088] | 74s
+===== gpt2-large x agnews 第 1 次尝试 EXIT=0 2026-11-16 02:18:43 =====
+===== gpt2-large x trec (bs=12) 第 1 次尝试 开始 2026-11-16 02:18:43 =====
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights:   3%|▎         | 11/436 [00:00<00:06, 65.11it/s]Loading weights:   5%|▌         | 23/436 [00:00<00:04, 85.18it/s]Loading weights:   8%|▊         | 36/436 [00:00<00:04, 82.46it/s]Loading weights:  11%|█         | 46/436 [00:00<00:04, 87.65it/s]Loading weights:  19%|█▉        | 83/436 [00:00<00:02, 173.05it/s]Loading weights:  24%|██▎       | 103/436 [00:00<00:02, 131.81it/s]Loading weights:  27%|██▋       | 119/436 [00:00<00:02, 134.06it/s]Loading weights:  31%|███       | 135/436 [00:01<00:02, 131.37it/s]Loading weights:  36%|███▌      | 158/436 [00:01<00:01, 153.64it/s]Loading weights:  40%|████      | 175/436 [00:01<00:02, 126.66it/s]Loading weights: 100%|██████████| 436/436 [00:01<00:00, 305.74it/s]
+[trec_gpt2-large_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 44/1800 处，回声模式补全中
+[trec_gpt2-large_0shot_sub300_seed0] 基线 0.3400 | 校准 0.1533 | p_cf [0.7068, 0.1011, 0.0178, 0.0219, 0.0403, 0.1121] | 6s
+[trec_gpt2-large_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 44/1800 处，回声模式补全中
+[trec_gpt2-large_0shot_sub300_seed1] 基线 0.3400 | 校准 0.1533 | p_cf [0.7068, 0.1011, 0.0178, 0.0219, 0.0403, 0.1121] | 6s
+[trec_gpt2-large_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 44/1800 处，回声模式补全中
+[trec_gpt2-large_0shot_sub300_seed2] 基线 0.3400 | 校准 0.1533 | p_cf [0.7068, 0.1011, 0.0178, 0.0219, 0.0403, 0.1121] | 6s
+[trec_gpt2-large_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 44/1800 处，回声模式补全中
+[trec_gpt2-large_0shot_sub300_seed3] 基线 0.3400 | 校准 0.1533 | p_cf [0.7068, 0.1011, 0.0178, 0.0219, 0.0403, 0.1121] | 6s
+[trec_gpt2-large_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 12
+缺失标签概率 44/1800 处，回声模式补全中
+[trec_gpt2-large_0shot_sub300_seed4] 基线 0.3400 | 校准 0.1533 | p_cf [0.7068, 0.1011, 0.0178, 0.0219, 0.0403, 0.1121] | 7s
+[trec_gpt2-large_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 12
+缺失标签概率 3/1800 处，回声模式补全中
+[trec_gpt2-large_1shot_sub300_seed0] 基线 0.3733 | 校准 0.2633 | p_cf [0.2536, 0.4203, 0.062, 0.048, 0.0871, 0.129] | 8s
+[trec_gpt2-large_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 12
+缺失标签概率 19/1800 处，回声模式补全中
+[trec_gpt2-large_1shot_sub300_seed1] 基线 0.2933 | 校准 0.2467 | p_cf [0.2798, 0.3807, 0.0676, 0.0141, 0.0714, 0.1864] | 8s
+[trec_gpt2-large_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 12
+[trec_gpt2-large_1shot_sub300_seed2] 基线 0.2733 | 校准 0.2500 | p_cf [0.246, 0.2137, 0.3039, 0.0319, 0.0751, 0.1295] | 7s
+[trec_gpt2-large_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 12
+缺失标签概率 3/1800 处，回声模式补全中
+[trec_gpt2-large_1shot_sub300_seed3] 基线 0.3267 | 校准 0.1567 | p_cf [0.1638, 0.615, 0.111, 0.0208, 0.0207, 0.0687] | 7s
+[trec_gpt2-large_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 12
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-large_1shot_sub300_seed4] 基线 0.2967 | 校准 0.2500 | p_cf [0.2168, 0.4415, 0.1188, 0.0349, 0.0716, 0.1164] | 7s
+[trec_gpt2-large_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 12
+缺失标签概率 4/1800 处，回声模式补全中
+[trec_gpt2-large_4shot_sub300_seed0] 基线 0.3333 | 校准 0.2500 | p_cf [0.1783, 0.1417, 0.0866, 0.0085, 0.1079, 0.4769] | 15s
+[trec_gpt2-large_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[trec_gpt2-large_4shot_sub300_seed1] 基线 0.3700 | 校准 0.2467 | p_cf [0.2527, 0.1796, 0.0977, 0.0695, 0.0721, 0.3284] | 13s
+[trec_gpt2-large_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 12
+缺失标签概率 8/1800 处，回声模式补全中
+[trec_gpt2-large_4shot_sub300_seed2] 基线 0.1767 | 校准 0.2767 | p_cf [0.086, 0.4913, 0.1159, 0.0102, 0.131, 0.1656] | 17s
+[trec_gpt2-large_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 12
+[trec_gpt2-large_4shot_sub300_seed3] 基线 0.3600 | 校准 0.2500 | p_cf [0.1382, 0.1403, 0.0719, 0.0337, 0.1216, 0.4943] | 12s
+[trec_gpt2-large_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 12
+缺失标签概率 2/1800 处，回声模式补全中
+[trec_gpt2-large_4shot_sub300_seed4] 基线 0.3500 | 校准 0.2500 | p_cf [0.4918, 0.0582, 0.0383, 0.0063, 0.1476, 0.2578] | 13s
+[trec_gpt2-large_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[trec_gpt2-large_8shot_sub300_seed0] 基线 0.4633 | 校准 0.3500 | p_cf [0.1894, 0.1722, 0.1162, 0.1107, 0.182, 0.2296] | 23s
+[trec_gpt2-large_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[trec_gpt2-large_8shot_sub300_seed1] 基线 0.3667 | 校准 0.2500 | p_cf [0.2571, 0.1815, 0.2061, 0.0614, 0.0751, 0.2188] | 22s
+[trec_gpt2-large_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[trec_gpt2-large_8shot_sub300_seed2] 基线 0.2833 | 校准 0.2500 | p_cf [0.1169, 0.2657, 0.0928, 0.0331, 0.2702, 0.2214] | 24s
+[trec_gpt2-large_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[trec_gpt2-large_8shot_sub300_seed3] 基线 0.3300 | 校准 0.2600 | p_cf [0.1484, 0.1566, 0.1277, 0.0706, 0.1544, 0.3422] | 20s
+[trec_gpt2-large_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 12
+[trec_gpt2-large_8shot_sub300_seed4] 基线 0.3833 | 校准 0.1333 | p_cf [0.3563, 0.1079, 0.0306, 0.0389, 0.2895, 0.1768] | 22s
+===== gpt2-large x trec 第 1 次尝试 EXIT=0 2026-11-16 02:23:09 =====
+===== 批次 gpt2-large 结束 FAILED=0 2026-11-16 02:23:09 =====
+===== gpt2-xl x sst2 (bs=2) 第 1 次尝试 开始 2026-11-16 02:23:09 =====
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:   4%|▍         | 26/580 [00:00<00:03, 177.62it/s]Loading weights:   8%|▊         | 44/580 [00:00<00:04, 121.72it/s]Loading weights:  10%|▉         | 57/580 [00:00<00:04, 112.22it/s]Loading weights:  14%|█▍        | 83/580 [00:00<00:03, 152.15it/s]Loading weights:  17%|█▋        | 100/580 [00:01<00:06, 74.94it/s]Loading weights:  19%|█▉        | 112/580 [00:01<00:05, 81.51it/s]Loading weights:  24%|██▍       | 141/580 [00:01<00:03, 119.68it/s]Loading weights:  27%|██▋       | 158/580 [00:01<00:03, 117.19it/s]Loading weights:  30%|██▉       | 173/580 [00:01<00:04, 85.65it/s] Loading weights:  32%|███▏      | 185/580 [00:01<00:04, 82.32it/s]Loading weights:  34%|███▍      | 196/580 [00:02<00:04, 82.41it/s]Loading weights:  36%|███▌      | 208/580 [00:02<00:04, 89.30it/s]Loading weights:  38%|███▊      | 219/580 [00:02<00:05, 70.81it/s]Loading weights:  40%|████      | 233/580 [00:02<00:04, 78.49it/s]Loading weights:  42%|████▏     | 243/580 [00:02<00:04, 70.00it/s]Loading weights:  45%|████▌     | 261/580 [00:02<00:03, 86.10it/s]Loading weights:  48%|████▊     | 278/580 [00:02<00:02, 103.15it/s]Loading weights:  50%|█████     | 290/580 [00:03<00:03, 75.45it/s] Loading weights:  52%|█████▏    | 300/580 [00:03<00:06, 41.04it/s]Loading weights:  53%|█████▎    | 308/580 [00:04<00:08, 33.97it/s]Loading weights:  54%|█████▍    | 314/580 [00:04<00:08, 32.43it/s]Loading weights:  55%|█████▌    | 319/580 [00:04<00:09, 28.40it/s]Loading weights:  56%|█████▋    | 327/580 [00:04<00:07, 32.61it/s]Loading weights:  57%|█████▋    | 332/580 [00:05<00:07, 31.32it/s]Loading weights:  58%|█████▊    | 336/580 [00:05<00:13, 17.51it/s]Loading weights:  58%|█████▊    | 339/580 [00:06<00:21, 11.15it/s]Loading weights:  59%|█████▉    | 342/580 [00:06<00:18, 12.65it/s]Loading weights:  59%|█████▉    | 345/580 [00:07<00:25,  9.20it/s]Loading weights: 100%|██████████| 580/580 [00:07<00:00, 80.07it/s]
+[sst2_gpt2-xl_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed0] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed1] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed2] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed3] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 364/600 处，回声模式补全中
+[sst2_gpt2-xl_0shot_sub300_seed4] 基线 0.5667 | 校准 0.7267 | p_cf [0.0812, 0.9188] | 25s
+[sst2_gpt2-xl_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed0] 基线 0.5233 | 校准 0.4933 | p_cf [0.1383, 0.8617] | 22s
+[sst2_gpt2-xl_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed1] 基线 0.5567 | 校准 0.4933 | p_cf [0.1273, 0.8727] | 16s
+[sst2_gpt2-xl_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed2] 基线 0.5100 | 校准 0.4933 | p_cf [0.1242, 0.8758] | 19s
+[sst2_gpt2-xl_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed3] 基线 0.5367 | 校准 0.4933 | p_cf [0.1545, 0.8455] | 21s
+[sst2_gpt2-xl_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[sst2_gpt2-xl_1shot_sub300_seed4] 基线 0.8600 | 校准 0.5567 | p_cf [0.5679, 0.4321] | 21s
+[sst2_gpt2-xl_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed0] 基线 0.7700 | 校准 0.8300 | p_cf [0.4127, 0.5873] | 48s
+[sst2_gpt2-xl_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed1] 基线 0.8533 | 校准 0.8867 | p_cf [0.4434, 0.5566] | 38s
+[sst2_gpt2-xl_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.196, 0.804] | 38s
+[sst2_gpt2-xl_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed3] 基线 0.6367 | 校准 0.6000 | p_cf [0.3324, 0.6676] | 48s
+[sst2_gpt2-xl_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[sst2_gpt2-xl_4shot_sub300_seed4] 基线 0.5467 | 校准 0.8967 | p_cf [0.4201, 0.5799] | 36s
+[sst2_gpt2-xl_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed0] 基线 0.5233 | 校准 0.5100 | p_cf [0.317, 0.683] | 65s
+[sst2_gpt2-xl_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed1] 基线 0.7233 | 校准 0.9000 | p_cf [0.444, 0.556] | 64s
+[sst2_gpt2-xl_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed2] 基线 0.5067 | 校准 0.4933 | p_cf [0.1867, 0.8133] | 73s
+[sst2_gpt2-xl_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed3] 基线 0.5833 | 校准 0.8767 | p_cf [0.3669, 0.6331] | 71s
+[sst2_gpt2-xl_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[sst2_gpt2-xl_8shot_sub300_seed4] 基线 0.5233 | 校准 0.4933 | p_cf [0.2575, 0.7425] | 60s
+===== gpt2-xl x sst2 第 1 次尝试 EXIT=0 2026-11-16 02:36:16 =====
+===== gpt2-xl x agnews (bs=2) 第 1 次尝试 开始 2026-11-16 02:36:16 =====
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:   4%|▍         | 24/580 [00:00<00:02, 238.53it/s]Loading weights:   8%|▊         | 48/580 [00:00<00:03, 141.57it/s]Loading weights:  11%|█         | 65/580 [00:00<00:06, 81.10it/s] Loading weights:  13%|█▎        | 77/580 [00:01<00:08, 61.07it/s]Loading weights:  15%|█▍        | 86/580 [00:01<00:09, 49.50it/s]Loading weights:  22%|██▏       | 130/580 [00:01<00:04, 101.44it/s]Loading weights:  28%|██▊       | 162/580 [00:01<00:03, 136.77it/s]Loading weights:  31%|███▏      | 182/580 [00:01<00:02, 133.76it/s]Loading weights:  35%|███▌      | 203/580 [00:01<00:02, 140.24it/s]Loading weights:  38%|███▊      | 220/580 [00:02<00:03, 101.09it/s]Loading weights:  40%|████      | 234/580 [00:02<00:03, 88.35it/s] Loading weights: 100%|██████████| 580/580 [00:02<00:00, 241.75it/s]
+[agnews_gpt2-xl_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 576/1200 处，回声模式补全中
+[agnews_gpt2-xl_0shot_sub300_seed0] 基线 0.4100 | 校准 0.5200 | p_cf [0.6058, 0.1121, 0.1801, 0.102] | 76s
+[agnews_gpt2-xl_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 576/1200 处，回声模式补全中
+[agnews_gpt2-xl_0shot_sub300_seed1] 基线 0.4100 | 校准 0.5200 | p_cf [0.6058, 0.1121, 0.1801, 0.102] | 78s
+[agnews_gpt2-xl_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 576/1200 处，回声模式补全中
+[agnews_gpt2-xl_0shot_sub300_seed2] 基线 0.4100 | 校准 0.5200 | p_cf [0.6058, 0.1121, 0.1801, 0.102] | 76s
+[agnews_gpt2-xl_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 576/1200 处，回声模式补全中
+[agnews_gpt2-xl_0shot_sub300_seed3] 基线 0.4100 | 校准 0.5200 | p_cf [0.6058, 0.1121, 0.1801, 0.102] | 76s
+[agnews_gpt2-xl_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 2
+缺失标签概率 576/1200 处，回声模式补全中
+[agnews_gpt2-xl_0shot_sub300_seed4] 基线 0.4100 | 校准 0.5200 | p_cf [0.6058, 0.1121, 0.1801, 0.102] | 76s
+[agnews_gpt2-xl_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 329/1200 处，回声模式补全中
+[agnews_gpt2-xl_1shot_sub300_seed0] 基线 0.2833 | 校准 0.5267 | p_cf [0.0422, 0.0099, 0.0779, 0.8699] | 72s
+[agnews_gpt2-xl_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 278/1200 处，回声模式补全中
+[agnews_gpt2-xl_1shot_sub300_seed1] 基线 0.2767 | 校准 0.4733 | p_cf [0.0248, 0.0032, 0.2423, 0.7297] | 70s
+[agnews_gpt2-xl_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 13/1200 处，回声模式补全中
+[agnews_gpt2-xl_1shot_sub300_seed2] 基线 0.2800 | 校准 0.2500 | p_cf [0.06, 0.1846, 0.5687, 0.1868] | 35s
+[agnews_gpt2-xl_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 20/1200 处，回声模式补全中
+[agnews_gpt2-xl_1shot_sub300_seed3] 基线 0.2667 | 校准 0.2467 | p_cf [0.0215, 0.0326, 0.7884, 0.1574] | 37s
+[agnews_gpt2-xl_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 5/1200 处，回声模式补全中
+[agnews_gpt2-xl_1shot_sub300_seed4] 基线 0.2500 | 校准 0.2433 | p_cf [0.4476, 0.1127, 0.3835, 0.0563] | 39s
+[agnews_gpt2-xl_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 72/1200 处，回声模式补全中
+[agnews_gpt2-xl_4shot_sub300_seed0] 基线 0.2467 | 校准 0.3500 | p_cf [0.187, 0.0028, 0.0271, 0.783] | 78s
+[agnews_gpt2-xl_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 120/1200 处，回声模式补全中
+[agnews_gpt2-xl_4shot_sub300_seed1] 基线 0.2433 | 校准 0.3533 | p_cf [0.1106, 0.0029, 0.1562, 0.7302] | 97s
+[agnews_gpt2-xl_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 3/1200 处，回声模式补全中
+[agnews_gpt2-xl_4shot_sub300_seed2] 基线 0.2433 | 校准 0.2467 | p_cf [0.0331, 0.0543, 0.4044, 0.5083] | 67s
+[agnews_gpt2-xl_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[agnews_gpt2-xl_4shot_sub300_seed3] 基线 0.2567 | 校准 0.2433 | p_cf [0.19, 0.0537, 0.6753, 0.0809] | 66s
+[agnews_gpt2-xl_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[agnews_gpt2-xl_4shot_sub300_seed4] 基线 0.2500 | 校准 0.2433 | p_cf [0.3634, 0.1189, 0.4795, 0.0382] | 103s
+[agnews_gpt2-xl_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 2
+缺失标签概率 140/1200 处，回声模式补全中
+[agnews_gpt2-xl_8shot_sub300_seed0] 基线 0.2433 | 校准 0.3867 | p_cf [0.4462, 0.0054, 0.1878, 0.3607] | 189s
+[agnews_gpt2-xl_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 2
+缺失标签概率 1/1200 处，回声模式补全中
+[agnews_gpt2-xl_8shot_sub300_seed1] 基线 0.2433 | 校准 0.4667 | p_cf [0.0734, 0.0742, 0.2496, 0.6028] | 128s
+[agnews_gpt2-xl_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[agnews_gpt2-xl_8shot_sub300_seed2] 基线 0.2533 | 校准 0.2433 | p_cf [0.5017, 0.132, 0.223, 0.1433] | 129s
+[agnews_gpt2-xl_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[agnews_gpt2-xl_8shot_sub300_seed3] 基线 0.2567 | 校准 0.2433 | p_cf [0.3793, 0.1041, 0.4057, 0.111] | 131s
+[agnews_gpt2-xl_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[agnews_gpt2-xl_8shot_sub300_seed4] 基线 0.3700 | 校准 0.2433 | p_cf [0.1865, 0.1296, 0.6438, 0.0401] | 138s
+===== gpt2-xl x agnews 第 1 次尝试 EXIT=0 2026-11-16 03:05:58 =====
+===== gpt2-xl x trec (bs=2) 第 1 次尝试 开始 2026-11-16 03:05:58 =====
+Loading weights:   0%|          | 0/580 [00:00<?, ?it/s]Loading weights:   4%|▍         | 23/580 [00:00<00:03, 149.35it/s]Loading weights:   7%|▋         | 38/580 [00:00<00:03, 148.95it/s]Loading weights:  13%|█▎        | 78/580 [00:00<00:02, 232.06it/s]Loading weights:  18%|█▊        | 102/580 [00:00<00:03, 153.76it/s]Loading weights:  21%|██        | 120/580 [00:00<00:03, 143.41it/s]Loading weights:  23%|██▎       | 136/580 [00:00<00:03, 145.98it/s]Loading weights:  26%|██▌       | 152/580 [00:01<00:04, 99.78it/s] Loading weights:  28%|██▊       | 165/580 [00:01<00:04, 87.05it/s]Loading weights:  30%|███       | 176/580 [00:01<00:04, 88.20it/s]Loading weights:  32%|███▏      | 187/580 [00:01<00:04, 92.36it/s]Loading weights:  34%|███▍      | 198/580 [00:01<00:05, 75.47it/s]Loading weights:  36%|███▌      | 207/580 [00:02<00:05, 63.86it/s]Loading weights:  37%|███▋      | 215/580 [00:02<00:06, 54.25it/s]Loading weights:  40%|████      | 232/580 [00:02<00:05, 66.28it/s]Loading weights:  44%|████▍     | 258/580 [00:02<00:03, 97.97it/s]Loading weights:  47%|████▋     | 270/580 [00:02<00:03, 101.42it/s]Loading weights:  49%|████▊     | 282/580 [00:02<00:03, 89.13it/s] Loading weights:  50%|█████     | 292/580 [00:02<00:03, 87.54it/s]Loading weights:  52%|█████▏    | 302/580 [00:03<00:03, 72.45it/s]Loading weights:  55%|█████▍    | 317/580 [00:03<00:03, 87.59it/s]Loading weights:  56%|█████▋    | 327/580 [00:03<00:03, 70.44it/s]Loading weights: 100%|██████████| 580/580 [00:03<00:00, 164.05it/s]
+[trec_gpt2-xl_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 2
+[trec_gpt2-xl_0shot_sub300_seed0] 基线 0.2867 | 校准 0.2100 | p_cf [0.5963, 0.2327, 0.0983, 0.0259, 0.0132, 0.0336] | 16s
+[trec_gpt2-xl_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 2
+[trec_gpt2-xl_0shot_sub300_seed1] 基线 0.2867 | 校准 0.2100 | p_cf [0.5963, 0.2327, 0.0983, 0.0259, 0.0132, 0.0336] | 15s
+[trec_gpt2-xl_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 2
+[trec_gpt2-xl_0shot_sub300_seed2] 基线 0.2867 | 校准 0.2100 | p_cf [0.5963, 0.2327, 0.0983, 0.0259, 0.0132, 0.0336] | 15s
+[trec_gpt2-xl_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 2
+[trec_gpt2-xl_0shot_sub300_seed3] 基线 0.2867 | 校准 0.2100 | p_cf [0.5963, 0.2327, 0.0983, 0.0259, 0.0132, 0.0336] | 15s
+[trec_gpt2-xl_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 2
+[trec_gpt2-xl_0shot_sub300_seed4] 基线 0.2867 | 校准 0.2100 | p_cf [0.5963, 0.2327, 0.0983, 0.0259, 0.0132, 0.0336] | 15s
+[trec_gpt2-xl_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 8/1800 处，回声模式补全中
+[trec_gpt2-xl_1shot_sub300_seed0] 基线 0.3067 | 校准 0.0267 | p_cf [0.1543, 0.4287, 0.3534, 0.0386, 0.0169, 0.0082] | 20s
+[trec_gpt2-xl_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[trec_gpt2-xl_1shot_sub300_seed1] 基线 0.3333 | 校准 0.0533 | p_cf [0.0684, 0.4029, 0.3667, 0.0562, 0.0599, 0.0459] | 17s
+[trec_gpt2-xl_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 2
+[trec_gpt2-xl_1shot_sub300_seed2] 基线 0.1600 | 校准 0.0267 | p_cf [0.0641, 0.0179, 0.857, 0.0265, 0.022, 0.0126] | 17s
+[trec_gpt2-xl_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 13/1800 处，回声模式补全中
+[trec_gpt2-xl_1shot_sub300_seed3] 基线 0.2733 | 校准 0.0267 | p_cf [0.0423, 0.4879, 0.4397, 0.0192, 0.0063, 0.0047] | 17s
+[trec_gpt2-xl_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 2
+缺失标签概率 4/1800 处，回声模式补全中
+[trec_gpt2-xl_1shot_sub300_seed4] 基线 0.2800 | 校准 0.0267 | p_cf [0.0533, 0.3668, 0.5286, 0.0308, 0.0115, 0.0091] | 17s
+[trec_gpt2-xl_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 4/1800 处，回声模式补全中
+[trec_gpt2-xl_4shot_sub300_seed0] 基线 0.3133 | 校准 0.1733 | p_cf [0.0852, 0.056, 0.238, 0.1088, 0.1741, 0.3379] | 37s
+[trec_gpt2-xl_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2-xl_4shot_sub300_seed1] 基线 0.2200 | 校准 0.1467 | p_cf [0.1118, 0.0165, 0.5297, 0.0338, 0.1494, 0.1588] | 28s
+[trec_gpt2-xl_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[trec_gpt2-xl_4shot_sub300_seed2] 基线 0.1633 | 校准 0.2500 | p_cf [0.0832, 0.1211, 0.4847, 0.0552, 0.1467, 0.1091] | 37s
+[trec_gpt2-xl_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 2
+缺失标签概率 1/1800 处，回声模式补全中
+[trec_gpt2-xl_4shot_sub300_seed3] 基线 0.1900 | 校准 0.1467 | p_cf [0.071, 0.014, 0.2882, 0.0212, 0.1714, 0.4343] | 29s
+[trec_gpt2-xl_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 2
+[trec_gpt2-xl_4shot_sub300_seed4] 基线 0.3133 | 校准 0.0267 | p_cf [0.2318, 0.0951, 0.5349, 0.0386, 0.0693, 0.0304] | 28s
+[trec_gpt2-xl_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[trec_gpt2-xl_8shot_sub300_seed0] 基线 0.4400 | 校准 0.1467 | p_cf [0.2869, 0.0634, 0.2421, 0.1101, 0.1575, 0.14] | 50s
+[trec_gpt2-xl_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[trec_gpt2-xl_8shot_sub300_seed1] 基线 0.3100 | 校准 0.2100 | p_cf [0.1774, 0.0382, 0.6598, 0.0282, 0.0179, 0.0786] | 49s
+[trec_gpt2-xl_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[trec_gpt2-xl_8shot_sub300_seed2] 基线 0.4067 | 校准 0.3600 | p_cf [0.2815, 0.0715, 0.1919, 0.0641, 0.2547, 0.1363] | 50s
+[trec_gpt2-xl_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[trec_gpt2-xl_8shot_sub300_seed3] 基线 0.3967 | 校准 0.1700 | p_cf [0.0739, 0.0538, 0.328, 0.1426, 0.2302, 0.1715] | 41s
+[trec_gpt2-xl_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 2
+[trec_gpt2-xl_8shot_sub300_seed4] 基线 0.3233 | 校准 0.1567 | p_cf [0.4322, 0.0675, 0.1441, 0.13, 0.154, 0.0722] | 49s
+===== gpt2-xl x trec 第 1 次尝试 EXIT=0 2026-11-16 03:15:40 =====
+===== 批次 gpt2-xl 结束 FAILED=0 2026-11-16 03:15:40 =====
+===== 全网格 4 模型批次全部退出 2026-11-16 03:15:40 =====

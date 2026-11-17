@@ -1,0 +1,17 @@
+{
+ "trial": true,
+ "model": "gpt2",
+ "dataset": "sst2",
+ "shots": 4,
+ "n_test": 50,
+ "seed": 0,
+ "acc_original": 0.42,
+ "acc_calibrated": 0.5,
+ "p_cf": [
+  0.5649641719757463,
+  0.43503582802425356
+ ],
+ "load_seconds": 1.5,
+ "infer_seconds": 1.0,
+ "total_seconds": 2.6
+}

@@ -1,0 +1,484 @@
+[agnews_gpt2-large_0shot_sub300_seed0]
+  [PASS] 基线 0.3667 | 校准 0.5333 | 翻转 111 | 独立复算一致
+[agnews_gpt2-large_0shot_sub300_seed1]
+  [PASS] 基线 0.3667 | 校准 0.5333 | 翻转 111 | 独立复算一致
+[agnews_gpt2-large_0shot_sub300_seed2]
+  [PASS] 基线 0.3667 | 校准 0.5333 | 翻转 111 | 独立复算一致
+[agnews_gpt2-large_0shot_sub300_seed3]
+  [PASS] 基线 0.3667 | 校准 0.5333 | 翻转 111 | 独立复算一致
+[agnews_gpt2-large_0shot_sub300_seed4]
+  [PASS] 基线 0.3667 | 校准 0.5333 | 翻转 111 | 独立复算一致
+[agnews_gpt2-large_1shot_sub300_seed0]
+  [PASS] 基线 0.2467 | 校准 0.6167 | 翻转 295 | 独立复算一致
+[agnews_gpt2-large_1shot_sub300_seed1]
+  [PASS] 基线 0.2567 | 校准 0.5767 | 翻转 288 | 独立复算一致
+[agnews_gpt2-large_1shot_sub300_seed2]
+  [PASS] 基线 0.2500 | 校准 0.4400 | 翻转 194 | 独立复算一致
+[agnews_gpt2-large_1shot_sub300_seed3]
+  [PASS] 基线 0.2533 | 校准 0.2900 | 翻转 285 | 独立复算一致
+[agnews_gpt2-large_1shot_sub300_seed4]
+  [PASS] 基线 0.2533 | 校准 0.2700 | 翻转 15 | 独立复算一致
+[agnews_gpt2-large_4shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.4567 | 翻转 300 | 独立复算一致
+[agnews_gpt2-large_4shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2633 | 翻转 300 | 独立复算一致
+[agnews_gpt2-large_4shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2567 | 翻转 299 | 独立复算一致
+[agnews_gpt2-large_4shot_sub300_seed3]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-large_4shot_sub300_seed4]
+  [PASS] 基线 0.2567 | 校准 0.2500 | 翻转 8 | 独立复算一致
+[agnews_gpt2-large_8shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.3933 | 翻转 193 | 独立复算一致
+[agnews_gpt2-large_8shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2-large_8shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-large_8shot_sub300_seed3]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-large_8shot_sub300_seed4]
+  [PASS] 基线 0.3267 | 校准 0.2467 | 翻转 153 | 独立复算一致
+[agnews_gpt2-medium_0shot_sub300_seed0]
+  [PASS] 基线 0.3033 | 校准 0.5333 | 翻转 161 | 独立复算一致
+[agnews_gpt2-medium_0shot_sub300_seed1]
+  [PASS] 基线 0.3033 | 校准 0.5333 | 翻转 161 | 独立复算一致
+[agnews_gpt2-medium_0shot_sub300_seed2]
+  [PASS] 基线 0.3033 | 校准 0.5333 | 翻转 161 | 独立复算一致
+[agnews_gpt2-medium_0shot_sub300_seed3]
+  [PASS] 基线 0.3033 | 校准 0.5333 | 翻转 161 | 独立复算一致
+[agnews_gpt2-medium_0shot_sub300_seed4]
+  [PASS] 基线 0.3033 | 校准 0.5333 | 翻转 161 | 独立复算一致
+[agnews_gpt2-medium_1shot_sub300_seed0]
+  [PASS] 基线 0.2900 | 校准 0.4433 | 翻转 285 | 独立复算一致
+[agnews_gpt2-medium_1shot_sub300_seed1]
+  [PASS] 基线 0.3067 | 校准 0.5300 | 翻转 267 | 独立复算一致
+[agnews_gpt2-medium_1shot_sub300_seed2]
+  [PASS] 基线 0.3000 | 校准 0.2333 | 翻转 27 | 独立复算一致
+[agnews_gpt2-medium_1shot_sub300_seed3]
+  [PASS] 基线 0.2933 | 校准 0.2467 | 翻转 49 | 独立复算一致
+[agnews_gpt2-medium_1shot_sub300_seed4]
+  [PASS] 基线 0.2600 | 校准 0.3033 | 翻转 55 | 独立复算一致
+[agnews_gpt2-medium_4shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.2567 | 翻转 300 | 独立复算一致
+[agnews_gpt2-medium_4shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2667 | 翻转 300 | 独立复算一致
+[agnews_gpt2-medium_4shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2-medium_4shot_sub300_seed3]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-medium_4shot_sub300_seed4]
+  [PASS] 基线 0.2567 | 校准 0.2500 | 翻转 2 | 独立复算一致
+[agnews_gpt2-medium_8shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 288 | 独立复算一致
+[agnews_gpt2-medium_8shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.3767 | 翻转 217 | 独立复算一致
+[agnews_gpt2-medium_8shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2500 | 翻转 2 | 独立复算一致
+[agnews_gpt2-medium_8shot_sub300_seed3]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-medium_8shot_sub300_seed4]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2-xl_0shot_sub300_seed0]
+  [PASS] 基线 0.4100 | 校准 0.5200 | 翻转 134 | 独立复算一致
+[agnews_gpt2-xl_0shot_sub300_seed1]
+  [PASS] 基线 0.4100 | 校准 0.5200 | 翻转 134 | 独立复算一致
+[agnews_gpt2-xl_0shot_sub300_seed2]
+  [PASS] 基线 0.4100 | 校准 0.5200 | 翻转 134 | 独立复算一致
+[agnews_gpt2-xl_0shot_sub300_seed3]
+  [PASS] 基线 0.4100 | 校准 0.5200 | 翻转 134 | 独立复算一致
+[agnews_gpt2-xl_0shot_sub300_seed4]
+  [PASS] 基线 0.4100 | 校准 0.5200 | 翻转 134 | 独立复算一致
+[agnews_gpt2-xl_1shot_sub300_seed0]
+  [PASS] 基线 0.2833 | 校准 0.5267 | 翻转 280 | 独立复算一致
+[agnews_gpt2-xl_1shot_sub300_seed1]
+  [PASS] 基线 0.2767 | 校准 0.4733 | 翻转 288 | 独立复算一致
+[agnews_gpt2-xl_1shot_sub300_seed2]
+  [PASS] 基线 0.2800 | 校准 0.2500 | 翻转 299 | 独立复算一致
+[agnews_gpt2-xl_1shot_sub300_seed3]
+  [PASS] 基线 0.2667 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2-xl_1shot_sub300_seed4]
+  [PASS] 基线 0.2500 | 校准 0.2433 | 翻转 7 | 独立复算一致
+[agnews_gpt2-xl_4shot_sub300_seed0]
+  [PASS] 基线 0.2467 | 校准 0.3500 | 翻转 300 | 独立复算一致
+[agnews_gpt2-xl_4shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.3533 | 翻转 300 | 独立复算一致
+[agnews_gpt2-xl_4shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2-xl_4shot_sub300_seed3]
+  [PASS] 基线 0.2567 | 校准 0.2433 | 翻转 4 | 独立复算一致
+[agnews_gpt2-xl_4shot_sub300_seed4]
+  [PASS] 基线 0.2500 | 校准 0.2433 | 翻转 2 | 独立复算一致
+[agnews_gpt2-xl_8shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.3867 | 翻转 163 | 独立复算一致
+[agnews_gpt2-xl_8shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.4667 | 翻转 300 | 独立复算一致
+[agnews_gpt2-xl_8shot_sub300_seed2]
+  [PASS] 基线 0.2533 | 校准 0.2433 | 翻转 3 | 独立复算一致
+[agnews_gpt2-xl_8shot_sub300_seed3]
+  [PASS] 基线 0.2567 | 校准 0.2433 | 翻转 4 | 独立复算一致
+[agnews_gpt2-xl_8shot_sub300_seed4]
+  [PASS] 基线 0.3700 | 校准 0.2433 | 翻转 51 | 独立复算一致
+[agnews_gpt2_0shot_sub300_seed0]
+  [PASS] 基线 0.5900 | 校准 0.5400 | 翻转 62 | 独立复算一致
+[agnews_gpt2_0shot_sub300_seed1]
+  [PASS] 基线 0.5900 | 校准 0.5400 | 翻转 62 | 独立复算一致
+[agnews_gpt2_0shot_sub300_seed2]
+  [PASS] 基线 0.5900 | 校准 0.5400 | 翻转 62 | 独立复算一致
+[agnews_gpt2_0shot_sub300_seed3]
+  [PASS] 基线 0.5900 | 校准 0.5400 | 翻转 62 | 独立复算一致
+[agnews_gpt2_0shot_sub300_seed4]
+  [PASS] 基线 0.5900 | 校准 0.5400 | 翻转 62 | 独立复算一致
+[agnews_gpt2_1shot_sub300_seed0]
+  [PASS] 基线 0.2367 | 校准 0.5233 | 翻转 262 | 独立复算一致
+[agnews_gpt2_1shot_sub300_seed1]
+  [PASS] 基线 0.2667 | 校准 0.5300 | 翻转 231 | 独立复算一致
+[agnews_gpt2_1shot_sub300_seed2]
+  [PASS] 基线 0.2400 | 校准 0.2467 | 翻转 18 | 独立复算一致
+[agnews_gpt2_1shot_sub300_seed3]
+  [PASS] 基线 0.2467 | 校准 0.2533 | 翻转 300 | 独立复算一致
+[agnews_gpt2_1shot_sub300_seed4]
+  [PASS] 基线 0.2833 | 校准 0.3467 | 翻转 178 | 独立复算一致
+[agnews_gpt2_4shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[agnews_gpt2_4shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2_4shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2_4shot_sub300_seed3]
+  [PASS] 基线 0.2467 | 校准 0.2867 | 翻转 16 | 独立复算一致
+[agnews_gpt2_4shot_sub300_seed4]
+  [PASS] 基线 0.2500 | 校准 0.2467 | 翻转 2 | 独立复算一致
+[agnews_gpt2_8shot_sub300_seed0]
+  [PASS] 基线 0.2433 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[agnews_gpt2_8shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2500 | 翻转 299 | 独立复算一致
+[agnews_gpt2_8shot_sub300_seed2]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2_8shot_sub300_seed3]
+  [PASS] 基线 0.2433 | 校准 0.2433 | 翻转 0 | 独立复算一致
+[agnews_gpt2_8shot_sub300_seed4]
+  [PASS] 基线 0.4533 | 校准 0.4200 | 翻转 52 | 独立复算一致
+[sst2_gpt2-large_0shot_sub300_seed0]
+  [PASS] 基线 0.7167 | 校准 0.8500 | 翻转 90 | 独立复算一致
+[sst2_gpt2-large_0shot_sub300_seed1]
+  [PASS] 基线 0.7167 | 校准 0.8500 | 翻转 90 | 独立复算一致
+[sst2_gpt2-large_0shot_sub300_seed2]
+  [PASS] 基线 0.7167 | 校准 0.8500 | 翻转 90 | 独立复算一致
+[sst2_gpt2-large_0shot_sub300_seed3]
+  [PASS] 基线 0.7167 | 校准 0.8500 | 翻转 90 | 独立复算一致
+[sst2_gpt2-large_0shot_sub300_seed4]
+  [PASS] 基线 0.7167 | 校准 0.8500 | 翻转 90 | 独立复算一致
+[sst2_gpt2-large_1shot_sub300_seed0]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-large_1shot_sub300_seed1]
+  [PASS] 基线 0.5133 | 校准 0.4933 | 翻转 298 | 独立复算一致
+[sst2_gpt2-large_1shot_sub300_seed2]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-large_1shot_sub300_seed3]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-large_1shot_sub300_seed4]
+  [PASS] 基线 0.7900 | 校准 0.5067 | 翻转 187 | 独立复算一致
+[sst2_gpt2-large_4shot_sub300_seed0]
+  [PASS] 基线 0.5433 | 校准 0.7733 | 翻转 203 | 独立复算一致
+[sst2_gpt2-large_4shot_sub300_seed1]
+  [PASS] 基线 0.4967 | 校准 0.5067 | 翻转 299 | 独立复算一致
+[sst2_gpt2-large_4shot_sub300_seed2]
+  [PASS] 基线 0.5633 | 校准 0.8933 | 翻转 113 | 独立复算一致
+[sst2_gpt2-large_4shot_sub300_seed3]
+  [PASS] 基线 0.5433 | 校准 0.4933 | 翻转 289 | 独立复算一致
+[sst2_gpt2-large_4shot_sub300_seed4]
+  [PASS] 基线 0.5167 | 校准 0.6700 | 翻转 46 | 独立复算一致
+[sst2_gpt2-large_8shot_sub300_seed0]
+  [PASS] 基线 0.8433 | 校准 0.8267 | 翻转 85 | 独立复算一致
+[sst2_gpt2-large_8shot_sub300_seed1]
+  [PASS] 基线 0.5167 | 校准 0.5067 | 翻转 293 | 独立复算一致
+[sst2_gpt2-large_8shot_sub300_seed2]
+  [PASS] 基线 0.8933 | 校准 0.8700 | 翻转 9 | 独立复算一致
+[sst2_gpt2-large_8shot_sub300_seed3]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-large_8shot_sub300_seed4]
+  [PASS] 基线 0.8333 | 校准 0.8800 | 翻转 36 | 独立复算一致
+[sst2_gpt2-medium_0shot_sub300_seed0]
+  [PASS] 基线 0.5933 | 校准 0.7667 | 翻转 118 | 独立复算一致
+[sst2_gpt2-medium_0shot_sub300_seed1]
+  [PASS] 基线 0.5933 | 校准 0.7667 | 翻转 118 | 独立复算一致
+[sst2_gpt2-medium_0shot_sub300_seed2]
+  [PASS] 基线 0.5933 | 校准 0.7667 | 翻转 118 | 独立复算一致
+[sst2_gpt2-medium_0shot_sub300_seed3]
+  [PASS] 基线 0.5933 | 校准 0.7667 | 翻转 118 | 独立复算一致
+[sst2_gpt2-medium_0shot_sub300_seed4]
+  [PASS] 基线 0.5933 | 校准 0.7667 | 翻转 118 | 独立复算一致
+[sst2_gpt2-medium_1shot_sub300_seed0]
+  [PASS] 基线 0.5033 | 校准 0.4933 | 翻转 3 | 独立复算一致
+[sst2_gpt2-medium_1shot_sub300_seed1]
+  [PASS] 基线 0.5800 | 校准 0.4933 | 翻转 278 | 独立复算一致
+[sst2_gpt2-medium_1shot_sub300_seed2]
+  [PASS] 基线 0.7067 | 校准 0.4933 | 翻转 106 | 独立复算一致
+[sst2_gpt2-medium_1shot_sub300_seed3]
+  [PASS] 基线 0.5967 | 校准 0.7100 | 翻转 54 | 独立复算一致
+[sst2_gpt2-medium_1shot_sub300_seed4]
+  [PASS] 基线 0.5067 | 校准 0.5067 | 翻转 0 | 独立复算一致
+[sst2_gpt2-medium_4shot_sub300_seed0]
+  [PASS] 基线 0.4967 | 校准 0.4933 | 翻转 1 | 独立复算一致
+[sst2_gpt2-medium_4shot_sub300_seed1]
+  [PASS] 基线 0.8233 | 校准 0.7233 | 翻转 86 | 独立复算一致
+[sst2_gpt2-medium_4shot_sub300_seed2]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-medium_4shot_sub300_seed3]
+  [PASS] 基线 0.5600 | 校准 0.4933 | 翻转 26 | 独立复算一致
+[sst2_gpt2-medium_4shot_sub300_seed4]
+  [PASS] 基线 0.5000 | 校准 0.5633 | 翻转 117 | 独立复算一致
+[sst2_gpt2-medium_8shot_sub300_seed0]
+  [PASS] 基线 0.5667 | 校准 0.5000 | 翻转 280 | 独立复算一致
+[sst2_gpt2-medium_8shot_sub300_seed1]
+  [PASS] 基线 0.8300 | 校准 0.5067 | 翻转 143 | 独立复算一致
+[sst2_gpt2-medium_8shot_sub300_seed2]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-medium_8shot_sub300_seed3]
+  [PASS] 基线 0.5100 | 校准 0.4933 | 翻转 299 | 独立复算一致
+[sst2_gpt2-medium_8shot_sub300_seed4]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-xl_0shot_sub300_seed0]
+  [PASS] 基线 0.5667 | 校准 0.7267 | 翻转 100 | 独立复算一致
+[sst2_gpt2-xl_0shot_sub300_seed1]
+  [PASS] 基线 0.5667 | 校准 0.7267 | 翻转 100 | 独立复算一致
+[sst2_gpt2-xl_0shot_sub300_seed2]
+  [PASS] 基线 0.5667 | 校准 0.7267 | 翻转 100 | 独立复算一致
+[sst2_gpt2-xl_0shot_sub300_seed3]
+  [PASS] 基线 0.5667 | 校准 0.7267 | 翻转 100 | 独立复算一致
+[sst2_gpt2-xl_0shot_sub300_seed4]
+  [PASS] 基线 0.5667 | 校准 0.7267 | 翻转 100 | 独立复算一致
+[sst2_gpt2-xl_1shot_sub300_seed0]
+  [PASS] 基线 0.5233 | 校准 0.4933 | 翻转 295 | 独立复算一致
+[sst2_gpt2-xl_1shot_sub300_seed1]
+  [PASS] 基线 0.5567 | 校准 0.4933 | 翻转 285 | 独立复算一致
+[sst2_gpt2-xl_1shot_sub300_seed2]
+  [PASS] 基线 0.5100 | 校准 0.4933 | 翻转 299 | 独立复算一致
+[sst2_gpt2-xl_1shot_sub300_seed3]
+  [PASS] 基线 0.5367 | 校准 0.4933 | 翻转 291 | 独立复算一致
+[sst2_gpt2-xl_1shot_sub300_seed4]
+  [PASS] 基线 0.8600 | 校准 0.5567 | 翻转 115 | 独立复算一致
+[sst2_gpt2-xl_4shot_sub300_seed0]
+  [PASS] 基线 0.7700 | 校准 0.8300 | 翻转 108 | 独立复算一致
+[sst2_gpt2-xl_4shot_sub300_seed1]
+  [PASS] 基线 0.8533 | 校准 0.8867 | 翻转 58 | 独立复算一致
+[sst2_gpt2-xl_4shot_sub300_seed2]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-xl_4shot_sub300_seed3]
+  [PASS] 基线 0.6367 | 校准 0.6000 | 翻转 227 | 独立复算一致
+[sst2_gpt2-xl_4shot_sub300_seed4]
+  [PASS] 基线 0.5467 | 校准 0.8967 | 翻转 129 | 独立复算一致
+[sst2_gpt2-xl_8shot_sub300_seed0]
+  [PASS] 基线 0.5233 | 校准 0.5100 | 翻转 290 | 独立复算一致
+[sst2_gpt2-xl_8shot_sub300_seed1]
+  [PASS] 基线 0.7233 | 校准 0.9000 | 翻转 79 | 独立复算一致
+[sst2_gpt2-xl_8shot_sub300_seed2]
+  [PASS] 基线 0.5067 | 校准 0.4933 | 翻转 300 | 独立复算一致
+[sst2_gpt2-xl_8shot_sub300_seed3]
+  [PASS] 基线 0.5833 | 校准 0.8767 | 翻转 104 | 独立复算一致
+[sst2_gpt2-xl_8shot_sub300_seed4]
+  [PASS] 基线 0.5233 | 校准 0.4933 | 翻转 295 | 独立复算一致
+[sst2_gpt2_0shot_sub300_seed0]
+  [PASS] 基线 0.7267 | 校准 0.6067 | 翻转 88 | 独立复算一致
+[sst2_gpt2_0shot_sub300_seed1]
+  [PASS] 基线 0.7267 | 校准 0.6067 | 翻转 88 | 独立复算一致
+[sst2_gpt2_0shot_sub300_seed2]
+  [PASS] 基线 0.7267 | 校准 0.6067 | 翻转 88 | 独立复算一致
+[sst2_gpt2_0shot_sub300_seed3]
+  [PASS] 基线 0.7267 | 校准 0.6067 | 翻转 88 | 独立复算一致
+[sst2_gpt2_0shot_sub300_seed4]
+  [PASS] 基线 0.7267 | 校准 0.6067 | 翻转 88 | 独立复算一致
+[sst2_gpt2_1shot_sub300_seed0]
+  [PASS] 基线 0.4833 | 校准 0.5067 | 翻转 297 | 独立复算一致
+[sst2_gpt2_1shot_sub300_seed1]
+  [PASS] 基线 0.5233 | 校准 0.4933 | 翻转 181 | 独立复算一致
+[sst2_gpt2_1shot_sub300_seed2]
+  [PASS] 基线 0.4933 | 校准 0.5033 | 翻转 191 | 独立复算一致
+[sst2_gpt2_1shot_sub300_seed3]
+  [PASS] 基线 0.5200 | 校准 0.5567 | 翻转 193 | 独立复算一致
+[sst2_gpt2_1shot_sub300_seed4]
+  [PASS] 基线 0.5000 | 校准 0.5067 | 翻转 298 | 独立复算一致
+[sst2_gpt2_4shot_sub300_seed0]
+  [PASS] 基线 0.4933 | 校准 0.5000 | 翻转 14 | 独立复算一致
+[sst2_gpt2_4shot_sub300_seed1]
+  [PASS] 基线 0.4933 | 校准 0.5067 | 翻转 300 | 独立复算一致
+[sst2_gpt2_4shot_sub300_seed2]
+  [PASS] 基线 0.4933 | 校准 0.5533 | 翻转 268 | 独立复算一致
+[sst2_gpt2_4shot_sub300_seed3]
+  [PASS] 基线 0.4933 | 校准 0.4933 | 翻转 26 | 独立复算一致
+[sst2_gpt2_4shot_sub300_seed4]
+  [PASS] 基线 0.4933 | 校准 0.5133 | 翻转 298 | 独立复算一致
+[sst2_gpt2_8shot_sub300_seed0]
+  [PASS] 基线 0.4967 | 校准 0.4933 | 翻转 1 | 独立复算一致
+[sst2_gpt2_8shot_sub300_seed1]
+  [PASS] 基线 0.4933 | 校准 0.6033 | 翻转 201 | 独立复算一致
+[sst2_gpt2_8shot_sub300_seed2]
+  [PASS] 基线 0.4933 | 校准 0.5067 | 翻转 6 | 独立复算一致
+[sst2_gpt2_8shot_sub300_seed3]
+  [PASS] 基线 0.6133 | 校准 0.5067 | 翻转 192 | 独立复算一致
+[sst2_gpt2_8shot_sub300_seed4]
+  [PASS] 基线 0.4933 | 校准 0.5067 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_0shot_sub300_seed0]
+  [PASS] 基线 0.3400 | 校准 0.1533 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_0shot_sub300_seed1]
+  [PASS] 基线 0.3400 | 校准 0.1533 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_0shot_sub300_seed2]
+  [PASS] 基线 0.3400 | 校准 0.1533 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_0shot_sub300_seed3]
+  [PASS] 基线 0.3400 | 校准 0.1533 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_0shot_sub300_seed4]
+  [PASS] 基线 0.3400 | 校准 0.1533 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_1shot_sub300_seed0]
+  [PASS] 基线 0.3733 | 校准 0.2633 | 翻转 298 | 独立复算一致
+[trec_gpt2-large_1shot_sub300_seed1]
+  [PASS] 基线 0.2933 | 校准 0.2467 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_1shot_sub300_seed2]
+  [PASS] 基线 0.2733 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_1shot_sub300_seed3]
+  [PASS] 基线 0.3267 | 校准 0.1567 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_1shot_sub300_seed4]
+  [PASS] 基线 0.2967 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_4shot_sub300_seed0]
+  [PASS] 基线 0.3333 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_4shot_sub300_seed1]
+  [PASS] 基线 0.3700 | 校准 0.2467 | 翻转 296 | 独立复算一致
+[trec_gpt2-large_4shot_sub300_seed2]
+  [PASS] 基线 0.1767 | 校准 0.2767 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_4shot_sub300_seed3]
+  [PASS] 基线 0.3600 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_4shot_sub300_seed4]
+  [PASS] 基线 0.3500 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_8shot_sub300_seed0]
+  [PASS] 基线 0.4633 | 校准 0.3500 | 翻转 219 | 独立复算一致
+[trec_gpt2-large_8shot_sub300_seed1]
+  [PASS] 基线 0.3667 | 校准 0.2500 | 翻转 292 | 独立复算一致
+[trec_gpt2-large_8shot_sub300_seed2]
+  [PASS] 基线 0.2833 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-large_8shot_sub300_seed3]
+  [PASS] 基线 0.3300 | 校准 0.2600 | 翻转 297 | 独立复算一致
+[trec_gpt2-large_8shot_sub300_seed4]
+  [PASS] 基线 0.3833 | 校准 0.1333 | 翻转 299 | 独立复算一致
+[trec_gpt2-medium_0shot_sub300_seed0]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_0shot_sub300_seed1]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_0shot_sub300_seed2]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_0shot_sub300_seed3]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_0shot_sub300_seed4]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_1shot_sub300_seed0]
+  [PASS] 基线 0.2933 | 校准 0.0300 | 翻转 297 | 独立复算一致
+[trec_gpt2-medium_1shot_sub300_seed1]
+  [PASS] 基线 0.3567 | 校准 0.0667 | 翻转 290 | 独立复算一致
+[trec_gpt2-medium_1shot_sub300_seed2]
+  [PASS] 基线 0.2467 | 校准 0.0267 | 翻转 298 | 独立复算一致
+[trec_gpt2-medium_1shot_sub300_seed3]
+  [PASS] 基线 0.2633 | 校准 0.1033 | 翻转 297 | 独立复算一致
+[trec_gpt2-medium_1shot_sub300_seed4]
+  [PASS] 基线 0.2400 | 校准 0.0900 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_4shot_sub300_seed0]
+  [PASS] 基线 0.1733 | 校准 0.3100 | 翻转 297 | 独立复算一致
+[trec_gpt2-medium_4shot_sub300_seed1]
+  [PASS] 基线 0.2100 | 校准 0.2333 | 翻转 293 | 独立复算一致
+[trec_gpt2-medium_4shot_sub300_seed2]
+  [PASS] 基线 0.2800 | 校准 0.0400 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_4shot_sub300_seed3]
+  [PASS] 基线 0.2667 | 校准 0.2333 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_4shot_sub300_seed4]
+  [PASS] 基线 0.4000 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_8shot_sub300_seed0]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 299 | 独立复算一致
+[trec_gpt2-medium_8shot_sub300_seed1]
+  [PASS] 基线 0.2367 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_8shot_sub300_seed2]
+  [PASS] 基线 0.3967 | 校准 0.1167 | 翻转 290 | 独立复算一致
+[trec_gpt2-medium_8shot_sub300_seed3]
+  [PASS] 基线 0.2500 | 校准 0.2333 | 翻转 300 | 独立复算一致
+[trec_gpt2-medium_8shot_sub300_seed4]
+  [PASS] 基线 0.2233 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_0shot_sub300_seed0]
+  [PASS] 基线 0.2867 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_0shot_sub300_seed1]
+  [PASS] 基线 0.2867 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_0shot_sub300_seed2]
+  [PASS] 基线 0.2867 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_0shot_sub300_seed3]
+  [PASS] 基线 0.2867 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_0shot_sub300_seed4]
+  [PASS] 基线 0.2867 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_1shot_sub300_seed0]
+  [PASS] 基线 0.3067 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_1shot_sub300_seed1]
+  [PASS] 基线 0.3333 | 校准 0.0533 | 翻转 282 | 独立复算一致
+[trec_gpt2-xl_1shot_sub300_seed2]
+  [PASS] 基线 0.1600 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_1shot_sub300_seed3]
+  [PASS] 基线 0.2733 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_1shot_sub300_seed4]
+  [PASS] 基线 0.2800 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_4shot_sub300_seed0]
+  [PASS] 基线 0.3133 | 校准 0.1733 | 翻转 285 | 独立复算一致
+[trec_gpt2-xl_4shot_sub300_seed1]
+  [PASS] 基线 0.2200 | 校准 0.1467 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_4shot_sub300_seed2]
+  [PASS] 基线 0.1633 | 校准 0.2500 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_4shot_sub300_seed3]
+  [PASS] 基线 0.1900 | 校准 0.1467 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_4shot_sub300_seed4]
+  [PASS] 基线 0.3133 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_8shot_sub300_seed0]
+  [PASS] 基线 0.4400 | 校准 0.1467 | 翻转 288 | 独立复算一致
+[trec_gpt2-xl_8shot_sub300_seed1]
+  [PASS] 基线 0.3100 | 校准 0.2100 | 翻转 300 | 独立复算一致
+[trec_gpt2-xl_8shot_sub300_seed2]
+  [PASS] 基线 0.4067 | 校准 0.3600 | 翻转 276 | 独立复算一致
+[trec_gpt2-xl_8shot_sub300_seed3]
+  [PASS] 基线 0.3967 | 校准 0.1700 | 翻转 246 | 独立复算一致
+[trec_gpt2-xl_8shot_sub300_seed4]
+  [PASS] 基线 0.3233 | 校准 0.1567 | 翻转 298 | 独立复算一致
+[trec_gpt2_0shot_sub300_seed0]
+  [PASS] 基线 0.2600 | 校准 0.1167 | 翻转 288 | 独立复算一致
+[trec_gpt2_0shot_sub300_seed1]
+  [PASS] 基线 0.2600 | 校准 0.1167 | 翻转 288 | 独立复算一致
+[trec_gpt2_0shot_sub300_seed2]
+  [PASS] 基线 0.2600 | 校准 0.1167 | 翻转 288 | 独立复算一致
+[trec_gpt2_0shot_sub300_seed3]
+  [PASS] 基线 0.2600 | 校准 0.1167 | 翻转 288 | 独立复算一致
+[trec_gpt2_0shot_sub300_seed4]
+  [PASS] 基线 0.2600 | 校准 0.1167 | 翻转 288 | 独立复算一致
+[trec_gpt2_1shot_sub300_seed0]
+  [PASS] 基线 0.3400 | 校准 0.1267 | 翻转 282 | 独立复算一致
+[trec_gpt2_1shot_sub300_seed1]
+  [PASS] 基线 0.2433 | 校准 0.2333 | 翻转 296 | 独立复算一致
+[trec_gpt2_1shot_sub300_seed2]
+  [PASS] 基线 0.1533 | 校准 0.2333 | 翻转 300 | 独立复算一致
+[trec_gpt2_1shot_sub300_seed3]
+  [PASS] 基线 0.3200 | 校准 0.1200 | 翻转 284 | 独立复算一致
+[trec_gpt2_1shot_sub300_seed4]
+  [PASS] 基线 0.3333 | 校准 0.0867 | 翻转 287 | 独立复算一致
+[trec_gpt2_4shot_sub300_seed0]
+  [PASS] 基线 0.1900 | 校准 0.2333 | 翻转 300 | 独立复算一致
+[trec_gpt2_4shot_sub300_seed1]
+  [PASS] 基线 0.3067 | 校准 0.2633 | 翻转 298 | 独立复算一致
+[trec_gpt2_4shot_sub300_seed2]
+  [PASS] 基线 0.2600 | 校准 0.0400 | 翻转 300 | 独立复算一致
+[trec_gpt2_4shot_sub300_seed3]
+  [PASS] 基线 0.1900 | 校准 0.2333 | 翻转 300 | 独立复算一致
+[trec_gpt2_4shot_sub300_seed4]
+  [PASS] 基线 0.3900 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2_8shot_sub300_seed0]
+  [PASS] 基线 0.3333 | 校准 0.0333 | 翻转 300 | 独立复算一致
+[trec_gpt2_8shot_sub300_seed1]
+  [PASS] 基线 0.3333 | 校准 0.0633 | 翻转 296 | 独立复算一致
+[trec_gpt2_8shot_sub300_seed2]
+  [PASS] 基线 0.3200 | 校准 0.2400 | 翻转 289 | 独立复算一致
+[trec_gpt2_8shot_sub300_seed3]
+  [PASS] 基线 0.4233 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trec_gpt2_8shot_sub300_seed4]
+  [PASS] 基线 0.2333 | 校准 0.0267 | 翻转 300 | 独立复算一致
+[trial_sst2_gpt2] (trial)
+  [PASS] 基线 0.4200 | 校准 0.5000 | 字段齐全
+============================================================
+全部通过（241 个结果文件）

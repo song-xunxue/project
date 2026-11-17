@@ -1,0 +1,18 @@
+{
+ "model": "gpt2-medium",
+ "dataset": "trec",
+ "bs": 16,
+ "oom": false,
+ "n_test": 50,
+ "shots": 8,
+ "acc_probe": 0.26,
+ "p_cf_head": [
+  0.0746,
+  0.4701
+ ],
+ "reserved_after_load_gb": 1.32,
+ "peak_allocated_gb": 3.32,
+ "peak_reserved_gb": 3.76,
+ "load_seconds": 1.8,
+ "infer_seconds": 2.8
+}

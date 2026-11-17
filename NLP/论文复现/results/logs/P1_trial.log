@@ -1,0 +1,6 @@
+资源试跑：gpt2 x sst2 x 4-shot x 50 条 x seed 0
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  20%|█▉        | 29/148 [00:00<00:00, 275.68it/s]Loading weights:  39%|███▊      | 57/148 [00:00<00:00, 216.71it/s]Loading weights:  54%|█████▍    | 80/148 [00:00<00:00, 135.82it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 279.93it/s]
+模型加载 2s | 推理 1s | 全程 3s
+基线准确率 0.4200 | 校准后 0.5000 | p_cf [0.565, 0.435]
+显存占用 2.18 GB
+已写 results/raw/trial_sst2_gpt2.json

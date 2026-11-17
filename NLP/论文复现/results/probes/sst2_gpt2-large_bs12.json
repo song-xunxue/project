@@ -1,0 +1,18 @@
+{
+ "model": "gpt2-large",
+ "dataset": "sst2",
+ "bs": 12,
+ "oom": false,
+ "n_test": 51,
+ "shots": 8,
+ "acc_probe": 0.8235,
+ "p_cf_head": [
+  0.4242,
+  0.5758
+ ],
+ "reserved_after_load_gb": 3.03,
+ "peak_allocated_gb": 5.86,
+ "peak_reserved_gb": 6.47,
+ "load_seconds": 4.2,
+ "infer_seconds": 6.8
+}

@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 27/148 [00:00<00:00, 255.82it/s]Loading weights:  36%|███▌      | 53/148 [00:00<00:00, 204.63it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 559.32it/s]
+[sst2_gpt2_0shot_sub300_seed0] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 319 处，回声模式补全中
+[sst2_gpt2_0shot_sub300_seed0] 基线 0.7267 | 校准 0.6067 | p_cf [0.422, 0.578] | 2s
+[sst2_gpt2_1shot_sub300_seed0] 测试 300 条 | 训练样例 1 条 | 批大小 16
+[sst2_gpt2_1shot_sub300_seed0] 基线 0.4833 | 校准 0.5067 | p_cf [0.6369, 0.3631] | 1s
+[sst2_gpt2_4shot_sub300_seed0] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[sst2_gpt2_4shot_sub300_seed0] 基线 0.4933 | 校准 0.5000 | p_cf [0.565, 0.435] | 3s
+[sst2_gpt2_8shot_sub300_seed0] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[sst2_gpt2_8shot_sub300_seed0] 基线 0.4967 | 校准 0.4933 | p_cf [0.496, 0.504] | 16s

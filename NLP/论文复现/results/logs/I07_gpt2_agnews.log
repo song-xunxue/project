@@ -1,0 +1,50 @@
+跳过（已存在，配置一致）: agnews_gpt2_0shot_sub300_seed0
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  52%|█████▏    | 77/148 [00:00<00:00, 747.52it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 468.35it/s]
+[agnews_gpt2_0shot_sub300_seed1] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed1] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed2] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed2] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed3] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed3] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+[agnews_gpt2_0shot_sub300_seed4] 测试 300 条 | 训练样例 0 条 | 批大小 16
+缺失标签概率 1071/1200 处，回声模式补全中
+[agnews_gpt2_0shot_sub300_seed4] 基线 0.5900 | 校准 0.5400 | p_cf [0.5525, 0.1716, 0.1463, 0.1296] | 11s
+跳过（已存在，配置一致）: agnews_gpt2_1shot_sub300_seed0
+[agnews_gpt2_1shot_sub300_seed1] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 513/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed1] 基线 0.2667 | 校准 0.5300 | p_cf [0.0278, 0.0011, 0.0543, 0.9168] | 11s
+[agnews_gpt2_1shot_sub300_seed2] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 26/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed2] 基线 0.2400 | 校准 0.2467 | p_cf [0.0187, 0.7345, 0.2125, 0.0343] | 4s
+[agnews_gpt2_1shot_sub300_seed3] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 12/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed3] 基线 0.2467 | 校准 0.2533 | p_cf [0.0118, 0.1148, 0.2401, 0.6332] | 4s
+[agnews_gpt2_1shot_sub300_seed4] 测试 300 条 | 训练样例 1 条 | 批大小 16
+缺失标签概率 249/1200 处，回声模式补全中
+[agnews_gpt2_1shot_sub300_seed4] 基线 0.2833 | 校准 0.3467 | p_cf [0.8034, 0.1011, 0.0863, 0.0092] | 10s
+跳过（已存在，配置一致）: agnews_gpt2_4shot_sub300_seed0
+[agnews_gpt2_4shot_sub300_seed1] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[agnews_gpt2_4shot_sub300_seed1] 基线 0.2433 | 校准 0.2467 | p_cf [0.4181, 0.0151, 0.1589, 0.4078] | 12s
+[agnews_gpt2_4shot_sub300_seed2] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[agnews_gpt2_4shot_sub300_seed2] 基线 0.2433 | 校准 0.2433 | p_cf [0.2524, 0.2079, 0.3306, 0.2091] | 11s
+[agnews_gpt2_4shot_sub300_seed3] 测试 300 条 | 训练样例 4 条 | 批大小 16
+缺失标签概率 17/1200 处，回声模式补全中
+[agnews_gpt2_4shot_sub300_seed3] 基线 0.2467 | 校准 0.2867 | p_cf [0.2233, 0.1059, 0.5914, 0.0794] | 10s
+[agnews_gpt2_4shot_sub300_seed4] 测试 300 条 | 训练样例 4 条 | 批大小 16
+[W1116 01:39:46.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1486880768 bytes (free: 0, total: 8585216000).
+缺失标签概率 3/1200 处，回声模式补全中
+[agnews_gpt2_4shot_sub300_seed4] 基线 0.2500 | 校准 0.2467 | p_cf [0.2715, 0.4108, 0.2828, 0.035] | 15s
+跳过（已存在，配置一致）: agnews_gpt2_8shot_sub300_seed0
+[agnews_gpt2_8shot_sub300_seed1] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[agnews_gpt2_8shot_sub300_seed1] 基线 0.2433 | 校准 0.2500 | p_cf [0.2902, 0.1483, 0.2124, 0.3492] | 14s
+[agnews_gpt2_8shot_sub300_seed2] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[W1116 01:40:23.000000000 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2153775104 bytes (free: 0, total: 8585216000).
+[agnews_gpt2_8shot_sub300_seed2] 基线 0.2433 | 校准 0.2433 | p_cf [0.4765, 0.19, 0.2401, 0.0934] | 16s
+[agnews_gpt2_8shot_sub300_seed3] 测试 300 条 | 训练样例 8 条 | 批大小 16
+[agnews_gpt2_8shot_sub300_seed3] 基线 0.2433 | 校准 0.2433 | p_cf [0.234, 0.4046, 0.2419, 0.1195] | 16s
+[agnews_gpt2_8shot_sub300_seed4] 测试 300 条 | 训练样例 8 条 | 批大小 16
+缺失标签概率 108/1200 处，回声模式补全中
+[agnews_gpt2_8shot_sub300_seed4] 基线 0.4533 | 校准 0.4200 | p_cf [0.3589, 0.1954, 0.4165, 0.0292] | 37s

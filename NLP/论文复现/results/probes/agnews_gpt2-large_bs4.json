@@ -1,0 +1,18 @@
+{
+ "model": "gpt2-large",
+ "dataset": "agnews",
+ "bs": 4,
+ "oom": false,
+ "n_test": 51,
+ "shots": 8,
+ "acc_probe": 0.2353,
+ "p_cf_head": [
+  0.3778,
+  0.0025
+ ],
+ "reserved_after_load_gb": 3.03,
+ "peak_allocated_gb": 5.06,
+ "peak_reserved_gb": 5.89,
+ "load_seconds": 4.5,
+ "infer_seconds": 17.3
+}
