@@ -1,0 +1,16 @@
+{
+  "models": ["gpt2", "gpt2-medium", "gpt2-large", "gpt2-xl"],
+  "datasets": ["sst2", "agnews", "trec"],
+  "shots": [0, 1, 4, 8],
+  "seeds": 5,
+  "subsample_test_set": 300,
+  "num_log_probs": 100,
+  "bs_default": 4,
+  "fp16": false,
+  "content_free_inputs": ["N/A", "", "[MASK]"],
+  "notes": {
+    "official_reference": "作者 README: gpt2-xl, datasets=sst2,trec,cb,agnews,dbpedia, num_seeds=5, all_shots=0,1,4,8, subsample_test_set=300, --approx",
+    "bs_by_model": {"gpt2": 16, "gpt2-medium": 12, "gpt2-large": 8, "gpt2-xl": 4},
+    "runtime_estimate": "gpt2-xl 全网格约 3-4 小时（RTX 4060 8GB fp32）；小模型显著更快"
+  }
+}
